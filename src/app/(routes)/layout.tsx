@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { twMerge } from "tailwind-merge";
 import { Barlow } from "next/font/google";
 
 import HeaderNav from "@/app/_components/header-nav";
@@ -21,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-grey-dark text-light-300`}>
+      <body className={twMerge(inter.className, "bg-grey-dark text-light-300")}>
         <HeaderNav />
         {children}
       </body>
