@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { twMerge } from "tailwind-merge";
+import { Barlow } from "next/font/google";
 
 import HeaderNav from "@/app/_components/header-nav";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Barlow({ subsets: ["latin"], weight: ["200", "300", "400", "500"] });
 
 export const metadata: Metadata = {
   title: {
@@ -21,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={twMerge(inter.className, "bg-grey-dark text-light-300")}>
         <HeaderNav />
         {children}
       </body>
