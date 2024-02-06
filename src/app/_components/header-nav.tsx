@@ -1,11 +1,18 @@
 import Link from "next/link";
 
+import { AcrossIcon } from "./icons/across";
+
 export default function HeaderNav() {
   return (
     <header className="container mx-auto flex items-center justify-between p-4">
-      <h1 className="text-2xl font-bold">Across</h1>
+      <Link href="/">
+        <AcrossIcon className="fill-aqua-100" />
+      </Link>
       <nav>
         <ul className="flex gap-4">
+          <li>
+            <Link href="/"></Link>
+          </li>
           <li>
             <Link href="/">Home</Link>
           </li>
