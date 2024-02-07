@@ -53,15 +53,30 @@ const config: Config = {
     },
     extend: {
       dropShadow: {
+        "aqua-sm": [
+          "0px 0px 8.286px #6CF9D8",
+          "0px 0px 5.919px #00A27C",
+          "0px 0px 1.578px rgba(0, 0, 0, 0.25)",
+        ],
         aqua: [
           "0px 0px 13.811px #6CF9D8",
           "0px 0px 9.865px #00A27C",
           "0px 0px 2.631px rgba(0, 0, 0, 0.25)",
         ],
+        "teal-sm": [
+          "0px 0px 8.286px #7FE9E1",
+          "0px 0px 5.919px #7FBCE9",
+          "0px 0px 1.578px rgba(0, 0, 0, 0.25)",
+        ],
         teal: [
           "0px 0px 13.811px #7FE9E1",
           "0px 0px 9.865px #7FBCE9",
           "0px 0px 2.631px rgba(0, 0, 0, 0.25)",
+        ],
+        "purple-sm": [
+          "0px 0px 8.286px #E66DFA",
+          "0px 0px 5.919px #974AE4",
+          "0px 0px 1.578px rgba(0, 0, 0, 0.25)",
         ],
         purple: [
           "0px 0px 13.811px #E66DFA",

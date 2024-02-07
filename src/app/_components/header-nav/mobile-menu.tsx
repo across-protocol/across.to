@@ -14,6 +14,7 @@ export function MobileMenu(props: {
   communityNavItems: NavItem[];
   isMenuOpen: boolean;
   onClickItem: () => void;
+  pathname: string;
 }) {
   return (
     <Transition
@@ -27,11 +28,21 @@ export function MobileMenu(props: {
       show={props.isMenuOpen}
     >
       <div className="bg-grey-dark absolute flex min-h-screen w-full flex-col gap-6 p-4 sm:hidden">
-        <Button className="sm:hidden">Bridge now</Button>
+        <Button
+          className={twMerge(
+            "sm:hidden",
+            props.pathname === "/across-plus"
+              ? "border-teal-100/[.05] bg-teal-100/[.05] text-teal-100"
+              : props.pathname === "/across-settlement"
+                ? "border-purple-100/[.05] bg-purple-100/[.05] text-purple-100"
+                : "",
+          )}
+        >
+          Bridge now
+        </Button>
         {props.productsNavItems.map((item) => (
           <span key={item.href} className="group">
             <Link
-              key={item.href}
               href={item.href}
               className={twMerge(
                 "flex flex-row gap-4 rounded-3xl p-4 transition group-hover:shadow-sm",
@@ -54,9 +65,11 @@ export function MobileMenu(props: {
         <div className="border-light-100/[.02] w-full border" />
         <div className="flex flex-row items-center justify-center gap-3">
           {props.communityNavItems.map((item) => (
-            <IconBox className="bg-light-100/[.05]" key={item.label}>
-              <item.Icon className={item.iconClassName} />
-            </IconBox>
+            <a key={item.label} href={item.href} target="_blank" rel="noreferrer">
+              <IconBox className="bg-light-100/[.05]">
+                <item.Icon className={item.iconClassName} />
+              </IconBox>
+            </a>
           ))}
         </div>
         <div className="flex flex-row items-center justify-center gap-1">
