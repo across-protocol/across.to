@@ -33,7 +33,7 @@ export function ProductsSubNav(props: { navItems: NavItem[] }) {
 
   return (
     <div className="min-w-3xl overflow-x-scroll p-4 sm:overflow-x-hidden">
-      <div className="bg-grey-dark flex flex-row items-center justify-start gap-4 sm:justify-center">
+      <div className="flex flex-row items-center justify-start gap-4 bg-grey-dark sm:justify-center">
         {props.navItems.map((item) => (
           <span key={item.href} className="group">
             <Link
@@ -63,7 +63,7 @@ export function ProductsSubNav(props: { navItems: NavItem[] }) {
               </IconBox>
               <div
                 className={twMerge(
-                  "sm:text-md whitespace-nowrap text-sm tabular-nums",
+                  "whitespace-nowrap text-sm tabular-nums sm:text-md",
                   isCurrentPath(item.href) ? "text-light-100" : "text-grey-400",
                 )}
               >

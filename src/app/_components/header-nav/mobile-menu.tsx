@@ -27,7 +27,7 @@ export function MobileMenu(props: {
       leaveTo="opacity-0 translate-y-1"
       show={props.isMenuOpen}
     >
-      <div className="bg-grey-dark absolute flex min-h-screen w-full flex-col gap-6 p-4 sm:hidden">
+      <div className="absolute flex min-h-screen w-full flex-col gap-6 bg-grey-dark p-4 sm:hidden">
         <Button
           className={twMerge(
             "sm:hidden",
@@ -55,14 +55,14 @@ export function MobileMenu(props: {
               </IconBox>
               <div className="flex flex-col">
                 <div className="text-light-100">{item.label}</div>
-                <div className="text-light-300 text-sm tabular-nums">
+                <div className="text-sm tabular-nums text-light-300">
                   {item.description}
                 </div>
               </div>
             </Link>
           </span>
         ))}
-        <div className="border-light-100/[.02] w-full border" />
+        <div className="w-full border border-light-100/[.02]" />
         <div className="flex flex-row items-center justify-center gap-3">
           {props.communityNavItems.map((item) => (
             <a key={item.label} href={item.href} target="_blank" rel="noreferrer">
@@ -73,7 +73,7 @@ export function MobileMenu(props: {
           ))}
         </div>
         <div className="flex flex-row items-center justify-center gap-1">
-          <div className="text-grey-400 text-sm tabular-nums">Powered by</div>
+          <div className="text-sm tabular-nums text-grey-400">Powered by</div>
           <UmaIcon />
         </div>
       </div>

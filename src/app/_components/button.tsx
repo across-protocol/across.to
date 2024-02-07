@@ -7,7 +7,7 @@ export function Button({ className, children, ...props }: ButtonProps) {
   return (
     <button
       className={twMerge(
-        "tracking-wide-4 text-aqua-100 bg-aqua-100/[.05] border-aqua-100/[.05] h-10 rounded-full border px-6 py-2 text-xs uppercase shadow-sm hover:opacity-80",
+        "h-10 rounded-full border border-aqua-100/[.05] bg-aqua-100/[.05] px-6 py-2 text-xs uppercase tracking-wide-4 text-aqua-100 shadow-sm hover:opacity-80",
         className,
       )}
       {...props}

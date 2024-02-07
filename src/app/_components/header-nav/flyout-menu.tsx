@@ -17,7 +17,7 @@ type Props = {
 export function FlyoutMenu({ buttonLabel, menuItems, className }: Props) {
   return (
     <Popover className={twMerge("relative", className)}>
-      <Popover.Button className="text-md text-light-300 flex cursor-pointer items-center justify-center gap-1">
+      <Popover.Button className="flex cursor-pointer items-center justify-center gap-1 text-md text-light-300">
         {buttonLabel}
         <ChevronDownIcon />
       </Popover.Button>
@@ -35,7 +35,7 @@ export function FlyoutMenu({ buttonLabel, menuItems, className }: Props) {
             "absolute left-40 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4",
           )}
         >
-          <div className="bg-grey-light w-screen max-w-md flex-auto overflow-hidden rounded-3xl text-sm shadow-sm">
+          <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-grey-light text-sm shadow-sm">
             <div className="p-4">
               {menuItems.map((item) => (
                 <span key={item.href} className="group">
@@ -52,7 +52,7 @@ export function FlyoutMenu({ buttonLabel, menuItems, className }: Props) {
                     </IconBox>
                     <div className="flex flex-col">
                       <div className="text-light-100">{item.label}</div>
-                      <div className="text-light-300 text-sm tabular-nums">
+                      <div className="text-sm tabular-nums text-light-300">
                         {item.description}
                       </div>
                     </div>
