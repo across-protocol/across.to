@@ -10,7 +10,7 @@ export function ChecklistIcon(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <rect width="25.5" height="25.5" rx="6" fill="#AA81FF" fill-opacity="0.2" />
+      <rect width="25.5" height="25.5" rx="6" fill="#AA81FF" fillOpacity="0.2" />
       <rect
         opacity="0.5"
         y="35.25"
@@ -18,7 +18,7 @@ export function ChecklistIcon(props: SVGProps<SVGSVGElement>) {
         height="25.5"
         rx="6"
         fill="#AA81FF"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
       <rect
         opacity="0.2"
@@ -27,16 +27,9 @@ export function ChecklistIcon(props: SVGProps<SVGSVGElement>) {
         height="25.5"
         rx="6"
         fill="#AA81FF"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
-      <rect
-        x="70.5"
-        width="25.5"
-        height="25.5"
-        rx="6"
-        fill="#AA81FF"
-        fill-opacity="0.2"
-      />
+      <rect x="70.5" width="25.5" height="25.5" rx="6" fill="#AA81FF" fillOpacity="0.2" />
       <rect
         opacity="0.5"
         x="70.5"
@@ -45,7 +38,7 @@ export function ChecklistIcon(props: SVGProps<SVGSVGElement>) {
         height="25.5"
         rx="6"
         fill="#AA81FF"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
       <rect
         opacity="0.2"
@@ -55,49 +48,49 @@ export function ChecklistIcon(props: SVGProps<SVGSVGElement>) {
         height="25.5"
         rx="6"
         fill="#AA81FF"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
       <path
         d="M39.4297 46.8594L45.7154 53.1452L58.2868 40.5737"
         stroke="black"
-        stroke-width="6.28571"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="6.28571"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M39.4297 46.8594L45.7154 53.1452L58.2868 40.5737"
         stroke="url(#paint0_linear_564_7356)"
-        stroke-width="6.28571"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="6.28571"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M39.4297 12.8585L45.7154 19.1442L58.2868 6.57275"
         stroke="black"
-        stroke-width="6.28571"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="6.28571"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M39.4297 12.8585L45.7154 19.1442L58.2868 6.57275"
         stroke="url(#paint1_linear_564_7356)"
-        stroke-width="6.28571"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="6.28571"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M39.4297 81.4298L45.7154 87.7155L58.2868 75.144"
         stroke="black"
-        stroke-width="6.28571"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="6.28571"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M39.4297 81.4298L45.7154 87.7155L58.2868 75.144"
         stroke="url(#paint2_linear_564_7356)"
-        stroke-width="6.28571"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="6.28571"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <defs>
         <linearGradient
@@ -108,13 +101,13 @@ export function ChecklistIcon(props: SVGProps<SVGSVGElement>) {
           y2="53.1452"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#A26CF9" />
-          <stop offset="0.386534" stop-color="#CEB1FF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#3B009A" />
-          <stop offset="0.620948" stop-color="#D8C1FF" />
-          <stop offset="0.708229" stop-color="#542999" />
-          <stop offset="0.78803" stop-color="#CCADFF" />
+          <stop offset="0.234414" stopColor="#A26CF9" />
+          <stop offset="0.386534" stopColor="#CEB1FF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#3B009A" />
+          <stop offset="0.620948" stopColor="#D8C1FF" />
+          <stop offset="0.708229" stopColor="#542999" />
+          <stop offset="0.78803" stopColor="#CCADFF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_564_7356"
@@ -124,13 +117,13 @@ export function ChecklistIcon(props: SVGProps<SVGSVGElement>) {
           y2="19.1442"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#A26CF9" />
-          <stop offset="0.386534" stop-color="#CEB1FF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#3B009A" />
-          <stop offset="0.620948" stop-color="#D8C1FF" />
-          <stop offset="0.708229" stop-color="#542999" />
-          <stop offset="0.78803" stop-color="#CCADFF" />
+          <stop offset="0.234414" stopColor="#A26CF9" />
+          <stop offset="0.386534" stopColor="#CEB1FF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#3B009A" />
+          <stop offset="0.620948" stopColor="#D8C1FF" />
+          <stop offset="0.708229" stopColor="#542999" />
+          <stop offset="0.78803" stopColor="#CCADFF" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_564_7356"
@@ -140,13 +133,13 @@ export function ChecklistIcon(props: SVGProps<SVGSVGElement>) {
           y2="87.7155"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#A26CF9" />
-          <stop offset="0.386534" stop-color="#CEB1FF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#3B009A" />
-          <stop offset="0.620948" stop-color="#D8C1FF" />
-          <stop offset="0.708229" stop-color="#542999" />
-          <stop offset="0.78803" stop-color="#CCADFF" />
+          <stop offset="0.234414" stopColor="#A26CF9" />
+          <stop offset="0.386534" stopColor="#CEB1FF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#3B009A" />
+          <stop offset="0.620948" stopColor="#D8C1FF" />
+          <stop offset="0.708229" stopColor="#542999" />
+          <stop offset="0.78803" stopColor="#CCADFF" />
         </linearGradient>
       </defs>
     </svg>
