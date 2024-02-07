@@ -14,8 +14,10 @@ const config: Config = {
         300: "#C5D5E0",
       },
       grey: {
+        light: "#313237",
         dark: "#2D2E33",
         400: "#9DAAB3",
+        600: "#3E4047",
       },
       aqua: {
         100: "#6CF9D8",
@@ -47,12 +49,25 @@ const config: Config = {
       "tight-4": "-0.12rem", // -1.92px
       "tight-5": "-0.04rem", // -0.64px
       "tight-6": "-0.03rem", // -0.48px
+      "wide-4": "0.12rem", // 1.92px
     },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      dropShadow: {
+        aqua: [
+          "0px 0px 13.811px #6CF9D8",
+          "0px 0px 9.865px #00A27C",
+          "0px 0px 2.631px rgba(0, 0, 0, 0.25)",
+        ],
+        teal: [
+          "0px 0px 13.811px #7FE9E1",
+          "0px 0px 9.865px #7FBCE9",
+          "0px 0px 2.631px rgba(0, 0, 0, 0.25)",
+        ],
+        purple: [
+          "0px 0px 13.811px #E66DFA",
+          "0px 0px 9.865px #974AE4",
+          "0px 0px 2.631px rgba(0, 0, 0, 0.25)",
+        ],
       },
     },
   },
