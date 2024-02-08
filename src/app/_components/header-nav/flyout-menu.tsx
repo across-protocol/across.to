@@ -17,7 +17,7 @@ type Props = {
 export function FlyoutMenu({ buttonLabel, menuItems, className }: Props) {
   return (
     <Popover className={twMerge("relative", className)}>
-      <Popover.Button className="flex cursor-pointer items-center justify-center gap-1 text-md text-light-300">
+      <Popover.Button className="flex cursor-pointer items-center justify-center gap-1 text-md text-light-300 focus-visible:outline-none">
         {buttonLabel}
         <ChevronDownIcon />
       </Popover.Button>
