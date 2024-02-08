@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 import { Barlow } from "next/font/google";
 
 import { HeaderNav } from "@/app/_components/header-nav";
+import { Footer } from "@/app/_components/footer";
 
 import "./globals.css";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         <div>
           <HeaderNav />
           {children}
+          <Footer />
         </div>
       </body>
     </html>
