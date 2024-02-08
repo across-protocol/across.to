@@ -12,9 +12,15 @@ type Props = {
   buttonLabel: string;
   menuItems: NavItem[];
   className?: string;
+  useExternalLinks?: boolean;
 };
 
-export function FlyoutMenu({ buttonLabel, menuItems, className }: Props) {
+export function FlyoutMenu({
+  useExternalLinks,
+  buttonLabel,
+  menuItems,
+  className,
+}: Props) {
   return (
     <Popover className={twMerge("relative", className)}>
       <Popover.Button className="flex cursor-pointer items-center justify-center gap-1 text-md text-light-300 focus-visible:outline-none">
@@ -40,12 +46,14 @@ export function FlyoutMenu({ buttonLabel, menuItems, className }: Props) {
               {menuItems.map((item) => (
                 <span key={item.href} className="group">
                   <Popover.Button
-                    as={Link}
+                    as={useExternalLinks ? "a" : Link}
                     href={item.href}
                     className={twMerge(
                       "flex flex-row gap-4 rounded-3xl p-4 transition group-hover:shadow-sm",
                       item.containerClassName,
                     )}
+                    target={useExternalLinks ? "_blank" : undefined}
+                    rel={useExternalLinks ? "noopener noreferrer" : undefined}
                   >
                     <IconBox className={item.iconContainerClassName}>
                       <item.Icon className={item.iconClassName} />
