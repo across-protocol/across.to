@@ -80,7 +80,7 @@ export function HeaderNav() {
   );
 
   return (
-    <header className="bg-grey-dark sticky top-0">
+    <header className="sticky top-0 bg-grey-dark">
       <nav className="mx-auto max-w-7xl p-4">
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row items-center">
@@ -117,7 +117,7 @@ export function HeaderNav() {
             </Button>
             {/* Only show menu button on mobile */}
             <button
-              className="border-grey-600 flex h-10 w-10 items-center justify-center rounded-full border sm:hidden"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-grey-600 sm:hidden"
               onClick={() => setIsMenuOpen((isMenuOpen) => !isMenuOpen)}
             >
               {isMenuOpen ? <MinusIcon /> : <MenuIcon />}

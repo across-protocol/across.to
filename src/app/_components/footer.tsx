@@ -87,7 +87,7 @@ export function Footer() {
           <FooterBox label="information" items={information} useExternalLinks />
         </div>
       </div>
-      <div className="text-grey-400 flex flex-row items-center justify-center gap-1 lining-nums  tabular-nums">
+      <div className="flex flex-row items-center justify-center gap-1 lining-nums tabular-nums  text-grey-400">
         Powered by
         <UmaIcon />
       </div>
@@ -102,7 +102,7 @@ function FooterBox(props: {
 }) {
   return (
     <div className="flex flex-col gap-5">
-      <div className="tracking-wide-4 text-grey-400 text-xs uppercase lining-nums tabular-nums">
+      <div className="text-xs uppercase lining-nums tabular-nums tracking-wide-4 text-grey-400">
         {props.label}
       </div>
       <div className="flex flex-col gap-5">
