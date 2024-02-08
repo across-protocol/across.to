@@ -1,4 +1,11 @@
 export { AcrossIcon } from "./across";
+export { UmaIcon } from "./uma";
+export { MenuIcon } from "./menu";
+export { MinusIcon } from "./minus";
+export { DiscordIcon } from "./discord";
+export { MediumIcon } from "./medium";
+export { TwitterIcon } from "./twitter";
+export { ChevronDownIcon } from "./chevron-down";
 
 // Gradient icons
 export { ArrowUpIcon } from "./gradient/arrow-up";

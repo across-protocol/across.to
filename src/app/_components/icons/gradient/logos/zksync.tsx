@@ -11,26 +11,26 @@ export function ZkSyncIcon({ variant = "aqua", ...props }: LogoIconProps) {
       fill="none"
       {...props}
     >
-      <g clip-path="url(#clip0_564_7544)">
+      <g clipPath="url(#clip0_564_7544)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M53.9094 15.792L38.8289 0.638184V11.7363L23.8555 22.8478L38.8289 22.8581V30.9458L53.9094 15.792Z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M53.9094 15.792L38.8289 0.638184V11.7363L23.8555 22.8478L38.8289 22.8581V30.9458L53.9094 15.792Z"
           fill={`url(#${linearGradientBasedId}_1)`}
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M0.757812 15.7856L15.8383 30.9394V19.9589L30.702 8.84005L15.8383 8.82974V0.631836L0.757812 15.7856Z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M0.757812 15.7856L15.8383 30.9394V19.9589L30.702 8.84005L15.8383 8.82974V0.631836L0.757812 15.7856Z"
           fill={`url(#${linearGradientBasedId}_2)`}
         />
@@ -43,9 +43,9 @@ export function ZkSyncIcon({ variant = "aqua", ...props }: LogoIconProps) {
           width="72"
           height="73"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="6.75" />
           <feComposite
             in2="SourceAlpha"
@@ -67,13 +67,13 @@ export function ZkSyncIcon({ variant = "aqua", ...props }: LogoIconProps) {
           y2="30.9458"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#6CF9D8" />
-          <stop offset="0.386534" stop-color="#B1FFED" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#009A76" />
-          <stop offset="0.620948" stop-color="#C1FFF0" />
-          <stop offset="0.708229" stop-color="#29997F" />
-          <stop offset="0.78803" stop-color="#ADFFEC" />
+          <stop offset="0.234414" stopColor="#6CF9D8" />
+          <stop offset="0.386534" stopColor="#B1FFED" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#009A76" />
+          <stop offset="0.620948" stopColor="#C1FFF0" />
+          <stop offset="0.708229" stopColor="#29997F" />
+          <stop offset="0.78803" stopColor="#ADFFEC" />
         </linearGradient>
         <linearGradient
           id="paint_linear_gradient_purple_1"
@@ -83,13 +83,13 @@ export function ZkSyncIcon({ variant = "aqua", ...props }: LogoIconProps) {
           y2="49.0705"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#A26CF9" />
-          <stop offset="0.386534" stop-color="#CEB1FF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#3B009A" />
-          <stop offset="0.620948" stop-color="#D8C1FF" />
-          <stop offset="0.708229" stop-color="#542999" />
-          <stop offset="0.78803" stop-color="#CCADFF" />
+          <stop offset="0.234414" stopColor="#A26CF9" />
+          <stop offset="0.386534" stopColor="#CEB1FF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#3B009A" />
+          <stop offset="0.620948" stopColor="#D8C1FF" />
+          <stop offset="0.708229" stopColor="#542999" />
+          <stop offset="0.78803" stopColor="#CCADFF" />
         </linearGradient>
         <linearGradient
           id="paint_linear_gradient_teal_1"
@@ -99,13 +99,13 @@ export function ZkSyncIcon({ variant = "aqua", ...props }: LogoIconProps) {
           y2="30.9458"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#6CD3F9" />
-          <stop offset="0.386534" stop-color="#B1EAFF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#00719A" />
-          <stop offset="0.620948" stop-color="#C1EEFF" />
-          <stop offset="0.708229" stop-color="#297B99" />
-          <stop offset="0.78803" stop-color="#ADE9FF" />
+          <stop offset="0.234414" stopColor="#6CD3F9" />
+          <stop offset="0.386534" stopColor="#B1EAFF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#00719A" />
+          <stop offset="0.620948" stopColor="#C1EEFF" />
+          <stop offset="0.708229" stopColor="#297B99" />
+          <stop offset="0.78803" stopColor="#ADE9FF" />
         </linearGradient>
         <linearGradient
           id="paint_linear_gradient_aqua_2"
@@ -115,13 +115,13 @@ export function ZkSyncIcon({ variant = "aqua", ...props }: LogoIconProps) {
           y2="30.9394"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#6CF9D8" />
-          <stop offset="0.386534" stop-color="#B1FFED" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#009A76" />
-          <stop offset="0.620948" stop-color="#C1FFF0" />
-          <stop offset="0.708229" stop-color="#29997F" />
-          <stop offset="0.78803" stop-color="#ADFFEC" />
+          <stop offset="0.234414" stopColor="#6CF9D8" />
+          <stop offset="0.386534" stopColor="#B1FFED" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#009A76" />
+          <stop offset="0.620948" stopColor="#C1FFF0" />
+          <stop offset="0.708229" stopColor="#29997F" />
+          <stop offset="0.78803" stopColor="#ADFFEC" />
         </linearGradient>
         <linearGradient
           id="paint_linear_gradient_purple_2"
@@ -131,13 +131,13 @@ export function ZkSyncIcon({ variant = "aqua", ...props }: LogoIconProps) {
           y2="49.064"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#A26CF9" />
-          <stop offset="0.386534" stop-color="#CEB1FF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#3B009A" />
-          <stop offset="0.620948" stop-color="#D8C1FF" />
-          <stop offset="0.708229" stop-color="#542999" />
-          <stop offset="0.78803" stop-color="#CCADFF" />
+          <stop offset="0.234414" stopColor="#A26CF9" />
+          <stop offset="0.386534" stopColor="#CEB1FF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#3B009A" />
+          <stop offset="0.620948" stopColor="#D8C1FF" />
+          <stop offset="0.708229" stopColor="#542999" />
+          <stop offset="0.78803" stopColor="#CCADFF" />
         </linearGradient>
         <linearGradient
           id="paint_linear_gradient_teal_2"
@@ -147,13 +147,13 @@ export function ZkSyncIcon({ variant = "aqua", ...props }: LogoIconProps) {
           y2="30.9394"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#6CD3F9" />
-          <stop offset="0.386534" stop-color="#B1EAFF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#00719A" />
-          <stop offset="0.620948" stop-color="#C1EEFF" />
-          <stop offset="0.708229" stop-color="#297B99" />
-          <stop offset="0.78803" stop-color="#ADE9FF" />
+          <stop offset="0.234414" stopColor="#6CD3F9" />
+          <stop offset="0.386534" stopColor="#B1EAFF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#00719A" />
+          <stop offset="0.620948" stopColor="#C1EEFF" />
+          <stop offset="0.708229" stopColor="#297B99" />
+          <stop offset="0.78803" stopColor="#ADE9FF" />
         </linearGradient>
         <clipPath id="clip0_564_7528">
           <rect width="45" height="46" fill="white" transform="translate(0 0.5)" />

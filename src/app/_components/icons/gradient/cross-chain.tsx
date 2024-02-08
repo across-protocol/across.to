@@ -9,7 +9,7 @@ export function CrossChainIcon(props: SVGProps<SVGSVGElement>) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="25.5" height="25.5" rx="6" fill="#AA81FF" fill-opacity="0.2" />
+      <rect width="25.5" height="25.5" rx="6" fill="#AA81FF" fillOpacity="0.2" />
       <rect
         opacity="0.5"
         y="35.25"
@@ -17,7 +17,7 @@ export function CrossChainIcon(props: SVGProps<SVGSVGElement>) {
         height="25.5"
         rx="6"
         fill="#AA81FF"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
       <rect
         opacity="0.2"
@@ -26,16 +26,9 @@ export function CrossChainIcon(props: SVGProps<SVGSVGElement>) {
         height="25.5"
         rx="6"
         fill="#AA81FF"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
-      <rect
-        x="70.5"
-        width="25.5"
-        height="25.5"
-        rx="6"
-        fill="#AA81FF"
-        fill-opacity="0.2"
-      />
+      <rect x="70.5" width="25.5" height="25.5" rx="6" fill="#AA81FF" fillOpacity="0.2" />
       <rect
         opacity="0.5"
         x="70.5"
@@ -44,7 +37,7 @@ export function CrossChainIcon(props: SVGProps<SVGSVGElement>) {
         height="25.5"
         rx="6"
         fill="#AA81FF"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
       <rect
         opacity="0.2"
@@ -54,9 +47,9 @@ export function CrossChainIcon(props: SVGProps<SVGSVGElement>) {
         height="25.5"
         rx="6"
         fill="#AA81FF"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
-      <rect x="36" width="25.5" height="25.5" rx="6" fill="#AA81FF" fill-opacity="0.2" />
+      <rect x="36" width="25.5" height="25.5" rx="6" fill="#AA81FF" fillOpacity="0.2" />
       <rect x="36" y="35.25" width="25.5" height="25.5" rx="12.75" fill="#D9D9D9" />
       <rect
         x="36"
@@ -74,7 +67,7 @@ export function CrossChainIcon(props: SVGProps<SVGSVGElement>) {
         height="25.5"
         rx="6"
         fill="#AA81FF"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
       <circle
         cx="48.8583"
@@ -95,13 +88,13 @@ export function CrossChainIcon(props: SVGProps<SVGSVGElement>) {
           y2="60.75"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#A26CF9" />
-          <stop offset="0.386534" stop-color="#CEB1FF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#3B009A" />
-          <stop offset="0.620948" stop-color="#D8C1FF" />
-          <stop offset="0.708229" stop-color="#542999" />
-          <stop offset="0.78803" stop-color="#CCADFF" />
+          <stop offset="0.234414" stopColor="#A26CF9" />
+          <stop offset="0.386534" stopColor="#CEB1FF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#3B009A" />
+          <stop offset="0.620948" stopColor="#D8C1FF" />
+          <stop offset="0.708229" stopColor="#542999" />
+          <stop offset="0.78803" stopColor="#CCADFF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_564_7369"
@@ -111,13 +104,13 @@ export function CrossChainIcon(props: SVGProps<SVGSVGElement>) {
           y2="82.2859"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#A26CF9" />
-          <stop offset="0.386534" stop-color="#CEB1FF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#3B009A" />
-          <stop offset="0.620948" stop-color="#D8C1FF" />
-          <stop offset="0.708229" stop-color="#542999" />
-          <stop offset="0.78803" stop-color="#CCADFF" />
+          <stop offset="0.234414" stopColor="#A26CF9" />
+          <stop offset="0.386534" stopColor="#CEB1FF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#3B009A" />
+          <stop offset="0.620948" stopColor="#D8C1FF" />
+          <stop offset="0.708229" stopColor="#542999" />
+          <stop offset="0.78803" stopColor="#CCADFF" />
         </linearGradient>
       </defs>
     </svg>

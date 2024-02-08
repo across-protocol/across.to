@@ -10,14 +10,14 @@ export function ShieldLargeIcon(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <rect width="96" height="25.7143" rx="6" fill="#6CF9D8" fill-opacity="0.15" />
+      <rect width="96" height="25.7143" rx="6" fill="#6CF9D8" fillOpacity="0.15" />
       <rect
         y="35.0356"
         width="96"
         height="25.7143"
         rx="6"
         fill="#6CF9D8"
-        fill-opacity="0.15"
+        fillOpacity="0.15"
       />
       <rect
         y="70.2856"
@@ -25,7 +25,7 @@ export function ShieldLargeIcon(props: SVGProps<SVGSVGElement>) {
         height="25.7143"
         rx="6"
         fill="#6CF9D8"
-        fill-opacity="0.15"
+        fillOpacity="0.15"
       />
       <g filter="url(#filter0_d_564_7400)">
         <path
@@ -45,9 +45,9 @@ export function ShieldLargeIcon(props: SVGProps<SVGSVGElement>) {
           width="76.8659"
           height="89.7819"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -81,13 +81,13 @@ export function ShieldLargeIcon(props: SVGProps<SVGSVGElement>) {
           y2="81.2573"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#6CD3F9" />
-          <stop offset="0.386534" stop-color="#B1EAFF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#00719A" />
-          <stop offset="0.620948" stop-color="#C1EEFF" />
-          <stop offset="0.708229" stop-color="#297B99" />
-          <stop offset="0.78803" stop-color="#ADE9FF" />
+          <stop offset="0.234414" stopColor="#6CD3F9" />
+          <stop offset="0.386534" stopColor="#B1EAFF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#00719A" />
+          <stop offset="0.620948" stopColor="#C1EEFF" />
+          <stop offset="0.708229" stopColor="#297B99" />
+          <stop offset="0.78803" stopColor="#ADE9FF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_564_7400"
@@ -97,13 +97,13 @@ export function ShieldLargeIcon(props: SVGProps<SVGSVGElement>) {
           y2="81.2573"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#6CF9D8" />
-          <stop offset="0.386534" stop-color="#B1FFED" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#009A76" />
-          <stop offset="0.620948" stop-color="#C1FFF0" />
-          <stop offset="0.708229" stop-color="#29997F" />
-          <stop offset="0.78803" stop-color="#ADFFEC" />
+          <stop offset="0.234414" stopColor="#6CF9D8" />
+          <stop offset="0.386534" stopColor="#B1FFED" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#009A76" />
+          <stop offset="0.620948" stopColor="#C1FFF0" />
+          <stop offset="0.708229" stopColor="#29997F" />
+          <stop offset="0.78803" stopColor="#ADFFEC" />
         </linearGradient>
       </defs>
     </svg>

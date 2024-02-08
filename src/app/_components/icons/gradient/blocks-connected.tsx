@@ -10,7 +10,7 @@ export function BlocksConnectedIcon(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <rect width="46.2857" height="25.7143" rx="6" fill="#AA81FF" fill-opacity="0.2" />
+      <rect width="46.2857" height="25.7143" rx="6" fill="#AA81FF" fillOpacity="0.2" />
       <rect
         opacity="0.2"
         y="70.2856"
@@ -18,7 +18,7 @@ export function BlocksConnectedIcon(props: SVGProps<SVGSVGElement>) {
         height="25.7143"
         rx="6"
         fill="#AA81FF"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
       <rect
         opacity="0.5"
@@ -28,7 +28,7 @@ export function BlocksConnectedIcon(props: SVGProps<SVGSVGElement>) {
         height="25.7143"
         rx="6"
         fill="#AA81FF"
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       />
       <path
         d="M34.2874 18.8569H22.8588C19.7029 18.8569 17.1445 21.4153 17.1445 24.5712V35.9998C17.1445 39.1557 19.7029 41.7141 22.8588 41.7141H34.2874C37.4433 41.7141 40.0017 39.1557 40.0017 35.9998V24.5712C40.0017 21.4153 37.4433 18.8569 34.2874 18.8569Z"
@@ -39,14 +39,14 @@ export function BlocksConnectedIcon(props: SVGProps<SVGSVGElement>) {
         fill="url(#paint0_linear_564_7341)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M28.572 47.4272C30.1499 47.4272 31.4291 48.7064 31.4291 50.2844V61.713C31.4291 62.4707 31.7301 63.1974 32.266 63.7333C32.8018 64.2691 33.5285 64.5701 34.2863 64.5701H45.7148C47.2928 64.5701 48.572 65.8493 48.572 67.4272C48.572 69.0052 47.2928 70.2844 45.7148 70.2844H34.2863C32.013 70.2844 29.8328 69.3813 28.2254 67.7739C26.6179 66.1664 25.7148 63.9862 25.7148 61.713V50.2844C25.7148 48.7064 26.994 47.4272 28.572 47.4272Z"
         fill="black"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M28.572 47.4272C30.1499 47.4272 31.4291 48.7064 31.4291 50.2844V61.713C31.4291 62.4707 31.7301 63.1974 32.266 63.7333C32.8018 64.2691 33.5285 64.5701 34.2863 64.5701H45.7148C47.2928 64.5701 48.572 65.8493 48.572 67.4272C48.572 69.0052 47.2928 70.2844 45.7148 70.2844H34.2863C32.013 70.2844 29.8328 69.3813 28.2254 67.7739C26.6179 66.1664 25.7148 63.9862 25.7148 61.713V50.2844C25.7148 48.7064 26.994 47.4272 28.572 47.4272Z"
         fill="url(#paint1_linear_564_7341)"
       />
@@ -67,13 +67,13 @@ export function BlocksConnectedIcon(props: SVGProps<SVGSVGElement>) {
           y2="41.7141"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#A26CF9" />
-          <stop offset="0.386534" stop-color="#CEB1FF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#3B009A" />
-          <stop offset="0.620948" stop-color="#D8C1FF" />
-          <stop offset="0.708229" stop-color="#542999" />
-          <stop offset="0.78803" stop-color="#CCADFF" />
+          <stop offset="0.234414" stopColor="#A26CF9" />
+          <stop offset="0.386534" stopColor="#CEB1FF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#3B009A" />
+          <stop offset="0.620948" stopColor="#D8C1FF" />
+          <stop offset="0.708229" stopColor="#542999" />
+          <stop offset="0.78803" stopColor="#CCADFF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_564_7341"
@@ -83,13 +83,13 @@ export function BlocksConnectedIcon(props: SVGProps<SVGSVGElement>) {
           y2="67.4272"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#A26CF9" />
-          <stop offset="0.386534" stop-color="#CEB1FF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#3B009A" />
-          <stop offset="0.620948" stop-color="#D8C1FF" />
-          <stop offset="0.708229" stop-color="#542999" />
-          <stop offset="0.78803" stop-color="#CCADFF" />
+          <stop offset="0.234414" stopColor="#A26CF9" />
+          <stop offset="0.386534" stopColor="#CEB1FF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#3B009A" />
+          <stop offset="0.620948" stopColor="#D8C1FF" />
+          <stop offset="0.708229" stopColor="#542999" />
+          <stop offset="0.78803" stopColor="#CCADFF" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_564_7341"
@@ -99,13 +99,13 @@ export function BlocksConnectedIcon(props: SVGProps<SVGSVGElement>) {
           y2="78.8557"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#A26CF9" />
-          <stop offset="0.386534" stop-color="#CEB1FF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#3B009A" />
-          <stop offset="0.620948" stop-color="#D8C1FF" />
-          <stop offset="0.708229" stop-color="#542999" />
-          <stop offset="0.78803" stop-color="#CCADFF" />
+          <stop offset="0.234414" stopColor="#A26CF9" />
+          <stop offset="0.386534" stopColor="#CEB1FF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#3B009A" />
+          <stop offset="0.620948" stopColor="#D8C1FF" />
+          <stop offset="0.708229" stopColor="#542999" />
+          <stop offset="0.78803" stopColor="#CCADFF" />
         </linearGradient>
       </defs>
     </svg>
