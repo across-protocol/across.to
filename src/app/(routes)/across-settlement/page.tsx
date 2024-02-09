@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import Image from "next/image";
+
+import { Hero } from "@/app/_components/hero";
 
 export const metadata: Metadata = {
   title: "Across Settlement",
@@ -8,8 +9,10 @@ export const metadata: Metadata = {
 
 export default function SettlementLanding() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Settlement
+    <main className="z-0 min-h-screen overflow-hidden">
+      <Hero>
+        <div className="py-10 text-center">Across Settlement</div>
+      </Hero>
     </main>
   );
 }

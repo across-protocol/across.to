@@ -9,6 +9,7 @@ export { TwitterIcon } from "./twitter";
 export { ChevronDownIcon } from "./chevron-down";
 export { QuestionMarkIcon } from "./question-mark";
 export { DocumentIcon } from "./document";
+export { Partner1Icon } from "./partner-1";
 
 // Gradient icons
 export { ArrowUpIcon } from "./gradient/arrow-up";
