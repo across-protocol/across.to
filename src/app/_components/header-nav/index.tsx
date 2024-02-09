@@ -17,6 +17,7 @@ import {
   MediumIcon,
 } from "../icons";
 import { Button } from "../button";
+import { PRODUCT_LINKS, SOCIAL_LINKS } from "@/app/_constants";
 
 import { FlyoutMenu } from "./flyout-menu";
 import { MobileMenu } from "./mobile-menu";
@@ -24,27 +25,21 @@ import { ProductsSubNav } from "./products-sub-nav";
 
 const productsNavigationItems = [
   {
-    label: "Across Bridge",
-    description: "Bridge Without Compromise",
-    href: "/across-bridge",
+    ...PRODUCT_LINKS.bridge,
     Icon: BridgeIcon,
     iconClassName: "group-hover:drop-shadow-aqua h-4 w-4",
     iconContainerClassName: "bg-aqua-100/[.05]",
     containerClassName: "group-hover:bg-aqua-100/[.05]",
   },
   {
-    label: "Across+",
-    description: "Cross-chain Bridge hooks to Fullfill User intents",
-    href: "/across-plus",
+    ...PRODUCT_LINKS.plus,
     Icon: PlusIcon,
     iconClassName: "group-hover:drop-shadow-teal h-5 w-5",
     iconContainerClassName: "bg-teal-100/[.05]",
     containerClassName: "group-hover:bg-teal-100/[.05]",
   },
   {
-    label: "Across Settlement",
-    description: "Cross-chain Intents Settlement Layer",
-    href: "/across-settlement",
+    ...PRODUCT_LINKS.settlement,
     Icon: CheckmarkSimpleIcon,
     iconClassName: "group-hover:drop-shadow-purple h-4 w-5",
     iconContainerClassName: "bg-purple-100/[.05]",
@@ -54,27 +49,21 @@ const productsNavigationItems = [
 
 const communityNavigationItems = [
   {
-    label: "Discord",
-    description: "Access support and chat with community members",
-    href: "https://discord.com/invite/sKSkhTtu8s",
+    ...SOCIAL_LINKS.discord,
     Icon: DiscordIcon,
     iconClassName: "h-4 w-5",
     iconContainerClassName: "bg-light-100/[.05]",
     containerClassName: "group-hover:bg-light-100/[.05]",
   },
   {
-    label: "Twitter",
-    description: "Follow for the latest updates on Across",
-    href: "https://twitter.com/AcrossProtocol",
+    ...SOCIAL_LINKS.twitter,
     Icon: TwitterIcon,
     iconClassName: "h-4 w-4",
     iconContainerClassName: "bg-light-100/[.05]",
     containerClassName: "group-hover:bg-light-100/[.05]",
   },
   {
-    label: "Medium",
-    description: "Read deep dives on Across infra and campaigns",
-    href: "https://medium.com/across-protocol",
+    ...SOCIAL_LINKS.medium,
     Icon: MediumIcon,
     iconClassName: "h-3 w-5",
     iconContainerClassName: "bg-light-100/[.05]",
@@ -91,7 +80,7 @@ export function HeaderNav() {
   );
 
   return (
-    <header className="sticky top-0">
+    <header className="sticky top-0 bg-grey-dark">
       <nav className="mx-auto max-w-7xl p-4">
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row items-center">
