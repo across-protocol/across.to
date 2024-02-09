@@ -20,7 +20,7 @@ export const SOCIAL_LINKS = {
   discord: {
     label: "Discord",
     description: "Access support and chat with community members",
-    href: "https://discord.com/invite/sKSkhTtu8s",
+    href: "discord.across.to",
   },
   twitter: {
     label: "Twitter",
