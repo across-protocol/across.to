@@ -44,7 +44,7 @@ export function PartnersTicker() {
               {partnersToRender.map((partner, index) => (
                 <div
                   key={index}
-                  className="animate-scroll flex h-[var(--slide-height)] w-[var(--slide-width)] flex-auto flex-shrink-0 flex-grow-0 flex-col items-center"
+                  className="flex h-[var(--slide-height)] w-[var(--slide-width)] flex-auto flex-shrink-0 flex-grow-0 animate-scroll flex-col items-center"
                 >
                   {/* Note: partner.name only for testing purposes */}
                   {/* FIXME: remove before deploying to prod */}
@@ -56,7 +56,7 @@ export function PartnersTicker() {
           </div>
         </div>
         {/* Fade in/out overlay */}
-        <div className="via-transparent absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-r from-grey-dark via-50% to-grey-dark bg-fixed sm:from-10% sm:to-90% xl:from-25% xl:to-75%" />
+        <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-r from-grey-dark via-transparent via-50% to-grey-dark bg-fixed sm:from-10% sm:to-90% xl:from-25% xl:to-75%" />
       </div>
     </>
   );
