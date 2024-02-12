@@ -22,14 +22,14 @@ export function StatBox({
     <div className="group">
       <div
         className={twMerge(
-          "group flex flex-col rounded-2xl border border-grey-600 px-4 pb-6 transition",
+          "group flex flex-col rounded-2xl border border-grey-600 px-4 pb-6 transition sm:pb-10",
           className,
         )}
         {...props}
       >
         <div
           className={twMerge(
-            "mb-4 h-1 w-11 self-center rounded-b-[12px] rounded-t-none bg-grey-600",
+            "mb-6 h-1 w-11 self-center rounded-b-[12px] rounded-t-none bg-grey-600 sm:mb-10",
             dividerClassName,
           )}
         />
