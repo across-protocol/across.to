@@ -10,8 +10,8 @@ export function HeroSection() {
   return (
     <Hero>
       <div className="container mx-auto flex flex-col items-center gap-16 px-4 pb-16 pt-8 md:flex-row-reverse">
-        <div className="flex max-w-80 flex-1 sm:max-w-100 md:max-w-full">
-          <Image src={landingHeroSrc} alt="Picture of the author" />
+        <div className="sm:max-w-100 flex max-w-80 flex-1 md:max-w-full">
+          <Image src={landingHeroSrc} alt="Across protocol diagram" priority={true} />
         </div>
         <div className="flex flex-1 flex-col gap-6">
           <Text variant="heading-1" className="text-center md:text-left">
