@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { HeroSection } from "./_components/hero";
+import { HeroSection } from "./_components/hero-section";
 
 export const metadata: Metadata = {
   title: "Home | Across Protocol",

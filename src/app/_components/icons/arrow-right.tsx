@@ -13,16 +13,16 @@ export function ArrowRightIcon(props: SVGProps<SVGSVGElement>) {
       <path
         d="M3.33203 8H12.6654"
         stroke="#2D2E33"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M8 3.33334L12.6667 8.00001L8 12.6667"
         stroke="#2D2E33"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
