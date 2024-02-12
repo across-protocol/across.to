@@ -13,12 +13,14 @@
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "next": "14.1.0",
+    "numeral": "^2.0.6",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/numeral": "^2.0.5",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
