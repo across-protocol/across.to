@@ -9,11 +9,11 @@ export function HeroSection() {
   return (
     <Hero>
       <div className="container mx-auto flex flex-col items-center gap-16 px-4 pb-16 pt-8 md:flex-row-reverse">
-        <div className="sm:max-w-100 flex max-w-80 flex-1 md:max-w-full">
+        <div className="flex max-w-80 flex-1 sm:max-w-100 md:max-w-full">
           <Image src={landingHeroSrc} alt="Picture of the author" />
         </div>
         <div className="flex flex-1 flex-col gap-6">
-          <h1 className="font-lighter text-center text-heading-3 lining-nums tabular-nums tracking-tight-5 sm:text-heading-2 md:text-left md:text-heading-1">
+          <h1 className="text-center text-heading-3 font-lighter lining-nums tabular-nums tracking-tight-5 sm:text-heading-2 md:text-left md:text-heading-1">
             <span className="text-aqua-100">Interoperability</span>
             <br />
             <span className="text-light-100">Powered By</span>{" "}
