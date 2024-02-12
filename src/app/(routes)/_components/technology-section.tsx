@@ -23,7 +23,7 @@ const sections = [
 
 export function TechnologySection() {
   return (
-    <section className="*: container mx-auto flex flex-col gap-16 px-4 sm:gap-24              ">
+    <section className="container mx-auto flex flex-col gap-16 px-4 sm:gap-24              ">
       <div className="flex flex-col gap-4">
         <Text variant="cap-case" className="text-aqua-100 md:text-center">
           the technology
