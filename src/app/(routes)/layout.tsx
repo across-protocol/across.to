@@ -7,7 +7,11 @@ import { Footer } from "@/app/_components/footer";
 
 import "./globals.css";
 
-const inter = Barlow({ subsets: ["latin"], weight: ["200", "300", "400", "500"] });
+const inter = Barlow({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {

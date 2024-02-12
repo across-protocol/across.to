@@ -53,6 +53,22 @@ const config: Config = {
       "wide-4": "0.12rem", // 1.92px
     },
     extend: {
+      container: {
+        screens: {
+          xl: "1024px",
+          "2xl": "1024px",
+        },
+      },
+      screens: {
+        sm: "760px",
+        md: "900px",
+      },
+      fontWeight: {
+        lighter: "275",
+      },
+      maxWidth: {
+        "100": "400px",
+      },
       animation: {
         scroll: "scroll var(--iteration-time) linear infinite",
       },

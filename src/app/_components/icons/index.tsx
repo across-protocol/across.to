@@ -10,6 +10,7 @@ export { ChevronDownIcon } from "./chevron-down";
 export { QuestionMarkIcon } from "./question-mark";
 export { DocumentIcon } from "./document";
 export { Partner1Icon } from "./partner-1";
+export { ArrowRightIcon } from "./arrow-right";
 
 // Gradient icons
 export { ArrowUpIcon } from "./gradient/arrow-up";
