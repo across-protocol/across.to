@@ -1,7 +1,8 @@
 import { ComponentProps } from "react";
-import { twMerge } from "tailwind-merge";
+import { twJoin } from "tailwind-merge";
 
 type TextVariant =
+  | "body"
   | "cap-case"
   | "heading-1"
   | "heading-2"
@@ -10,10 +11,11 @@ type TextVariant =
   | "body-nums";
 
 type Props = ComponentProps<"div"> & {
-  variant: TextVariant;
+  variant?: TextVariant;
 };
 
 const textBaseClasses = {
+  body: "text-md",
   "cap-case":
     "text-medium text-xs uppercase lining-nums tabular-nums tracking-wide-4 sm:text-md",
   "heading-1":
@@ -27,9 +29,9 @@ const textBaseClasses = {
   "body-nums": "text-md lining-nums tabular-nums sm:text-lg",
 };
 
-export function Text({ variant, className, children, ...props }: Props) {
+export function Text({ variant = "body", className, children, ...props }: Props) {
   return (
-    <div className={twMerge(textBaseClasses[variant], className)} {...props}>
+    <div className={twJoin(textBaseClasses[variant], className)} {...props}>
       {children}
     </div>
   );

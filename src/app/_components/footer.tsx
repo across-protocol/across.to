@@ -135,7 +135,7 @@ function FooterBoxItem(props: {
       <IconBox className={twMerge("h-10 w-10", props.item.iconContainerClassName)}>
         <props.item.Icon className={props.item.iconClassName} />
       </IconBox>
-      <div className=" text-sm lining-nums tabular-nums">{props.item.label}</div>
+      <div className="text-sm lining-nums tabular-nums">{props.item.label}</div>
     </div>
   );
 }
