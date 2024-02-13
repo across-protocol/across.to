@@ -80,7 +80,7 @@ export function HeaderNav() {
   );
 
   return (
-    <header className="sticky top-0 bg-grey-dark">
+    <header className="sticky top-0 z-10 bg-grey-dark">
       <nav className="mx-auto max-w-7xl p-4">
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row items-center">

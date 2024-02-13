@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     colors: {
+      transparent: "transparent",
       light: {
         100: "#fff",
         200: "#F0FFFB",
@@ -52,6 +53,17 @@ const config: Config = {
       "wide-4": "0.12rem", // 1.92px
     },
     extend: {
+      animation: {
+        scroll: "scroll var(--iteration-time) linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": {
+            transform: "translateX(calc(var(--slide-width) * var(--no-of-slides)* -1))",
+          },
+        },
+      },
       dropShadow: {
         "aqua-sm": [
           "0px 0px 8.286px #6CF9D8",

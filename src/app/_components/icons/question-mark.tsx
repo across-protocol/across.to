@@ -25,7 +25,7 @@ export function QuestionMarkIcon(props: SVGProps<SVGSVGElement>) {
       <path
         d="M10 14.1667H10.0083"
         stroke="white"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
