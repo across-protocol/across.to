@@ -9,8 +9,8 @@ import { INFORMATION_LINKS } from "../../_constants";
 export function HeroSection() {
   return (
     <Hero>
-      <div className="container mx-auto flex flex-col items-center gap-16 px-4 pb-16 pt-8 md:flex-row-reverse">
-        <div className="flex max-w-80 flex-1 sm:max-w-100 md:max-w-full">
+      <div className="container mx-auto flex flex-col items-center gap-16 px-4 pb-16 pt-8 md:flex-row-reverse md:gap-0 md:pr-2">
+        <div className="sm:max-w-100 flex max-w-80 flex-1 md:max-w-full">
           <Image src={landingHeroSrc} alt="Across protocol diagram" priority={true} />
         </div>
         <div className="flex flex-1 flex-col gap-6">
