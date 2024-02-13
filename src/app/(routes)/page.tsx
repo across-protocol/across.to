@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { Hero } from "@/app/_components/hero";
+import { HeroSection } from "./_components/hero-section";
 
 export const metadata: Metadata = {
   title: "Home | Across Protocol",
@@ -10,9 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="z-0 min-h-screen overflow-hidden">
-      <Hero>
-        <div className="py-10 text-center">Home</div>
-      </Hero>
+      <HeroSection />
     </main>
   );
 }

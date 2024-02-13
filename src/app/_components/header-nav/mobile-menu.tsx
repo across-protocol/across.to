@@ -27,10 +27,10 @@ export function MobileMenu(props: {
       leaveTo="opacity-0 translate-y-1"
       show={props.isMenuOpen}
     >
-      <div className="absolute flex min-h-screen w-full flex-col gap-6 bg-grey-dark p-4 sm:hidden">
+      <div className="absolute flex min-h-screen w-full flex-col gap-6 bg-grey-dark p-4 md:hidden">
         <Button
           className={twMerge(
-            "sm:hidden",
+            "md:hidden",
             props.pathname === "/across-plus"
               ? "border-teal-100/[.05] bg-teal-100/[.05] text-teal-100"
               : props.pathname === "/across-settlement"

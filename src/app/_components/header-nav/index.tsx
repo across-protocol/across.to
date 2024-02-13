@@ -96,7 +96,7 @@ export function HeaderNav() {
                 )}
               />
             </Link>
-            <div className="hidden flex-row items-center gap-6 sm:flex">
+            <div className="hidden flex-row items-center gap-6 md:flex">
               <Link href="/">Home</Link>
               <FlyoutMenu buttonLabel="Products" menuItems={productsNavigationItems} />
               <FlyoutMenu
@@ -109,7 +109,7 @@ export function HeaderNav() {
           <div className="flex flex-row gap-3">
             <Button
               className={twMerge(
-                "hidden transition sm:block",
+                "hidden transition md:block",
                 pathname === "/across-plus"
                   ? "border-teal-100/[.05] bg-teal-100/[.05] text-teal-100"
                   : pathname === "/across-settlement"
@@ -121,7 +121,7 @@ export function HeaderNav() {
             </Button>
             {/* Only show menu button on mobile */}
             <button
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-grey-600 sm:hidden"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-grey-600 md:hidden"
               onClick={() => setIsMenuOpen((isMenuOpen) => !isMenuOpen)}
             >
               {isMenuOpen ? <MinusIcon /> : <MenuIcon />}
