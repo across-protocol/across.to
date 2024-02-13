@@ -4,32 +4,20 @@ import { StatBox } from "../../_components/stat-box";
 import { getProtocolStats } from "../../_lib/scraper";
 import { humanReadableNumber } from "../../_lib/format";
 
-const fallbackStats = {
-  totalVolumeUsd: "$5B+",
-  totalDeposits: "3M+",
-  avgFillTimeInMinutes: "1m",
-  bridgeFee: "<$1",
-};
-
 async function getFormattedStatsData() {
-  try {
-    const protocolStats = await getProtocolStats({
-      revalidate: 24 * 60 * 60, // Update once a day
-    });
+  const protocolStats = await getProtocolStats({
+    revalidate: 24 * 60 * 60, // Update once a day
+  });
 
-    return {
-      totalVolumeUsd: `$${humanReadableNumber(protocolStats.totalVolumeUsd)}`,
-      totalDeposits: `${humanReadableNumber(protocolStats.totalDeposits)}`,
-      avgFillTimeInMinutes: `${protocolStats.avgFillTimeInMinutes < 1 ? "<" : ""} ${Math.max(
-        protocolStats.avgFillTimeInMinutes,
-        1,
-      )}m`,
-      bridgeFee: "<$1",
-    };
-  } catch (error) {
-    console.error(error);
-    return fallbackStats;
-  }
+  return {
+    totalVolumeUsd: `$${humanReadableNumber(protocolStats.totalVolumeUsd)}`,
+    totalDeposits: `${humanReadableNumber(protocolStats.totalDeposits)}`,
+    avgFillTimeInMinutes: `${protocolStats.avgFillTimeInMinutes < 1 ? "<" : ""} ${Math.max(
+      protocolStats.avgFillTimeInMinutes,
+      1,
+    )}m`,
+    bridgeFee: "<$1",
+  };
 }
 
 export async function StatsSection() {
