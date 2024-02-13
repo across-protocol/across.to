@@ -53,7 +53,7 @@ export function TechnologySection() {
         ))}
       </div>
       <div className="flex flex-col items-center">
-        <div className="flex max-w-100 flex-1 sm:max-w-lg md:max-w-full">
+        <div className="max-w-100 flex flex-1 sm:max-w-lg md:max-w-full">
           <picture>
             <source srcSet={landingTechnologySrc.src} media="(min-width: 760px)" />
             <img src={landingTechnologyMobileSrc.src} alt="MDN" />
