@@ -13,7 +13,9 @@ const fallbackStats = {
 
 async function getFormattedStatsData() {
   try {
-    const protocolStats = await getProtocolStats();
+    const protocolStats = await getProtocolStats({
+      revalidate: 24 * 60 * 60, // Update once a day
+    });
 
     return {
       totalVolumeUsd: `$${humanReadableNumber(protocolStats.totalVolumeUsd)}`,
@@ -25,7 +27,7 @@ async function getFormattedStatsData() {
       bridgeFee: "<$1",
     };
   } catch (error) {
-    console.error("Failed to fetch stats");
+    console.error(error);
     return fallbackStats;
   }
 }
