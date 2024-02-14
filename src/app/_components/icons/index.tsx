@@ -12,6 +12,7 @@ export { DocumentIcon } from "./document";
 export { Partner1Icon } from "./partner-1";
 export { ArrowRightIcon } from "./arrow-right";
 export { ArrowUpRightIcon } from "./arrow-up-right";
+export { ArrowUpRightThickIcon } from "./arrow-up-right-thick";
 
 // Gradient icons
 export { ArrowUpIcon } from "./gradient/arrow-up";
