@@ -10,17 +10,23 @@ export function HeroSection() {
   return (
     <Hero>
       <div className="container mx-auto flex flex-col items-center gap-16 px-4 pb-16 pt-8 md:flex-row-reverse md:gap-8 md:pt-16">
-        <div className="flex max-w-80 flex-1 sm:max-w-100 md:max-w-full">
+        <div className="sm:max-w-100 flex max-w-80 flex-1 md:max-w-full">
           <Image src={plusHeroSrc} alt="Across plus graphic" priority={true} />
         </div>
         <div className="flex flex-1 flex-col gap-6">
-          <Text variant="heading-1" className="text-center md:text-left">
+          <Text
+            variant="heading-1"
+            className="text-center sm:tracking-tight-1 md:text-left"
+          >
             <span className="text-light-100">Cross-Chain</span>{" "}
             <br className="hidden md:block" />
             <span className="text-teal-100">Bridge Hooks</span>{" "}
-            <br className="hidden sm:block" />
-            <span className="text-light-100">To Fulfill</span>{" "}
-            <br className="hidden md:block" />
+            <br className="hidden sm:block md:hidden" />
+            <span className="text-light-100">
+              To
+              <br className="hidden md:block" /> Fulfill
+            </span>{" "}
+            {/* <br className="hidden md:block" /> */}
             <span className="text-teal-100">User Intents</span>
           </Text>
           <div className="flex w-full flex-row justify-center md:justify-start">
