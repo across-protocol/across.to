@@ -35,7 +35,7 @@ export function PartnersTicker() {
   return (
     <>
       <div className="mb-8 text-center text-xs uppercase lining-nums tabular-nums tracking-wide-4 text-grey-400">
-        Integrated Partners
+        trusted by top tier applications
       </div>
       <div className="w-[calc(2 * var(--no-of-slides))] group relative overflow-hidden">
         <div className="container mx-auto">
