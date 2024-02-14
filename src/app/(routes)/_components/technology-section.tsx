@@ -12,12 +12,21 @@ const sections = [
   {
     Icon: FeatherIcon,
     title: "Elegant Abstraction",
-    body: "Intents replace explicit execution steps with implicit user outcomes, relying on a competitive network of market makers to fulfill outcomes. Cross-chain intents are a cross-chain limit order plus an action to execute.",
+    body: "Across connects users and applications via intents, not blockchains to other blockchains via complex or trusted message passing. Developers only need to attach a standard  order to protocol actions to create seamless cross-chain experiences.",
   },
   {
     Icon: BlocksDiagonalIcon,
     title: "Modular Interoperability",
-    body: "Intents replace explicit execution steps with implicit user outcomes, relying on a competitive network of market makers to fulfill outcomes. Cross-chain intents are a cross-chain limit order plus an action to execute.",
+    body: (
+      <>
+        Cross-chain intents are powered by a modular system of 3 layers:
+        <ol className="list-decimal pl-6">
+          <li>Request for quote mechanism</li>
+          <li>Network of competitive market makers</li>
+          <li>Settlement layer to escrow user input funds, verify, and repay relayers</li>
+        </ol>
+      </>
+    ),
   },
 ];
 
