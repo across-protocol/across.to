@@ -3,13 +3,15 @@ import { twMerge } from "tailwind-merge";
 
 import { PartnersTicker } from "./partners-ticker";
 
-type HeroProps = ComponentProps<"section">;
+type HeroProps = ComponentProps<"section"> & {
+  title: string;
+};
 
-export function Hero({ className, children, ...props }: HeroProps) {
+export function Hero({ className, children, title, ...props }: HeroProps) {
   return (
     <section className={twMerge("min-h-screen", className)} {...props}>
       {children}
-      <PartnersTicker />
+      <PartnersTicker title={title} />
     </section>
   );
 }
