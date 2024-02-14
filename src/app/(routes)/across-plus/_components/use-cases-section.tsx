@@ -95,6 +95,7 @@ const useCases = [
     title: "Unlock New Ecosystems",
     body: "Onboard NFT collectors from their home chain with bridge + buy NFT bundled contract functions using Across+. Bridge abstraction eliminates cross-chain learning curve hurdles and Across’ reliably fast transfer speeds prevents missed opportunities on timed mints and auctions.",
     learnMoreLink: "https://docs.across.to/additional-info/faq",
+    listTitle: "value props",
     listItems: (
       <>
         <li>
@@ -229,36 +230,43 @@ function UseCasePanel({
           leaveTo="opacity-0"
         >
           <div className="flex flex-col gap-8">
-            <div className="flex flex-col gap-4">
-              <Text variant="cap-case" className="text-teal-100">
-                Use cases
-              </Text>
-              <Text variant="heading-4" className="text-light-100">
-                {useCase.title}
-              </Text>
-              <Text variant="body">{useCase.body}</Text>
-            </div>
-            <div className="flex flex-col">
-              <Text variant="cap-case" className="mb-3 text-grey-400">
-                {useCase.listTitle}
-              </Text>
-              <ul className="flex list-disc flex-col gap-2 pl-5 marker:text-teal-100">
-                {useCase.listItems}
-              </ul>
-            </div>
-            <a
-              className="mt-4 flex cursor-pointer flex-row items-center gap-1"
-              href={useCase.learnMoreLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Text variant="cap-case" className="text-teal-100 sm:text-xs md:text-xs">
-                learn more
-              </Text>
-              <div className="flex h-4 w-4 items-center justify-center rounded-full bg-teal-100">
-                <ArrowUpRightThickIcon className="stroke-grey-dark" />
+            <div className="flex flex-col gap-8 md:flex-row">
+              <div className="flex flex-1 flex-col gap-4">
+                <Text variant="cap-case" className="text-teal-100">
+                  Use cases
+                </Text>
+                <Text variant="heading-4" className="text-light-100">
+                  {useCase.title}
+                </Text>
+                <Text variant="body">{useCase.body}</Text>
               </div>
-            </a>
+              <div className="flex flex-1 flex-col md:justify-center">
+                <Text
+                  variant="cap-case"
+                  className="mb-3 text-grey-400 sm:text-xs md:text-xs"
+                >
+                  {useCase.listTitle}
+                </Text>
+                <ul className="flex list-disc flex-col gap-2 pl-5 marker:text-teal-100">
+                  {useCase.listItems}
+                </ul>
+              </div>
+            </div>
+            <div>
+              <a
+                className="mt-4 flex cursor-pointer flex-row items-center gap-1"
+                href={useCase.learnMoreLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Text variant="cap-case" className="text-teal-100 sm:text-xs md:text-xs">
+                  learn more
+                </Text>
+                <div className="flex h-4 w-4 items-center justify-center rounded-full bg-teal-100">
+                  <ArrowUpRightThickIcon className="stroke-grey-dark" />
+                </div>
+              </a>
+            </div>
             <div className="flex flex-col items-center rounded-3xl bg-teal-100/[.02] shadow-sm">
               <div className="flex max-w-100 flex-1 sm:max-w-lg md:max-w-full">
                 <picture>
