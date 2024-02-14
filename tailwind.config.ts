@@ -20,6 +20,9 @@ const config: Config = {
         400: "#9DAAB3",
         600: "#3E4047",
       },
+      black: {
+        700: "#34353B",
+      },
       aqua: {
         100: "#6CF9D8",
       },
@@ -71,6 +74,7 @@ const config: Config = {
       },
       animation: {
         scroll: "scroll var(--iteration-time) linear infinite",
+        progress: "horizontalScrollFull 5000ms linear infinite",
       },
       keyframes: {
         scroll: {
@@ -78,6 +82,10 @@ const config: Config = {
           "100%": {
             transform: "translateX(calc(var(--slide-width) * var(--no-of-slides)* -1))",
           },
+        },
+        horizontalScrollFull: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
       dropShadow: {
