@@ -179,7 +179,7 @@ function UseCaseTab(props: { tabLabel: string; showAnimation?: boolean }) {
         <div className="flex flex-col focus-visible:outline-none">
           <button
             className={twMerge(
-              "border-black-700 rounded-xl border px-4 py-2 text-grey-400 shadow-sm",
+              "rounded-xl border border-black-700 px-4 py-2 text-grey-400 shadow-sm",
               selected ? "bg-teal-100/[.05] text-teal-100" : "bg-transparent",
             )}
           >
@@ -268,7 +268,7 @@ function UseCasePanel({
               </a>
             </div>
             <div className="flex flex-col items-center rounded-3xl bg-teal-100/[.02] shadow-sm">
-              <div className="max-w-100 flex flex-1 sm:max-w-lg md:max-w-full">
+              <div className="flex max-w-100 flex-1 sm:max-w-lg md:max-w-full">
                 <picture>
                   <img src={useCase.images.mobile.src} alt="use case graphic" />
                   <source srcSet={useCase.images.tablet.src} media="(min-width: 760px)" />
