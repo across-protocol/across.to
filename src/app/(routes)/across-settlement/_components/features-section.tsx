@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import {
   BlocksConnectedIcon,
   ChecklistIcon,
@@ -5,8 +7,8 @@ import {
   CrossChainIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
+import { FeaturesGrid } from "@/app/_components/features-grid";
 import settlement2Image from "@/app/_assets/settlement-2.png";
-import Image from "next/image";
 
 const features = [
   {
@@ -49,17 +51,7 @@ export function FeaturesSection() {
           Best Execution
         </Text>
       </div>
-      <div className="grid grid-cols-1 gap-12 sm:gap-y-16 md:grid-cols-2">
-        {features.map((feature) => (
-          <div key={feature.title}>
-            {feature.Icon}
-            <Text variant="heading-4" className="mb-4 mt-8 capitalize text-light-200">
-              {feature.title}
-            </Text>
-            <Text className="max-w-100 text-light-300">{feature.body}</Text>
-          </div>
-        ))}
-      </div>
+      <FeaturesGrid features={features} />
     </section>
   );
 }

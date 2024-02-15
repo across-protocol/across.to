@@ -5,6 +5,7 @@ import {
   ArrowUpRightThickIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
+import { FeaturesGrid } from "@/app/_components/features-grid";
 import { INFORMATION_LINKS } from "@/app/_constants";
 
 const features = [
@@ -36,16 +37,7 @@ export function FeaturesSection() {
           Seamless Cross-chain Onboarding
         </Text>
       </div>
-      <div className="grid grid-cols-1 gap-12 sm:gap-y-16 md:grid-cols-2">
-        {features.map((feature) => (
-          <div key={feature.title}>
-            {feature.Icon}
-            <Text variant="heading-4" className="mb-4 mt-8 capitalize text-light-200">
-              {feature.title}
-            </Text>
-            <Text className="max-w-[520px] text-light-300">{feature.body}</Text>
-          </div>
-        ))}
+      <FeaturesGrid features={features}>
         <div className="flex flex-col items-center gap-8 rounded-2xl bg-teal-100/[.02] p-6 shadow-md sm:items-start">
           <div className="flex flex-col items-center justify-center self-center rounded-lg bg-teal-100/[.05] p-2">
             <Text variant="cap-case" className="text-teal-100">
@@ -72,7 +64,7 @@ export function FeaturesSection() {
             </a>
           </div>
         </div>
-      </div>
+      </FeaturesGrid>
     </section>
   );
 }
