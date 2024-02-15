@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 import { Text } from "./text";
 
-type Props = ComponentProps<"div"> & {
+export type Props = ComponentProps<"div"> & {
   title: string;
   titleClassName: string;
   value: string;

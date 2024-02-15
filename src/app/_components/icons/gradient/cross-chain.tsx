@@ -8,6 +8,7 @@ export function CrossChainIcon(props: SVGProps<SVGSVGElement>) {
       viewBox="0 0 96 96"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <rect width="25.5" height="25.5" rx="6" fill="#AA81FF" fillOpacity="0.2" />
       <rect
