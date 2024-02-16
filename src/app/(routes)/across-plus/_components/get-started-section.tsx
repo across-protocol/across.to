@@ -19,13 +19,13 @@ export function GetStartedSection() {
           rel="noopener noreferrer"
           className="flex h-10 flex-col items-center justify-center rounded-full bg-teal-100/[.05] px-6 py-2 shadow-sm"
         >
-          <Text variant="cap-case-xs" className="text-teal-100">
+          <Text variant="cap-case" className="text-teal-100">
             go to docs
           </Text>
         </a>
         {/* TODO: Use correct link */}
         <a href="#" className="flex flex-row items-center justify-center gap-2 px-6 py-2">
-          <Text variant="cap-case-xs" className="text-teal-100">
+          <Text variant="cap-case" className="text-teal-100">
             get it touch
           </Text>
           <div className="flex h-5 w-5 flex-col items-center justify-center rounded-full bg-teal-100">

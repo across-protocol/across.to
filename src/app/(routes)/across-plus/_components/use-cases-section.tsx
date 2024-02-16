@@ -2,7 +2,7 @@
 
 import { Fragment, useEffect, useState } from "react";
 import { Tab, Transition } from "@headlessui/react";
-import { twMerge } from "tailwind-merge";
+import { twMerge } from "@/app/_lib/tw-merge";
 
 import { ArrowUpRightThickIcon } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
@@ -237,7 +237,7 @@ function UseCasePanel({
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-8 md:flex-row">
               <div className="flex flex-1 flex-col gap-4">
-                <Text variant="cap-case-xs" className="text-teal-100">
+                <Text variant="cap-case" className="text-teal-100">
                   Use cases
                 </Text>
                 <Text variant="heading-4" className="text-light-100">

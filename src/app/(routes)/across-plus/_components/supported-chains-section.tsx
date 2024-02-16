@@ -39,7 +39,7 @@ export function SupportedChainsSection() {
   return (
     <section className="container mx-auto flex flex-col gap-16 p-5 sm:gap-24 md:px-4">
       <div className="flex flex-col gap-4">
-        <Text variant="cap-case-xs" className="text-center text-teal-100">
+        <Text variant="cap-case" className="text-center text-teal-100">
           well connected
         </Text>
         <Text variant="heading-2" className="text-center capitalize text-light-200">
