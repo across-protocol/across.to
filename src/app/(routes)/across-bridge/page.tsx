@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 import { HeroSection } from "./_components/hero-section";
 import { FeaturesSection } from "./_components/features-section";
+import { TestimonialsSection } from "./_components/testimonials-section";
 
 export const metadata: Metadata = {
   title: "Across Bridge",
@@ -13,6 +14,7 @@ export default function BridgeLanding() {
     <main className="z-0 mb-24 flex min-h-screen flex-col gap-24 overflow-hidden px-4 sm:gap-32 md:gap-48">
       <HeroSection />
       <FeaturesSection />
+      <TestimonialsSection />
     </main>
   );
 }
