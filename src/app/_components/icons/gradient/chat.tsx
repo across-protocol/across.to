@@ -1,5 +1,5 @@
 import { SVGProps } from "react";
-import { twMerge } from "tailwind-merge";
+import { twMerge } from "@/app/_lib/tw-merge";
 
 type Variant = "light" | "aqua" | "teal";
 

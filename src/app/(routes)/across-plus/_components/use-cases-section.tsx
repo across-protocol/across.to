@@ -2,7 +2,7 @@
 
 import { Fragment, useEffect, useState } from "react";
 import { Tab, Transition } from "@headlessui/react";
-import { twMerge } from "tailwind-merge";
+import { twMerge } from "@/app/_lib/tw-merge";
 
 import { ArrowUpRightThickIcon } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
@@ -147,8 +147,13 @@ export function UseCasesSection() {
 
   return (
     <section className="container mx-auto flex flex-col gap-16 p-5 sm:gap-24 md:px-4">
-      <Tab.Group selectedIndex={currentSlideIndex} onChange={setCurrentSlideIndex}>
-        <Tab.List className="flex flex-row flex-wrap gap-4">
+      <Tab.Group
+        selectedIndex={currentSlideIndex}
+        onChange={setCurrentSlideIndex}
+        as="div"
+        className="-m-5 rounded-3xl border border-light-100/[.02] p-5 md:-m-12 md:p-12"
+      >
+        <Tab.List className="mb-5 flex flex-row flex-wrap gap-4 md:mb-12">
           {useCases.map((useCase, index) => (
             <UseCaseTab
               tabLabel={useCase.tabButtonLabel}
@@ -270,12 +275,12 @@ function UseCasePanel({
             <div className="flex flex-col items-center rounded-3xl bg-teal-100/[.02] shadow-sm">
               <div className="flex max-w-100 flex-1 sm:max-w-lg md:max-w-full">
                 <picture>
-                  <img src={useCase.images.mobile.src} alt="use case graphic" />
                   <source srcSet={useCase.images.tablet.src} media="(min-width: 760px)" />
                   <source
                     srcSet={useCase.images.desktop.src}
                     media="(min-width: 900px)"
                   />
+                  <img src={useCase.images.mobile.src} alt="use case graphic" />
                 </picture>
               </div>
             </div>

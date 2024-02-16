@@ -67,11 +67,11 @@ export function SupportedChainsSection(props: { variant: "teal" | "purple" }) {
           <div key={index} className="flex flex-col items-center gap-4">
             <div
               className={twJoin(
-                "flex h-20 w-20 flex-col items-center justify-center rounded-2xl",
+                "h-22 w-22 flex flex-col items-center justify-center rounded-2xl md:h-[108px] md:w-[108px]",
                 variants[props.variant].bgClassName,
               )}
             >
-              <chain.Icon className="h-10 w-10" variant={props.variant} />
+              <chain.Icon className="h-10 w-10 md:h-12 md:w-12" variant={props.variant} />
             </div>
             <Text variant="body" className="capitalize text-light-300">
               {chain.label}

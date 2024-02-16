@@ -41,7 +41,7 @@ export function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Text variant="cap-case">go to docs</Text>
+            <Text variant="cap-case-sm">go to docs</Text>
             <div className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-100">
               <ArrowRightIcon />
             </div>

@@ -15,7 +15,7 @@ import {
 } from "./icons";
 import { IconBox } from "./icon-box";
 import { PRODUCT_LINKS, SOCIAL_LINKS, INFORMATION_LINKS } from "@/app/_constants";
-import { twMerge } from "tailwind-merge";
+import { twMerge } from "@/app/_lib/tw-merge";
 
 const products = [
   {
