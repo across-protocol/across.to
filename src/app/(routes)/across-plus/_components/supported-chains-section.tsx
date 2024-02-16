@@ -39,7 +39,7 @@ export function SupportedChainsSection() {
   return (
     <section className="container mx-auto flex flex-col gap-16 p-5 sm:gap-24 md:px-4">
       <div className="flex flex-col gap-4">
-        <Text variant="cap-case" className="text-center text-teal-100">
+        <Text variant="cap-case-xs" className="text-center text-teal-100">
           well connected
         </Text>
         <Text variant="heading-2" className="text-center capitalize text-light-200">
@@ -49,8 +49,8 @@ export function SupportedChainsSection() {
       <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3">
         {chains.map((chain, index) => (
           <div key={index} className="flex flex-col items-center gap-4">
-            <div className="flex h-20 w-20 flex-col items-center justify-center rounded-2xl bg-teal-100/[.05]">
-              <chain.Icon className="h-10 w-10" variant="teal" />
+            <div className="h-22 w-22 flex flex-col items-center justify-center rounded-2xl bg-teal-100/[.05] md:h-[108px] md:w-[108px]">
+              <chain.Icon className="h-10 w-10 md:h-12 md:w-12" variant="teal" />
             </div>
             <Text variant="body" className="capitalize text-light-300">
               {chain.label}

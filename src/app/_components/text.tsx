@@ -11,6 +11,7 @@ const textBaseClasses = {
   body: "text-md",
   "cap-case":
     "text-medium text-xs uppercase lining-nums tabular-nums tracking-wide-4 sm:text-md",
+  "cap-case-xs": "text-medium text-xs uppercase lining-nums tabular-nums tracking-wide-4",
   "heading-1":
     "text-heading-3 font-lighter lining-nums tabular-nums tracking-tight-5 sm:text-heading-2 md:text-heading-1",
   "heading-2":

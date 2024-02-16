@@ -147,8 +147,13 @@ export function UseCasesSection() {
 
   return (
     <section className="container mx-auto flex flex-col gap-16 p-5 sm:gap-24 md:px-4">
-      <Tab.Group selectedIndex={currentSlideIndex} onChange={setCurrentSlideIndex}>
-        <Tab.List className="flex flex-row flex-wrap gap-4">
+      <Tab.Group
+        selectedIndex={currentSlideIndex}
+        onChange={setCurrentSlideIndex}
+        as="div"
+        className="-m-5 rounded-3xl border border-light-100/[.02] p-5 md:-m-12 md:p-12"
+      >
+        <Tab.List className="mb-5 flex flex-row flex-wrap gap-4 md:mb-12">
           {useCases.map((useCase, index) => (
             <UseCaseTab
               tabLabel={useCase.tabButtonLabel}
@@ -232,7 +237,7 @@ function UseCasePanel({
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-8 md:flex-row">
               <div className="flex flex-1 flex-col gap-4">
-                <Text variant="cap-case" className="text-teal-100">
+                <Text variant="cap-case-xs" className="text-teal-100">
                   Use cases
                 </Text>
                 <Text variant="heading-4" className="text-light-100">
