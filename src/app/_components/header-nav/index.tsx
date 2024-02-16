@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+
 import { twMerge } from "@/app/_lib/tw-merge";
+import { PRODUCT_LINKS, SOCIAL_LINKS } from "@/app/_constants";
 
 import {
   AcrossIcon,
@@ -18,7 +20,7 @@ import {
 } from "../icons";
 import { Button } from "../button";
 import { Text } from "../text";
-import { PRODUCT_LINKS, SOCIAL_LINKS } from "@/app/_constants";
+import { BridgeNowLink } from "../bridge-now-link";
 
 import { FlyoutMenu } from "./flyout-menu";
 import { MobileMenu } from "./mobile-menu";
@@ -108,18 +110,20 @@ export function HeaderNav() {
             </div>
           </div>
           <div className="flex flex-row gap-3">
-            <Button
-              className={twMerge(
-                "hidden transition md:block",
-                pathname === "/across-plus"
-                  ? "border-teal-100 bg-teal-100/[.05] text-teal-100"
-                  : pathname === "/across-settlement"
-                    ? "border-purple-100 bg-purple-100/[.05] text-purple-100"
-                    : "border-aqua-100 bg-aqua-100/[.05] text-aqua-100",
-              )}
-            >
-              <Text variant="cap-case-sm">Bridge now</Text>
-            </Button>
+            <BridgeNowLink>
+              <Button
+                className={twMerge(
+                  "hidden transition md:block",
+                  pathname === "/across-plus"
+                    ? "border-teal-100 bg-teal-100/[.05] text-teal-100"
+                    : pathname === "/across-settlement"
+                      ? "border-purple-100 bg-purple-100/[.05] text-purple-100"
+                      : "border-aqua-100 bg-aqua-100/[.05] text-aqua-100",
+                )}
+              >
+                <Text variant="cap-case-sm">Bridge now</Text>
+              </Button>
+            </BridgeNowLink>
             {/* Only show menu button on mobile */}
             <button
               className="flex h-10 w-10 items-center justify-center rounded-full border border-grey-600 md:hidden"

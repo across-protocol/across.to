@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import { Hero } from "@/app/_components/hero";
 import { Text } from "@/app/_components/text";
+import { BridgeNowLink } from "@/app/_components/bridge-now-link";
 import { ArrowRightIcon } from "@/app/_components/icons/arrow-right";
-import { INFORMATION_LINKS } from "@/app/_constants";
 import bridgeHeroImage from "@/app/_assets/bridge-hero.png";
 
 export function HeroSection() {
@@ -29,17 +29,12 @@ export function HeroSection() {
               secured by an intents-based architecture.
             </Text>
           </div>
-          <a
-            className="flex cursor-pointer flex-row items-center justify-center gap-2 text-aqua-100 md:justify-start"
-            href={INFORMATION_LINKS.docs.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <BridgeNowLink className="flex cursor-pointer flex-row items-center justify-center gap-2 text-aqua-100 md:justify-start">
             <Text variant="cap-case">bridge now</Text>
             <div className="flex h-5 w-5 items-center justify-center rounded-full bg-aqua-100">
               <ArrowRightIcon />
             </div>
-          </a>
+          </BridgeNowLink>
         </div>
       </div>
     </Hero>

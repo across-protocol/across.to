@@ -6,6 +6,8 @@ import { Transition } from "@headlessui/react";
 import { UmaIcon } from "../icons";
 import { Button } from "../button";
 import { IconBox } from "../icon-box";
+import { BridgeNowLink } from "../bridge-now-link";
+import { Text } from "../text";
 
 import { NavItem } from "./types";
 
@@ -28,18 +30,20 @@ export function MobileMenu(props: {
       show={props.isMenuOpen}
     >
       <div className="absolute flex min-h-screen w-full flex-col gap-6 bg-grey-dark p-4 md:hidden">
-        <Button
-          className={twMerge(
-            "md:hidden",
-            props.pathname === "/across-plus"
-              ? "border-teal-100/[.05] bg-teal-100/[.05] text-teal-100"
-              : props.pathname === "/across-settlement"
-                ? "border-purple-100/[.05] bg-purple-100/[.05] text-purple-100"
-                : "",
-          )}
-        >
-          Bridge now
-        </Button>
+        <BridgeNowLink className="flex w-full flex-row">
+          <Button
+            className={twMerge(
+              "w-full",
+              props.pathname === "/across-plus"
+                ? "border-teal-100 bg-teal-100/[.05] text-teal-100"
+                : props.pathname === "/across-settlement"
+                  ? "border-purple-100 bg-purple-100/[.05] text-purple-100"
+                  : "border-aqua-100 bg-aqua-100/[.05] text-aqua-100",
+            )}
+          >
+            <Text variant="cap-case-sm">Bridge now</Text>
+          </Button>
+        </BridgeNowLink>
         {props.productsNavItems.map((item) => (
           <span key={item.href} className="group">
             <Link

@@ -1,13 +1,13 @@
 import { SVGProps } from "react";
+import { twMerge } from "@/app/_lib/tw-merge";
 
-export function DoubleChevronRightIcon(props: SVGProps<SVGSVGElement>) {
+export function DoubleChevronRightIcon({ className, ...props }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width="96"
-      height="96"
       viewBox="0 0 96 96"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={twMerge("h-12 w-12", className)}
       {...props}
     >
       <rect
