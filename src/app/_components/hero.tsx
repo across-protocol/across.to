@@ -1,5 +1,5 @@
 import { ComponentProps } from "react";
-import { twMerge } from "tailwind-merge";
+import { twMerge } from "@/app/_lib/tw-merge";
 
 import { PartnersTicker } from "./partners-ticker";
 
