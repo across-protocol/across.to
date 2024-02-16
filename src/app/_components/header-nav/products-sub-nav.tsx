@@ -32,8 +32,8 @@ export function ProductsSubNav(props: { navItems: NavItem[] }) {
   const isCurrentPath = (href: string) => pathname.startsWith(href);
 
   return (
-    <div className="min-w-3xl overflow-x-scroll p-4 sm:overflow-x-hidden">
-      <div className="flex flex-row items-center justify-start gap-4 bg-grey-dark sm:justify-center">
+    <div className="overflow-x-scroll p-4 min-[500px]:overflow-x-hidden">
+      <div className="flex flex-row items-center justify-start gap-4 bg-grey-dark min-[500px]:justify-center">
         {props.navItems.map((item) => (
           <span key={item.href} className="group">
             <Link

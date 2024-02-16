@@ -31,11 +31,11 @@ const partners = [
 // Duplicate partners to simulate infinite scrolling
 const partnersToRender = [...partners, ...partners];
 
-export function PartnersTicker() {
+export function PartnersTicker(props: { title: string }) {
   return (
     <>
       <div className="mb-8 text-center text-xs uppercase lining-nums tabular-nums tracking-wide-4 text-grey-400">
-        Integrated Partners
+        {props.title}
       </div>
       <div className="w-[calc(2 * var(--no-of-slides))] group relative overflow-hidden">
         <div className="container mx-auto">

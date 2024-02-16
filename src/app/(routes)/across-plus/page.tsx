@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
-import { Hero } from "@/app/_components/hero";
+import { HeroSection } from "./_components/hero-section";
+import { FeaturesSection } from "./_components/features-section";
 
 export const metadata: Metadata = {
   title: "Across Plus",
@@ -9,10 +10,9 @@ export const metadata: Metadata = {
 
 export default function PlusLanding() {
   return (
-    <main className="z-0 min-h-screen overflow-hidden">
-      <Hero>
-        <div className="py-10 text-center">Across Plus</div>
-      </Hero>
+    <main className="z-0 flex min-h-screen flex-col gap-24 overflow-hidden px-4 sm:gap-32 md:gap-48">
+      <HeroSection />
+      <FeaturesSection />
     </main>
   );
 }
