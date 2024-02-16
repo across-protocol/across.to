@@ -24,7 +24,7 @@ export function GetStartedSection(props: {
   return (
     <section className="container mx-auto flex flex-col items-center gap-16 sm:gap-24">
       {props.Image}
-      <Text variant="heading-1" className="text-light-100">
+      <Text variant="heading-1" className="tracking-tight-1 text-light-100">
         Ready to get started?
       </Text>
       <div className="flex flex-row gap-6">
@@ -39,24 +39,21 @@ export function GetStartedSection(props: {
         >
           <Text
             variant="cap-case"
-            className={twJoin(
-              "sm:text-sm md:text-sm",
-              variants[props.variant].textClassName,
-            )}
+            className={twJoin(variants[props.variant].textClassName)}
           >
             go to docs
           </Text>
         </a>
         {/* TODO: Use correct link */}
-        <a href="#" className="flex flex-row items-center justify-center gap-2 px-6 py-2">
+        <a
+          href="#"
+          className="flex h-10 flex-row items-center justify-center gap-2 px-6 py-2"
+        >
           <Text
             variant="cap-case"
-            className={twJoin(
-              "sm:text-sm md:text-sm",
-              variants[props.variant].textClassName,
-            )}
+            className={twJoin(variants[props.variant].textClassName)}
           >
-            get it touch
+            get in touch
           </Text>
           <div
             className={twJoin(
