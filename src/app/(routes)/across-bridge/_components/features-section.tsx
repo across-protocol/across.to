@@ -39,7 +39,7 @@ export function FeaturesSection() {
       <Image
         src={bridge2Image}
         alt="Across settlement layers graphic"
-        className="self-center sm:max-w-[514px]"
+        className="-mb-16 self-center sm:-mb-24 sm:max-w-[514px]"
       />
       <div className="flex flex-col gap-4">
         <Text variant="cap-case" className="text-center text-aqua-100">
