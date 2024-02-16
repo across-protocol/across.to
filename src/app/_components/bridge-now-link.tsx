@@ -1,12 +1,21 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 type Props = React.ComponentProps<"a">;
 
 const bridgeAppBaseUrl = "https://app.across.to";
 
-export function BridgeNowLink({ className, ...props }: Props) {
+export function BridgeNowLink(props: Props) {
+  return (
+    <Suspense>
+      <_BridgeNowLink {...props} />
+    </Suspense>
+  );
+}
+
+function _BridgeNowLink({ className, ...props }: Props) {
   const searchParams = useSearchParams();
 
   const refParams = searchParams.get("ref") || searchParams.get("referrer");
