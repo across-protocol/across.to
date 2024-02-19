@@ -5,6 +5,7 @@ import { FeaturesSection } from "./_components/features-section";
 import { UseCasesSection } from "./_components/use-cases-section";
 import { SupportedChainsSection } from "@/app/_components/supported-chains-section";
 import { PlusGetStartedSection } from "./_components/get-started-section";
+import { IntegratedPartnersSection } from "./_components/integrated-partners-section";
 
 export const metadata: Metadata = {
   title: "Across Plus",
@@ -18,6 +19,7 @@ export default function PlusLanding() {
       <FeaturesSection />
       <UseCasesSection />
       <SupportedChainsSection variant="teal" />
+      <IntegratedPartnersSection />
       <PlusGetStartedSection />
     </main>
   );
