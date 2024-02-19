@@ -1,3 +1,4 @@
+import { twMerge } from "@/app/_lib/tw-merge";
 import {
   EthereumIcon,
   OptimismIcon,
@@ -20,6 +21,7 @@ const chains = [
   {
     label: "Polygon Network",
     Icon: PolygonIcon,
+    iconClassName: "h-8 w-9 md:h-10 md:w-10",
   },
   {
     label: "Arbitrum One",
@@ -50,7 +52,10 @@ export function SupportedChainsSection() {
         {chains.map((chain, index) => (
           <div key={index} className="flex flex-col items-center gap-4">
             <div className="h-22 w-22 flex flex-col items-center justify-center rounded-2xl bg-teal-100/[.05] md:h-[108px] md:w-[108px]">
-              <chain.Icon className="h-10 w-10 md:h-12 md:w-12" variant="teal" />
+              <chain.Icon
+                className={twMerge("h-10 w-10 md:h-12 md:w-12", chain.iconClassName)}
+                variant="teal"
+              />
             </div>
             <Text variant="body" className="capitalize text-light-300">
               {chain.label}
