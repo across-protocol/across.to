@@ -1,4 +1,4 @@
-import { twJoin } from "tailwind-merge";
+import { twMerge } from "@/app/_lib/tw-merge";
 
 import {
   EthereumIcon,
@@ -22,6 +22,7 @@ const chains = [
   {
     label: "Polygon Network",
     Icon: PolygonIcon,
+    iconClassName: "h-8 w-9 md:h-10 md:w-10",
   },
   {
     label: "Arbitrum One",
@@ -54,7 +55,7 @@ export function SupportedChainsSection(props: { variant: "teal" | "purple" }) {
       <div className="flex flex-col gap-4">
         <Text
           variant="cap-case"
-          className={twJoin("text-center", variants[props.variant].textClassName)}
+          className={twMerge("text-center", variants[props.variant].textClassName)}
         >
           well connected
         </Text>
@@ -62,16 +63,19 @@ export function SupportedChainsSection(props: { variant: "teal" | "purple" }) {
           Supported Chains
         </Text>
       </div>
-      <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-x-12 gap-y-12 self-center sm:grid-cols-2 sm:self-auto md:grid-cols-3 md:gap-x-[150px]">
         {chains.map((chain, index) => (
           <div key={index} className="flex flex-col items-center gap-4">
             <div
-              className={twJoin(
-                "h-22 w-22 flex flex-col items-center justify-center rounded-2xl md:h-[108px] md:w-[108px]",
+              className={twMerge(
+                "flex h-[88px] w-[88px] flex-col items-center justify-center rounded-2xl md:h-[108px] md:w-[108px]",
                 variants[props.variant].bgClassName,
               )}
             >
-              <chain.Icon className="h-10 w-10 md:h-12 md:w-12" variant={props.variant} />
+              <chain.Icon
+                className={twMerge("h-10 w-10 md:h-12 md:w-12", chain.iconClassName)}
+                variant={props.variant}
+              />
             </div>
             <Text variant="body" className="capitalize text-light-300">
               {chain.label}
