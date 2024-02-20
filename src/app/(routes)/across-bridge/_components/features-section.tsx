@@ -14,22 +14,22 @@ const features = [
   {
     Icon: <CodeIcon className="h-14 w-14" />,
     title: "efficient",
-    body: "With Across, bridging your tokens at the fastest speed and lowest cost does not come with security tradeoffs. How? At Across, only bridge users or bridge LPs never shoulder the risks associated with cross-chain transfers.",
+    body: "Empirically proven as the lowest cost bridge, Across is engineered for best-execution through its gas-optimized contracts, aggregated verification and intents design. It is maximally capital efficient, which ultimately minimizes costs to end users.",
   },
   {
     Icon: <ShieldLargeIcon className="h-14 w-14" />,
     title: "Secure",
-    body: "Using canonical assets is the only trustless way to transfer value, which is why Across only circulates genuine tokens, never representative or synthetic assets. In every transfer facilitated by Across, user assets are never put at risk.",
+    body: "Across’ intents architecture removes risk from end-users by shifting it to 3rd party relayers, who accept this risk in exchange for a fee. Relayers are only repaid after users are correctly filled, as verified by UMA's Optimistic Oracle.",
   },
   {
     Icon: <DoubleChevronRightIcon className="h-14 w-14" />,
     title: "Fast",
-    body: "Intents architecture enables the fastest bridge experience. By using a network of third party relayers, incentivized to quickly fill transfers, fill times are usually completed in a few seconds.",
+    body: "Intent designs enable the fastest bridge experience. By using a competitive network of third party relayers, bridge orders are filled within seconds, an order of magnitude faster than competing bridges.",
   },
   {
     Icon: <DollarIcon className="h-14 w-14" />,
     title: "Superior",
-    body: "Canonical assets are the only trustless way to transfer value, which is why Across only circulates canonical tokens, never representative or synthetic ones. In every transfer at Across, users always receive canonical assets.",
+    body: "The Across Bridge is a superior design, offering the lowest cost and fastest way to transfer value between chains, without the security tradeoffs of using representative, lock-and-mint assets or messaging systems.",
   },
 ];
 

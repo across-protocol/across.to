@@ -12,9 +12,12 @@ const variantToClassNames = {
   teal: {
     buttonClassName: "bg-teal-100/[.05] text-teal-100",
   },
+  purple: {
+    buttonClassName: "bg-purple-100/[.05] text-purple-100",
+  },
 };
 
-export function SubscribeSection(props: { variant: "aqua" | "teal" }) {
+export function SubscribeSection(props: { variant: "aqua" | "teal" | "purple" }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [responseMsg, setResponseMsg] = useState("");

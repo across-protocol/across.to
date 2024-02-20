@@ -5,6 +5,7 @@ import { StatsSection } from "./_components/stats-section";
 import { FeaturesSection } from "./_components/features-section";
 import { SupportedChainsSection } from "@/app/_components/supported-chains-section";
 import { SettlementGetStartedSection } from "./_components/get-started-section";
+import { SubscribeSection } from "@/app/_components/subscribe-section";
 
 export const metadata: Metadata = {
   title: "Across Settlement",
@@ -19,6 +20,7 @@ export default function SettlementLanding() {
       <FeaturesSection />
       <SupportedChainsSection variant="purple" />
       <SettlementGetStartedSection />
+      <SubscribeSection variant="purple" />
     </main>
   );
 }

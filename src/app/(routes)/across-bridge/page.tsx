@@ -4,6 +4,7 @@ import { HeroSection } from "./_components/hero-section";
 import { FeaturesSection } from "./_components/features-section";
 import { TestimonialsSection } from "./_components/testimonials-section";
 import { BridgeNowSection } from "./_components/bridge-now-section";
+import { SubscribeSection } from "@/app/_components/subscribe-section";
 
 export const metadata: Metadata = {
   title: "Across Bridge",
@@ -17,6 +18,7 @@ export default function BridgeLanding() {
       <FeaturesSection />
       <TestimonialsSection />
       <BridgeNowSection />
+      <SubscribeSection variant="aqua" />
     </main>
   );
 }

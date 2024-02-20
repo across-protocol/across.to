@@ -3,13 +3,13 @@ import Image from "next/image";
 import { Text } from "@/app/_components/text";
 import { BridgeNowLink } from "@/app/_components/bridge-now-link";
 import { Button } from "@/app/_components/button";
-import bridgeHeroImage from "@/app/_assets/bridge-hero.png";
+import bridgeNowImage from "@/app/_assets/bridge-now.png";
 
 export function BridgeNowSection() {
   return (
     <section className="container mx-auto flex flex-col items-center gap-16 sm:gap-24">
       <Image
-        src={bridgeHeroImage}
+        src={bridgeNowImage}
         alt="screenshot of bridge ui"
         className=" max-w-[357px]"
       />

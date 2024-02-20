@@ -14,7 +14,7 @@ const features = [
   {
     Icon: <BlocksConnectedIcon className="h-14 w-14" />,
     title: "Cross-Chain Intents Settlement",
-    body: "Intents are cross-chain limit orders submitted to an RFQ system and fulfilled by relayers with their own capital. Settlement verifies fulfillment and repays relayers. Across’ maximally efficient settlement system reduces cost to relayers, and ultimately, users.",
+    body: "Intents are cross-chain limit orders submitted to an RFQ system and fulfilled by relayers with their own capital. Settlement verifies fulfillment and repays relayers. Across’ maximally efficient and modular settlement system reduces cost to relayers, and ultimately, users.",
   },
   {
     Icon: <ChecklistIcon className="h-14 w-14" />,
@@ -29,7 +29,7 @@ const features = [
   {
     Icon: <CrossChainIcon className="h-14 w-14" />,
     title: "Seamless cross-chain management",
-    body: "Repayment is made on the relayers’ chain of choice, reducing overhead and complexity of managing cross-chain positions. Lower costs for relayers resulting in lower costs for users.",
+    body: "Repayment is made on the relayer's chain of choice, reducing overhead and complexity of managing cross-chain positions. Lower costs for relayers resulting in lower costs for users.",
   },
 ];
 
