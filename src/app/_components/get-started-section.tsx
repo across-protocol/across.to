@@ -33,7 +33,7 @@ export function GetStartedSection(props: {
           target="_blank"
           rel="noopener noreferrer"
           className={twJoin(
-            "flex h-10 flex-col items-center justify-center rounded-full px-6 py-2 shadow-sm",
+            "flex flex-col items-center justify-center rounded-full px-6 py-2 shadow-sm",
             variants[props.variant].opacityBgClassName,
           )}
         >

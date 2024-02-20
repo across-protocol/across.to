@@ -1,5 +1,8 @@
 import { Metadata } from "next";
 
+import { HeroSection } from "./_components/hero-section";
+import { FeaturesSection } from "./_components/features-section";
+
 export const metadata: Metadata = {
   title: "Across Bridge",
   description: "Interoperability powered by Intents.",
@@ -7,8 +10,9 @@ export const metadata: Metadata = {
 
 export default function BridgeLanding() {
   return (
-    <main className="z-0 min-h-screen overflow-hidden">
-      <div className="py-10 text-center">Across Bridge</div>
+    <main className="z-0 mb-24 flex min-h-screen flex-col gap-24 overflow-hidden px-4 sm:gap-32 md:gap-48">
+      <HeroSection />
+      <FeaturesSection />
     </main>
   );
 }
