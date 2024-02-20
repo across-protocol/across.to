@@ -14,6 +14,7 @@ export { ArrowRightIcon } from "./arrow-right";
 export { ArrowUpRightIcon } from "./arrow-up-right";
 export { ArrowUpRightThickIcon } from "./arrow-up-right-thick";
 export { VerifiedCheckmarkIcon } from "./verified-checkmark";
+export { DiscourseIcon } from "./discourse";
 
 // Gradient icons
 export { ArrowUpIcon } from "./gradient/arrow-up";

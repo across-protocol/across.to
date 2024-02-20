@@ -18,8 +18,8 @@ const products = [
     iconContainerClassName: "bg-aqua-100/[.05]",
     arrowIconClassName: "stroke-aqua-100",
     containerClassName: [
-      "bg-gradient-to-r from-aqua-100/[.05] to-transparent",
-      "md:group-hover:bg-gradient-to-r md:group-hover:from-aqua-100/[.05] md:group-hover:to-transparent",
+      "bg-gradient-to-b from-aqua-100/[.05] to-transparent",
+      "md:group-hover:bg-gradient-to-b md:group-hover:from-aqua-100/[.05] md:group-hover:to-transparent",
     ],
   },
   {
@@ -29,8 +29,8 @@ const products = [
     iconContainerClassName: "bg-teal-100/[.05]",
     arrowIconClassName: "stroke-teal-100",
     containerClassName: [
-      "bg-gradient-to-r from-teal-100/[.05] to-transparent",
-      "md:group-hover:bg-gradient-to-r md:group-hover:from-teal-100/[.05] md:group-hover:to-transparent",
+      "bg-gradient-to-b from-teal-100/[.05] to-transparent",
+      "md:group-hover:bg-gradient-to-b md:group-hover:from-teal-100/[.05] md:group-hover:to-transparent",
     ],
   },
   {
@@ -40,23 +40,23 @@ const products = [
     iconContainerClassName: "bg-purple-100/[.05]",
     arrowIconClassName: "stroke-purple-100",
     containerClassName: [
-      "bg-gradient-to-r from-purple-100/[.05] to-transparent",
-      "md:group-hover:bg-gradient-to-r md:group-hover:from-purple-100/[.05] md:group-hover:to-transparent",
+      "bg-gradient-to-b from-purple-100/[.05] to-transparent",
+      "md:group-hover:bg-gradient-to-b md:group-hover:from-purple-100/[.05] md:group-hover:to-transparent",
     ],
   },
 ];
 
 export function ProductsSection() {
   return (
-    <section className="container mx-auto mb-12 flex flex-col gap-16 px-4 sm:gap-24 md:mb-24">
-      <div className="flex flex-col gap-3 sm:gap-4">
-        <Text variant="cap-case" className="text-teal-100">
+    <section className="container mx-auto flex flex-col gap-16 px-4 md:gap-24">
+      <div className="flex flex-col gap-3 sm:gap-4 md:items-center">
+        <Text variant="cap-case" className="text-aqua-100">
           Solutions
         </Text>
         <Text variant="heading-2" className="capitalize text-light-200">
           Across Products
         </Text>
-        <Text variant="body-nums">
+        <Text variant="body-nums" className="md:text-center">
           Fastest and lowest-cost bridging for end-users.
           <br />
           Streamlined interoperability for developers.

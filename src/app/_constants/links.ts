@@ -1,17 +1,17 @@
 export const PRODUCT_LINKS = {
   bridge: {
     label: "Across Bridge",
-    description: "Bridge Without Compromise",
+    description: "Lowest Fees & Fastest Speeds",
     href: "/across-bridge",
   },
   plus: {
     label: "Across+",
-    description: "Cross-chain Bridge hooks to Fullfill User intents",
+    description: "Cross-Chain Bridge Hooks",
     href: "/across-plus",
   },
   settlement: {
     label: "Across Settlement",
-    description: "Cross-chain Intents Settlement Layer",
+    description: "Cross-Chain Intents Settlement Layer",
     href: "/across-settlement",
   },
 };
@@ -31,6 +31,11 @@ export const SOCIAL_LINKS = {
     label: "Medium",
     description: "Read deep dives on Across infra and campaigns",
     href: "https://medium.com/across-protocol",
+  },
+  discourse: {
+    label: "Forum",
+    description: "Weigh in on proposals for Across DAO",
+    href: "https://forum.across.to",
   },
 };
 

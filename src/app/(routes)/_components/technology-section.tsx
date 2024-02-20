@@ -1,18 +1,18 @@
 import { ChatIcon, FeatherIcon, BlocksDiagonalIcon } from "../../_components/icons";
 import { Text } from "../../_components/text";
-import landingTechnologySrc from "../../_assets/landing-2.png";
-import landingTechnologyMobileSrc from "../../_assets/landing-2-mobile.png";
+import landingTechnologySrc from "../../_assets/landing-tech.png";
+import landingTechnologyMobileSrc from "../../_assets/landing-tech-mobile.png";
 
 const sections = [
   {
     Icon: ChatIcon,
     title: "User-Centric",
-    body: "Intents replace explicit execution steps with implicit user outcomes, relying on a competitive network of market makers to fulfill outcomes. Cross-chain intents are a cross-chain limit order plus an action to execute.",
+    body: "Intents replace explicit execution steps with user outcomes, allowing relayers to compete to provide the optimal execution path for the user. Cross-chain intents are a cross-chain limit order plus an action to execute.",
   },
   {
     Icon: FeatherIcon,
     title: "Elegant Abstraction",
-    body: "Across connects users and applications via intents, not blockchains to other blockchains via complex or trusted message passing. Developers only need to attach a standard  order to protocol actions to create seamless cross-chain experiences.",
+    body: "Unlike complex, trusted message passing solutions, Across connects users to dapps via intents, not just blockchains to other blockchains. Developers only need to embed a standard order in protocol actions to create seamless cross-chain experiences.",
   },
   {
     Icon: BlocksDiagonalIcon,
@@ -22,7 +22,7 @@ const sections = [
         Cross-chain intents are powered by a modular system of 3 layers:
         <ol className="list-decimal pl-6">
           <li>Request for quote mechanism</li>
-          <li>Network of competitive market makers</li>
+          <li>Network of competitive relayers</li>
           <li>Settlement layer to escrow user input funds, verify, and repay relayers</li>
         </ol>
       </>
@@ -53,7 +53,7 @@ export function TechnologySection() {
         ))}
       </div>
       <div className="flex flex-col items-center">
-        <div className="flex max-w-100 flex-1 sm:max-w-lg md:max-w-full">
+        <div className="flex max-w-100 flex-1 sm:max-w-lg md:max-w-[638px]">
           <picture>
             <source srcSet={landingTechnologySrc.src} media="(min-width: 760px)" />
             <img src={landingTechnologyMobileSrc.src} alt="MDN" />

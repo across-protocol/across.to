@@ -8,7 +8,10 @@ export function StatsSection() {
         <Text variant="cap-case" className="text-aqua-100 md:text-center">
           power in originality
         </Text>
-        <Text variant="heading-2" className="text-center capitalize text-light-200">
+        <Text
+          variant="heading-2"
+          className="text-center capitalize tracking-tight-2 text-light-200"
+        >
           Production ready <br />
           Empirically Proven
         </Text>
