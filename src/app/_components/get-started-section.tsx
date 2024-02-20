@@ -1,6 +1,6 @@
 import { ArrowRightIcon } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
-import { INFORMATION_LINKS } from "@/app/_constants";
+import { INFORMATION_LINKS, SOCIAL_LINKS } from "@/app/_constants";
 import { ReactNode } from "react";
 import { twJoin } from "tailwind-merge";
 
@@ -44,9 +44,10 @@ export function GetStartedSection(props: {
             go to docs
           </Text>
         </a>
-        {/* TODO: Use correct link */}
         <a
-          href="#"
+          href={SOCIAL_LINKS.discord.href}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex h-10 flex-row items-center justify-center gap-2 px-6 py-2"
         >
           <Text
