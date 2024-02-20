@@ -58,7 +58,7 @@ export function SubscribeSection(props: { variant: "aqua" | "teal" | "purple" })
         <input
           type="email"
           placeholder="your email"
-          className="text-medium border-grey-500 h-10 rounded-full border bg-transparent px-6 text-xs uppercase lining-nums tabular-nums tracking-wide-4 focus:outline-none focus:ring-light-100 sm:w-[280px] sm:text-sm"
+          className="text-medium h-10 rounded-full border border-grey-500 bg-transparent px-6 text-xs uppercase lining-nums tabular-nums tracking-wide-4 focus:outline-none focus:ring-light-100 sm:w-[280px] sm:text-sm"
           onChange={(event) => setEmail(event.target.value)}
           value={email}
         />
