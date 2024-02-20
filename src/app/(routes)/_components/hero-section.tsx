@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { PartnersTicker } from "@/app/_components/partners-ticker";
 import { Hero } from "../../_components/hero";
 import { Text } from "../../_components/text";
 import { ArrowRightIcon } from "../../_components/icons/arrow-right";
@@ -38,6 +39,7 @@ export function HeroSection() {
           </a>
         </div>
       </div>
+      <PartnersTicker />
     </Hero>
   );
 }

@@ -39,7 +39,7 @@ export const twMerge = extendTailwindMerge({
       "max-w": ["max-w-100"],
       animate: [
         {
-          animate: ["scroll", "progress"],
+          animate: ["infinite-scroll"],
         },
       ],
       "drop-shadow": [

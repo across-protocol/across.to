@@ -1,63 +1,59 @@
-import { Partner1Icon } from "./icons";
+import Image from "next/image";
 
-// TODO: Replace with actual partner logos
+import { Ticker } from "./ticker";
+
+import balancerLogoSrc from "@/app/_assets/logos/balancer.svg";
+import bungeeLogoSrc from "@/app/_assets/logos/bungee.svg";
+import chainhopLogoSrc from "@/app/_assets/logos/chainhop.svg";
+import dodoLogoSrc from "@/app/_assets/logos/dodo.svg";
+import jumperLogoSrc from "@/app/_assets/logos/jumper.svg";
+import lifiLogoSrc from "@/app/_assets/logos/li-fi.svg";
+import okxLogoSrc from "@/app/_assets/logos/okx.svg";
+import pooltogetherLogoSrc from "@/app/_assets/logos/pooltogether.svg";
+import rainbowLogoSrc from "@/app/_assets/logos/rainbow.svg";
+import rangoLogoSrc from "@/app/_assets/logos/rango.svg";
+import snxLogoSrc from "@/app/_assets/logos/snx.svg";
+import socketLogoSrc from "@/app/_assets/logos/socket.svg";
+
 const partners = [
   {
-    name: "Partner 1",
-    Logo: Partner1Icon,
+    logo: <Image src={balancerLogoSrc} alt="balancer logo" />,
   },
   {
-    name: "Partner 2",
-    Logo: Partner1Icon,
+    logo: <Image src={bungeeLogoSrc} alt="bungee logo" />,
   },
   {
-    name: "Partner 3",
-    Logo: Partner1Icon,
+    logo: <Image src={chainhopLogoSrc} alt="chainhop logo" />,
   },
   {
-    name: "Partner 4",
-    Logo: Partner1Icon,
+    logo: <Image src={dodoLogoSrc} alt="dodo logo" />,
   },
   {
-    name: "Partner 5",
-    Logo: Partner1Icon,
+    logo: <Image src={jumperLogoSrc} alt="jumper logo" />,
   },
   {
-    name: "Partner 6",
-    Logo: Partner1Icon,
+    logo: <Image src={lifiLogoSrc} alt="lifi logo" />,
+  },
+  {
+    logo: <Image src={okxLogoSrc} alt="okx logo" />,
+  },
+  {
+    logo: <Image src={pooltogetherLogoSrc} alt="pooltogether logo" />,
+  },
+  {
+    logo: <Image src={rainbowLogoSrc} alt="rainbow logo" />,
+  },
+  {
+    logo: <Image src={rangoLogoSrc} alt="rango logo" />,
+  },
+  {
+    logo: <Image src={snxLogoSrc} alt="snx logo" />,
+  },
+  {
+    logo: <Image src={socketLogoSrc} alt="socket logo" />,
   },
 ];
 
-// Duplicate partners to simulate infinite scrolling
-const partnersToRender = [...partners, ...partners];
-
-export function PartnersTicker(props: { title: string }) {
-  return (
-    <>
-      <div className="mb-8 text-center text-xs uppercase lining-nums tabular-nums tracking-wide-4 text-grey-400">
-        {props.title}
-      </div>
-      <div className="w-[calc(2 * var(--no-of-slides))] group relative overflow-hidden">
-        <div className="container mx-auto">
-          <div className="grid">
-            <div className="w-[calc(var(--slides-in-view) * var(--slide-width))] flex flex-row overflow-hidden">
-              {partnersToRender.map((partner, index) => (
-                <div
-                  key={index}
-                  className="flex h-[var(--slide-height)] w-[var(--slide-width)] flex-auto flex-shrink-0 flex-grow-0 animate-scroll flex-col items-center"
-                >
-                  {/* Note: partner.name only for testing purposes */}
-                  {/* FIXME: remove before deploying to prod */}
-                  <div>{partner.name}</div>
-                  <partner.Logo className="h-8 w-8" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        {/* Fade in/out overlay */}
-        <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-r from-grey-dark via-transparent via-50% to-grey-dark bg-fixed sm:from-10% sm:to-90% xl:from-25% xl:to-75%" />
-      </div>
-    </>
-  );
+export function PartnersTicker() {
+  return <Ticker title={"trusted by top tier applications"} items={partners} />;
 }

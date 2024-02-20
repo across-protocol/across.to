@@ -73,19 +73,12 @@ const config: Config = {
         "100": "400px",
       },
       animation: {
-        scroll: "scroll var(--iteration-time) linear infinite",
-        progress: "horizontalScrollFull 5000ms linear infinite",
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
       },
       keyframes: {
-        scroll: {
-          "0%": { transform: "translateX(0)" },
-          "100%": {
-            transform: "translateX(calc(var(--slide-width) * var(--no-of-slides)* -1))",
-          },
-        },
-        horizontalScrollFull: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-100%)" },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
         },
       },
       dropShadow: {
