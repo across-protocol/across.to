@@ -29,10 +29,16 @@ export function FeaturesSection() {
   return (
     <section className="container mx-auto flex flex-col gap-16 px-4 sm:gap-24              ">
       <div className="flex flex-col gap-4">
-        <Text variant="cap-case" className="text-center text-teal-100">
+        <Text
+          variant="cap-case"
+          className="text-center text-xs text-teal-100 sm:text-xs md:text-xs"
+        >
           +users +TVL +chains
         </Text>
-        <Text variant="heading-2" className="text-center capitalize text-light-200">
+        <Text
+          variant="heading-2"
+          className="text-center capitalize tracking-tight-2 text-light-200"
+        >
           Seamless Cross-chain Onboarding
         </Text>
       </div>

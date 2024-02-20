@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { twMerge } from "tailwind-merge";
+import { twMerge } from "@/app/_lib/tw-merge";
 
 import {
   AcrossIcon,
@@ -17,6 +17,7 @@ import {
   MediumIcon,
 } from "../icons";
 import { Button } from "../button";
+import { Text } from "../text";
 import { PRODUCT_LINKS, SOCIAL_LINKS } from "@/app/_constants";
 
 import { FlyoutMenu } from "./flyout-menu";
@@ -111,13 +112,13 @@ export function HeaderNav() {
               className={twMerge(
                 "hidden transition md:block",
                 pathname === "/across-plus"
-                  ? "border-teal-100/[.05] bg-teal-100/[.05] text-teal-100"
+                  ? "border-teal-100 bg-teal-100/[.05] text-teal-100"
                   : pathname === "/across-settlement"
-                    ? "border-purple-100/[.05] bg-purple-100/[.05] text-purple-100"
-                    : "",
+                    ? "border-purple-100 bg-purple-100/[.05] text-purple-100"
+                    : "border-aqua-100 bg-aqua-100/[.05] text-aqua-100",
               )}
             >
-              Bridge now
+              <Text variant="cap-case-sm">Bridge now</Text>
             </Button>
             {/* Only show menu button on mobile */}
             <button

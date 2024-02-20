@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Fragment } from "react";
-import { twMerge } from "tailwind-merge";
+import { twMerge } from "@/app/_lib/tw-merge";
 import { Transition } from "@headlessui/react";
 
 import { UmaIcon } from "../icons";

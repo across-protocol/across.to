@@ -31,7 +31,7 @@ export function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Text variant="cap-case">start building</Text>
+            <Text variant="cap-case-sm">start building</Text>
             <div className="flex h-5 w-5 items-center justify-center rounded-full bg-aqua-100">
               <ArrowRightIcon />
             </div>
