@@ -10,6 +10,6 @@
     { "source": "/pool", "destination": "https://app.across.to/pool", "permanent": true },
     { "source": "/transactions", "destination": "https://app.across.to/transactions", "permanent": true },
     { "source": "/rewards", "destination": "https://app.across.to/rewards", "permanent": true },
-    { "source": "/rewards/:path", "destination": "https://app.across.to/rewards/:path", "permanent": true },
+    { "source": "/rewards/:path", "destination": "https://app.across.to/rewards/:path", "permanent": true }
   ]
 }
