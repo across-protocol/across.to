@@ -3,8 +3,18 @@
 import { useState } from "react";
 
 import { Text } from "./text";
+import { twMerge } from "../_lib/tw-merge";
 
-export function SubscribeSection() {
+const variantToClassNames = {
+  aqua: {
+    buttonClassName: "bg-aqua-100/[.05] text-aqua-100",
+  },
+  teal: {
+    buttonClassName: "bg-teal-100/[.05] text-teal-100",
+  },
+};
+
+export function SubscribeSection(props: { variant: "aqua" | "teal" }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [responseMsg, setResponseMsg] = useState("");
@@ -51,7 +61,10 @@ export function SubscribeSection() {
         />
         <button
           type="submit"
-          className="h-10 w-[112px] rounded-full bg-aqua-100/[.05] px-6 text-aqua-100 shadow hover:opacity-75"
+          className={twMerge(
+            "h-10 w-[112px] rounded-full px-6  shadow hover:opacity-75",
+            variantToClassNames[props.variant].buttonClassName,
+          )}
           disabled={status === "loading"}
         >
           <Text variant="cap-case-sm">Sign up</Text>

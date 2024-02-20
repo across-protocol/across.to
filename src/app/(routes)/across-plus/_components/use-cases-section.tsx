@@ -18,11 +18,11 @@ import addLiquidityMobileImage from "@/app/_assets/plus-use-case-add-liquidity-m
  *    enter="transition transform ease-linear duration-[5000ms]"
  * ```
  */
-const sliderInterval = 5000;
+const sliderInterval = 15000;
 
 const useCases = [
   {
-    tabButtonLabel: "Add Liquidity",
+    tabButtonLabel: "Bootstrap Liquidity",
     title: "Bootstrap Liquidity",
     body: "Secure TVL and consolidate capital on your protocol's home chain using Across+. Bridge + LP bundled functions allow protocols to sidestep elaborate multichain deployments and pull capital rather than chase it.",
     learnMoreLink: "https://docs.across.to/additional-info/faq",
@@ -56,29 +56,29 @@ const useCases = [
     },
   },
   {
-    tabButtonLabel: "Long Perpetual",
-    title: "Trade from any chain",
-    body: "Increase dapp trading volume by enabling users to enter into a perp position from any chain. Implementing cross-chain bridge hooks for perpetuals enhances UX, streamlining dapp-level interactions. Reduce user steps, decrease transaction time and increase user engagement.",
+    tabButtonLabel: "Lend",
+    title: "Attract Users",
+    body: "With Across+ lending protocols can attract liquidity and users from any chain. Increase TVL and expand user reach by accepting deposits from any chain to any market.",
     learnMoreLink: "https://docs.across.to/additional-info/faq",
     listTitle: "value props",
     listItems: (
       <>
         <li>
           <Text variant="body-nums-sm" className="text-light-200">
-            <span className="text-teal-100">Increase cross-chain trading volume</span>{" "}
-            with bridge + long perp bundles
+            <span className="text-teal-100">Increase TVL</span> with bridge + lend bundles
+            for users on any chain
           </Text>
         </li>
         <li>
           <Text variant="body-nums-sm" className="text-light-200">
-            <span className="text-teal-100">Expand bundles to include</span> destination
-            chain gas token functions
+            <span className="text-teal-100">Expand user reach</span> by enabling users to
+            supply from their home chain
           </Text>
         </li>
         <li>
           <Text variant="body-nums-sm" className="text-light-200">
-            <span className="text-teal-100">Upgrade trading UX</span> by significantly
-            simplifying user journies
+            <span className="text-teal-100">Consolidate liquidity</span> by pulling
+            liquidity to the protocol&apos;s native chain(s)
           </Text>
         </li>
       </>
@@ -191,20 +191,26 @@ function UseCaseTab(props: { tabLabel: string; showAnimation?: boolean }) {
             {props.tabLabel}
           </button>
           <div className="mx-2 h-[1px] overflow-x-hidden rounded-bl-2xl">
-            <Transition
-              appear={true}
-              show={selected && Boolean(props.showAnimation)}
-              // NOTE: `duration-[${sliderInterval}ms]` needs to be in sync with value of
-              // variable `sliderInterval`.
-              enter="transition transform ease-linear duration-[5000ms]"
-              enterFrom="translate-x-0"
-              enterTo="-translate-x-full"
-              leave="transition duration-[0ms] transform"
-              leaveFrom="-translate-x-full"
-              leaveTo="-translate-x-full"
-            >
-              <div className={twMerge("h-[1px] w-full bg-teal-100")} />
-            </Transition>
+            {selected ? (
+              props.showAnimation ? (
+                <Transition
+                  appear={true}
+                  show={true}
+                  // NOTE: `duration-[${sliderInterval}ms]` needs to be in sync with value of
+                  // variable `sliderInterval`.
+                  enter="transition transform ease-linear duration-[15000ms]"
+                  enterFrom="translate-x-0"
+                  enterTo="-translate-x-full"
+                  leave="transition duration-[0ms] transform"
+                  leaveFrom="-translate-x-full"
+                  leaveTo="-translate-x-full"
+                >
+                  <div className={twMerge("h-[1px] w-full bg-teal-100")} />
+                </Transition>
+              ) : (
+                <div className={twMerge("h-[1px] w-full bg-teal-100")} />
+              )
+            ) : null}
           </div>
         </div>
       )}
@@ -227,12 +233,12 @@ function UseCasePanel({
         <Transition
           appear={true}
           show={selected}
-          enter="transition-opacity duration-500"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity duration-500"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
+          enter="transition duration-500"
+          enterFrom="translate-x-full"
+          enterTo="translate-x-0"
+          leave="transition duration-500"
+          leaveFrom="translate-x-0"
+          leaveTo="-translate-x-full"
         >
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-8 md:flex-row">
