@@ -62,7 +62,7 @@ export function SupportedChainsSection(props: { variant: "teal" | "purple" }) {
           Supported Chains
         </Text>
       </div>
-      <div className="grid grid-cols-1 gap-x-12 gap-y-12 self-center sm:grid-cols-2 sm:self-auto md:grid-cols-3 md:gap-x-[150px]">
+      <div className="grid grid-cols-1 gap-x-12 gap-y-12 self-auto sm:grid-cols-2 md:grid-cols-3 md:gap-x-[150px] md:self-center">
         {chains.map((chain, index) => (
           <div key={index} className="flex flex-col items-center gap-4">
             <div
