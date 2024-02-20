@@ -18,7 +18,7 @@ export default function Home() {
       <ProductsSection />
       <TechnologySection />
       <StatsSection />
-      <SubscribeSection />
+      <SubscribeSection variant="aqua" />
     </main>
   );
 }

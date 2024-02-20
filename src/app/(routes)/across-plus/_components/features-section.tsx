@@ -52,8 +52,8 @@ export function FeaturesSection() {
           </div>
           <div>
             <Text className="max-w-100 text-light-300">
-              Visit the Across+ documentation page to learn the ins and outs of how
-              we&apos;ve built the system.
+              Visit our documentation page to learn more about the benefits of integrating
+              Across+.
             </Text>
             <a
               className="mt-4 flex cursor-pointer flex-row items-center gap-1"

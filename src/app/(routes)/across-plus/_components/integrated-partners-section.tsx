@@ -20,7 +20,7 @@ import onthisProfileSrc from "../_assets/onthis-profile.png";
  *    enter="transition transform ease-linear duration-[5000ms]"
  * ```
  */
-const sliderInterval = 15000;
+const sliderInterval = 20000;
 
 const partners = [
   {
@@ -173,30 +173,36 @@ function IntegratedPartnerPanel({
       {({ selected }) => (
         <>
           <div className="mb-8 h-[1px] overflow-x-hidden rounded-bl-2xl">
-            <Transition
-              appear={true}
-              show={showAnimation}
-              // NOTE: `duration-[${sliderInterval}ms]` needs to be in sync with value of
-              // variable `sliderInterval`.
-              enter="transition transform ease-linear duration-[15000ms]"
-              enterFrom="translate-x-0"
-              enterTo="-translate-x-full"
-              leave="transition duration-[0ms] transform"
-              leaveFrom="-translate-x-full"
-              leaveTo="-translate-x-full"
-            >
-              <div className={twMerge("h-[1px] w-full bg-teal-100")} />
-            </Transition>
+            {selected ? (
+              showAnimation ? (
+                <Transition
+                  appear={true}
+                  show={showAnimation}
+                  // NOTE: `duration-[${sliderInterval}ms]` needs to be in sync with value of
+                  // variable `sliderInterval`.
+                  enter="transition transform ease-linear duration-[20000ms]"
+                  enterFrom="translate-x-0"
+                  enterTo="-translate-x-full"
+                  leave="transition duration-[0ms] transform"
+                  leaveFrom="-translate-x-full"
+                  leaveTo="-translate-x-full"
+                >
+                  <div className={twMerge("h-[1px] w-full bg-teal-100")} />
+                </Transition>
+              ) : (
+                <div className={twMerge("h-[1px] w-full bg-teal-100")} />
+              )
+            ) : null}
           </div>
           <Transition
             appear={true}
             show={selected}
-            enter="transition-opacity duration-500"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition-opacity duration-500"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
+            enter="transition duration-500"
+            enterFrom="translate-x-full"
+            enterTo="translate-x-0"
+            leave="transition duration-500"
+            leaveFrom="translate-x-0"
+            leaveTo="-translate-x-full"
           >
             <div className="flex flex-col gap-8 md:flex-row">
               <div className="flex flex-1 flex-col gap-8">
