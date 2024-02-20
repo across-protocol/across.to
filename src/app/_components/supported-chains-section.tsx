@@ -21,7 +21,7 @@ const chains = [
   {
     label: "Polygon Network",
     Icon: PolygonIcon,
-    iconClassName: "h-8 w-9 md:h-10 md:w-10",
+    iconClassName: "h-8 w-8 md:h-10 md:w-10",
   },
   {
     label: "Arbitrum One",
