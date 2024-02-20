@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Hero } from "@/app/_components/hero";
+import { SupportedChainsTicker } from "@/app/_components/supported-chains-ticker";
 import { Text } from "@/app/_components/text";
 import { BridgeNowLink } from "@/app/_components/bridge-now-link";
 import { ArrowRightIcon } from "@/app/_components/icons/arrow-right";
@@ -37,6 +38,7 @@ export function HeroSection() {
           </BridgeNowLink>
         </div>
       </div>
+      <SupportedChainsTicker />
     </Hero>
   );
 }
