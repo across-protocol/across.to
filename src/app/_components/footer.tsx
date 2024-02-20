@@ -12,6 +12,7 @@ import {
   UmaIcon,
   QuestionMarkIcon,
   DocumentIcon,
+  DiscourseIcon,
 } from "./icons";
 import { IconBox } from "./icon-box";
 import { PRODUCT_LINKS, SOCIAL_LINKS, INFORMATION_LINKS } from "@/app/_constants";
@@ -55,6 +56,12 @@ const socials = [
     ...SOCIAL_LINKS.medium,
     Icon: MediumIcon,
     iconClassName: "h-3 w-5",
+    iconContainerClassName: "bg-light-100/[.05]",
+  },
+  {
+    ...SOCIAL_LINKS.discourse,
+    Icon: DiscourseIcon,
+    iconClassName: "h-4 w-4",
     iconContainerClassName: "bg-light-100/[.05]",
   },
 ];

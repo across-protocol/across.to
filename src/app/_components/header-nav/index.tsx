@@ -17,6 +17,7 @@ import {
   DiscordIcon,
   TwitterIcon,
   MediumIcon,
+  DiscourseIcon,
 } from "../icons";
 import { Button } from "../button";
 import { Text } from "../text";
@@ -69,6 +70,13 @@ const communityNavigationItems = [
     ...SOCIAL_LINKS.medium,
     Icon: MediumIcon,
     iconClassName: "h-3 w-5",
+    iconContainerClassName: "bg-light-100/[.05]",
+    containerClassName: "group-hover:bg-light-100/[.05]",
+  },
+  {
+    ...SOCIAL_LINKS.discourse,
+    Icon: DiscourseIcon,
+    iconClassName: "h-4 w-4",
     iconContainerClassName: "bg-light-100/[.05]",
     containerClassName: "group-hover:bg-light-100/[.05]",
   },
