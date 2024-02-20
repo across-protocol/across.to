@@ -4,7 +4,7 @@ import { Hero } from "@/app/_components/hero";
 import { SupportedChainsTicker } from "@/app/_components/supported-chains-ticker";
 import { Text } from "@/app/_components/text";
 import { BridgeNowLink } from "@/app/_components/bridge-now-link";
-import { ArrowRightIcon } from "@/app/_components/icons/arrow-right";
+import { Button } from "@/app/_components/button";
 import bridgeHeroImage from "@/app/_assets/bridge-hero.png";
 
 export function HeroSection() {
@@ -30,11 +30,10 @@ export function HeroSection() {
               secured by an intents-based architecture.
             </Text>
           </div>
-          <BridgeNowLink className="flex cursor-pointer flex-row items-center justify-center gap-2 text-aqua-100 md:justify-start">
-            <Text variant="cap-case">bridge now</Text>
-            <div className="flex h-5 w-5 items-center justify-center rounded-full bg-aqua-100">
-              <ArrowRightIcon />
-            </div>
+          <BridgeNowLink>
+            <Button className="border-aqua-100 bg-aqua-100/[.05] text-aqua-100">
+              <Text variant="cap-case-sm">Bridge now</Text>
+            </Button>
           </BridgeNowLink>
         </div>
       </div>
