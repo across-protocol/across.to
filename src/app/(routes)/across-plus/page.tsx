@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import { HeroSection } from "./_components/hero-section";
 import { FeaturesSection } from "./_components/features-section";
 import { UseCasesSection } from "./_components/use-cases-section";
-import { SupportedChainsSection } from "./_components/supported-chains-section";
-import { GetStartedSection } from "./_components/get-started-section";
+import { SupportedChainsSection } from "@/app/_components/supported-chains-section";
+import { PlusGetStartedSection } from "./_components/get-started-section";
 
 export const metadata: Metadata = {
   title: "Across Plus",
@@ -17,8 +17,8 @@ export default function PlusLanding() {
       <HeroSection />
       <FeaturesSection />
       <UseCasesSection />
-      <SupportedChainsSection />
-      <GetStartedSection />
+      <SupportedChainsSection variant="teal" />
+      <PlusGetStartedSection />
     </main>
   );
 }

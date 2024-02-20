@@ -8,6 +8,7 @@ export function CheckmarkIcon(props: SVGProps<SVGSVGElement>) {
       viewBox="0 0 96 96"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <rect
         opacity="0.5"

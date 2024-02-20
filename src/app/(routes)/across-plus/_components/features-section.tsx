@@ -27,7 +27,7 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section className="container mx-auto flex flex-col gap-16 px-4 sm:gap-24              ">
+    <section className="container mx-auto flex flex-col gap-16 px-4 sm:gap-24">
       <div className="flex flex-col gap-4">
         <Text
           variant="cap-case"
@@ -49,7 +49,7 @@ export function FeaturesSection() {
             <Text variant="heading-4" className="mb-4 mt-8 capitalize text-light-200">
               {feature.title}
             </Text>
-            <Text className="text-light-300">{feature.body}</Text>
+            <Text className="max-w-[520px] text-light-300">{feature.body}</Text>
           </div>
         ))}
         <div className="flex flex-col items-center gap-8 rounded-2xl bg-teal-100/[.02] p-6 shadow-md sm:items-start">
