@@ -5,7 +5,7 @@ type HeroProps = ComponentProps<"section">;
 
 export function Hero({ className, children, ...props }: HeroProps) {
   return (
-    <section className={twMerge("min-h-screen md:-mb-[180px]", className)} {...props}>
+    <section className={twMerge("min-h-screen", className)} {...props}>
       {children}
     </section>
   );

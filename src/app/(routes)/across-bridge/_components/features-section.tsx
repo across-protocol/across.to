@@ -35,7 +35,7 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section className="container mx-auto -mt-32 flex flex-col gap-16 px-4 sm:gap-24">
+    <section className="container mx-auto flex flex-col gap-16 px-4 sm:gap-24 md:-mt-32">
       <Image
         src={bridge2Image}
         alt="Across settlement layers graphic"

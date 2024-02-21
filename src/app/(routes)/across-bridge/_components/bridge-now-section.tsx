@@ -11,7 +11,7 @@ export function BridgeNowSection() {
       <Image
         src={bridgeNowImage}
         alt="screenshot of bridge ui"
-        className="max-w-[455px]"
+        className="min-[455px]:max-w-[455px]"
       />
       <Text
         variant="heading-1"
