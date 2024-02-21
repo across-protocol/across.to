@@ -8,8 +8,11 @@ import { ArrowUpRightThickIcon } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
 import addLiquidityImage from "@/app/_assets/plus-use-case-add-liquidity.png";
-import addLiquidityTabletImage from "@/app/_assets/plus-use-case-add-liquidity-tablet.png";
 import addLiquidityMobileImage from "@/app/_assets/plus-use-case-add-liquidity-mobile.png";
+import lendImage from "@/app/_assets/plus-use-case-lend.png";
+import lendMobileImage from "@/app/_assets/plus-use-case-lend-mobile.png";
+import buyNftImage from "@/app/_assets/plus-use-case-buy-nft.png";
+import buyNftMobileImage from "@/app/_assets/plus-use-case-buy-nft-mobile.png";
 
 /**
  * NOTE: This needs to be in sync with the `duration-[sliderInterval]` in the `<Transition>` component.
@@ -51,7 +54,6 @@ const useCases = [
     ),
     images: {
       desktop: addLiquidityImage,
-      tablet: addLiquidityTabletImage,
       mobile: addLiquidityMobileImage,
     },
   },
@@ -83,11 +85,9 @@ const useCases = [
         </li>
       </>
     ),
-    // TODO: Get correct images
     images: {
-      desktop: addLiquidityImage,
-      tablet: addLiquidityTabletImage,
-      mobile: addLiquidityMobileImage,
+      desktop: lendImage,
+      mobile: lendMobileImage,
     },
   },
   {
@@ -120,11 +120,9 @@ const useCases = [
         </li>
       </>
     ),
-    // TODO: Get correct images
     images: {
-      desktop: addLiquidityImage,
-      tablet: addLiquidityTabletImage,
-      mobile: addLiquidityMobileImage,
+      desktop: buyNftImage,
+      mobile: buyNftMobileImage,
     },
   },
 ];
@@ -278,10 +276,9 @@ function UseCasePanel({
                 </div>
               </a>
             </div>
-            <div className="flex flex-col items-center rounded-3xl bg-teal-100/[.02] shadow-sm">
-              <div className="flex max-w-100 flex-1 sm:max-w-lg md:max-w-full">
+            <div className="flex flex-col items-center">
+              <div className="flex max-w-[336px] flex-1 md:max-w-full">
                 <picture>
-                  <source srcSet={useCase.images.tablet.src} media="(min-width: 760px)" />
                   <source
                     srcSet={useCase.images.desktop.src}
                     media="(min-width: 900px)"
