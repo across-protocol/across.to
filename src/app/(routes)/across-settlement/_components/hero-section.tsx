@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Text } from "@/app/_components/text";
 import { ArrowRightIcon } from "@/app/_components/icons/arrow-right";
 import settlementHeroImage from "@/app/_assets/settlement-hero.png";
-import { INFORMATION_LINKS } from "@/app/_constants";
+import { INTEGRATION_LINKS } from "@/app/_constants/links";
 
 export function HeroSection() {
   return (
@@ -31,13 +31,13 @@ export function HeroSection() {
               variant="body-nums"
               className="max-w-[336px] text-center sm:max-w-[430px] md:text-left"
             >
-              Efficiently transform RFQ order flow into cross-chain swaps with
-              Across&apos; intents settlement system.
+              The future of interoperability in intents -- Across Settlement is the only
+              production-ready, modular settlement layer for cross-chain intents.
             </Text>
           </div>
           <a
             className="flex cursor-pointer flex-row items-center justify-center gap-2 text-purple-100 md:justify-start"
-            href={INFORMATION_LINKS.docs.href}
+            href={INTEGRATION_LINKS.settlement}
             target="_blank"
             rel="noopener noreferrer"
           >

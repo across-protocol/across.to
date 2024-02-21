@@ -1,6 +1,6 @@
 import { ArrowRightIcon } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
-import { INFORMATION_LINKS, SOCIAL_LINKS } from "@/app/_constants";
+import { SOCIAL_LINKS } from "@/app/_constants";
 import { ReactNode } from "react";
 import { twJoin } from "tailwind-merge";
 
@@ -20,6 +20,7 @@ const variants = {
 export function GetStartedSection(props: {
   Image: ReactNode;
   variant: "teal" | "purple";
+  docsHref: string;
 }) {
   return (
     <section className="container mx-auto flex flex-col items-center gap-16 sm:gap-24">
@@ -29,7 +30,7 @@ export function GetStartedSection(props: {
       </Text>
       <div className="flex flex-row gap-6">
         <a
-          href={INFORMATION_LINKS.docs.href}
+          href={props.docsHref}
           target="_blank"
           rel="noopener noreferrer"
           className={twJoin(

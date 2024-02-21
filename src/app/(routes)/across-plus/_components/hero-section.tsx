@@ -4,7 +4,7 @@ import { Hero } from "@/app/_components/hero";
 import { Text } from "@/app/_components/text";
 import { ArrowRightIcon } from "@/app/_components/icons/arrow-right";
 import plusHeroSrc from "@/app/_assets/plus-hero.png";
-import { INFORMATION_LINKS } from "@/app/_constants";
+import { INTEGRATION_LINKS } from "@/app/_constants/links";
 
 export function HeroSection() {
   return (
@@ -26,7 +26,6 @@ export function HeroSection() {
               To
               <br className="hidden md:block" /> Fulfill
             </span>{" "}
-            {/* <br className="hidden md:block" /> */}
             <span className="text-teal-100">User Intents</span>
           </Text>
           <div className="flex w-full flex-row justify-center md:justify-start">
@@ -37,11 +36,11 @@ export function HeroSection() {
           </div>
           <a
             className="flex cursor-pointer flex-row items-center justify-center gap-2 text-teal-100 md:justify-start"
-            href={INFORMATION_LINKS.docs.href}
+            href={INTEGRATION_LINKS.plus}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Text variant="cap-case">go to docs</Text>
+            <Text variant="cap-case-sm">go to docs</Text>
             <div className="flex h-5 w-5 items-center justify-center rounded-full bg-teal-100">
               <ArrowRightIcon />
             </div>

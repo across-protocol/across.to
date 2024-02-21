@@ -11,13 +11,13 @@ export function BridgeNowSection() {
       <Image
         src={bridgeNowImage}
         alt="screenshot of bridge ui"
-        className=" max-w-[357px]"
+        className="max-w-[455px]"
       />
       <Text
         variant="heading-1"
         className="text-center capitalize text-light-100 md:tracking-tight-1"
       >
-        experience the bridge
+        Experience The Best Bridge
       </Text>
       <div className="flex flex-row items-center">
         <BridgeNowLink>

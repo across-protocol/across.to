@@ -13,6 +13,7 @@ import lendImage from "@/app/_assets/plus-use-case-lend.png";
 import lendMobileImage from "@/app/_assets/plus-use-case-lend-mobile.png";
 import buyNftImage from "@/app/_assets/plus-use-case-buy-nft.png";
 import buyNftMobileImage from "@/app/_assets/plus-use-case-buy-nft-mobile.png";
+import { INTEGRATION_LINKS } from "@/app/_constants/links";
 
 /**
  * NOTE: This needs to be in sync with the `duration-[sliderInterval]` in the `<Transition>` component.
@@ -28,7 +29,7 @@ const useCases = [
     tabButtonLabel: "Bootstrap Liquidity",
     title: "Bootstrap Liquidity",
     body: "Secure TVL and consolidate capital on your protocol's home chain using Across+. Bridge + LP bundled functions allow protocols to sidestep elaborate multichain deployments and pull capital rather than chase it.",
-    learnMoreLink: "https://docs.across.to/additional-info/faq",
+    learnMoreLink: INTEGRATION_LINKS.plus,
     listTitle: "key features",
     listItems: (
       <>
@@ -46,8 +47,8 @@ const useCases = [
         </li>
         <li>
           <Text variant="body-nums-sm" className="text-light-200">
-            <span className="text-teal-100">Consolidate liquidity pool management</span>{" "}
-            by pulling liquidity to your chain
+            <span className="text-teal-100">Consolidate liquidity</span> by pulling
+            liquidity to the protocol’s native chain(s)
           </Text>
         </li>
       </>
@@ -59,9 +60,9 @@ const useCases = [
   },
   {
     tabButtonLabel: "Lend",
-    title: "Attract Users",
+    title: "Expand Markets",
     body: "With Across+ lending protocols can attract liquidity and users from any chain. Increase TVL and expand user reach by accepting deposits from any chain to any market.",
-    learnMoreLink: "https://docs.across.to/additional-info/faq",
+    learnMoreLink: INTEGRATION_LINKS.plus,
     listTitle: "value props",
     listItems: (
       <>
@@ -94,7 +95,7 @@ const useCases = [
     tabButtonLabel: "Buy NFT",
     title: "Unlock New Ecosystems",
     body: "Onboard NFT collectors from their home chain with bridge + buy NFT bundled contract functions using Across+. Bridge abstraction eliminates cross-chain learning curve hurdles and Across’ reliably fast transfer speeds prevents missed opportunities on timed mints and auctions.",
-    learnMoreLink: "https://docs.across.to/additional-info/faq",
+    learnMoreLink: INTEGRATION_LINKS.plus,
     listTitle: "value props",
     listItems: (
       <>

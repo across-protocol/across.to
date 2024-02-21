@@ -40,12 +40,18 @@ export const SOCIAL_LINKS = {
 };
 
 export const INFORMATION_LINKS = {
-  faq: {
-    label: "FAQ",
-    href: "https://docs.across.to/additional-info/faq",
+  github: {
+    label: "GitHub",
+    href: "https://github.com/across-protocol",
   },
   docs: {
     label: "Docs",
     href: "https://docs.across.to",
   },
+};
+
+export const INTEGRATION_LINKS = {
+  plus: "https://docs.across.to/v/developer-docs-v3/integration-guides/across+-integration",
+  settlement:
+    "https://docs.across.to/v/developer-docs-v3/integration-guides/across-settlement-integration",
 };
