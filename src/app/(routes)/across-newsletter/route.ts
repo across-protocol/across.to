@@ -7,39 +7,47 @@ import {
 } from "./_constants";
 
 export async function POST(request: Request) {
-  const body = await request.json();
-  const email = body.email;
+  try {
+    const body = await request.json();
+    const email = body.email;
 
-  const parsedEmail = z.string().email().safeParse(email);
+    const parsedEmail = z.string().email().safeParse(email);
 
-  if (!parsedEmail.success) {
-    return new Response("Invalid email address", {
-      status: 400,
-    });
-  }
+    if (!parsedEmail.success) {
+      return new Response("Invalid email address", {
+        status: 400,
+      });
+    }
 
-  const response = await fetch(
-    `https://${MAILCHIMP_API_SERVER}.api.mailchimp.com/3.0/lists/${MAILCHIMP_AUDIENCE_ID}/members`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `api_key ${MAILCHIMP_API_KEY}`,
+    const response = await fetch(
+      `https://${MAILCHIMP_API_SERVER}.api.mailchimp.com/3.0/lists/${MAILCHIMP_AUDIENCE_ID}/members`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `api_key ${MAILCHIMP_API_KEY}`,
+        },
+        body: JSON.stringify({
+          email_address: parsedEmail.data,
+          status: "subscribed",
+        }),
       },
-      body: JSON.stringify({
-        email_address: parsedEmail.data,
-        status: "subscribed",
-      }),
-    },
-  );
+    );
 
-  if (response.status == 200) {
-    return new Response("Successfully subscribed", {
-      status: 201,
+    if (response.status == 200) {
+      return new Response("Successfully subscribed", {
+        status: 201,
+      });
+    }
+
+    const data = await response.json();
+    return new Response(`${data.title}: ${data.detail}`, {
+      status: response.status,
+    });
+  } catch (error) {
+    console.error(error);
+    return new Response("Something went wrong", {
+      status: 500,
     });
   }
-
-  return new Response("Something went wrong", {
-    status: 500,
-  });
 }
