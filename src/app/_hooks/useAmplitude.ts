@@ -1,18 +1,14 @@
 import { useEffect, useState } from "react";
 import { ampli } from "../_amplitude";
-import { AMPLITUDE_KEY } from "../_constants";
-import {
-  AMPLITUDE_LOGGING,
-  AMPLITUDE_SERVER_URL,
-  GIT_COMMIT_HASH,
-  IS_PROD,
-} from "../_constants/environment";
+import { GIT_COMMIT_HASH } from "../_constants/environment";
 import { initializeAmplitude, pageLookup } from "../_lib/amplitude";
+import { usePathname } from "next/navigation";
 
 export function useAmplitude() {
   const [isAmplitudeInitialized, setIsAmplitudeInitialized] = useState(false);
   const [isInitialPageView, setIsInitialPageView] = useState(true);
-  const pathname = typeof window !== "undefined" ? window.location.pathname : undefined;
+
+  const pathname = usePathname();
 
   // Tracking page views on client side
   useEffect(() => {
@@ -28,7 +24,7 @@ export function useAmplitude() {
         isInitialPageView,
       });
     }
-    setIsAmplitudeInitialized(true);
+    setIsInitialPageView(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
