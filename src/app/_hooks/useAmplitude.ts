@@ -26,7 +26,7 @@ export function useAmplitude() {
     }
     setIsInitialPageView(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname]);
+  }, [pathname, isAmplitudeInitialized]);
 
   // Initialize Amplitude
   useEffect(() => {
