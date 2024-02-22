@@ -6,7 +6,7 @@ import {
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 import { FeaturesGrid } from "@/app/_components/features-grid";
-import { INFORMATION_LINKS } from "@/app/_constants";
+import { INTEGRATION_LINKS } from "@/app/_constants/links";
 
 const features = [
   {
@@ -57,7 +57,7 @@ export function FeaturesSection() {
             </Text>
             <a
               className="mt-4 flex cursor-pointer flex-row items-center gap-1"
-              href={INFORMATION_LINKS.docs.href}
+              href={INTEGRATION_LINKS.plus}
               target="_blank"
               rel="noopener noreferrer"
             >
