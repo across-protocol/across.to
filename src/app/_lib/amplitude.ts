@@ -28,8 +28,6 @@ export async function initializeAmplitude(setLoaded: (loaded: boolean) => void) 
     ampli.load({
       client: { instance: amplitude, configuration: {} },
     });
-    // Log that the application has been loaded
-    ampli.applicationLoaded();
     // Set loaded to true
     setLoaded(true);
     // Output that Amplitude has been initialized
