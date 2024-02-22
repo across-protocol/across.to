@@ -1,3 +1,5 @@
+"use client";
+
 import * as amplitude from "@amplitude/analytics-browser";
 import { useEffect, useState } from "react";
 import { ampli } from "../_amplitude";
@@ -7,17 +9,21 @@ import {
   AMPLITUDE_SERVER_URL,
   IS_PROD,
 } from "../_constants/environment";
+import { useRouter } from "next/router";
 
 export function useAmplitude() {
   const [isAmplitudeInitialized, setIsAmplitudeInitialized] = useState(false);
-  const page = window.location.pathname;
+  const router = useRouter();
 
   // Tracking page views on client side
-  useEffect(() => {}, [page]);
+  useEffect(() => {}, [router.pathname]);
 
   // Initialize Amplitude
   useEffect(() => {
-    initializeAmplitude(setIsAmplitudeInitialized);
+    if (!isAmplitudeInitialized) {
+      initializeAmplitude(setIsAmplitudeInitialized);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 }
 
@@ -39,11 +45,13 @@ async function initializeAmplitude(setLoaded: (loaded: boolean) => void) {
       },
     });
     ampli.load({
-      client: { instance: amplitude },
+      client: { instance: amplitude, configuration: {} },
     });
     // Log that the application has been loaded
     ampli.applicationLoaded();
     // Set loaded to true
     setLoaded(true);
+    // Output that Amplitude has been initialized
+    console.info("Amplitude instrumentation initialized");
   }
 }

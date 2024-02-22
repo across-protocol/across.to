@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
 import { twMerge } from "@/app/_lib/tw-merge";
+import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
 
-import { HeaderNav } from "@/app/_components/header-nav";
 import { Footer } from "@/app/_components/footer";
+import { HeaderNav } from "@/app/_components/header-nav";
+import { Amplitude } from "@/app/_components/amplitude";
 
 import "./globals.css";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <Amplitude />
       </body>
     </html>
   );
