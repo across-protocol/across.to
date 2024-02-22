@@ -8,7 +8,8 @@ import { SubscribeSection } from "@/app/_components/subscribe-section";
 
 export const metadata: Metadata = {
   title: "Across Bridge",
-  description: "Interoperability powered by Intents.",
+  description:
+    "Lowest Fees Fastest Speeds. Experience extraordinarily fast and cost-effective cross-chain bridging, secured by an intents-based architecture.",
 };
 
 export default function BridgeLanding() {

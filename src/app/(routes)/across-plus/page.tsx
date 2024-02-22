@@ -9,8 +9,9 @@ import { IntegratedPartnersSection } from "./_components/integrated-partners-sec
 import { SubscribeSection } from "@/app/_components/subscribe-section";
 
 export const metadata: Metadata = {
-  title: "Across Plus",
-  description: "Interoperability powered by Intents.",
+  title: "Across+",
+  description:
+    "Cross-Chain Bridge Hooks To Fulfill User Intents. Bridge abstraction promotes user onboarding and bootstraps cross-chain capital by bundling bridge + protocol actions within dapps.",
 };
 
 export default function PlusLanding() {

@@ -51,7 +51,7 @@ export const INFORMATION_LINKS = {
 };
 
 export const INTEGRATION_LINKS = {
-  plus: "https://docs.across.to/v/developer-docs-v3/integration-guides/across+-integration",
+  plus: "https://docs.across.to/v/v3-developer-docs/integration-guides/across+-integration",
   settlement:
-    "https://docs.across.to/v/developer-docs-v3/integration-guides/across-settlement-integration",
+    "https://docs.across.to/v/v3-developer-docs/concepts/intents-architecture-in-across",
 };

@@ -8,7 +8,8 @@ import { SubscribeSection } from "@/app/_components/subscribe-section";
 
 export const metadata: Metadata = {
   title: "Home | Across Protocol",
-  description: "Interoperability powered by Intents.",
+  description:
+    "Interoperability powered by Intents. A new paradigm in cross-chain experiences, seamlessly connecting users with applications.",
 };
 
 export default function Home() {
