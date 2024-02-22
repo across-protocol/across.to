@@ -190,7 +190,7 @@ export interface PageViewedProperties {
   /**
    * | Rule | Value |
    * |---|---|
-   * | Enum Values | splashPage, bridgePage, poolPage, rewardsPage, transactionsPage, stakingPage, referralPage, airdropPage, 404Page |
+   * | Enum Values | splashPage, bridgePage, poolPage, rewardsPage, transactionsPage, stakingPage, referralPage, airdropPage, 404Page, marketingHomePage, marketingBridgePage, marketingAcrossPlusPage, marketingSettlementPage |
    */
   page:
     | "splashPage"
@@ -201,7 +201,11 @@ export interface PageViewedProperties {
     | "stakingPage"
     | "referralPage"
     | "airdropPage"
-    | "404Page";
+    | "404Page"
+    | "marketingHomePage"
+    | "marketingBridgePage"
+    | "marketingAcrossPlusPage"
+    | "marketingSettlementPage";
   path: string;
   /**
    * Address of referee, null if no referral used

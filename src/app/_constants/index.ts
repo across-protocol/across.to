@@ -1,2 +1,3 @@
 export { PRODUCT_LINKS, SOCIAL_LINKS, INFORMATION_LINKS } from "./links";
-export { IS_PROD, AMPLITUDE_KEY } from "./environment";
+export * from "./environment";
+export { AMPLITUDE_PAGE_LOOKUP } from "./amplitude";
