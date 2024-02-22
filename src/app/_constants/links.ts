@@ -20,7 +20,7 @@ export const SOCIAL_LINKS = {
   discord: {
     label: "Discord",
     description: "Access support and chat with community members",
-    href: "discord.across.to",
+    href: "https://discord.across.to",
   },
   twitter: {
     label: "Twitter",
@@ -46,7 +46,7 @@ export const INFORMATION_LINKS = {
   },
   docs: {
     label: "Docs",
-    href: "https://docs.across.to",
+    href: "https://docs.across.to/v/v3-developer-docs/introduction/what-is-across",
   },
 };
 
