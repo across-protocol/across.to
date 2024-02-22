@@ -41,17 +41,19 @@ export function HeroSection() {
               <Text variant="cap-case-sm">Bridge now</Text>
             </Button>
           </BridgeNowLink>
-          <a
-            className="flex cursor-pointer flex-row items-center justify-center gap-2 text-aqua-100 md:justify-start"
-            href={INFORMATION_LINKS.docs.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Text variant="cap-case-sm">start building</Text>
-            <div className="flex h-5 w-5 items-center justify-center rounded-full bg-aqua-100">
-              <ArrowRightIcon />
-            </div>
-          </a>
+          <div className="flex self-center md:self-start">
+            <a
+              className="flex cursor-pointer flex-row items-center justify-center gap-2 text-aqua-100 hover:opacity-75 md:justify-start"
+              href={INFORMATION_LINKS.docs.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Text variant="cap-case-sm">start building</Text>
+              <div className="flex h-5 w-5 items-center justify-center rounded-full bg-aqua-100">
+                <ArrowRightIcon />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
       <PartnersTicker />

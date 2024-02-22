@@ -34,17 +34,19 @@ export function HeroSection() {
               capital by bundling bridge + protocol actions within dapps.
             </Text>
           </div>
-          <a
-            className="flex cursor-pointer flex-row items-center justify-center gap-2 text-teal-100 md:justify-start"
-            href={INTEGRATION_LINKS.plus}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Text variant="cap-case-sm">go to docs</Text>
-            <div className="flex h-5 w-5 items-center justify-center rounded-full bg-teal-100">
-              <ArrowRightIcon />
-            </div>
-          </a>
+          <div className="flex self-center md:self-start">
+            <a
+              className="flex cursor-pointer flex-row items-center justify-center gap-2 text-teal-100 hover:opacity-75 md:justify-start"
+              href={INTEGRATION_LINKS.plus}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Text variant="cap-case-sm">go to docs</Text>
+              <div className="flex h-5 w-5 items-center justify-center rounded-full bg-teal-100">
+                <ArrowRightIcon />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </Hero>

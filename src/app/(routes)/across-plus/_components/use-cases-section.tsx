@@ -264,7 +264,7 @@ function UseCasePanel({
             </div>
             <div>
               <a
-                className="mt-4 flex cursor-pointer flex-row items-center gap-1"
+                className="mt-4 flex cursor-pointer flex-row items-center gap-1 hover:opacity-75"
                 href={useCase.learnMoreLink}
                 target="_blank"
                 rel="noopener noreferrer"

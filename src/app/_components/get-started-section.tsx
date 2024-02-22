@@ -34,7 +34,7 @@ export function GetStartedSection(props: {
           target="_blank"
           rel="noopener noreferrer"
           className={twJoin(
-            "flex flex-col items-center justify-center rounded-full px-6 py-2 shadow-sm",
+            "flex flex-col items-center justify-center rounded-full px-6 py-2 shadow-sm hover:opacity-75",
             variants[props.variant].opacityBgClassName,
           )}
         >
@@ -49,7 +49,7 @@ export function GetStartedSection(props: {
           href={SOCIAL_LINKS.discord.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex h-10 flex-row items-center justify-center gap-2 px-6 py-2"
+          className="flex h-10 flex-row items-center justify-center gap-2 px-6 py-2 hover:opacity-75"
         >
           <Text
             variant="cap-case"
