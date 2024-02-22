@@ -22,7 +22,7 @@ const features = [
   {
     Icon: <ChatIcon variant="teal" className="h-14 w-14" />,
     title: "intents-based Architecture",
-    body: "Cross-chain intents are cross-chain limit orders plus a protocol action to execute on destination. Simply attach the intent order standard to protocol actions to create seamless cross-chain experiences.",
+    body: "Cross-chain intents are cross-chain limit orders plus a protocol action to execute on destination. Simply embed the intent order standard in protocol actions to create seamless cross-chain experiences.",
   },
 ];
 

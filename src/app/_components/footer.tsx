@@ -10,9 +10,9 @@ import {
   TwitterIcon,
   MediumIcon,
   UmaIcon,
-  QuestionMarkIcon,
   DocumentIcon,
   DiscourseIcon,
+  GitHubIcon,
 } from "./icons";
 import { IconBox } from "./icon-box";
 import { PRODUCT_LINKS, SOCIAL_LINKS, INFORMATION_LINKS } from "@/app/_constants";
@@ -68,14 +68,14 @@ const socials = [
 
 const information = [
   {
-    ...INFORMATION_LINKS.faq,
-    Icon: QuestionMarkIcon,
+    ...INFORMATION_LINKS.docs,
+    Icon: DocumentIcon,
     iconClassName: "h-5 w-5",
     iconContainerClassName: "bg-light-100/[.05]",
   },
   {
-    ...INFORMATION_LINKS.docs,
-    Icon: DocumentIcon,
+    ...INFORMATION_LINKS.github,
+    Icon: GitHubIcon,
     iconClassName: "h-5 w-5",
     iconContainerClassName: "bg-light-100/[.05]",
   },

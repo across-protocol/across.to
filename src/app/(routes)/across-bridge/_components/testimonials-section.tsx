@@ -79,9 +79,9 @@ const tweets = {
       isVerified: true,
       displayName: "kidponga.eth",
       username: "@kidponga",
-      tweetUrl: "https://x.com/Infinity_1001/status/1749523278228521112?s=20",
+      tweetUrl: "https://x.com/kidponga/status/1750013537379111135?s=20",
       profileImageUrl:
-        "https://pbs.twimg.com/profile_images/1692052698307153920/WiHp_6vw_200x200.jpg",
+        "https://pbs.twimg.com/profile_images/1674812681457483782/d-X5fE6H_200x200.jpg",
       tweet: (
         <>
           What&apos;s the best bridge in crypto?
@@ -149,10 +149,9 @@ const tweets = {
       isVerified: false,
       displayName: "Infinity",
       username: "@Infinity_1001",
-      // TODO: update tweet url
-      tweetUrl: "https://x.com/kidponga/status/1750013537379111135?s=20",
+      tweetUrl: "https://x.com/Infinity_1001/status/1749523278228521112?s=20",
       profileImageUrl:
-        "https://pbs.twimg.com/profile_images/1687521808331702272/Ky0QmeqD_200x200.jpg",
+        "https://pbs.twimg.com/profile_images/1694133216343441408/1Uz5ZXP8_200x200.jpg",
       tweet: (
         <>
           Across is without a doubt the best bridge you can use today.
@@ -195,7 +194,7 @@ export function TestimonialsSection() {
           </Text>
           <Text
             variant="body"
-            className="max-w-[336px] text-center text-md text-light-300 md:text-lg"
+            className="max-w-[400px] text-center text-md text-light-300 md:text-lg"
           >
             {mainTweet.body}
           </Text>
@@ -205,7 +204,7 @@ export function TestimonialsSection() {
           </div>
           <div
             className={twMerge(
-              "flex flex-col gap-4 overflow-hidden sm:flex-row md:gap-8",
+              "mt-12 flex flex-col gap-4 overflow-hidden sm:flex-row md:mt-24 md:gap-8",
               isExpanded ? "" : "h-[480px]",
             )}
           >

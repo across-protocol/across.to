@@ -1,6 +1,6 @@
 import { ArrowRightIcon } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
-import { INFORMATION_LINKS, SOCIAL_LINKS } from "@/app/_constants";
+import { SOCIAL_LINKS } from "@/app/_constants";
 import { ReactNode } from "react";
 import { twJoin } from "tailwind-merge";
 
@@ -20,20 +20,21 @@ const variants = {
 export function GetStartedSection(props: {
   Image: ReactNode;
   variant: "teal" | "purple";
+  docsHref: string;
 }) {
   return (
     <section className="container mx-auto flex flex-col items-center gap-16 sm:gap-24">
       {props.Image}
-      <Text variant="heading-1" className="tracking-tight-1 text-light-100">
+      <Text variant="heading-1" className="capitalize text-light-100 md:tracking-tight-1">
         Ready to get started?
       </Text>
       <div className="flex flex-row gap-6">
         <a
-          href={INFORMATION_LINKS.docs.href}
+          href={props.docsHref}
           target="_blank"
           rel="noopener noreferrer"
           className={twJoin(
-            "flex flex-col items-center justify-center rounded-full px-6 py-2 shadow-sm",
+            "flex flex-col items-center justify-center rounded-full px-6 py-2 shadow-sm hover:opacity-75",
             variants[props.variant].opacityBgClassName,
           )}
         >
@@ -48,7 +49,7 @@ export function GetStartedSection(props: {
           href={SOCIAL_LINKS.discord.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex h-10 flex-row items-center justify-center gap-2 px-6 py-2"
+          className="flex h-10 flex-row items-center justify-center gap-2 px-6 py-2 hover:opacity-75"
         >
           <Text
             variant="cap-case"

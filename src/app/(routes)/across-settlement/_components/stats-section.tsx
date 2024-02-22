@@ -8,7 +8,7 @@ const statBoxOverrides = {
 
 export async function StatsSection() {
   return (
-    <section className="container mx-auto -mt-48 flex flex-col px-4 sm:-mt-16 md:-mt-48">
+    <section className="container mx-auto flex flex-col px-4">
       <StatsRow
         volumeBoxProps={statBoxOverrides}
         transactionBoxProps={statBoxOverrides}

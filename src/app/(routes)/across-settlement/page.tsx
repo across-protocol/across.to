@@ -9,12 +9,13 @@ import { SubscribeSection } from "@/app/_components/subscribe-section";
 
 export const metadata: Metadata = {
   title: "Across Settlement",
-  description: "Interoperability powered by Intents.",
+  description:
+    "Cross-chain Intents Settlement Layer. The future of interoperability in intents -- Across Settlement is the only production-ready, modular settlement layer for cross-chain intents.",
 };
 
 export default function SettlementLanding() {
   return (
-    <main className="z-0 mb-24 flex min-h-screen flex-col gap-24 overflow-hidden px-4 sm:gap-32 md:gap-48">
+    <main className="z-0 mb-24 flex flex-col gap-24 overflow-hidden px-4 sm:gap-32 md:gap-48">
       <HeroSection />
       <StatsSection />
       <FeaturesSection />
