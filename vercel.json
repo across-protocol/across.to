@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://across.to/api/:path*"
+      "destination": "https://app.across.to/api/:path*"
     }
   ],
   "redirects": [
