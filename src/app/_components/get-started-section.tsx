@@ -25,7 +25,7 @@ export function GetStartedSection(props: {
   return (
     <section className="container mx-auto flex flex-col items-center gap-16 sm:gap-24">
       {props.Image}
-      <Text variant="heading-1" className="text-light-100 md:tracking-tight-1">
+      <Text variant="heading-1" className="capitalize text-light-100 md:tracking-tight-1">
         Ready to get started?
       </Text>
       <div className="flex flex-row gap-6">
