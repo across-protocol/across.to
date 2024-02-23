@@ -9,7 +9,7 @@ import {
 } from "../_constants";
 
 export async function initializeAmplitude(setLoaded: (loaded: boolean) => void) {
-  if (AMPLITUDE_KEY) {
+  if (IS_PROD && AMPLITUDE_KEY) {
     amplitude.init(AMPLITUDE_KEY, undefined, {
       serverUrl: AMPLITUDE_SERVER_URL,
       identityStorage: "none",
