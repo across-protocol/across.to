@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={twMerge(inter.className, "bg-grey-dark text-light-300")}>
-        <div className="min-h-screen flex flex-col justify-between">
+        <div className="flex min-h-screen flex-col justify-between">
           <HeaderNav />
           {children}
           <Footer />
