@@ -95,7 +95,7 @@ export function Footer() {
         </div>
       </div>
       <div className="flex flex-row items-center justify-center gap-1 lining-nums tabular-nums  text-grey-400">
-        Powered by
+        Secured by
         <UmaIcon />
       </div>
     </footer>
