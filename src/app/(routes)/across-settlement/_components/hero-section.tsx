@@ -32,7 +32,7 @@ export function HeroSection() {
               variant="body-nums"
               className="max-w-[336px] text-center sm:max-w-[430px] md:text-left"
             >
-              The future of interoperability in intents -- Across Settlement is the only
+              The future of interoperability is intents -- Across Settlement is the only
               production-ready, modular settlement layer for cross-chain intents.
             </Text>
           </div>
