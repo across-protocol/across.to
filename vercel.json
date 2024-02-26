@@ -21,6 +21,21 @@
       "source": "/rewards/:path*",
       "destination": "https://app.across.to/rewards/:path*",
       "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/careers",
+      "destination": "https://jobs.lever.co/risklabs",
+      "permanent": true
+    },
+    {
+      "source": "/jobs",
+      "destination": "https://jobs.lever.co/risklabs",
+      "permanent": true
     }
   ]
 }
