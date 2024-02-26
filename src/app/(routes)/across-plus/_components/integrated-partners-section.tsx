@@ -51,7 +51,7 @@ const partners = [
     partner: "Onthis",
     description: (
       <>
-        The onthis product, Shortcuts, sends ETH to human-readable contracts to bridge,
+        The OnThis product, Shortcuts, sends ETH to human-readable contracts to bridge,
         swap, stake, mint, and more, directly from a user’s wallet. Across+ powers these
         cross-chain bundled transactions.
       </>

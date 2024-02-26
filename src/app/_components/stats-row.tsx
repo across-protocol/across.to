@@ -42,7 +42,7 @@ export async function StatsRow(props: {
         {...props.volumeBoxProps}
       />
       <StatBox
-        title="transaction"
+        title="transactions"
         value={formattedStatsData.totalDeposits}
         titleClassName="text-orange-100"
         className="group-hover:border-orange-100"
