@@ -7,6 +7,16 @@ import { TwitterIcon, VerifiedCheckmarkIcon } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 import { twMerge } from "@/app/_lib/tw-merge";
 
+import prayEthProfileImage from "../_assets/pray_eth-profile-pic.jpeg";
+import davidjgooseyProfileImage from "../_assets/davidjgoosey-profile-pic.jpeg";
+import ayyyeaandyProfileImage from "../_assets/ayyyeandy-profile-pic.jpeg";
+import carlshuuProfileImage from "../_assets/carlshuu-profile-pic.jpeg";
+import infinityProfileImage from "../_assets/Infinity_1001-profile-pic.jpeg";
+import ivanProfileImage from "../_assets/ivan90403291-profile-ic.jpeg";
+import kidpongaProfileImage from "../_assets/kidponga-profile-pic.jpeg";
+import maxlomuProfileImage from "../_assets/maxlomu-profile-pic.jpeg";
+import scottProfileImage from "../_assets/scottburke777-profile-pic.jpeg";
+
 const mainTweet = {
   title: (
     <>
@@ -33,8 +43,7 @@ const tweets = {
       isVerified: true,
       displayName: "pray.eth",
       username: "@pray_eth",
-      profileImageUrl:
-        "https://pbs.twimg.com/profile_images/1692052698307153920/WiHp_6vw_200x200.jpg",
+      profileImageUrl: prayEthProfileImage,
       tweet: (
         <>
           Yeah, I bridge a lot, noticed @BungeeExchange routes were giving me
@@ -52,8 +61,7 @@ const tweets = {
       displayName: "David Goose",
       username: "@davidjgoosey",
       tweetUrl: "https://x.com/davidjgoosey/status/1649207665518690304?s=20",
-      profileImageUrl:
-        "https://pbs.twimg.com/profile_images/1594113194397687816/l2RGYB8y_200x200.jpg",
+      profileImageUrl: davidjgooseyProfileImage,
       tweet: (
         <>
           Across has one of the best UX of the bridges I&apos;ve tried to date, keep up
@@ -66,8 +74,7 @@ const tweets = {
       displayName: "Scott BurkΞ",
       username: "@scottburke777",
       tweetUrl: "https://x.com/scottburke777/status/1656557680012476416?s=20",
-      profileImageUrl:
-        "https://pbs.twimg.com/profile_images/1618111203586314240/obBfZyuv_200x200.jpg",
+      profileImageUrl: scottProfileImage,
       tweet: (
         <>
           Tried a few Arbitrum bridges over the last few months, just tried
@@ -80,8 +87,7 @@ const tweets = {
       displayName: "kidponga.eth",
       username: "@kidponga",
       tweetUrl: "https://x.com/kidponga/status/1750013537379111135?s=20",
-      profileImageUrl:
-        "https://pbs.twimg.com/profile_images/1674812681457483782/d-X5fE6H_200x200.jpg",
+      profileImageUrl: kidpongaProfileImage,
       tweet: (
         <>
           What&apos;s the best bridge in crypto?
@@ -101,36 +107,33 @@ const tweets = {
       displayName: "Kisuke Urahara",
       username: "@Ivan90403291",
       tweetUrl: "https://x.com/Ivan90403291/status/1692120646602391671?s=20",
-      profileImageUrl:
-        "https://pbs.twimg.com/profile_images/1255439408100265984/JjHosYHZ_200x200.jpg",
+      profileImageUrl: ivanProfileImage,
       tweet: <>@AcrossProtocol is 100% the best bridge</>,
     },
   ],
   secondColumn: [
-    {
-      isVerified: false,
-      displayName: "maxlomu",
-      username: "@maxlomu",
-      tweetUrl: "https://x.com/maxlomu/status/1675975309835882502?s=20",
-      profileImageUrl:
-        "https://pbs.twimg.com/profile_images/1620485487466094602/oAWikXJe_200x200.jpg",
-      tweet: (
-        <>
-          Honestly well done guys.
-          <br />
-          <br />
-          Not only Across liquidity model is very capital efficient (so you can be
-          cheaper), but the architecture (contrary to L0) is actually trust-minimized.
-        </>
-      ),
-    },
+    // {
+    //   isVerified: false,
+    //   displayName: "maxlomu",
+    //   username: "@maxlomu",
+    //   tweetUrl: "https://x.com/maxlomu/status/1675975309835882502?s=20",
+    //   profileImageUrl: maxlomuProfileImage,
+    //   tweet: (
+    //     <>
+    //       Honestly well done guys.
+    //       <br />
+    //       <br />
+    //       Not only Across liquidity model is very capital efficient (so you can be
+    //       cheaper), but the architecture (contrary to L0) is actually trust-minimized.
+    //     </>
+    //   ),
+    // },
     {
       isVerified: true,
       displayName: "Andy",
       username: "@ayyyeandy",
       tweetUrl: "https://x.com/ayyyeandy/status/1726985723285553249?s=20",
-      profileImageUrl:
-        "https://pbs.twimg.com/profile_images/1687521808331702272/Ky0QmeqD_200x200.jpg",
+      profileImageUrl: ayyyeaandyProfileImage,
       tweet: (
         <>
           Lol. One second to bridge from @arbitrum to @zksync using @AcrossProtocol
@@ -150,8 +153,7 @@ const tweets = {
       displayName: "Infinity",
       username: "@Infinity_1001",
       tweetUrl: "https://x.com/Infinity_1001/status/1749523278228521112?s=20",
-      profileImageUrl:
-        "https://pbs.twimg.com/profile_images/1694133216343441408/1Uz5ZXP8_200x200.jpg",
+      profileImageUrl: infinityProfileImage,
       tweet: (
         <>
           Across is without a doubt the best bridge you can use today.
@@ -169,8 +171,7 @@ const tweets = {
       displayName: "jaeger 狼",
       username: "@carlshuu",
       tweetUrl: "https://x.com/carlshuu/status/1742052941480255592?s=20",
-      profileImageUrl:
-        "https://pbs.twimg.com/profile_images/1737090443962413056/aHv5T66J_200x200.jpg",
+      profileImageUrl: carlshuuProfileImage,
       tweet: (
         <>
           @AcrossProtocol is so freaking good. It&apos;s insane how fast their bridge is.
