@@ -28,7 +28,7 @@
       "permanent": true
     },
     {
-      "source": "/career",
+      "source": "/careers",
       "destination": "https://jobs.lever.co/risklabs",
       "permanent": true
     },
