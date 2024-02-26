@@ -14,22 +14,22 @@ const features = [
   {
     Icon: <CodeIcon className="h-14 w-14" />,
     title: "efficient",
-    body: "Empirically proven as the lowest cost bridge, Across is engineered for best-execution through its gas-optimized contracts, aggregated verification and intents design. It is maximally capital efficient, which ultimately minimizes costs to end users.",
+    body: "Empirically proven as the lowest cost bridge, Across is engineered for best-execution through its gas-optimized contracts, aggregated verification and intents-based design. It is maximally capital efficient, minimizing costs to end users.",
   },
   {
     Icon: <ShieldLargeIcon className="h-14 w-14" />,
     title: "Secure",
-    body: "Across’ intents architecture removes risk from end-users by shifting it to 3rd party relayers, who accept this risk in exchange for a fee. Relayers are only repaid after users are correctly filled, as verified by UMA's Optimistic Oracle.",
+    body: "Across’ intents-based architecture removes risk from end-users by shifting it to third party relayers, who accept this risk in exchange for a fee. Relayers are only repaid after users are correctly filled, as verified by UMA's Optimistic Oracle.",
   },
   {
     Icon: <DoubleChevronRightIcon className="h-14 w-14" />,
     title: "Fast",
-    body: "Intent designs enable the fastest bridge experience. By using a competitive network of third party relayers, bridge orders are filled within seconds, an order of magnitude faster than competing bridges.",
+    body: "Intents-based design enables the fastest bridge experience. By using a competitive network of third party relayers, bridge orders are filled within seconds, an order of magnitude faster than competing bridges.",
   },
   {
     Icon: <DollarIcon className="h-14 w-14" />,
     title: "Superior",
-    body: "The Across Bridge is a superior design, offering the lowest cost and fastest way to transfer value between chains, without the security tradeoffs of using representative, lock-and-mint assets or messaging systems.",
+    body: "The Across Bridge harnesses a superior design, offering the fastest and lowest cost way to transfer value between chains, without the security tradeoffs of representative, lock-and-mint assets or messaging systems.",
   },
 ];
 
