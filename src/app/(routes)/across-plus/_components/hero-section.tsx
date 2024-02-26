@@ -8,7 +8,7 @@ import { INTEGRATION_LINKS } from "@/app/_constants/links";
 
 export function HeroSection() {
   return (
-    <Hero className="md:-mb-[360px]">
+    <Hero>
       <div className="container mx-auto flex flex-col items-center gap-16 px-4 pb-16 pt-8 md:flex-row-reverse md:gap-8 md:pt-16">
         <div className="flex max-w-80 flex-1 sm:max-w-100 md:max-w-full">
           <Image src={plusHeroSrc} alt="Across plus graphic" priority={true} />
