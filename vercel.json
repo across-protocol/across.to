@@ -30,12 +30,12 @@
     {
       "source": "/career",
       "destination": "https://jobs.lever.co/risklabs",
-      "permanent": true,
+      "permanent": true
     },
     {
       "source": "/jobs",
       "destination": "https://jobs.lever.co/risklabs",
-      "permanent": true,
+      "permanent": true
     }
   ]
 }
