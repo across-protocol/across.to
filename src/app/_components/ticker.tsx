@@ -1,17 +1,31 @@
+import { twMerge } from "@/app/_lib/tw-merge";
+
+const variants = {
+  "20": "animate-infinite-scroll-20",
+  "30": "animate-infinite-scroll-30",
+};
+
 export function Ticker(props: {
   title: string;
   items: {
     logo: React.ReactNode;
   }[];
+  variant?: keyof typeof variants;
 }) {
   const notEnoughItems = props.items.length < 10;
+  const scrollAnimationClass = variants[props.variant || "20"];
   return (
     <div className="group relative overflow-hidden">
       <div className="mb-8 text-center text-xs uppercase lining-nums tabular-nums tracking-wide-4 text-grey-400">
         {props.title}
       </div>
       <div className="inline-flex w-full flex-nowrap">
-        <div className="flex animate-infinite-scroll items-center justify-center md:justify-start">
+        <div
+          className={twMerge(
+            "flex items-center justify-center md:justify-start",
+            scrollAnimationClass,
+          )}
+        >
           {props.items.map((item, index) => (
             <div key={index} className="w-52">
               {item.logo}
@@ -19,7 +33,12 @@ export function Ticker(props: {
           ))}
         </div>
         {/* Duplicate for infinite scroll */}
-        <div className="flex animate-infinite-scroll items-center justify-center md:justify-start">
+        <div
+          className={twMerge(
+            "flex items-center justify-center md:justify-start",
+            scrollAnimationClass,
+          )}
+        >
           {props.items.map((item, index) => (
             <div key={index + props.items.length} className="w-52">
               {item.logo}
@@ -28,7 +47,12 @@ export function Ticker(props: {
         </div>
         {/* Multiply again if not enough items for large screen */}
         {notEnoughItems && (
-          <div className="flex animate-infinite-scroll items-center justify-center md:justify-start">
+          <div
+            className={twMerge(
+              "flex items-center justify-center md:justify-start",
+              scrollAnimationClass,
+            )}
+          >
             {props.items.map((item, index) => (
               <div key={index + 2 * props.items.length} className="w-52">
                 {item.logo}

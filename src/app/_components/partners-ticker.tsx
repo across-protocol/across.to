@@ -71,5 +71,7 @@ const partners = [
 ];
 
 export function PartnersTicker() {
-  return <Ticker title={"trusted by top tier applications"} items={partners} />;
+  return (
+    <Ticker title={"trusted by top tier applications"} items={partners} variant="30" />
+  );
 }

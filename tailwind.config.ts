@@ -74,7 +74,8 @@ const config: Config = {
         "100": "400px",
       },
       animation: {
-        "infinite-scroll": "infinite-scroll 25s linear infinite",
+        "infinite-scroll-20": "infinite-scroll 20s linear infinite",
+        "infinite-scroll-30": "infinite-scroll 30s linear infinite",
       },
       keyframes: {
         "infinite-scroll": {
