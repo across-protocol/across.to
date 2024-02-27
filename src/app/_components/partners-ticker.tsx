@@ -14,14 +14,14 @@ import rainbowLogoSrc from "@/app/_assets/logos/rainbow.svg";
 import rangoLogoSrc from "@/app/_assets/logos/rango.svg";
 import snxLogoSrc from "@/app/_assets/logos/snx.svg";
 import socketLogoSrc from "@/app/_assets/logos/socket.svg";
-import xzLogoSrc from "@/app/_assets/logos/xz.svg";
+import xyLogoSrc from "@/app/_assets/logos/xy.svg";
 import tahoLogoSrc from "@/app/_assets/logos/taho.svg";
 import swingLogoSrc from "@/app/_assets/logos/swing.svg";
 import metamaskLogoSrc from "@/app/_assets/logos/metamask.svg";
 
 const partners = [
   {
-    logo: <Image src={xzLogoSrc} alt="xz logo" />,
+    logo: <Image src={xyLogoSrc} alt="xy logo" />,
   },
   {
     logo: <Image src={tahoLogoSrc} alt="taho logo" />,
