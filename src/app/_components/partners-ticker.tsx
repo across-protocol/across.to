@@ -14,8 +14,24 @@ import rainbowLogoSrc from "@/app/_assets/logos/rainbow.svg";
 import rangoLogoSrc from "@/app/_assets/logos/rango.svg";
 import snxLogoSrc from "@/app/_assets/logos/snx.svg";
 import socketLogoSrc from "@/app/_assets/logos/socket.svg";
+import xyLogoSrc from "@/app/_assets/logos/xy.svg";
+import tahoLogoSrc from "@/app/_assets/logos/taho.svg";
+import swingLogoSrc from "@/app/_assets/logos/swing.svg";
+import metamaskLogoSrc from "@/app/_assets/logos/metamask.svg";
 
 const partners = [
+  {
+    logo: <Image src={xyLogoSrc} alt="xy logo" />,
+  },
+  {
+    logo: <Image src={tahoLogoSrc} alt="taho logo" />,
+  },
+  {
+    logo: <Image src={swingLogoSrc} alt="swing logo" />,
+  },
+  {
+    logo: <Image src={metamaskLogoSrc} alt="metamask logo" />,
+  },
   {
     logo: <Image src={balancerLogoSrc} alt="balancer logo" />,
   },
@@ -55,5 +71,7 @@ const partners = [
 ];
 
 export function PartnersTicker() {
-  return <Ticker title={"trusted by top tier applications"} items={partners} />;
+  return (
+    <Ticker title={"trusted by top tier applications"} items={partners} variant="30" />
+  );
 }
