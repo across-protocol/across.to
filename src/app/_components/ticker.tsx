@@ -37,7 +37,7 @@ export function Ticker(props: {
           </div>
         )}
         {/* Fade in/out overlay */}
-        <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-r from-grey-dark via-transparent via-50% to-grey-dark bg-fixed sm:from-5% sm:to-95%" />
+        <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gradient-to-r from-grey-dark from-[1%] via-transparent via-50% to-grey-dark bg-fixed sm:from-5% sm:to-95%" />
       </div>
     </div>
   );
