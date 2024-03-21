@@ -6,6 +6,7 @@ import {
   ArbitrumIcon,
   BaseIcon,
   ZkSyncIcon,
+  LineaIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
@@ -13,27 +14,38 @@ const chains = [
   {
     label: "Ethereum Mainnet",
     Icon: EthereumIcon,
+    containerClassName: "col-start-1",
   },
   {
     label: "Optimism",
     Icon: OptimismIcon,
+    containerClassName: "md:col-start-3",
   },
   {
     label: "Polygon Network",
     Icon: PolygonIcon,
     iconClassName: "h-8 w-8 md:h-10 md:w-10",
+    containerClassName: "md:col-start-5",
   },
   {
     label: "Arbitrum One",
     Icon: ArbitrumIcon,
+    containerClassName: "md:col-start-7",
   },
   {
     label: "Base",
     Icon: BaseIcon,
+    containerClassName: "md:col-start-2",
   },
   {
     label: "zkSync Era",
     Icon: ZkSyncIcon,
+    containerClassName: "md:col-start-4",
+  },
+  {
+    label: "Linea",
+    Icon: LineaIcon,
+    containerClassName: "sm:col-start-2 md:col-start-6",
   },
 ];
 
@@ -62,9 +74,15 @@ export function SupportedChainsSection(props: { variant: "teal" | "purple" }) {
           Supported Chains
         </Text>
       </div>
-      <div className="grid grid-cols-1 gap-x-12 gap-y-12 self-auto sm:grid-cols-2 md:grid-cols-3 md:gap-x-[150px] md:self-center">
+      <div className="grid grid-cols-1 gap-x-12 gap-y-12 self-auto sm:grid-cols-3 md:grid-cols-7 md:gap-x-0 md:self-center">
         {chains.map((chain, index) => (
-          <div key={index} className="flex flex-col items-center gap-4">
+          <div
+            key={index}
+            className={twMerge(
+              "flex flex-col items-center gap-4",
+              chain.containerClassName,
+            )}
+          >
             <div
               className={twMerge(
                 "flex h-[88px] w-[88px] flex-col items-center justify-center rounded-2xl md:h-[108px] md:w-[108px]",

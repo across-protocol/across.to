@@ -42,3 +42,4 @@ export { EthereumIcon } from "./gradient/logos/ethereum";
 export { OptimismIcon } from "./gradient/logos/optimism";
 export { PolygonIcon } from "./gradient/logos/polygon";
 export { ZkSyncIcon } from "./gradient/logos/zksync";
+export { LineaIcon } from "./gradient/logos/linea";
