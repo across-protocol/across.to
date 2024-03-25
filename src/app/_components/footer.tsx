@@ -91,7 +91,7 @@ export function Footer() {
         <div className="mb-40 mt-12 grid grid-cols-2 gap-x-8 gap-y-12 sm:mt-0 sm:grid-cols-3 lg:gap-x-16">
           <FooterBox label="products" items={products} />
           <FooterBox label="socials" items={socials} useExternalLinks />
-          <FooterBox label="information" items={information} useExternalLinks />
+          <FooterBox label="resources" items={information} useExternalLinks />
         </div>
       </div>
       <div className="flex flex-row items-center justify-center gap-1 lining-nums tabular-nums  text-grey-400">
