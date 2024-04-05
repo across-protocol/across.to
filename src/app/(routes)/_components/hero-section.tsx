@@ -32,7 +32,7 @@ export function HeroSection() {
             A new paradigm in cross-chain experiences, seamlessly connecting users with
             applications.
           </Text>
-          <BridgeNowLink className="self-center md:self-start">
+          <BridgeNowLink className="self-center md:self-start" section="marketingHero">
             <Button
               className={twMerge(
                 "border-aqua-100 bg-aqua-100/[.05] text-aqua-100 transition",

@@ -20,7 +20,7 @@ export function BridgeNowSection() {
         Experience The Best Bridge
       </Text>
       <div className="flex flex-row items-center">
-        <BridgeNowLink>
+        <BridgeNowLink section="marketingHero">
           <Button className="border-aqua-100 bg-aqua-100/[.05] text-aqua-100">
             <Text variant="cap-case-sm">Bridge now</Text>
           </Button>
