@@ -29,7 +29,7 @@ function _BridgeNowLink({ className, section, ...props }: Props) {
       section: section,
       page: pageLookup(pathname),
     });
-  }
+  };
   return (
     <a
       onClick={actionCallback}
