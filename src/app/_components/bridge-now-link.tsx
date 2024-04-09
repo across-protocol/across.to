@@ -24,14 +24,12 @@ function _BridgeNowLink({ className, section, ...props }: Props) {
   const bridgeNowLink = `${bridgeAppBaseUrl}/bridge${refParams ? `?ref=${refParams}` : ""}`;
 
   const pathname = usePathname();
-  const actionCallback = useCallback(() => {
-    console.log("HI(");
+  const actionCallback = () => {
     ampli.bridgeButtonClicked({
       section: section,
       page: pageLookup(pathname),
     });
-  }, [pathname, section]);
-
+  }
   return (
     <a
       onClick={actionCallback}
