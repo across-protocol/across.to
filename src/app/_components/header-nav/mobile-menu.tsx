@@ -30,7 +30,7 @@ export function MobileMenu(props: {
       show={props.isMenuOpen}
     >
       <div className="absolute flex min-h-screen w-full flex-col gap-6 bg-grey-dark p-4 md:hidden">
-        <BridgeNowLink className="flex w-full flex-row">
+        <BridgeNowLink className="flex w-full flex-row" section="navbar">
           <Button
             className={twMerge(
               "w-full",

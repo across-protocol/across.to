@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
 import { ampli } from "../_amplitude";
 import { GIT_COMMIT_HASH } from "../_constants/environment";
-import { initializeAmplitude, pageLookup } from "../_lib/amplitude";
+import { pageLookup } from "../_lib/amplitude";
 import { usePathname } from "next/navigation";
+import { useAmplitude } from "./useAmplitude";
 
-export function useAmplitude() {
-  const [isAmplitudeInitialized, setIsAmplitudeInitialized] = useState(false);
+export function usePageTracking() {
   const [isInitialPageView, setIsInitialPageView] = useState(true);
+  const { isAmpliInitialized } = useAmplitude();
 
   const pathname = usePathname();
 
   // Tracking page views on client side
   useEffect(() => {
-    if (isAmplitudeInitialized && pathname) {
+    if (isAmpliInitialized && pathname) {
       const referrer = document.referrer;
       const origin = window.location.origin;
       ampli.pageViewed({
@@ -26,13 +27,5 @@ export function useAmplitude() {
     }
     setIsInitialPageView(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname, isAmplitudeInitialized]);
-
-  // Initialize Amplitude
-  useEffect(() => {
-    if (!isAmplitudeInitialized) {
-      initializeAmplitude(setIsAmplitudeInitialized);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [pathname, isAmpliInitialized]);
 }

@@ -177,20 +177,11 @@ export interface IdentifyProperties {
   WethVolumeUsd?: any;
 }
 
-export interface PageViewedProperties {
-  /**
-   * Hash to identify the UI version when event was triggered
-   */
-  gitCommitHash: string;
-  /**
-   * Boolean if this is first time identifed user has visited page. Should be Null for anonymous users.
-   */
-  isInitialPageView: boolean;
-  origin: string;
+export interface BridgeButtonClickedProperties {
   /**
    * | Rule | Value |
    * |---|---|
-   * | Enum Values | splashPage, bridgePage, poolPage, rewardsPage, transactionsPage, stakingPage, referralPage, airdropPage, 404Page, marketingHomePage, marketingBridgePage, marketingAcrossPlusPage, marketingSettlementPage |
+   * | Enum Values | splashPage, bridgePage, poolPage, rewardsPage, transactionsPage, stakingPage, referralPage, airdropPage, 404Page, marketingHomePage, marketingBridgePage, marketingAcrossPlusPage, marketingSettlementPage, depositStatusPage |
    */
   page:
     | "splashPage"
@@ -205,7 +196,60 @@ export interface PageViewedProperties {
     | "marketingHomePage"
     | "marketingBridgePage"
     | "marketingAcrossPlusPage"
-    | "marketingSettlementPage";
+    | "marketingSettlementPage"
+    | "depositStatusPage";
+  /**
+   * | Rule | Value |
+   * |---|---|
+   * | Enum Values | navbar, mobileNavSidebar, addLiquidityForm, removeLiquidityForm, airdropSplashFlow, referralTable, rewardsTable, unstakeForm, myTransactionsTable, bridgeForm, claimReferralRewardsForm, stakeForm, depositConfirmation, marketingHero |
+   */
+  section:
+    | "navbar"
+    | "mobileNavSidebar"
+    | "addLiquidityForm"
+    | "removeLiquidityForm"
+    | "airdropSplashFlow"
+    | "referralTable"
+    | "rewardsTable"
+    | "unstakeForm"
+    | "myTransactionsTable"
+    | "bridgeForm"
+    | "claimReferralRewardsForm"
+    | "stakeForm"
+    | "depositConfirmation"
+    | "marketingHero";
+}
+
+export interface PageViewedProperties {
+  /**
+   * Hash to identify the UI version when event was triggered
+   */
+  gitCommitHash: string;
+  /**
+   * Boolean if this is first time identifed user has visited page. Should be Null for anonymous users.
+   */
+  isInitialPageView: boolean;
+  origin: string;
+  /**
+   * | Rule | Value |
+   * |---|---|
+   * | Enum Values | splashPage, bridgePage, poolPage, rewardsPage, transactionsPage, stakingPage, referralPage, airdropPage, 404Page, marketingHomePage, marketingBridgePage, marketingAcrossPlusPage, marketingSettlementPage, depositStatusPage |
+   */
+  page:
+    | "splashPage"
+    | "bridgePage"
+    | "poolPage"
+    | "rewardsPage"
+    | "transactionsPage"
+    | "stakingPage"
+    | "referralPage"
+    | "airdropPage"
+    | "404Page"
+    | "marketingHomePage"
+    | "marketingBridgePage"
+    | "marketingAcrossPlusPage"
+    | "marketingSettlementPage"
+    | "depositStatusPage";
   path: string;
   /**
    * Address of referee, null if no referral used
@@ -227,6 +271,14 @@ export class Identify implements BaseEvent {
 
 export class ApplicationLoaded implements BaseEvent {
   event_type = "ApplicationLoaded";
+}
+
+export class BridgeButtonClicked implements BaseEvent {
+  event_type = "BridgeButtonClicked";
+
+  constructor(public event_properties: BridgeButtonClickedProperties) {
+    this.event_properties = event_properties;
+  }
 }
 
 export class PageViewed implements BaseEvent {
@@ -369,6 +421,23 @@ export class Ampli {
     options?: EventOptions,
   ) {
     return this.track(new ApplicationLoaded(), options);
+  }
+
+  /**
+   * BridgeButtonClicked
+   *
+   * [View in Tracking Plan](https://data.amplitude.com/risklabs/Risk%20Labs/events/main/latest/BridgeButtonClicked)
+   *
+   * Event has no description in tracking plan.
+   *
+   * @param properties The event's properties (e.g. page)
+   * @param options Amplitude event options.
+   */
+  bridgeButtonClicked(
+    properties: BridgeButtonClickedProperties,
+    options?: EventOptions,
+  ) {
+    return this.track(new BridgeButtonClicked(properties), options);
   }
 
   /**

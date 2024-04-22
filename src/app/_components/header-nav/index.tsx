@@ -118,7 +118,7 @@ export function HeaderNav() {
             </div>
           </div>
           <div className="flex flex-row gap-3">
-            <BridgeNowLink>
+            <BridgeNowLink section="navbar">
               <Button
                 className={twMerge(
                   "hidden transition md:block",

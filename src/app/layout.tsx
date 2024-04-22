@@ -4,9 +4,10 @@ import { Barlow } from "next/font/google";
 
 import { Footer } from "@/app/_components/footer";
 import { HeaderNav } from "@/app/_components/header-nav";
-import { Amplitude } from "@/app/_components/amplitude";
+import { PageTracking } from "@/app/_components/page-tracking";
 
 import "./globals.css";
+import { AmpliProvider } from "./_hooks/useAmplitude";
 
 const inter = Barlow({
   subsets: ["latin"],
@@ -29,12 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={twMerge(inter.className, "bg-grey-dark text-light-300")}>
-        <div className="flex min-h-screen flex-col justify-between">
-          <HeaderNav />
-          {children}
-          <Footer />
-        </div>
-        <Amplitude />
+        <AmpliProvider>
+          <div className="flex min-h-screen flex-col justify-between">
+            <HeaderNav />
+            {children}
+            <Footer />
+          </div>
+          <PageTracking />
+        </AmpliProvider>
       </body>
     </html>
   );
