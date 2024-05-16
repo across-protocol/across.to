@@ -9,7 +9,7 @@
       "destination": "https://api2.amplitude.com/2/httpapi/:path*"
     },
     {
-      "source": "/amplitude",
+      "source": "/amplitude2",
       "destination": "https://api2.amplitude.com/2/httpapi"
     }
   ],
