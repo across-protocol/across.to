@@ -3,6 +3,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://app.across.to/api/:path*"
+    },
+    {
+      "source": "/amplitude",
+      "destination": "https://api2.amplitude.com/2/httpapi"
     }
   ],
   "redirects": [
