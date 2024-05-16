@@ -5,11 +5,7 @@
       "destination": "https://app.across.to/api/:path*"
     },
     {
-      "source": "/amplitude/:path*",
-      "destination": "https://api2.amplitude.com/2/httpapi/:path*"
-    },
-    {
-      "source": "/amplitude2",
+      "source": "/amplitude",
       "destination": "https://api2.amplitude.com/2/httpapi"
     }
   ],
