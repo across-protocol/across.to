@@ -7,6 +7,7 @@ import {
   BaseIcon,
   ZkSyncIcon,
   LineaIcon,
+  ModeIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
@@ -35,17 +36,22 @@ const chains = [
   {
     label: "Base",
     Icon: BaseIcon,
-    containerClassName: "md:col-start-2",
+    containerClassName: "md:col-start-1",
   },
   {
     label: "zkSync Era",
     Icon: ZkSyncIcon,
-    containerClassName: "md:col-start-4",
+    containerClassName: "md:col-start-3",
   },
   {
     label: "Linea",
     Icon: LineaIcon,
-    containerClassName: "sm:col-start-2 md:col-start-6",
+    containerClassName: "sm:col-start-1 md:col-start-5",
+  },
+  {
+    label: "Mode",
+    Icon: ModeIcon,
+    containerClassName: "sm:col-start-3 md:col-start-7",
   },
 ];
 
