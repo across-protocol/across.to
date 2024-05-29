@@ -43,3 +43,4 @@ export { OptimismIcon } from "./gradient/logos/optimism";
 export { PolygonIcon } from "./gradient/logos/polygon";
 export { ZkSyncIcon } from "./gradient/logos/zksync";
 export { LineaIcon } from "./gradient/logos/linea";
+export { ModeIcon } from "./gradient/logos/mode";

@@ -9,6 +9,7 @@ import ethLogoSrc from "@/app/_assets/logos/eth.svg";
 import arbLogoSrc from "@/app/_assets/logos/arb.svg";
 import maticLogoSrc from "@/app/_assets/logos/matic.svg";
 import lineaLogoSrc from "@/app/_assets/logos/linea.svg";
+import modeLogoSrc from "@/app/_assets/logos/mode.svg";
 
 const chains = [
   {
@@ -31,6 +32,9 @@ const chains = [
   },
   {
     logo: <Image src={lineaLogoSrc} alt="linea logo" />,
+  },
+  {
+    logo: <Image src={modeLogoSrc} alt="mode logo" />,
   },
 ];
 
