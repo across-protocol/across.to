@@ -32,6 +32,7 @@ export function MockupsCarousel() {
                 className="opacity-80"
                 width={360}
                 priority
+                quality={100}
               />
             </div>
           </CarouselItem>
