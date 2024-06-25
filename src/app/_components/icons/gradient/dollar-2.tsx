@@ -10,7 +10,7 @@ export function DollarIcon2(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <rect width="14.875" height="14.875" rx="3.5" fill="#44D2FF" fill-opacity="0.15" />
+      <rect width="14.875" height="14.875" rx="3.5" fill="#44D2FF" fillOpacity="0.15" />
       <rect
         opacity="0.5"
         y="20.5625"
@@ -18,7 +18,7 @@ export function DollarIcon2(props: SVGProps<SVGSVGElement>) {
         height="14.875"
         rx="3.5"
         fill="#44D2FF"
-        fill-opacity="0.15"
+        fillOpacity="0.15"
       />
       <rect
         opacity="0.2"
@@ -27,7 +27,7 @@ export function DollarIcon2(props: SVGProps<SVGSVGElement>) {
         height="14.875"
         rx="3.5"
         fill="#44D2FF"
-        fill-opacity="0.15"
+        fillOpacity="0.15"
       />
       <mask
         id="path-4-outside-1_1942_3418"
@@ -60,7 +60,7 @@ export function DollarIcon2(props: SVGProps<SVGSVGElement>) {
         height="14.875"
         rx="3.5"
         fill="#44D2FF"
-        fill-opacity="0.15"
+        fillOpacity="0.15"
       />
       <rect
         opacity="0.2"
@@ -70,7 +70,7 @@ export function DollarIcon2(props: SVGProps<SVGSVGElement>) {
         height="14.875"
         rx="3.5"
         fill="#44D2FF"
-        fill-opacity="0.15"
+        fillOpacity="0.15"
       />
       <rect
         x="41.75"
@@ -78,7 +78,7 @@ export function DollarIcon2(props: SVGProps<SVGSVGElement>) {
         height="14.875"
         rx="3.5"
         fill="#44D2FF"
-        fill-opacity="0.15"
+        fillOpacity="0.15"
       />
       <rect
         opacity="0.5"
@@ -88,7 +88,7 @@ export function DollarIcon2(props: SVGProps<SVGSVGElement>) {
         height="14.875"
         rx="3.5"
         fill="#44D2FF"
-        fill-opacity="0.15"
+        fillOpacity="0.15"
       />
       <rect
         opacity="0.2"
@@ -98,7 +98,7 @@ export function DollarIcon2(props: SVGProps<SVGSVGElement>) {
         height="14.875"
         rx="3.5"
         fill="#44D2FF"
-        fill-opacity="0.15"
+        fillOpacity="0.15"
       />
       <defs>
         <linearGradient
@@ -109,13 +109,13 @@ export function DollarIcon2(props: SVGProps<SVGSVGElement>) {
           y2="50.6455"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#6CD3F9" />
-          <stop offset="0.386534" stop-color="#B1EAFF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#00719A" />
-          <stop offset="0.620948" stop-color="#C1EEFF" />
-          <stop offset="0.708229" stop-color="#297B99" />
-          <stop offset="0.78803" stop-color="#ADE9FF" />
+          <stop offset="0.234414" stopColor="#6CD3F9" />
+          <stop offset="0.386534" stopColor="#B1EAFF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#00719A" />
+          <stop offset="0.620948" stopColor="#C1EEFF" />
+          <stop offset="0.708229" stopColor="#297B99" />
+          <stop offset="0.78803" stopColor="#ADE9FF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_1942_3418"
@@ -125,13 +125,13 @@ export function DollarIcon2(props: SVGProps<SVGSVGElement>) {
           y2="50.6455"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#6CD3F9" />
-          <stop offset="0.386534" stop-color="#B1EAFF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#00719A" />
-          <stop offset="0.620948" stop-color="#C1EEFF" />
-          <stop offset="0.708229" stop-color="#297B99" />
-          <stop offset="0.78803" stop-color="#ADE9FF" />
+          <stop offset="0.234414" stopColor="#6CD3F9" />
+          <stop offset="0.386534" stopColor="#B1EAFF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#00719A" />
+          <stop offset="0.620948" stopColor="#C1EEFF" />
+          <stop offset="0.708229" stopColor="#297B99" />
+          <stop offset="0.78803" stopColor="#ADE9FF" />
         </linearGradient>
       </defs>
     </svg>

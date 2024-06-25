@@ -18,24 +18,24 @@ export function ChartUpIcon(props: SVGProps<SVGSVGElement>) {
         height="56"
         rx="3.5"
         stroke="url(#paint0_linear_1942_3398)"
-        stroke-opacity="0.15"
-        stroke-width="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeOpacity="0.15"
+        strokeWidth="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         stroke-dasharray="26 26"
         mask="url(#path-1-inside-1_1942_3398)"
       />
       <path
         d="M14 39L22.445 28.0528C23.2456 27.0149 24.8115 27.0149 25.6121 28.0528L28.2307 31.4472C29.0314 32.4851 30.5972 32.4851 31.3979 31.4472L41 19"
         stroke="black"
-        stroke-width="5"
-        stroke-linecap="round"
+        strokeWidth="5"
+        strokeLinecap="round"
       />
       <path
         d="M14 39L22.445 28.0528C23.2456 27.0149 24.8115 27.0149 25.6121 28.0528L28.2307 31.4472C29.0314 32.4851 30.5972 32.4851 31.3979 31.4472L41 19"
         stroke="url(#paint1_linear_1942_3398)"
-        stroke-width="5"
-        stroke-linecap="round"
+        strokeWidth="5"
+        strokeLinecap="round"
       />
       <defs>
         <linearGradient
@@ -46,8 +46,8 @@ export function ChartUpIcon(props: SVGProps<SVGSVGElement>) {
           y2="56"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#44D2FF" />
-          <stop offset="1" stop-color="#44D2FF" stopOpacity="0" />
+          <stop stopColor="#44D2FF" />
+          <stop offset="1" stopColor="#44D2FF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_1942_3398"
@@ -57,13 +57,13 @@ export function ChartUpIcon(props: SVGProps<SVGSVGElement>) {
           y2="39"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.234414" stop-color="#6CD3F9" />
-          <stop offset="0.386534" stop-color="#B1EAFF" />
-          <stop offset="0.508728" stop-color="white" />
-          <stop offset="0.513716" stop-color="#00719A" />
-          <stop offset="0.620948" stop-color="#C1EEFF" />
-          <stop offset="0.708229" stop-color="#297B99" />
-          <stop offset="0.78803" stop-color="#ADE9FF" />
+          <stop offset="0.234414" stopColor="#6CD3F9" />
+          <stop offset="0.386534" stopColor="#B1EAFF" />
+          <stop offset="0.508728" stopColor="white" />
+          <stop offset="0.513716" stopColor="#00719A" />
+          <stop offset="0.620948" stopColor="#C1EEFF" />
+          <stop offset="0.708229" stopColor="#297B99" />
+          <stop offset="0.78803" stopColor="#ADE9FF" />
         </linearGradient>
       </defs>
     </svg>
