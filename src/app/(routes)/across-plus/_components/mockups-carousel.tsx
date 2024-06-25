@@ -33,6 +33,7 @@ export function MockupsCarousel() {
                 width={360}
                 priority
                 quality={100}
+                unoptimized
               />
             </div>
           </CarouselItem>
