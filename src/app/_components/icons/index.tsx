@@ -34,6 +34,9 @@ export { FeatherIcon } from "./gradient/feather";
 export { PlusIcon } from "./gradient/plus";
 export { ShieldLargeIcon } from "./gradient/shield-large";
 export { ShieldIcon } from "./gradient/shield-small";
+export { DollarIcon2 } from "./gradient/dollar-2";
+export { ChartUpIcon } from "./gradient/chart-up";
+export { ClockIcon } from "./gradient/clock";
 
 // Gradient logo icons
 export { ArbitrumIcon } from "./gradient/logos/arbitrum";

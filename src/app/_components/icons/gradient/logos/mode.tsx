@@ -11,10 +11,10 @@ export function ModeIcon({ variant = "aqua", ...props }: LogoIconProps) {
       fill="none"
       {...props}
     >
-      <g clip-path="url(#clip0_2_7)">
+      <g clipPath="url(#clip0_2_7)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M45 22.5C45 10.0755 34.9245 0 22.5 0C10.0755 0 0 10.0755 0 22.5C0 34.9245 10.0755 45 22.5 45C34.9245 45 45 34.9245 45 22.5ZM23.355 23.0625L27.117 12.4695H33.1875V30.969H29.115V21.753L30.744 16.4925L29.583 16.0785L24.291 30.969H21.186L15.894 16.0785L14.733 16.4925L16.3575 21.753V30.969H12.285V12.4695H18.36L22.122 23.0625V26.172H23.355V23.0625Z"
           fill={`url(#${linearGradientBasedId}_1)`}
         />

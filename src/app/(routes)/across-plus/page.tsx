@@ -2,9 +2,9 @@ import { Metadata } from "next";
 
 import { HeroSection } from "./_components/hero-section";
 import { FeaturesSection } from "./_components/features-section";
-import { UseCasesSection } from "./_components/use-cases-section";
 import { SupportedChainsSection } from "@/app/_components/supported-chains-section";
-import { PlusGetStartedSection } from "./_components/get-started-section";
+import { PlusGetStartedSectionBottom } from "./_components/get-started-section-bottom";
+import { PlusGetStartedSectionTop } from "./_components/get-started-section-top";
 import { IntegratedPartnersSection } from "./_components/integrated-partners-section";
 import { SubscribeSection } from "@/app/_components/subscribe-section";
 
@@ -18,11 +18,11 @@ export default function PlusLanding() {
   return (
     <main className="z-0 mb-24 flex flex-col gap-24 overflow-hidden px-4 sm:gap-32 md:gap-48">
       <HeroSection />
+      <PlusGetStartedSectionTop />
       <FeaturesSection />
-      <UseCasesSection />
       <SupportedChainsSection variant="teal" />
       <IntegratedPartnersSection />
-      <PlusGetStartedSection />
+      <PlusGetStartedSectionBottom />
       <SubscribeSection variant="teal" />
     </main>
   );

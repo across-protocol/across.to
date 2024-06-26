@@ -3,6 +3,10 @@ import {
   ShieldIcon,
   ChatIcon,
   ArrowUpRightThickIcon,
+  DollarIcon,
+  DollarIcon2,
+  ChartUpIcon,
+  ClockIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 import { FeaturesGrid } from "@/app/_components/features-grid";
@@ -11,18 +15,23 @@ import { INTEGRATION_LINKS } from "@/app/_constants/links";
 const features = [
   {
     Icon: <ArrowUpIcon className="h-14 w-14" />,
-    title: "Web2-Grade UX",
-    body: "Users want to use apps, not bridges. Across+ upgrades dapp UX by abstracting bridging to the background for a Web2-like experience.",
+    title: "Elevate your UX",
+    body: "Users want to use apps, not bridges. Across+ upgrades your UI by bundling bridge transactions into your user's actions.",
   },
   {
-    Icon: <ShieldIcon className="h-14 w-14" />,
-    title: "Secure by Design",
-    body: "Most cross-chain messaging solutions increase trust assumptions vs. the chains they connect. Across+ actions are not cross-chain messages -- they are actions to execute when assets are delivered on the destination.",
+    Icon: <DollarIcon2 className="h-14 w-14" />,
+    title: "Deepen your Liquidity",
+    body: "Unlock access to liquidity on all supported chains while keeping your app’s liquidity where it is.",
   },
   {
-    Icon: <ChatIcon variant="teal" className="h-14 w-14" />,
-    title: "intents-based Architecture",
-    body: "Cross-chain intents are cross-chain limit orders plus a protocol action to execute on destination. Simply embed the intent order standard in protocol actions to create seamless cross-chain experiences.",
+    Icon: <ChartUpIcon className="h-14 w-14" />,
+    title: "Grow faster with less work",
+    body: "Reach users on new chains without adding to the maintenance requirements of your app.",
+  },
+  {
+    Icon: <ClockIcon className="h-14 w-14" />,
+    title: "Easy Integration",
+    body: "Add Across+ to your dapp without any smart contract work.",
   },
 ];
 
@@ -34,43 +43,18 @@ export function FeaturesSection() {
           variant="cap-case"
           className="text-center text-xs text-teal-100 sm:text-xs md:text-xs"
         >
-          +users +TVL +chains
+          +deposit +lend +swap +mint
         </Text>
         <Text
           variant="heading-2"
           className="text-center capitalize tracking-tight-2 text-light-200"
         >
-          Seamless Cross-chain Onboarding
+          Seamless Cross-chain
+          <br />
+          Onboarding
         </Text>
       </div>
-      <FeaturesGrid features={features}>
-        <div className="flex flex-col items-center gap-8 rounded-2xl bg-teal-100/[.02] p-6 shadow-md sm:items-start">
-          <div className="flex flex-col items-center justify-center self-center rounded-lg bg-teal-100/[.05] p-2">
-            <Text variant="cap-case" className="text-teal-100">
-              across.to/docs
-            </Text>
-          </div>
-          <div>
-            <Text className="max-w-100 text-light-300">
-              Visit our documentation page to learn more about the benefits of integrating
-              Across+.
-            </Text>
-            <a
-              className="mt-4 flex cursor-pointer flex-row items-center gap-1"
-              href={INTEGRATION_LINKS.plus}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Text variant="cap-case" className="text-teal-100 sm:text-xs md:text-xs">
-                visit docs
-              </Text>
-              <div className="flex h-4 w-4 items-center justify-center rounded-full bg-teal-100">
-                <ArrowUpRightThickIcon className="stroke-grey-dark" />
-              </div>
-            </a>
-          </div>
-        </div>
-      </FeaturesGrid>
+      <FeaturesGrid features={features} />
     </section>
   );
 }
