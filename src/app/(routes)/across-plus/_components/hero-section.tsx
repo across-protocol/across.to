@@ -2,9 +2,8 @@ import Image from "next/image";
 
 import { Hero } from "@/app/_components/hero";
 import { Text } from "@/app/_components/text";
-import { ArrowRightIcon } from "@/app/_components/icons/arrow-right";
 import plusHeroSrc from "@/app/_assets/plus-hero.png";
-import { INTEGRATION_LINKS } from "@/app/_constants/links";
+import { TypeformButton } from "./typeform-button";
 
 export function HeroSection() {
   return (
@@ -30,17 +29,7 @@ export function HeroSection() {
             </Text>
           </div>
           <div className="flex self-center md:self-start">
-            <a
-              className="flex cursor-pointer flex-row items-center justify-center gap-2 text-teal-100 hover:opacity-75 md:justify-start"
-              href={INTEGRATION_LINKS.form}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Text variant="cap-case-sm">learn more</Text>
-              <div className="flex h-5 w-5 items-center justify-center rounded-full bg-teal-100">
-                <ArrowRightIcon />
-              </div>
-            </a>
+            <TypeformButton />
           </div>
         </div>
       </div>
