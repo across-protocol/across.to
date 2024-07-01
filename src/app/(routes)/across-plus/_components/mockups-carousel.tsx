@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Autoscroll from "embla-carousel-auto-scroll";
+import Autoplay from "embla-carousel-autoplay";
 
 import { Carousel, CarouselContent, CarouselItem } from "@/app/_components/carousel";
 import mockupImage1 from "../_assets/mockup-1.png";
@@ -20,7 +20,11 @@ export function MockupsCarousel() {
       opts={{
         loop: true,
       }}
-      plugins={[Autoscroll()]}
+      plugins={[
+        Autoplay({
+          delay: 3_000,
+        }),
+      ]}
     >
       <CarouselContent className={twMerge("mx-10 gap-2 sm:mx-40 md:mx-52")}>
         {[...CAROUSEL_IMAGES, ...CAROUSEL_IMAGES].map((image, index) => (
