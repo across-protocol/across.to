@@ -8,6 +8,7 @@ import {
   ZkSyncIcon,
   LineaIcon,
   ModeIcon,
+  BlastIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
@@ -15,43 +16,48 @@ const chains = [
   {
     label: "Ethereum Mainnet",
     Icon: EthereumIcon,
-    containerClassName: "col-start-1",
+    containerClassName: "sm:col-start-1",
   },
   {
     label: "Optimism",
     Icon: OptimismIcon,
-    containerClassName: "md:col-start-3",
+    containerClassName: "sm:col-start-2",
   },
   {
     label: "Polygon Network",
     Icon: PolygonIcon,
     iconClassName: "h-8 w-8 md:h-10 md:w-10",
-    containerClassName: "md:col-start-5",
+    containerClassName: "sm:col-start-3",
   },
   {
     label: "Arbitrum One",
     Icon: ArbitrumIcon,
-    containerClassName: "md:col-start-7",
+    containerClassName: "sm:col-start-1",
   },
   {
     label: "Base",
     Icon: BaseIcon,
-    containerClassName: "md:col-start-1",
+    containerClassName: "sm:col-start-2",
   },
   {
     label: "zkSync Era",
     Icon: ZkSyncIcon,
-    containerClassName: "md:col-start-3",
+    containerClassName: "sm:col-start-3",
   },
   {
     label: "Linea",
     Icon: LineaIcon,
-    containerClassName: "sm:col-start-1 md:col-start-5",
+    containerClassName: "sm:col-start-1",
   },
   {
     label: "Mode",
     Icon: ModeIcon,
-    containerClassName: "sm:col-start-3 md:col-start-7",
+    containerClassName: "sm:col-start-2",
+  },
+  {
+    label: "Blast",
+    Icon: BlastIcon,
+    containerClassName: "sm:col-start-3",
   },
 ];
 
@@ -80,7 +86,7 @@ export function SupportedChainsSection(props: { variant: "teal" | "purple" }) {
           Supported Chains
         </Text>
       </div>
-      <div className="grid grid-cols-1 gap-x-12 gap-y-12 self-auto sm:grid-cols-3 md:grid-cols-7 md:gap-x-0 md:self-center">
+      <div className="elf-auto grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-3 sm:self-center">
         {chains.map((chain, index) => (
           <div
             key={index}
