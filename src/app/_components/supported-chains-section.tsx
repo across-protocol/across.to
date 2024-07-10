@@ -86,7 +86,7 @@ export function SupportedChainsSection(props: { variant: "teal" | "purple" }) {
           Supported Chains
         </Text>
       </div>
-      <div className="elf-auto grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-3 sm:self-center">
+      <div className="grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-3 sm:self-center">
         {chains.map((chain, index) => (
           <div
             key={index}
