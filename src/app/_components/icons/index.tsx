@@ -48,3 +48,4 @@ export { ZkSyncIcon } from "./gradient/logos/zksync";
 export { LineaIcon } from "./gradient/logos/linea";
 export { ModeIcon } from "./gradient/logos/mode";
 export { BlastIcon } from "./gradient/logos/blast";
+export { ScrollIcon } from "./gradient/logos/scroll";
