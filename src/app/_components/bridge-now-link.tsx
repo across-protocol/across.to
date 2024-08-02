@@ -21,7 +21,17 @@ function _BridgeNowLink({ className, section, ...props }: Props) {
   const searchParams = useSearchParams();
 
   const refParams = searchParams.get("ref") || searchParams.get("referrer");
-  const bridgeNowLink = `${bridgeAppBaseUrl}/bridge${refParams ? `?ref=${refParams}` : ""}`;
+  const integratorParams = searchParams.get("integrator");
+
+  const params = new URLSearchParams();
+  if (refParams) {
+    params.set("ref", refParams);
+  }
+  if (integratorParams) {
+    params.set("integrator", integratorParams);
+  }
+
+  const bridgeNowLink = `${bridgeAppBaseUrl}/bridge?${params.toString()}`;
 
   const pathname = usePathname();
   const actionCallback = () => {

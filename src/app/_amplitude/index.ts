@@ -220,6 +220,49 @@ export interface BridgeButtonClickedProperties {
     | "marketingHero";
 }
 
+export interface CtaButtonClickedProperties {
+  /**
+   * | Rule | Value |
+   * |---|---|
+   * | Enum Values | splashPage, bridgePage, poolPage, rewardsPage, transactionsPage, stakingPage, referralPage, airdropPage, 404Page, marketingHomePage, marketingBridgePage, marketingAcrossPlusPage, marketingSettlementPage, depositStatusPage |
+   */
+  page:
+    | "splashPage"
+    | "bridgePage"
+    | "poolPage"
+    | "rewardsPage"
+    | "transactionsPage"
+    | "stakingPage"
+    | "referralPage"
+    | "airdropPage"
+    | "404Page"
+    | "marketingHomePage"
+    | "marketingBridgePage"
+    | "marketingAcrossPlusPage"
+    | "marketingSettlementPage"
+    | "depositStatusPage";
+  /**
+   * | Rule | Value |
+   * |---|---|
+   * | Enum Values | navbar, mobileNavSidebar, addLiquidityForm, removeLiquidityForm, airdropSplashFlow, referralTable, rewardsTable, unstakeForm, myTransactionsTable, bridgeForm, claimReferralRewardsForm, stakeForm, depositConfirmation, marketingHero |
+   */
+  section:
+    | "navbar"
+    | "mobileNavSidebar"
+    | "addLiquidityForm"
+    | "removeLiquidityForm"
+    | "airdropSplashFlow"
+    | "referralTable"
+    | "rewardsTable"
+    | "unstakeForm"
+    | "myTransactionsTable"
+    | "bridgeForm"
+    | "claimReferralRewardsForm"
+    | "stakeForm"
+    | "depositConfirmation"
+    | "marketingHero";
+}
+
 export interface PageViewedProperties {
   /**
    * Hash to identify the UI version when event was triggered
@@ -259,6 +302,10 @@ export interface PageViewedProperties {
    * Referring url
    */
   referrer?: string;
+  /**
+   * The current URL of the website on which this event was generated
+   */
+  siteUrl?: string;
 }
 
 export class Identify implements BaseEvent {
@@ -277,6 +324,14 @@ export class BridgeButtonClicked implements BaseEvent {
   event_type = "BridgeButtonClicked";
 
   constructor(public event_properties: BridgeButtonClickedProperties) {
+    this.event_properties = event_properties;
+  }
+}
+
+export class CtaButtonClicked implements BaseEvent {
+  event_type = "CTAButtonClicked";
+
+  constructor(public event_properties: CtaButtonClickedProperties) {
     this.event_properties = event_properties;
   }
 }
@@ -438,6 +493,23 @@ export class Ampli {
     options?: EventOptions,
   ) {
     return this.track(new BridgeButtonClicked(properties), options);
+  }
+
+  /**
+   * CTAButtonClicked
+   *
+   * [View in Tracking Plan](https://data.amplitude.com/risklabs/Risk%20Labs/events/main/latest/CTAButtonClicked)
+   *
+   * When an Across Marketing CTA is clicked
+   *
+   * @param properties The event's properties (e.g. page)
+   * @param options Amplitude event options.
+   */
+  ctaButtonClicked(
+    properties: CtaButtonClickedProperties,
+    options?: EventOptions,
+  ) {
+    return this.track(new CtaButtonClicked(properties), options);
   }
 
   /**
