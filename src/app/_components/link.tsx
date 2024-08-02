@@ -1,7 +1,8 @@
 "use client";
 
 import Link, { LinkProps } from "next/link";
-import React from "react";
+import { useSearchParams } from "next/navigation";
+import React, { Suspense } from "react";
 
 type CustomLinkProps = LinkProps & {
   preserveQueryParams?: boolean;
@@ -15,11 +16,17 @@ type CustomLinkProps = LinkProps & {
  * will be preserved when navigating to the new page. Providing new query params will effectively override this behavior.
  */
 function CustomLink({ href, preserveQueryParams, ...props }: CustomLinkProps) {
+  const params = useSearchParams();
   if (preserveQueryParams && !href.toString().includes("?")) {
-    const currentQueryParams = new URLSearchParams(window.location.search);
-    href = `${href.toString()}?${currentQueryParams.toString()}`;
+    href = `${href.toString()}?${params.toString()}`;
   }
   return <Link href={href} {...props} />;
 }
 
-export default CustomLink;
+export default function CustonLinkWithSuspense(props: CustomLinkProps) {
+  return (
+    <Suspense>
+      <CustomLink {...props} />
+    </Suspense>
+  );
+}
