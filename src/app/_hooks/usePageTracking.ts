@@ -16,6 +16,7 @@ export function usePageTracking() {
     if (isAmpliInitialized && pathname) {
       const referrer = document.referrer;
       const origin = window.location.origin;
+      const siteUrl = window.location.href;
       ampli.pageViewed({
         gitCommitHash: GIT_COMMIT_HASH,
         page: pageLookup(pathname),
@@ -23,6 +24,7 @@ export function usePageTracking() {
         referrer,
         origin,
         isInitialPageView,
+        siteUrl,
       });
     }
     setIsInitialPageView(true);

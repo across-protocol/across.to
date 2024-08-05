@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { twMerge } from "@/app/_lib/tw-merge";
 
 import { IconBox } from "../icon-box";
 
 import { NavItem } from "./types";
+import CustomLink from "../link";
 
 const classNameOverrides: Record<
   string,
@@ -36,7 +36,8 @@ export function ProductsSubNav(props: { navItems: NavItem[] }) {
       <div className="flex flex-row items-center justify-start gap-4 bg-grey-dark min-[500px]:justify-center">
         {props.navItems.map((item) => (
           <span key={item.href} className="group">
-            <Link
+            <CustomLink
+              preserveQueryParams
               key={item.href}
               href={item.href}
               className={twMerge(
@@ -69,7 +70,7 @@ export function ProductsSubNav(props: { navItems: NavItem[] }) {
               >
                 {item.label}
               </div>
-            </Link>
+            </CustomLink>
           </span>
         ))}
       </div>
