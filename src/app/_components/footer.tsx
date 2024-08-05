@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 import {
   AcrossFullIcon,
@@ -17,6 +16,7 @@ import {
 import { IconBox } from "./icon-box";
 import { PRODUCT_LINKS, SOCIAL_LINKS, INFORMATION_LINKS } from "@/app/_constants";
 import { twMerge } from "@/app/_lib/tw-merge";
+import CustomLink from "./link";
 
 const products = [
   {
@@ -120,9 +120,9 @@ function FooterBox(props: {
                 <FooterBoxItem item={item} />
               </a>
             ) : (
-              <Link href={item.href}>
+              <CustomLink href={item.href} preserveQueryParams>
                 <FooterBoxItem item={item} />
-              </Link>
+              </CustomLink>
             )}
           </div>
         ))}
