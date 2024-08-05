@@ -11,6 +11,7 @@ import maticLogoSrc from "@/app/_assets/logos/matic.svg";
 import lineaLogoSrc from "@/app/_assets/logos/linea.svg";
 import modeLogoSrc from "@/app/_assets/logos/mode.svg";
 import blastLogoSrc from "@/app/_assets/logos/blast.svg";
+import scrollLogoSrc from "@/app/_assets/logos/scroll.svg";
 
 const chains = [
   {
@@ -39,6 +40,9 @@ const chains = [
   },
   {
     logo: <Image src={blastLogoSrc} alt="blast logo" />,
+  },
+  {
+    logo: <Image src={scrollLogoSrc} alt="scroll logo" />,
   },
 ];
 
