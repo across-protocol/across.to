@@ -6,8 +6,10 @@ import { Footer } from "@/app/_components/footer";
 import { HeaderNav } from "@/app/_components/header-nav";
 import { PageTracking } from "@/app/_components/page-tracking";
 
-import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { GOOGLE_ANALYTICS_TAG_ID } from "./_constants";
 import { AmpliProvider } from "./_hooks/useAmplitude";
+import "./globals.css";
 
 const inter = Barlow({
   subsets: ["latin"],
@@ -39,6 +41,7 @@ export default function RootLayout({
           <PageTracking />
         </AmpliProvider>
       </body>
+      {GOOGLE_ANALYTICS_TAG_ID && <GoogleAnalytics gaId={GOOGLE_ANALYTICS_TAG_ID} />}
     </html>
   );
 }
