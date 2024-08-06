@@ -13,6 +13,7 @@ import modeLogoSrc from "@/app/_assets/logos/mode.svg";
 import blastLogoSrc from "@/app/_assets/logos/blast.svg";
 import scrollLogoSrc from "@/app/_assets/logos/scroll.svg";
 import liskLogoSrc from "@/app/_assets/logos/lisk.svg";
+import redstoneLogoSrc from "@/app/_assets/logos/redstone.svg";
 
 const chains = [
   {
@@ -47,6 +48,9 @@ const chains = [
   },
   {
     logo: <Image src={liskLogoSrc} alt="lisk logo" />,
+  },
+  {
+    logo: <Image src={redstoneLogoSrc} alt="redstone logo" />,
   },
 ];
 

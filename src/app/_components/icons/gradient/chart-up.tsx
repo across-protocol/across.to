@@ -22,7 +22,7 @@ export function ChartUpIcon(props: SVGProps<SVGSVGElement>) {
         strokeWidth="10"
         strokeLinecap="round"
         strokeLinejoin="round"
-        stroke-dasharray="26 26"
+        strokeDasharray="26 26"
         mask="url(#path-1-inside-1_1942_3398)"
       />
       <path
