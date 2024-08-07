@@ -50,3 +50,4 @@ export { ModeIcon } from "./gradient/logos/mode";
 export { BlastIcon } from "./gradient/logos/blast";
 export { ScrollIcon } from "./gradient/logos/scroll";
 export { LiskIcon } from "./gradient/logos/lisk";
+export { ZoraIcon } from "./gradient/logos/zora";
