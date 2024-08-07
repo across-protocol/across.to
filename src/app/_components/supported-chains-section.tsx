@@ -11,6 +11,7 @@ import {
   BlastIcon,
   ScrollIcon,
   LiskIcon,
+  ZoraIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
@@ -60,6 +61,11 @@ const chains = [
     label: "Lisk",
     Icon: LiskIcon,
     containerClassName: "sm:col-start-3",
+  },
+  {
+    label: "Zora",
+    Icon: ZoraIcon,
+    containerClassName: "sm:col-start-4",
   },
 ];
 
