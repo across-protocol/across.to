@@ -66,7 +66,7 @@ export default async function SpecificBlogPage({ params }: SpecificBlogPageProps
           <Divider />
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {entry.relevantEntries.map((entry) => (
-              <ArticleSnippetCard article={entry} />
+              <ArticleSnippetCard article={entry} key={entry.sys.id} />
             ))}
           </div>
         </SubStack>

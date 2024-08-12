@@ -93,6 +93,7 @@ export async function retrieveRelevantContentfulEntries(
     "fields.content[exists]": true, // no empty posts
     "fields.tag[in]": tags.join(","), // get posts with same tags
     "fields.slug[nin]": entrySlugId, // don't include current post
+    "fields.slug[exists]": true, // no empty slugs
 
     // TODO: Update existing posts to have publishDate
     // "fields.publishDate[exists]": true, // no empty dates
