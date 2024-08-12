@@ -1,12 +1,14 @@
-import { ChevronDownIcon } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 import {
   retrieveContentfulEntry,
   retrieveContentfulPublishedSlugs,
 } from "@/app/_lib/contentful";
 import Image from "next/image";
-import Link from "next/link";
 import { redirect } from "next/navigation";
+import BackgroundBanner from "./backgroundBanner";
+import Breadcrumb from "./breadcrumb";
+import { MetaInfo } from "./metaInfo";
+import FeaturedImage from "./featuredImage";
 
 type SpecificBlogPageProps = { params: { slug: string } };
 
@@ -25,29 +27,23 @@ export default async function SpecificBlogPage({ params }: SpecificBlogPageProps
   if (!entry) {
     redirect("/404");
   }
-  // Max title to 40 characters
-  const title =
-    entry.fields.title.length > 40
-      ? entry.fields.title.slice(0, 40) + "..."
-      : entry.fields.title;
-
-  const featuredUrl = `https:${entry.fields.featuredImage?.fields.file?.url ?? ""}`;
+  const imageUrl = entry.fields.featuredImage?.fields.file?.url;
+  const fullTitle = entry.fields.title;
+  const dateCreatedAt = entry.sys.createdAt;
+  const content = entry.fields.content;
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-col gap-8 py-10">
-      <div className="flex items-center gap-2">
-        <Link href="/blog" className="text-sm font-lighter leading-tight ">
-          Blog
-        </Link>
-        <ChevronDownIcon className="-rotate-90" />
-        <div className="text-sm font-lighter leading-tight text-aqua-100">{title}</div>
-      </div>
-      <Image
-        className="border-white-translucent rounded-3xl border"
-        src={featuredUrl}
-        width={800}
-        height={400}
-        alt={entry.fields.title}
-      />
-    </main>
+    <>
+      <BackgroundBanner offsetTop={-127} />
+      <main className="z-10 mx-auto flex w-full max-w-2xl flex-col gap-6 px-4 py-10 lg:gap-8 lg:px-0">
+        <Breadcrumb fullTitle={fullTitle} />
+        <FeaturedImage url={imageUrl} title={fullTitle} />
+        <div className="row flex flex-col gap-5 text-center sm:text-left lg:gap-6">
+          <MetaInfo isoCreatedDate={dateCreatedAt} content={content} />
+          <Text variant="heading-2">{fullTitle}</Text>
+          <section></section>
+        </div>
+        <div className="border-white h-0 w-full border-t border-white-translucent"></div>
+      </main>
+    </>
   );
 }

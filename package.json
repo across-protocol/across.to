@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@amplitude/analytics-browser": "^2.4.1",
+    "@contentful/rich-text-plain-text-renderer": "^16.2.8",
+    "@contentful/rich-text-types": "^16.8.3",
     "@headlessui/react": "^1.7.18",
     "@next/third-parties": "^14.2.5",
     "@typeform/embed-react": "^3.17.0",
@@ -20,6 +22,8 @@
     "embla-carousel-auto-scroll": "^8.1.5",
     "embla-carousel-autoplay": "^8.1.5",
     "embla-carousel-react": "^8.1.5",
+    "lodash.words": "^4.2.0",
+    "luxon": "^3.5.0",
     "next": "14.1.0",
     "numeral": "^2.0.6",
     "react": "^18",
@@ -28,6 +32,8 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@types/lodash.words": "^4.2.9",
+    "@types/luxon": "^3.4.2",
     "@types/node": "^20",
     "@types/numeral": "^2.0.5",
     "@types/react": "^18",
