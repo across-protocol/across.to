@@ -5,7 +5,7 @@ export default function FeaturedImage({ url, title }: { url?: string; title: str
     url && (
       <Image
         className="rounded-3xl border border-white-translucent"
-        src={`https://${url}`}
+        src={`https:${url}`}
         width={800}
         height={400}
         alt={title}
