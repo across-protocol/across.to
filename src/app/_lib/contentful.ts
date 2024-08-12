@@ -18,17 +18,21 @@ type TypeAcrossBlogPostFields = {
   title: EntryFieldTypes.Symbol;
   slug: EntryFieldTypes.Symbol;
   content: EntryFieldTypes.RichText;
+  tag: EntryFieldTypes.Array<EntryFieldTypes.Symbol>;
   featuredImage: EntryFieldTypes.AssetLink;
+  publishDate: EntryFieldTypes.Date;
+  description: EntryFieldTypes.Symbol;
 };
 
 type TypeAcrossBlogPostSkeleton = EntrySkeletonType<
   TypeAcrossBlogPostFields,
   "acrossBlogPost"
 >;
-type TypeAcrossBlogPost<
-  Modifiers extends ChainModifiers,
-  Locales extends LocaleCode = LocaleCode,
-> = Entry<TypeAcrossBlogPostSkeleton, Modifiers, Locales>;
+export type BlogPostType = Entry<
+  TypeAcrossBlogPostSkeleton,
+  "WITHOUT_UNRESOLVABLE_LINKS",
+  string
+>;
 
 function getProductionClient() {
   return createClient({
@@ -50,7 +54,10 @@ export async function retrieveContentfulPublishedSlugs(): Promise<string[]> {
   return entries.items.map((item) => item.fields.slug);
 }
 
-export async function retrieveContentfulEntry(entrySlugId: string) {
+export async function retrieveContentfulEntry(
+  entrySlugId: string,
+  relevantEntryCount = 4,
+) {
   const client = getProductionClient();
   const options = {
     content_type: contentType,
@@ -59,7 +66,41 @@ export async function retrieveContentfulEntry(entrySlugId: string) {
   } as const;
   const entries =
     await client.withoutUnresolvableLinks.getEntries<TypeAcrossBlogPostSkeleton>(options);
-  return entries.total ? entries.items[0] : undefined;
+  const entry = entries.items[0];
+  if (!entry) {
+    return undefined;
+  }
+  const relevantEntries = await retrieveRelevantContentfulEntries(
+    entrySlugId,
+    entry.fields.tag ?? [],
+    relevantEntryCount,
+  );
+  return {
+    ...entry,
+    relevantEntries,
+  };
+}
+
+export async function retrieveRelevantContentfulEntries(
+  entrySlugId: string,
+  tags: string[],
+  limit: number,
+): Promise<BlogPostType[]> {
+  const client = getProductionClient();
+  const options = {
+    content_type: contentType,
+    limit,
+    "fields.content[exists]": true, // no empty posts
+    "fields.tag[in]": tags.join(","), // get posts with same tags
+    "fields.slug[nin]": entrySlugId, // don't include current post
+
+    // TODO: Update existing posts to have publishDate
+    // "fields.publishDate[exists]": true, // no empty dates
+    // order: "-fields.publishDate", // sorted latest first
+  } as const;
+  const entries =
+    await client.withoutUnresolvableLinks.getEntries<TypeAcrossBlogPostSkeleton>(options);
+  return entries.items;
 }
 
 export function getReadingTime(content: Document): number {
