@@ -9,6 +9,8 @@ type Props = ComponentProps<"div"> & {
 
 const textBaseClasses = {
   body: "text-md",
+  "cap-case-md":
+    "text-medium text-medium uppercase lining-nums tabular-nums tracking-wide-4",
   "cap-case-sm":
     "text-medium text-xs uppercase lining-nums tabular-nums tracking-wide-4 sm:text-sm",
   "cap-case-xs":

@@ -6,7 +6,7 @@ export default function BackgroundBanner({ offsetTop }: { offsetTop: number }) {
   return (
     <Image
       className={twMerge(
-        "absolute -top-1/3 left-1/3 z-0 hidden sm:block",
+        "absolute left-1/3 z-0 hidden sm:block lg:left-1/2",
         `top-[${offsetTop}px]`,
       )}
       src={backgroundBanner.src}

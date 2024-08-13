@@ -6,7 +6,7 @@ import {
 import { BLOCKS, Document, INLINES, MARKS } from "@contentful/rich-text-types";
 import Link from "next/link";
 import { isExternal } from "util/types";
-import Divider from "./divider";
+import Divider from "./Divider";
 import { IframeContainer } from "./iFrameContainer";
 import { Text } from "@/app/_components/text";
 import { Asset, EntryFieldTypes } from "contentful";

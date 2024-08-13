@@ -1,7 +1,7 @@
 import { BlogPostType } from "@/app/_lib/contentful";
 import ContentfulImage from "./[slug]/ContentfulImage";
 import { Asset } from "contentful";
-import { MetaInfo } from "./[slug]/metaInfo";
+import { MetaInfo } from "./[slug]/MetaInfo";
 import { Text } from "@/app/_components/text";
 import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
 import Link from "next/link";
@@ -20,12 +20,7 @@ export default function ArticleSnippetCard({
       href={`/blog/${article.fields.slug}`}
       className="relative isolate flex w-full flex-col items-start justify-center gap-0 overflow-hidden rounded-3xl border border-white-translucent "
     >
-      <ContentfulImage
-        image={
-          article.fields.featuredImage as Asset<"WITHOUT_UNRESOLVABLE_LINKS", string>
-        }
-        borderless
-      />
+      <ContentfulImage image={article.fields.featuredImage} borderless />
       <div className="flex flex-col gap-4 p-5">
         <MetaInfo
           isoCreatedDate={article.sys.createdAt}

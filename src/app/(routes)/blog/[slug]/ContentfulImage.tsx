@@ -6,10 +6,14 @@ export default function ContentfulImage({
   borderless,
   displayDescription,
 }: {
-  image: Asset<"WITHOUT_UNRESOLVABLE_LINKS", string>;
+  image?: Asset<"WITHOUT_UNRESOLVABLE_LINKS", string>;
   borderless?: boolean;
   displayDescription?: boolean;
 }) {
+  if (!image) {
+    return null;
+  }
+
   const { file, description, title } = image.fields;
   const url = file?.url;
   if (!url) {
