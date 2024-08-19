@@ -64,7 +64,7 @@ export function ZoraIcon({ variant = "aqua", ...props }: LogoIconProps) {
         <path
           stroke={baseColors[variant]}
           fill="url(#radial_gradient)"
-          stroke-width="1"
+          strokeWidth="1"
           d="M50,0.5c27.3,0,49.5,22.2,49.5,49.5S77.3,99.5,50,99.5S0.5,77.3,0.5,50S22.7,0.5,50,0.5z"
         />
       </g>
