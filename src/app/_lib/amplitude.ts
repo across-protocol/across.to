@@ -24,6 +24,9 @@ export async function initializeAmplitude(setLoaded: (loaded: boolean) => void) 
         fileDownloads: false,
         formInteractions: false,
       },
+      trackingOptions: {
+        ipAddress: false,
+      },
     });
     ampli.load({
       client: { instance: amplitude, configuration: {} },
