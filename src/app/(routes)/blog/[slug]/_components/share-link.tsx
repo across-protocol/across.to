@@ -5,6 +5,7 @@ import { BlogPostType } from "@/app/_lib/contentful";
 import { TwitterIcon, LinkIcon } from "@/app/_components/icons";
 import { useEffect, useState } from "react";
 import { twMerge } from "@/app/_lib/tw-merge";
+import { useRouter } from "next/navigation";
 
 function LinkButton({
   onClick,
@@ -49,6 +50,7 @@ export default function ShareLink({
   collapsed?: boolean;
 }) {
   const url = `https://across.to/blog/${entry.fields.slug}`;
+  const twitterUrl = `https://twitter.com/intent/tweet?url=${url}`;
 
   const buttons = [
     {
@@ -59,7 +61,9 @@ export default function ShareLink({
     },
     {
       icon: TwitterIcon,
-      onClick: () => {}, // TODO: Implement Twitter sharing
+      onClick: () => {
+        window.open(twitterUrl, "_blank")?.focus();
+      },
     },
   ];
 
