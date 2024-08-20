@@ -29,6 +29,7 @@
     "numeral": "^2.0.6",
     "react": "^18",
     "react-dom": "^18",
+    "sharp": "^0.33.5",
     "tailwind-merge": "^2.2.1",
     "zod": "^3.22.4"
   },

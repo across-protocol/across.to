@@ -5,15 +5,15 @@ import {
 import { redirect } from "next/navigation";
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
-import ArticleSnippetCard from "../ArticleSnippetCard";
-import Divider from "./Divider";
-import ArticleContent from "./ArticleContent";
-import BackgroundBanner from "./BackgroundBanner";
-import Breadcrumb from "./Breadcrumb";
-import { MetaInfo } from "./MetaInfo";
-import BackToTopButton from "../BackToTopButton";
-import ContentfulImage from "./ContentfulImage";
-import ShareLink from "./ShareLink";
+import Divider from "./_components/divider";
+import ArticleContent from "./_components/article-content";
+import BackgroundBanner from "./_components/background-banner";
+import Breadcrumb from "./_components/breadcrumb";
+import { MetaInfo } from "./_components/meta-info";
+import BackToTopButton from "../_components/back-to-top-button";
+import ContentfulImage from "./_components/contentful-image";
+import ShareLink from "./_components/share-link";
+import ArticleSnippetCard from "../_components/article-snippet-card";
 
 type SpecificBlogPageProps = { params: { slug: string } };
 

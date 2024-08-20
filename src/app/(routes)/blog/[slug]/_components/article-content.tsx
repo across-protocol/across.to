@@ -6,12 +6,11 @@ import {
 import { BLOCKS, Document, INLINES, MARKS } from "@contentful/rich-text-types";
 import Link from "next/link";
 import { isExternal } from "util/types";
-import Divider from "./Divider";
-import { IframeContainer } from "./iFrameContainer";
+import Divider from "./divider";
+import { IframeContainer } from "./iframe-container";
 import { Text } from "@/app/_components/text";
-import { Asset, EntryFieldTypes } from "contentful";
-import Image from "next/image";
-import ContentfulImage from "./ContentfulImage";
+import { Asset } from "contentful";
+import ContentfulImage from "./contentful-image";
 
 // Map text-format types to custom components
 

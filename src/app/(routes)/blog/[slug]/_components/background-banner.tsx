@@ -1,6 +1,6 @@
 import { twMerge } from "@/app/_lib/tw-merge";
 import Image from "next/image";
-import backgroundBanner from "../../../_assets/blog-background.png";
+import backgroundBanner from "@/app/_assets/blog-background.png";
 
 export default function BackgroundBanner({ offsetTop }: { offsetTop: number }) {
   return (
