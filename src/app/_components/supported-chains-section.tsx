@@ -12,6 +12,7 @@ import {
   ScrollIcon,
   LiskIcon,
   RedstoneIcon,
+  ZoraIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
@@ -67,6 +68,11 @@ const chains = [
     Icon: RedstoneIcon,
     containerClassName: "",
   },
+  {
+    label: "Zora",
+    Icon: ZoraIcon,
+    containerClassName: "",
+  },
 ];
 
 const variants = {
@@ -94,18 +100,26 @@ export function SupportedChainsSection(props: { variant: "teal" | "purple" }) {
           Supported Chains
         </Text>
       </div>
-      <div className="grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-3 sm:self-center md:grid-cols-4">
+      <div
+        style={
+          {
+            "--item-size-small": "88px",
+            "--item-size-large": "102px",
+          } as React.CSSProperties
+        }
+        className="grid w-full max-w-[800px] grid-cols-[repeat(auto-fill,minmax(var(--item-size-small),1fr))] gap-x-12 gap-y-12 sm:self-center md:grid-cols-[repeat(auto-fill,minmax(var(--item-size-large),1fr))]"
+      >
         {chains.map((chain, index) => (
           <div
             key={index}
             className={twMerge(
-              "flex flex-col items-center gap-4",
+              "flex w-[102px] flex-col items-center gap-4 justify-self-center",
               chain.containerClassName,
             )}
           >
             <div
               className={twMerge(
-                "flex h-[88px] w-[88px] flex-col items-center justify-center rounded-2xl md:h-[108px] md:w-[108px]",
+                "flex h-[--item-size-small] w-[--item-size-small] flex-col items-center justify-center rounded-2xl md:h-[--item-size-large] md:w-[--item-size-large]",
                 variants[props.variant].bgClassName,
               )}
             >
