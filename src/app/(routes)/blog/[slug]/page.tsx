@@ -14,8 +14,45 @@ import BackToTopButton from "../_components/back-to-top-button";
 import ContentfulImage from "./_components/contentful-image";
 import ShareLink from "./_components/share-link";
 import ArticleSnippetCard from "../_components/article-snippet-card";
+import { Metadata } from "next";
+import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
 
 type SpecificBlogPageProps = { params: { slug: string } };
+
+export async function generateMetadata({
+  params,
+}: SpecificBlogPageProps): Promise<Metadata> {
+  const entry = await retrieveContentfulEntry(params.slug);
+  if (!entry) {
+    redirect("/404");
+  }
+  const title = entry.fields.title;
+  const description =
+    documentToPlainTextString(entry.fields.content).substring(0, 50) + "...";
+  const imageUrl = `https:${entry.fields.featuredImage?.fields.file?.url}`;
+
+  return {
+    keywords: entry.fields.tag ?? [],
+    publisher: "Across Protocol",
+    alternates: {
+      canonical: "/",
+      languages: {
+        "en-US": "/en-US",
+      },
+    },
+    title,
+    description,
+    icons: {
+      icon: ["/favicon-32x32.png", "/favicon-16x16.png"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@AcrossProtocol",
+      title,
+      images: [imageUrl],
+    },
+  };
+}
 
 export async function generateStaticParams() {
   // Grab all relevant slugs and pipe them into the SSG function
