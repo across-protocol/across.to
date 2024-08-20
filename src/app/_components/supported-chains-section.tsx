@@ -100,26 +100,18 @@ export function SupportedChainsSection(props: { variant: "teal" | "purple" }) {
           Supported Chains
         </Text>
       </div>
-      <div
-        style={
-          {
-            "--item-size-small": "88px",
-            "--item-size-large": "102px",
-          } as React.CSSProperties
-        }
-        className="grid w-full max-w-[800px] grid-cols-[repeat(auto-fill,minmax(var(--item-size-small),1fr))] gap-x-12 gap-y-12 sm:self-center md:grid-cols-[repeat(auto-fill,minmax(var(--item-size-large),1fr))]"
-      >
+      <div className="grid w-full max-w-[800px] grid-cols-[repeat(auto-fill,minmax(var(--item-size),1fr))] gap-x-12 gap-y-12 [--item-size:88px] sm:self-center md:[--item-size:102px]">
         {chains.map((chain, index) => (
           <div
             key={index}
             className={twMerge(
-              "flex w-[102px] flex-col items-center gap-4 justify-self-center",
+              "flex flex-col items-center gap-4 justify-self-center",
               chain.containerClassName,
             )}
           >
             <div
               className={twMerge(
-                "flex h-[--item-size-small] w-[--item-size-small] flex-col items-center justify-center rounded-2xl md:h-[--item-size-large] md:w-[--item-size-large]",
+                "flex h-[--item-size] w-[--item-size] flex-col items-center justify-center rounded-2xl",
                 variants[props.variant].bgClassName,
               )}
             >
