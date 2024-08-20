@@ -11,7 +11,7 @@ import {
   BlastIcon,
   ScrollIcon,
   LiskIcon,
-  ZoraIcon,
+  RedstoneIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
@@ -60,12 +60,12 @@ const chains = [
   {
     label: "Lisk",
     Icon: LiskIcon,
-    containerClassName: "sm:col-start-3",
+    containerClassName: "",
   },
   {
-    label: "Zora",
-    Icon: ZoraIcon,
-    containerClassName: "sm:col-start-4",
+    label: "Redstone",
+    Icon: RedstoneIcon,
+    containerClassName: "",
   },
 ];
 
@@ -94,7 +94,7 @@ export function SupportedChainsSection(props: { variant: "teal" | "purple" }) {
           Supported Chains
         </Text>
       </div>
-      <div className="grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-3 sm:self-center md:grid-cols-5">
+      <div className="grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-3 sm:self-center md:grid-cols-4">
         {chains.map((chain, index) => (
           <div
             key={index}
@@ -114,7 +114,7 @@ export function SupportedChainsSection(props: { variant: "teal" | "purple" }) {
                 variant={props.variant}
               />
             </div>
-            <Text variant="body" className="capitalize text-light-300">
+            <Text variant="body" className="text-center capitalize text-light-300">
               {chain.label}
             </Text>
           </div>
