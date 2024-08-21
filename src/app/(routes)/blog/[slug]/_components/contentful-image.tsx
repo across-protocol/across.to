@@ -32,6 +32,7 @@ export default function ContentfulImage({
         height={file.details.image?.height}
         width={file.details.image?.width}
         className={classes}
+        aria-description={description}
       />
       {description && displayDescription && <p>{description}</p>}
     </div>
