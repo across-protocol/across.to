@@ -91,7 +91,7 @@ export async function retrieveRelevantContentfulEntries(
     content_type: contentType,
     limit,
     "fields.content[exists]": true, // no empty posts
-    "fields.tag[in]": tags.join(","), // get posts with same tags
+    "fields.tag[in]": tags.join(",").toLowerCase(), // get posts with same tags
     "fields.slug[nin]": entrySlugId, // don't include current post
     "fields.slug[exists]": true, // no empty slugs
 
