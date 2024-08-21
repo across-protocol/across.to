@@ -7,7 +7,7 @@ import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 import Divider from "./_components/divider";
 import ArticleContent from "./_components/article-content";
-import BackgroundBanner from "./_components/background-banner";
+import BackgroundBanner from "../background-banner";
 import Breadcrumb from "./_components/breadcrumb";
 import { MetaInfo } from "./_components/meta-info";
 import BackToTopButton from "../_components/back-to-top-button";
