@@ -51,3 +51,4 @@ export { BlastIcon } from "./gradient/logos/blast";
 export { ScrollIcon } from "./gradient/logos/scroll";
 export { LiskIcon } from "./gradient/logos/lisk";
 export { RedstoneIcon } from "./gradient/logos/redstone";
+export { ZoraIcon } from "./gradient/logos/zora";

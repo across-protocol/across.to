@@ -14,6 +14,7 @@ import blastLogoSrc from "@/app/_assets/logos/blast.svg";
 import scrollLogoSrc from "@/app/_assets/logos/scroll.svg";
 import liskLogoSrc from "@/app/_assets/logos/lisk.svg";
 import redstoneLogoSrc from "@/app/_assets/logos/redstone.svg";
+import zoraLogoSrc from "@/app/_assets/logos/zora.svg";
 
 const chains = [
   {
@@ -51,6 +52,9 @@ const chains = [
   },
   {
     logo: <Image src={redstoneLogoSrc} alt="redstone logo" />,
+  },
+  {
+    logo: <Image src={zoraLogoSrc} alt="zora logo" />,
   },
 ];
 
