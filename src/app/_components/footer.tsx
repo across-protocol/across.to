@@ -17,6 +17,8 @@ import { IconBox } from "./icon-box";
 import { PRODUCT_LINKS, SOCIAL_LINKS, INFORMATION_LINKS } from "@/app/_constants";
 import { twMerge } from "@/app/_lib/tw-merge";
 import CustomLink from "./link";
+import Link from "next/link";
+import { TERMS_OF_SERVICE } from "../_constants/links";
 
 const products = [
   {
@@ -94,9 +96,13 @@ export function Footer() {
           <FooterBox label="resources" items={information} useExternalLinks />
         </div>
       </div>
-      <div className="flex flex-row items-center justify-center gap-1 lining-nums tabular-nums  text-grey-400">
-        Secured by
-        <UmaIcon />
+      <div className="flex flex-col items-center gap-5">
+        <div className="flex flex-row items-center justify-center gap-1 lining-nums tabular-nums  text-grey-400">
+          Secured by
+          <UmaIcon />
+        </div>
+        <div className="h-[1px] w-1/2 max-w-[12rem] bg-gradient-to-r from-transparent via-grey-500 to-transparent"></div>
+        <Link className="text-grey-400 -mt-2" href={TERMS_OF_SERVICE}>Terms of Service</Link>
       </div>
     </footer>
   );
