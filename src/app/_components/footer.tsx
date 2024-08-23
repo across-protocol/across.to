@@ -102,7 +102,9 @@ export function Footer() {
           <UmaIcon />
         </div>
         <div className="h-[1px] w-1/2 max-w-[12rem] bg-gradient-to-r from-transparent via-grey-500 to-transparent"></div>
-        <Link className="text-grey-400 -mt-2" href={TERMS_OF_SERVICE}>Terms of Service</Link>
+        <Link className="-mt-2 text-grey-400" href={TERMS_OF_SERVICE}>
+          Terms of Service
+        </Link>
       </div>
     </footer>
   );
