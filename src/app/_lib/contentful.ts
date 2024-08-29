@@ -51,7 +51,7 @@ export async function retrieveContentfulPublishedSlugs({
   limit?: number;
   avoidTags?: string[];
   includeTags?: string[];
-}): Promise<string[]> {
+} = {}): Promise<string[]> {
   const client = getProductionClient();
   const options = {
     content_type: contentType,
