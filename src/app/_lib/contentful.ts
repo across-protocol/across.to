@@ -41,16 +41,31 @@ function getProductionClient() {
   });
 }
 
-export async function retrieveContentfulPublishedSlugs(): Promise<string[]> {
+export async function retrieveContentfulPublishedSlugs({
+  query,
+  limit,
+  avoidTags,
+  includeTags,
+}: {
+  query?: string;
+  limit?: number;
+  avoidTags?: string[];
+  includeTags?: string[];
+}): Promise<string[]> {
   const client = getProductionClient();
   const options = {
     content_type: contentType,
     select: "fields.slug",
     "fields.content[exists]": true,
     "fields.slug[exists]": true,
+    ...(limit ? { limit } : {}),
+    ...(query ? { query } : {}),
+    ...(avoidTags ? { "fields.tag[nin]": avoidTags.join(",").toLowerCase() } : {}),
+    ...(includeTags ? { "fields.tag[in]": includeTags.join(",").toLowerCase() } : {}),
   } as const;
   const entries =
     await client.withoutUnresolvableLinks.getEntries<TypeAcrossBlogPostSkeleton>(options);
+
   return entries.items.map((item) => item.fields.slug);
 }
 

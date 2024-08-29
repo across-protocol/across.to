@@ -2,11 +2,25 @@ import { Text } from "@/app/_components/text";
 import BackToTopButton from "./_components/back-to-top-button";
 import BackgroundBanner from "./background-banner";
 import Filter from "./_components/filter";
-import { retrieveContentfulPublishedSlugs } from "@/app/_lib/contentful";
+import {
+  retrieveContentfulEntry,
+  retrieveContentfulPublishedSlugs,
+} from "@/app/_lib/contentful";
 import ArticleFullCard from "./_components/article-full-card";
+import ArticleSnippetCard from "./_components/article-snippet-card";
 
 export default async function BlogHomePage() {
-  const slugs = await retrieveContentfulPublishedSlugs();
+  const recentArticleSlugs = await retrieveContentfulPublishedSlugs({
+    limit: 6,
+    avoidTags: ["get-started"],
+  });
+  const getStartedSlugs = await retrieveContentfulPublishedSlugs({
+    limit: 3,
+    includeTags: ["get-started"],
+  });
+  const getStartedSnippets = await Promise.all(
+    getStartedSlugs.map((s) => retrieveContentfulEntry(s)),
+  );
 
   return (
     <>
@@ -16,16 +30,28 @@ export default async function BlogHomePage() {
           Across Protocol
         </Text>
         <Filter />
-
+        <div className="flex w-full flex-col gap-4">
+          <Text variant="body" className="text-grey-400">
+            Get started with Across
+          </Text>
+          <div className="scrollbar-hide w-full overflow-x-scroll">
+            <div className="grid w-[1024px] grid-cols-3 gap-5 md:w-full">
+              {getStartedSnippets.slice(0, 3).map((snippet) => (
+                <div className="w-full" key={snippet?.fields.slug}>
+                  <ArticleSnippetCard article={snippet!} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className="flex w-full flex-col gap-4">
           <Text variant="body" className="text-grey-400">
             Most recent articles
           </Text>
-          {slugs.map((slug) => (
+          {recentArticleSlugs.map((slug) => (
             <ArticleFullCard key={slug} slug={slug} />
           ))}
         </div>
-
         <BackToTopButton />
       </main>
     </>

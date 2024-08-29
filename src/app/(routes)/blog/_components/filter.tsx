@@ -7,7 +7,7 @@ export default function Filter() {
   const { text, handleTextChange } = useFilter();
 
   return (
-    <div className="sticky top-14 flex w-full justify-center border-b border-white-translucent bg-grey-dark py-6">
+    <div className="z-10 sticky top-14 flex w-full justify-center border-b border-white-translucent bg-grey-dark py-6">
       <div className="flex h-10 items-center gap-2 rounded-full border border-white-translucent bg-[#ffffff08] px-4">
         <SearchIcon />
         <input

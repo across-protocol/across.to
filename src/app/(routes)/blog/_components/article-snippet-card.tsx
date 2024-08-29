@@ -11,9 +11,6 @@ export default function ArticleSnippetCard({
   article: BlogPostType;
   expandedOnDesktop?: boolean;
 }) {
-  const description =
-    article.fields.description ??
-    `${documentToPlainTextString(article.fields.content).substring(0, 25)}...`;
   return (
     <Link
       href={`/blog/${article.fields.slug}`}
@@ -26,8 +23,9 @@ export default function ArticleSnippetCard({
           content={article.fields.content}
           preventCenter
         />
-        <Text variant="heading-5">{article.fields.title}</Text>
-        <Text variant="body">{description}</Text>
+        <Text variant="heading-5" className="line-clamp-2">
+          {article.fields.title}
+        </Text>
       </div>
     </Link>
   );

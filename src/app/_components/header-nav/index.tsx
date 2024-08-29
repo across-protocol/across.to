@@ -109,6 +109,7 @@ export function HeaderNav() {
             </Link>
             <div className="hidden flex-row items-center gap-6 md:flex">
               <Link href="/">Home</Link>
+              <Link href="/blog">Blog</Link>
               <FlyoutMenu buttonLabel="Products" menuItems={productsNavigationItems} />
               <FlyoutMenu
                 buttonLabel="Community"

@@ -11,8 +11,7 @@ export default async function ArticleFullCard({ slug }: { slug: string }) {
     return null;
   }
   const description =
-    article.fields.description ??
-    `${documentToPlainTextString(article.fields.content).substring(0, 100)}...`;
+    article.fields.description ?? documentToPlainTextString(article.fields.content);
 
   return (
     <Link
@@ -24,10 +23,10 @@ export default async function ArticleFullCard({ slug }: { slug: string }) {
           isoCreatedDate={article.sys.createdAt}
           content={article.fields.content}
         />
-        <Text variant="heading-4" className="group-hover:text-aqua-100">
+        <Text variant="heading-4" className="line-clamp-2 group-hover:text-aqua-100">
           {article.fields.title}
         </Text>
-        <Text variant="body" className="text-lg">
+        <Text variant="body" className="line-clamp-2 text-lg">
           {description}
         </Text>
       </div>
