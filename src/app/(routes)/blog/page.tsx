@@ -8,6 +8,7 @@ import {
 } from "@/app/_lib/contentful";
 import ArticleFullCard from "./_components/article-full-card";
 import ArticleSnippetCard from "./_components/article-snippet-card";
+import { Suspense } from "react";
 
 export default async function BlogHomePage() {
   const recentArticleSlugs = await retrieveContentfulPublishedSlugs({
@@ -29,12 +30,14 @@ export default async function BlogHomePage() {
         <Text variant="heading-2" className="-mb-6 lg:-mb-8">
           Across Protocol
         </Text>
-        <Filter />
+        <Suspense>
+          <Filter />
+        </Suspense>
         <div className="flex w-full flex-col gap-4">
           <Text variant="body" className="text-grey-400">
             Get started with Across
           </Text>
-          <div className="scrollbar-hide w-full overflow-x-scroll">
+          <div className="w-full overflow-x-scroll scrollbar-hide">
             <div className="grid w-[1024px] grid-cols-3 gap-5 md:w-full">
               {getStartedSnippets.slice(0, 3).map((snippet) => (
                 <div className="w-full" key={snippet?.fields.slug}>
