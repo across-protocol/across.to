@@ -34,6 +34,10 @@ export type BlogPostType = Entry<
   string
 >;
 
+export type BlogPostWithRelevantEntries = BlogPostType & {
+  relevantEntries: BlogPostType[];
+};
+
 function getProductionClient() {
   return createClient({
     space: CONTENTFUL_SPACE_ID ?? "",
@@ -72,7 +76,7 @@ export async function retrieveContentfulPublishedSlugs({
 export async function retrieveContentfulEntry(
   entrySlugId: string,
   relevantEntryCount = 4,
-) {
+): Promise<BlogPostWithRelevantEntries | undefined> {
   const client = getProductionClient();
   const options = {
     content_type: contentType,
