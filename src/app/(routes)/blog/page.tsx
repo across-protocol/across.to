@@ -41,12 +41,15 @@ export default async function BlogHomePage({ searchParams }: PageProps) {
         <Text variant="heading-2" className="-mb-6 lg:-mb-8">
           Across Protocol
         </Text>
+        <Suspense>
+          <Filter />
+        </Suspense>
         <Suspense
+          key={key}
           fallback={
             <h2 className="text-text-secondary text-2xl my-auto flex-1">Searching...</h2>
           }
         >
-          <Filter />
           <Posts
             getStartedSnippets={getStartedSnippets}
             recentArticleSlugs={recentArticleSlugs}
