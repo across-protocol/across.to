@@ -1,6 +1,5 @@
 import { BlogPostType } from "@/app/_lib/contentful";
 import { Text } from "@/app/_components/text";
-import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
 import Link from "next/link";
 import ContentfulImage from "../[slug]/_components/contentful-image";
 import { MetaInfo } from "../[slug]/_components/meta-info";

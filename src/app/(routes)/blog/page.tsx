@@ -1,16 +1,23 @@
 import { Text } from "@/app/_components/text";
 import BackToTopButton from "./_components/back-to-top-button";
-import BackgroundBanner from "./background-banner";
+import BackgroundBanner from "./_components/background-banner";
 import Filter from "./_components/filter";
-import {
-  retrieveContentfulEntry,
-  retrieveContentfulPublishedSlugs,
-} from "@/app/_lib/contentful";
-import ArticleFullCard from "./_components/article-full-card";
-import ArticleSnippetCard from "./_components/article-snippet-card";
-import { Suspense } from "react";
 
-export default async function BlogHomePage() {
+import { Suspense } from "react";
+import {
+  retrieveContentfulPublishedSlugs,
+  retrieveContentfulEntry,
+} from "@/app/_lib/contentful";
+import { Posts } from "./_components/posts";
+import { createCacheKey } from "@/app/_lib/cache";
+
+export type SearchParams = Record<string, string | undefined>;
+
+type PageProps = {
+  searchParams: SearchParams;
+};
+
+export default async function BlogHomePage({ searchParams }: PageProps) {
   const recentArticleSlugs = await retrieveContentfulPublishedSlugs({
     limit: 6,
     avoidTags: ["get-started"],
@@ -23,6 +30,10 @@ export default async function BlogHomePage() {
     getStartedSlugs.map((s) => retrieveContentfulEntry(s)),
   );
 
+  const key = createCacheKey({
+    searchParams,
+  });
+
   return (
     <>
       <BackgroundBanner />
@@ -33,29 +44,19 @@ export default async function BlogHomePage() {
         <Suspense>
           <Filter />
         </Suspense>
-        <div className="flex w-full flex-col gap-4">
-          <Text variant="body" className="text-grey-400">
-            Get started with Across
-          </Text>
-          <div className="w-full overflow-x-scroll scrollbar-hide">
-            <div className="grid w-[1024px] grid-cols-3 gap-5 md:w-full">
-              {getStartedSnippets.slice(0, 3).map((snippet) => (
-                <div className="w-full" key={snippet?.fields.slug}>
-                  <ArticleSnippetCard article={snippet!} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="flex w-full flex-col gap-4">
-          <Text variant="body" className="text-grey-400">
-            Most recent articles
-          </Text>
-          {recentArticleSlugs.map((slug) => (
-            <ArticleFullCard key={slug} slug={slug} />
-          ))}
-        </div>
-        <BackToTopButton />
+        <Suspense
+          key={key}
+          fallback={
+            <h2 className="text-text-secondary text-2xl my-auto flex-1">Searching...</h2>
+          }
+        >
+          <Posts
+            getStartedSnippets={getStartedSnippets}
+            recentArticleSlugs={recentArticleSlugs}
+            searchParams={searchParams}
+          />
+          <BackToTopButton />
+        </Suspense>
       </main>
     </>
   );
