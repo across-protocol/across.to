@@ -17,6 +17,7 @@ export { VerifiedCheckmarkIcon } from "./verified-checkmark";
 export { DiscourseIcon } from "./discourse";
 export { GitHubIcon } from "./github";
 export { LinkIcon } from "./link";
+export { SearchIcon } from "./search";
 
 // Gradient icons
 export { ArrowUpIcon } from "./gradient/arrow-up";
