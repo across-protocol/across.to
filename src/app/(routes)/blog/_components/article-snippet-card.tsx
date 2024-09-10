@@ -1,6 +1,5 @@
 import { BlogPostType } from "@/app/_lib/contentful";
 import { Text } from "@/app/_components/text";
-import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
 import Link from "next/link";
 import ContentfulImage from "../[slug]/_components/contentful-image";
 import { MetaInfo } from "../[slug]/_components/meta-info";
@@ -11,9 +10,6 @@ export default function ArticleSnippetCard({
   article: BlogPostType;
   expandedOnDesktop?: boolean;
 }) {
-  const description =
-    article.fields.description ??
-    `${documentToPlainTextString(article.fields.content).substring(0, 25)}...`;
   return (
     <Link
       href={`/blog/${article.fields.slug}`}
@@ -26,8 +22,9 @@ export default function ArticleSnippetCard({
           content={article.fields.content}
           preventCenter
         />
-        <Text variant="heading-5">{article.fields.title}</Text>
-        <Text variant="body">{description}</Text>
+        <Text variant="heading-5" className="line-clamp-2">
+          {article.fields.title}
+        </Text>
       </div>
     </Link>
   );

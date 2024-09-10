@@ -34,6 +34,10 @@ export type BlogPostType = Entry<
   string
 >;
 
+export type BlogPostWithRelevantEntries = BlogPostType & {
+  relevantEntries: BlogPostType[];
+};
+
 function getProductionClient() {
   return createClient({
     space: CONTENTFUL_SPACE_ID ?? "",
@@ -41,23 +45,38 @@ function getProductionClient() {
   });
 }
 
-export async function retrieveContentfulPublishedSlugs(): Promise<string[]> {
+export async function retrieveContentfulPublishedSlugs({
+  query,
+  limit,
+  avoidTags,
+  includeTags,
+}: {
+  query?: string;
+  limit?: number;
+  avoidTags?: string[];
+  includeTags?: string[];
+} = {}): Promise<string[]> {
   const client = getProductionClient();
   const options = {
     content_type: contentType,
     select: "fields.slug",
     "fields.content[exists]": true,
     "fields.slug[exists]": true,
+    ...(limit ? { limit } : {}),
+    ...(query ? { query } : {}),
+    ...(avoidTags ? { "fields.tag[nin]": avoidTags.join(",").toLowerCase() } : {}),
+    ...(includeTags ? { "fields.tag[in]": includeTags.join(",").toLowerCase() } : {}),
   } as const;
   const entries =
     await client.withoutUnresolvableLinks.getEntries<TypeAcrossBlogPostSkeleton>(options);
+
   return entries.items.map((item) => item.fields.slug);
 }
 
 export async function retrieveContentfulEntry(
   entrySlugId: string,
   relevantEntryCount = 4,
-) {
+): Promise<BlogPostWithRelevantEntries | undefined> {
   const client = getProductionClient();
   const options = {
     content_type: contentType,
