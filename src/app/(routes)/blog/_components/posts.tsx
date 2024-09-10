@@ -48,16 +48,16 @@ export async function Posts({
     const searchedSlugs = await retrieveContentfulPublishedSlugs({
       query: search,
     });
-    return (
+    return searchedSlugs.length === 0 ? (
+      <h2 className="text-2xl my-auto flex-1 text-grey-400">No results.</h2>
+    ) : (
       <div className="flex w-full flex-col gap-4">
         <Text variant="body" className="text-grey-400">
           Search results
         </Text>
-        {searchedSlugs.length === 0 ? (
-          <h2 className="text-text-secondary text-2xl my-auto flex-1">No results</h2>
-        ) : (
-          searchedSlugs.map((slug) => <ArticleFullCard key={slug} slug={slug} />)
-        )}
+        {searchedSlugs.map((slug) => (
+          <ArticleFullCard key={slug} slug={slug} />
+        ))}
       </div>
     );
   }
