@@ -53,9 +53,11 @@ export async function Posts({
         <Text variant="body" className="text-grey-400">
           Search results
         </Text>
-        {searchedSlugs.map((slug) => (
-          <ArticleFullCard key={slug} slug={slug} />
-        ))}
+        {searchedSlugs.length === 0 ? (
+          <h2 className="text-text-secondary text-2xl my-auto flex-1">No results</h2>
+        ) : (
+          searchedSlugs.map((slug) => <ArticleFullCard key={slug} slug={slug} />)
+        )}
       </div>
     );
   }
