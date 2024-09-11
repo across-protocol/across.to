@@ -81,7 +81,7 @@ export async function retrieveContentfulEntry(
   const options = {
     content_type: contentType,
     limit: 1,
-    "fields.slug[match]": entrySlugId,
+    "fields.slug": entrySlugId,
   } as const;
   const entries =
     await client.withoutUnresolvableLinks.getEntries<TypeAcrossBlogPostSkeleton>(options);
