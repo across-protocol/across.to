@@ -56,3 +56,5 @@ export const INTEGRATION_LINKS = {
   settlement:
     "https://docs.across.to/v/v3-developer-docs/concepts/intents-architecture-in-across",
 };
+
+export const SITE_BASE_URL = "https://across.to" as const;

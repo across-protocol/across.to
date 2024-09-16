@@ -16,6 +16,7 @@ import ShareLink from "./_components/share-link";
 import ArticleSnippetCard from "../_components/article-snippet-card";
 import { Metadata } from "next";
 import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
+import { SITE_BASE_URL } from "@/app/_constants/links";
 
 type SpecificBlogPageProps = { params: { slug: string } };
 
@@ -33,12 +34,10 @@ export async function generateMetadata({
 
   return {
     keywords: entry.fields.tag ?? [],
+    metadataBase: new URL(SITE_BASE_URL),
     publisher: "Across Protocol",
     alternates: {
-      canonical: "/",
-      languages: {
-        "en-US": "/en-US",
-      },
+      canonical: `/blog/${params.slug}`,
     },
     title,
     description,
@@ -50,6 +49,13 @@ export async function generateMetadata({
       site: "@AcrossProtocol",
       title,
       images: [imageUrl],
+    },
+    openGraph: {
+      siteName: "Across Protocol",
+      title,
+      description,
+      images: [imageUrl],
+      url: `/blog/${params.slug}`,
     },
   };
 }
