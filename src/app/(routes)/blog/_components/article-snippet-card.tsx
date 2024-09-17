@@ -1,4 +1,4 @@
-import { BlogPostType } from "@/app/_lib/contentful";
+import { BlogPostType, resolvePublishDateToIsoDate } from "@/app/_lib/contentful";
 import { Text } from "@/app/_components/text";
 import Link from "next/link";
 import ContentfulImage from "../[slug]/_components/contentful-image";
@@ -18,7 +18,7 @@ export default function ArticleSnippetCard({
       <ContentfulImage image={article.fields.featuredImage} borderless />
       <div className="flex flex-col gap-4 p-5">
         <MetaInfo
-          isoCreatedDate={article.sys.createdAt}
+          isoCreatedDate={resolvePublishDateToIsoDate(article)}
           content={article.fields.content}
           preventCenter
         />
