@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 import { twMerge } from "@/app/_lib/tw-merge";
-import { PRODUCT_LINKS, SOCIAL_LINKS } from "@/app/_constants";
+import { INFORMATION_LINKS, PRODUCT_LINKS, SOCIAL_LINKS } from "@/app/_constants";
 
 import {
   AcrossIcon,
@@ -18,6 +18,7 @@ import {
   TwitterIcon,
   MediumIcon,
   DiscourseIcon,
+  NewspaperIcon,
 } from "../icons";
 import { Button } from "../button";
 import { Text } from "../text";
@@ -76,6 +77,14 @@ const communityNavigationItems = [
   {
     ...SOCIAL_LINKS.discourse,
     Icon: DiscourseIcon,
+    iconClassName: "h-4 w-4",
+    iconContainerClassName: "bg-light-100/[.05]",
+    containerClassName: "group-hover:bg-light-100/[.05]",
+  },
+  {
+    ...INFORMATION_LINKS.blog,
+    description: "Across Blog",
+    Icon: NewspaperIcon,
     iconClassName: "h-4 w-4",
     iconContainerClassName: "bg-light-100/[.05]",
     containerClassName: "group-hover:bg-light-100/[.05]",
