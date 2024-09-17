@@ -21,6 +21,7 @@ export default async function BlogHomePage({ searchParams }: PageProps) {
   const recentArticleSlugs = await retrieveContentfulPublishedSlugs({
     limit: 6,
     avoidTags: ["get-started"],
+    sortByRecent: true,
   });
   const getStartedSlugs = await retrieveContentfulPublishedSlugs({
     limit: 3,
