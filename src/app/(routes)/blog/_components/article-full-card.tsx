@@ -1,4 +1,7 @@
-import { resolvePublishDateToIsoDate, retrieveContentfulEntry } from "@/app/_lib/contentful";
+import {
+  resolvePublishDateToIsoDate,
+  retrieveContentfulEntry,
+} from "@/app/_lib/contentful";
 import ContentfulImage from "../[slug]/_components/contentful-image";
 import { MetaInfo } from "../[slug]/_components/meta-info";
 import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
