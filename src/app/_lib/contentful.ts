@@ -113,10 +113,8 @@ export async function retrieveRelevantContentfulEntries(
     "fields.tag[in]": tags.join(",").toLowerCase(), // get posts with same tags
     "fields.slug[nin]": entrySlugId, // don't include current post
     "fields.slug[exists]": true, // no empty slugs
-
-    // TODO: Update existing posts to have publishDate
-    // "fields.publishDate[exists]": true, // no empty dates
-    // order: "-fields.publishDate", // sorted latest first
+    "fields.publishDate[exists]": true, // no empty dates
+    order: "-fields.publishDate", // sorted latest first
   } as const;
   const entries =
     await client.withoutUnresolvableLinks.getEntries<TypeAcrossBlogPostSkeleton>(options);
