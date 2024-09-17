@@ -128,3 +128,7 @@ export function getReadingTime(content: Document): number {
   const wordCount = words(rawText).length;
   return Math.round(wordCount / averageReadingSpeed);
 }
+
+export function resolvePublishDateToIsoDate(entry: BlogPostType): string {
+  return entry.fields.publishDate ?? entry.sys.createdAt;
+}

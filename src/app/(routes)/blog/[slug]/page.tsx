@@ -1,4 +1,5 @@
 import {
+  resolvePublishDateToIsoDate,
   retrieveContentfulEntry,
   retrieveContentfulPublishedSlugs,
 } from "@/app/_lib/contentful";
@@ -89,7 +90,6 @@ export default async function SpecificBlogPage({ params }: SpecificBlogPageProps
     redirect("/404");
   }
   const fullTitle = entry.fields.title;
-  const dateCreatedAt = entry.sys.createdAt;
   const content = entry.fields.content;
   return (
     <>
@@ -103,7 +103,7 @@ export default async function SpecificBlogPage({ params }: SpecificBlogPageProps
         <Breadcrumb fullTitle={fullTitle} />
         <ContentfulImage image={entry.fields.featuredImage} />
         <SubStack className="text-center sm:text-left">
-          <MetaInfo isoCreatedDate={dateCreatedAt} content={content} />
+          <MetaInfo isoCreatedDate={resolvePublishDateToIsoDate(entry)} content={content} />
           <h1 className="text-heading-3 font-lighter lining-nums tabular-nums tracking-tight-5 sm:text-heading-2">
             {fullTitle}
           </h1>
