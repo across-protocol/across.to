@@ -51,12 +51,14 @@ export async function retrieveContentfulPublishedSlugs({
   avoidTags,
   includeTags,
   sortByRecent,
+  skip,
 }: {
   query?: string;
   limit?: number;
   avoidTags?: string[];
   includeTags?: string[];
   sortByRecent?: boolean;
+  skip?: number;
 } = {}): Promise<string[]> {
   const client = getProductionClient();
   const options = {
@@ -69,6 +71,7 @@ export async function retrieveContentfulPublishedSlugs({
     ...(avoidTags ? { "fields.tag[nin]": avoidTags.join(",").toLowerCase() } : {}),
     ...(includeTags ? { "fields.tag[in]": includeTags.join(",").toLowerCase() } : {}),
     ...(sortByRecent ? { order: "-fields.publishDate" } : {}),
+    ...(skip ? { skip } : {}),
   } as const;
   const entries =
     await client.withoutUnresolvableLinks.getEntries<TypeAcrossBlogPostSkeleton>(options);
