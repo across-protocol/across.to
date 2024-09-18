@@ -39,8 +39,8 @@ export default async function BlogHomePage({ searchParams }: PageProps) {
     <>
       <BackgroundBanner />
       <main className="relative z-[1] mx-auto flex w-full max-w-4xl flex-col items-center gap-6 px-4 py-10 lg:gap-8 lg:px-0">
-        <Text variant="heading-2" className="-mb-6 lg:-mb-8">
-          Across Blog
+        <Text variant="heading-2" className="-mb-6">
+          <h1>Across Blog</h1>
         </Text>
         <Suspense>
           <Filter />
