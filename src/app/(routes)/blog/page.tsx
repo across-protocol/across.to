@@ -4,10 +4,7 @@ import BackgroundBanner from "./_components/background-banner";
 import Filter from "./_components/filter";
 
 import { Suspense } from "react";
-import {
-  retrieveContentfulPublishedSlugs,
-  retrieveContentfulEntry,
-} from "@/app/_lib/contentful";
+import { retrieveContentfulPublishedSlugs } from "@/app/_lib/contentful";
 import { Posts } from "./_components/posts";
 import { createCacheKey } from "@/app/_lib/cache";
 
@@ -18,23 +15,9 @@ type PageProps = {
 };
 
 export default async function BlogHomePage({ searchParams }: PageProps) {
-  const recentArticleSlugs = await retrieveContentfulPublishedSlugs({
-    limit: 6,
-    avoidTags: ["get-started"],
-    sortByRecent: true,
-  });
-  const getStartedSlugs = await retrieveContentfulPublishedSlugs({
-    limit: 3,
-    includeTags: ["get-started"],
-  });
-  const getStartedSnippets = await Promise.all(
-    getStartedSlugs.map((s) => retrieveContentfulEntry(s)),
-  );
-
   const key = createCacheKey({
     searchParams,
   });
-
   return (
     <>
       <BackgroundBanner />
@@ -51,11 +34,7 @@ export default async function BlogHomePage({ searchParams }: PageProps) {
             <h2 className="text-text-secondary text-2xl my-auto flex-1">Searching...</h2>
           }
         >
-          <Posts
-            getStartedSnippets={getStartedSnippets}
-            recentArticleSlugs={recentArticleSlugs}
-            searchParams={searchParams}
-          />
+          <Posts searchParams={searchParams} />
           <BackToTopButton />
         </Suspense>
       </main>
