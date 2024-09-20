@@ -73,6 +73,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(SITE_BASE_URL),
     publisher: "Across Protocol",
+    alternates: {
+      canonical: `/blog`,
+    },
     title,
     description,
     icons: {
