@@ -17,7 +17,7 @@ type CustomLinkProps = LinkProps & {
  */
 function CustomLink({ href, preserveQueryParams, ...props }: CustomLinkProps) {
   const params = useSearchParams();
-  if (preserveQueryParams && !href.toString().includes("?")) {
+  if (preserveQueryParams && params.size > 0 && !href.toString().includes("?")) {
     href = `${href.toString()}?${params.toString()}`;
   }
   return <Link href={href} {...props} />;

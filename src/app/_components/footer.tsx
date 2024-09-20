@@ -12,6 +12,7 @@ import {
   DocumentIcon,
   DiscourseIcon,
   GitHubIcon,
+  NewspaperIcon,
 } from "./icons";
 import { IconBox } from "./icon-box";
 import { PRODUCT_LINKS, SOCIAL_LINKS, INFORMATION_LINKS } from "@/app/_constants";
@@ -68,6 +69,12 @@ const socials = [
 
 const information = [
   {
+    ...INFORMATION_LINKS.blog,
+    Icon: NewspaperIcon,
+    iconClassName: "h-5 w-5",
+    iconContainerClassName: "bg-light-100/[.05]",
+  },
+  {
     ...INFORMATION_LINKS.docs,
     Icon: DocumentIcon,
     iconClassName: "h-5 w-5",
@@ -115,7 +122,7 @@ function FooterBox(props: {
       <div className="flex flex-col gap-5">
         {props.items.map((item) => (
           <div key={item.href} className="flex flex-row items-center gap-3">
-            {props.useExternalLinks ? (
+            {props.useExternalLinks && !item.href.startsWith("/") ? (
               <a href={item.href} target="_blank" rel="noopener noreferrer">
                 <FooterBoxItem item={item} />
               </a>
