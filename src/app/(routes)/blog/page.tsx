@@ -7,6 +7,8 @@ import { Suspense } from "react";
 import { retrieveContentfulPublishedSlugs } from "@/app/_lib/contentful";
 import { Posts } from "./_components/posts";
 import { createCacheKey } from "@/app/_lib/cache";
+import { Metadata } from "next";
+import { SITE_BASE_URL } from "@/app/_constants/links";
 
 export type SearchParams = Record<string, string | undefined>;
 
@@ -40,4 +42,33 @@ export default async function BlogHomePage({ searchParams }: PageProps) {
       </main>
     </>
   );
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "Across Blog";
+  const description =
+    "Explore the latest in cross-chain solutions with the Across blog. Dive into tutorials, updates and announcements that help you leverage our protocol for fast and secure cross-chain transactions.";
+
+  return {
+    metadataBase: new URL(SITE_BASE_URL),
+    publisher: "Across Protocol",
+    alternates: {
+      canonical: `/blog`,
+    },
+    title,
+    description,
+    icons: {
+      icon: ["/favicon-32x32.png", "/favicon-16x16.png"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@AcrossProtocol",
+      title,
+    },
+    openGraph: {
+      siteName: "Across Protocol",
+      title,
+      description,
+    },
+  };
 }
