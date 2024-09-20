@@ -48,6 +48,10 @@ export const INFORMATION_LINKS = {
     label: "Docs",
     href: "https://docs.across.to/v/v3-developer-docs/introduction/what-is-across",
   },
+  blog: {
+    label: "Blog",
+    href: "/blog",
+  },
 };
 
 export const INTEGRATION_LINKS = {
