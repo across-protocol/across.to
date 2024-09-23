@@ -62,3 +62,4 @@ export const INTEGRATION_LINKS = {
 };
 
 export const SITE_BASE_URL = "https://across.to" as const;
+export const TERMS_OF_SERVICE = "/terms-of-service";
