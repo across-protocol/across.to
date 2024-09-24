@@ -1,8 +1,5 @@
 import { Text } from "@/app/_components/text";
 import ArticleFullCard from "./article-full-card";
-import { retrieveContentfulPublishedSlugs } from "@/app/_lib/contentful";
-import { SearchParams } from "../page";
-import { useState } from "react";
 
 export async function Posts({ isSearch, slugs }: { isSearch: boolean; slugs: string[] }) {
   return (

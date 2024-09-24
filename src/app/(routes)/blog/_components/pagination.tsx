@@ -67,7 +67,7 @@ const PageButton = ({
       isDisabled ? "opacity-25" : "cursor-pointer",
       isAqua
         ? "bg-aqua-100/5 text-aqua-100"
-        : "border-white-translucent border text-grey-400",
+        : "border border-white-translucent text-grey-400",
     )}
     onClick={isDisabled ? undefined : onClick}
   >

@@ -53,7 +53,11 @@ export default async function BlogHomePage({ searchParams }: PageProps) {
           }
         >
           <Posts isSearch={isSearch} slugs={slugsForQuery} />
-          <Pagination pageLength={pageLength} totalCount={totalCount} currentPage={pageNumber} />
+          <Pagination
+            pageLength={pageLength}
+            totalCount={totalCount}
+            currentPage={pageNumber}
+          />
           <BackToTopButton />
         </Suspense>
       </main>
