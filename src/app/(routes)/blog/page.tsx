@@ -4,11 +4,12 @@ import BackgroundBanner from "./_components/background-banner";
 import Filter from "./_components/filter";
 
 import { Suspense } from "react";
-import { retrieveContentfulPublishedSlugs } from "@/app/_lib/contentful";
 import { Posts } from "./_components/posts";
 import { createCacheKey } from "@/app/_lib/cache";
 import { Metadata } from "next";
 import { SITE_BASE_URL } from "@/app/_constants/links";
+import Pagination from "./_components/pagination";
+import { retrieveContentfulPublishedSlugs } from "@/app/_lib/contentful";
 
 export type SearchParams = Record<string, string | undefined>;
 
@@ -20,6 +21,21 @@ export default async function BlogHomePage({ searchParams }: PageProps) {
   const key = createCacheKey({
     searchParams,
   });
+
+  const search = searchParams["search"];
+  const isSearch = Boolean(!!search);
+  const page = Number(searchParams["page"]);
+
+  const pageNumber = isNaN(page) || !Number.isInteger(page) || page < 1 ? 1 : page;
+  const pageLength = 10;
+
+  const { slugsForQuery, totalCount } = await retrieveContentfulPublishedSlugs({
+    query: search,
+    sortByRecent: true,
+    limit: pageLength,
+    skip: (pageNumber - 1) * pageLength,
+  });
+
   return (
     <>
       <BackgroundBanner />
@@ -36,7 +52,8 @@ export default async function BlogHomePage({ searchParams }: PageProps) {
             <h2 className="text-text-secondary text-2xl my-auto flex-1">Searching...</h2>
           }
         >
-          <Posts searchParams={searchParams} />
+          <Posts isSearch={isSearch} slugs={slugsForQuery} />
+          <Pagination pageLength={pageLength} totalCount={totalCount} currentPage={pageNumber} />
           <BackToTopButton />
         </Suspense>
       </main>

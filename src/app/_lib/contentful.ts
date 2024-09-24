@@ -59,7 +59,7 @@ export async function retrieveContentfulPublishedSlugs({
   includeTags?: string[];
   sortByRecent?: boolean;
   skip?: number;
-} = {}): Promise<string[]> {
+} = {}): Promise<{ slugsForQuery: string[]; totalCount: number }> {
   const client = getProductionClient();
   const options = {
     content_type: contentType,
@@ -67,7 +67,7 @@ export async function retrieveContentfulPublishedSlugs({
     "fields.content[exists]": true,
     "fields.slug[exists]": true,
     ...(limit ? { limit } : {}),
-    ...(query ? { query } : {}),
+    ...(query ? { query: decodeURI(query) } : {}),
     ...(avoidTags ? { "fields.tag[nin]": avoidTags.join(",").toLowerCase() } : {}),
     ...(includeTags ? { "fields.tag[in]": includeTags.join(",").toLowerCase() } : {}),
     ...(sortByRecent ? { order: "-fields.publishDate" } : {}),
@@ -76,7 +76,10 @@ export async function retrieveContentfulPublishedSlugs({
   const entries =
     await client.withoutUnresolvableLinks.getEntries<TypeAcrossBlogPostSkeleton>(options);
 
-  return entries.items.map((item) => item.fields.slug);
+  return {
+    slugsForQuery: entries.items.map((item) => item.fields.slug),
+    totalCount: entries.total,
+  };
 }
 
 export async function retrieveContentfulEntry(
