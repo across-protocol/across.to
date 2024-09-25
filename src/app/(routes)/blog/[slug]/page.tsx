@@ -65,8 +65,8 @@ export async function generateStaticParams() {
   // Grab all relevant slugs and pipe them into the SSG function
   // so that we can generate static blog pages without needing to
   // use SSR at runtime as much as possible.
-  const slugs = await retrieveContentfulPublishedSlugs();
-  return slugs.map((slug) => ({
+  const { slugsForQuery } = await retrieveContentfulPublishedSlugs();
+  return slugsForQuery.map((slug) => ({
     slug,
   }));
 }
