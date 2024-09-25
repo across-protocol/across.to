@@ -3,11 +3,7 @@ import { useState, useCallback } from "react";
 import { useDebouncedCallback } from "use-debounce";
 
 export function useFilter() {
-  const { params, setParams, removeParams } = useSetQueryParams([
-    "product",
-    "search",
-    "tag",
-  ]);
+  const { params, setParams, removeParams } = useSetQueryParams(["page", "search"]);
   const [text, setText] = useState(params.search ?? "");
 
   const debouncedSetParam = useDebouncedCallback((value: string) => {
@@ -18,18 +14,19 @@ export function useFilter() {
 
   function handleTextChange(value: string) {
     setText(value);
+    handlePageChange(1); // Reset page to 1 when searching
     debouncedSetParam(value);
   }
 
-  function handleTagChange(value: string) {
+  function handlePageChange(value: number) {
     setParams({
-      tag: value,
+      page: String(value),
     });
   }
 
   const clearAll = useCallback(() => {
     setText("");
-    removeParams(["product", "search", "tag"]);
+    removeParams(["page", "search"]);
   }, [removeParams]);
 
   const hasParams = text || params.tag ? true : false;
@@ -39,7 +36,7 @@ export function useFilter() {
     handleTextChange,
     productParam: params.product,
     tag: params.tag,
-    handleTagChange,
+    handlePageChange,
     clearAll,
     hasParams,
   };
