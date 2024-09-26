@@ -3,11 +3,14 @@ export type AMPLITUDE_PAGE =
   | "marketingHomePage"
   | "marketingBridgePage"
   | "marketingAcrossPlusPage"
-  | "marketingSettlementPage";
+  | "marketingSettlementPage"
+  | "marketingBlogSpecificPage"
+  | "marketingBlogHomePage";
 
 export const AMPLITUDE_PAGE_LOOKUP: Record<string, AMPLITUDE_PAGE> = {
   "/": "marketingHomePage",
   "/across-bridge": "marketingBridgePage",
   "/across-plus": "marketingAcrossPlusPage",
   "/across-settlement": "marketingSettlementPage",
+  "/blog": "marketingBlogHomePage",
 };
