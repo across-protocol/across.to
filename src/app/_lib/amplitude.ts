@@ -39,5 +39,8 @@ export async function initializeAmplitude(setLoaded: (loaded: boolean) => void) 
 }
 
 export function pageLookup(pathname: string) {
-  return AMPLITUDE_PAGE_LOOKUP[pathname] ?? "404Page";
+  const isSpecificBlogPage = /^\/blog\/[a-zA-Z0-9-]+$/.test(pathname);
+  return isSpecificBlogPage
+    ? "marketingBlogSpecificPage"
+    : AMPLITUDE_PAGE_LOOKUP[pathname] ?? "404Page";
 }

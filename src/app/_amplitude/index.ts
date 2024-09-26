@@ -181,7 +181,7 @@ export interface BridgeButtonClickedProperties {
   /**
    * | Rule | Value |
    * |---|---|
-   * | Enum Values | splashPage, bridgePage, poolPage, rewardsPage, transactionsPage, stakingPage, referralPage, airdropPage, 404Page, marketingHomePage, marketingBridgePage, marketingAcrossPlusPage, marketingSettlementPage, depositStatusPage |
+   * | Enum Values | splashPage, bridgePage, poolPage, rewardsPage, transactionsPage, stakingPage, referralPage, airdropPage, 404Page, marketingHomePage, marketingBridgePage, marketingAcrossPlusPage, marketingSettlementPage, depositStatusPage, marketingBlogSpecificPage, marketingBlogHomePage |
    */
   page:
     | "splashPage"
@@ -197,7 +197,9 @@ export interface BridgeButtonClickedProperties {
     | "marketingBridgePage"
     | "marketingAcrossPlusPage"
     | "marketingSettlementPage"
-    | "depositStatusPage";
+    | "depositStatusPage"
+    | "marketingBlogSpecificPage"
+    | "marketingBlogHomePage";
   /**
    * | Rule | Value |
    * |---|---|
@@ -224,7 +226,7 @@ export interface CtaButtonClickedProperties {
   /**
    * | Rule | Value |
    * |---|---|
-   * | Enum Values | splashPage, bridgePage, poolPage, rewardsPage, transactionsPage, stakingPage, referralPage, airdropPage, 404Page, marketingHomePage, marketingBridgePage, marketingAcrossPlusPage, marketingSettlementPage, depositStatusPage |
+   * | Enum Values | splashPage, bridgePage, poolPage, rewardsPage, transactionsPage, stakingPage, referralPage, airdropPage, 404Page, marketingHomePage, marketingBridgePage, marketingAcrossPlusPage, marketingSettlementPage, depositStatusPage, marketingBlogSpecificPage, marketingBlogHomePage |
    */
   page:
     | "splashPage"
@@ -240,7 +242,9 @@ export interface CtaButtonClickedProperties {
     | "marketingBridgePage"
     | "marketingAcrossPlusPage"
     | "marketingSettlementPage"
-    | "depositStatusPage";
+    | "depositStatusPage"
+    | "marketingBlogSpecificPage"
+    | "marketingBlogHomePage";
   /**
    * | Rule | Value |
    * |---|---|
@@ -276,7 +280,7 @@ export interface PageViewedProperties {
   /**
    * | Rule | Value |
    * |---|---|
-   * | Enum Values | splashPage, bridgePage, poolPage, rewardsPage, transactionsPage, stakingPage, referralPage, airdropPage, 404Page, marketingHomePage, marketingBridgePage, marketingAcrossPlusPage, marketingSettlementPage, depositStatusPage |
+   * | Enum Values | splashPage, bridgePage, poolPage, rewardsPage, transactionsPage, stakingPage, referralPage, airdropPage, 404Page, marketingHomePage, marketingBridgePage, marketingAcrossPlusPage, marketingSettlementPage, depositStatusPage, marketingBlogSpecificPage, marketingBlogHomePage |
    */
   page:
     | "splashPage"
@@ -292,7 +296,9 @@ export interface PageViewedProperties {
     | "marketingBridgePage"
     | "marketingAcrossPlusPage"
     | "marketingSettlementPage"
-    | "depositStatusPage";
+    | "depositStatusPage"
+    | "marketingBlogSpecificPage"
+    | "marketingBlogHomePage";
   path: string;
   /**
    * Address of referee, null if no referral used
