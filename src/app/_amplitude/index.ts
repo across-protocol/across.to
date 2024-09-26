@@ -177,6 +177,32 @@ export interface IdentifyProperties {
   WethVolumeUsd?: any;
 }
 
+export interface BlogSearchProperties {
+  /**
+   * | Rule | Value |
+   * |---|---|
+   * | Enum Values | splashPage, bridgePage, poolPage, rewardsPage, transactionsPage, stakingPage, referralPage, airdropPage, 404Page, marketingHomePage, marketingBridgePage, marketingAcrossPlusPage, marketingSettlementPage, depositStatusPage, marketingBlogSpecificPage, marketingBlogHomePage |
+   */
+  page:
+    | "splashPage"
+    | "bridgePage"
+    | "poolPage"
+    | "rewardsPage"
+    | "transactionsPage"
+    | "stakingPage"
+    | "referralPage"
+    | "airdropPage"
+    | "404Page"
+    | "marketingHomePage"
+    | "marketingBridgePage"
+    | "marketingAcrossPlusPage"
+    | "marketingSettlementPage"
+    | "depositStatusPage"
+    | "marketingBlogSpecificPage"
+    | "marketingBlogHomePage";
+  search: string;
+}
+
 export interface BridgeButtonClickedProperties {
   /**
    * | Rule | Value |
@@ -324,6 +350,14 @@ export class Identify implements BaseEvent {
 
 export class ApplicationLoaded implements BaseEvent {
   event_type = "ApplicationLoaded";
+}
+
+export class BlogSearch implements BaseEvent {
+  event_type = "BlogSearch";
+
+  constructor(public event_properties: BlogSearchProperties) {
+    this.event_properties = event_properties;
+  }
 }
 
 export class BridgeButtonClicked implements BaseEvent {
@@ -482,6 +516,23 @@ export class Ampli {
     options?: EventOptions,
   ) {
     return this.track(new ApplicationLoaded(), options);
+  }
+
+  /**
+   * BlogSearch
+   *
+   * [View in Tracking Plan](https://data.amplitude.com/risklabs/Risk%20Labs/events/main/latest/BlogSearch)
+   *
+   * Event has no description in tracking plan.
+   *
+   * @param properties The event's properties (e.g. page)
+   * @param options Amplitude event options.
+   */
+  blogSearch(
+    properties: BlogSearchProperties,
+    options?: EventOptions,
+  ) {
+    return this.track(new BlogSearch(properties), options);
   }
 
   /**
