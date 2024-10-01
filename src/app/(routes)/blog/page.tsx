@@ -27,7 +27,7 @@ export default async function BlogHomePage({ searchParams }: PageProps) {
   const page = Number(searchParams["page"]);
 
   const pageNumber = isNaN(page) || !Number.isInteger(page) || page < 1 ? 1 : page;
-  const pageLength = 10;
+  const pageLength = 16;
 
   const { slugsForQuery, totalCount } = await retrieveContentfulPublishedSlugs({
     query: search,

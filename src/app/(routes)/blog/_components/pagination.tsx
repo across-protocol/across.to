@@ -24,7 +24,7 @@ export default function Pagination({
   const hasNext = currentPage < totalPages;
 
   return (
-    <div className="flex items-start justify-center gap-3">
+    <div className="flex items-start justify-center gap-1 lg:gap-3">
       <PageButton
         text="Previous"
         isDisabled={!hasPrevious}
