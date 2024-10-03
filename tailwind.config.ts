@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     colors: {
       transparent: "transparent",
+      "white-translucent": "#ffffff08",
       light: {
         100: "#fff",
         200: "#F0FFFB",
@@ -46,6 +47,7 @@ const config: Config = {
       "heading-2": ["3rem", "3.3rem"], // [48px, 52.8px]
       "heading-3": ["2rem", "2.2rem"], // [32px, 35.2px]
       "heading-4": ["1.5rem", "1.65rem"], // [24px, 26.4px]
+      "heading-5": ["1.25rem", "1.375rem"], // [20px, 22px]
     },
     letterSpacing: {
       "tight-1": "-0.28rem", // -4.48px
@@ -117,6 +119,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
 export default config;

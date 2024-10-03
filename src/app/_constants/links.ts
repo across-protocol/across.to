@@ -48,6 +48,10 @@ export const INFORMATION_LINKS = {
     label: "Docs",
     href: "https://docs.across.to/v/v3-developer-docs/introduction/what-is-across",
   },
+  blog: {
+    label: "Blog",
+    href: "/blog",
+  },
 };
 
 export const INTEGRATION_LINKS = {
@@ -56,5 +60,7 @@ export const INTEGRATION_LINKS = {
   settlement:
     "https://docs.across.to/v/v3-developer-docs/concepts/intents-architecture-in-across",
 };
+
+export const SITE_BASE_URL = "https://across.to" as const;
 
 export const TERMS_OF_SERVICE = "/terms-of-service";
