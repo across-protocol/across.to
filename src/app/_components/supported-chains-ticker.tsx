@@ -58,7 +58,7 @@ const chains = [
     logo: <Image src={zoraLogoSrc} alt="zora logo" />,
   },
   {
-    logo: <Image src={worldChainIconSrc} alt="world chain logo" />,
+    logo: <Image className="px-4" src={worldChainIconSrc} alt="world chain logo" />,
   },
 ];
 
