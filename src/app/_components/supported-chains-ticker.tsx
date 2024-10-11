@@ -15,6 +15,7 @@ import scrollLogoSrc from "@/app/_assets/logos/scroll.svg";
 import liskLogoSrc from "@/app/_assets/logos/lisk.svg";
 import redstoneLogoSrc from "@/app/_assets/logos/redstone.svg";
 import zoraLogoSrc from "@/app/_assets/logos/zora.svg";
+import worldChainIconSrc from "@/app/_assets/logos/world-chain.svg";
 
 const chains = [
   {
@@ -55,6 +56,9 @@ const chains = [
   },
   {
     logo: <Image src={zoraLogoSrc} alt="zora logo" />,
+  },
+  {
+    logo: <Image src={worldChainIconSrc} alt="world chain logo" />,
   },
 ];
 
