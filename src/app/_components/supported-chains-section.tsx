@@ -13,6 +13,7 @@ import {
   LiskIcon,
   RedstoneIcon,
   ZoraIcon,
+  WorldChainIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
@@ -72,6 +73,10 @@ const chains = [
     label: "Zora",
     Icon: ZoraIcon,
     containerClassName: "",
+  },
+  {
+    label: "World Chain",
+    Icon: WorldChainIcon,
   },
 ];
 
