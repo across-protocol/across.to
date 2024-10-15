@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import { CONTENTFUL_REVALIDATE_SECRET } from "@/app/_constants";
 
-export function POST(request: NextRequest) {
+export async function POST(request: NextRequest) {
   const requestHeaders = new Headers(request.headers);
   const secret = requestHeaders.get("x-vercel-reval-key");
 
@@ -10,8 +10,17 @@ export function POST(request: NextRequest) {
     return NextResponse.json({ message: "Invalid secret" }, { status: 401 });
   }
 
-  // revalidate ALL data. for home page and the articles pages
-  revalidatePath("/blog", "layout");
+  const body = await request.json();
+  const slug = body?.fields?.slug?.["en-US"];
 
-  return NextResponse.json({ revalidated: true, now: Date.now() });
+  if (typeof slug !== "string") {
+    return NextResponse.json({ message: "Invalid request body" }, { status: 400 });
+  }
+
+  // Revalidate blog post and all related pages
+  revalidatePath(`/blog/${slug}`);
+  // Revalidate home page
+  revalidatePath("/blog");
+
+  return NextResponse.json({ revalidated: true, slug, now: Date.now() });
 }
