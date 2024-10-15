@@ -9,3 +9,4 @@ export const GOOGLE_ANALYTICS_TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_
 // Server side environment variables
 export const CONTENTFUL_SPACE_ID = process.env.CONTENTFUL_SPACE_ID;
 export const CONTENTFUL_ACCESS_TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN;
+export const CONTENTFUL_REVALIDATE_SECRET = process.env.CONTENTFUL_REVALIDATE_SECRET;
