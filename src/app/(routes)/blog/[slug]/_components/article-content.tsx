@@ -25,7 +25,6 @@ const markRenderers: RenderMark = {
 
 function createMaybeYoutubeEmbedLink(url: URL) {
   if (!url.hostname.includes("youtube.com")) return;
-
   if (url.pathname.includes("embed")) {
     // already an embed link
     return url.href;
@@ -44,37 +43,38 @@ const nodeRenderers: RenderNode = {
   [INLINES.HYPERLINK]: (node, children) => {
     const url = new URL(node.data.uri as string);
 
-    const href = generateEmbedHref(url);
-
-    if (
-      url.hostname.includes("youtube.com") ||
-      url.hostname.includes("player.vimeo.com") ||
-      children?.toString().toLowerCase().includes("iframe") // to handle uncommon cases, creator can set the text to "iframe"
-    ) {
-      return (
-        <IframeContainer>
-          <iframe
-            width="100%"
-            height="100%"
-            src={href}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              clipPath: "inset(0% 0% 0% 0% round 16px)",
-            }}
-          ></iframe>
-        </IframeContainer>
-      );
+    if (children?.toString().toLowerCase().includes("iframe")) {
+      if (
+        url.hostname.includes("youtube.com") ||
+        url.hostname.includes("player.vimeo.com")
+      ) {
+        const href = generateEmbedHref(url);
+        return (
+          <IframeContainer>
+            <iframe
+              width="100%"
+              height="100%"
+              src={href}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                clipPath: "inset(0% 0% 0% 0% round 16px)",
+              }}
+            ></iframe>
+          </IframeContainer>
+        );
+      }
     }
+
     return (
       <Link
-        target={isExternal(href) ? "_blank" : undefined}
+        target={isExternal(url.href) ? "_blank" : undefined}
         className="hover:text-text underline"
-        href={href}
+        href={url.href}
         type="external"
       >
         {children}
