@@ -23,12 +23,32 @@ const markRenderers: RenderMark = {
   [MARKS.SUBSCRIPT]: (text) => <sub>{text}</sub>,
 };
 
+function createMaybeYoutubeEmbedLink(url: URL) {
+  if (!url.hostname.includes("youtube.com")) return;
+
+  if (url.pathname.includes("embed")) {
+    // already an embed link
+    return url.href;
+  }
+  const videoId = url.searchParams.get("v");
+  if (!videoId) return;
+  return `https://youtube.com/embed/${videoId}`;
+}
+
+// add more cases for vimeo or other services as needed
+function generateEmbedHref(url: URL) {
+  return createMaybeYoutubeEmbedLink(url) ?? url.href;
+}
+
 const nodeRenderers: RenderNode = {
   [INLINES.HYPERLINK]: (node, children) => {
-    const href = node.data.uri as string;
+    const url = new URL(node.data.uri as string);
+
+    const href = generateEmbedHref(url);
+
     if (
-      href.includes("youtube.com/embed") ||
-      href.includes("player.vimeo.com") ||
+      url.hostname.includes("youtube.com") ||
+      url.hostname.includes("player.vimeo.com") ||
       children?.toString().toLowerCase().includes("iframe") // to handle uncommon cases, creator can set the text to "iframe"
     ) {
       return (
