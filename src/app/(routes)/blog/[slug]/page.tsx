@@ -30,7 +30,9 @@ export async function generateMetadata({
   }
   const title = entry.fields.title;
   const description =
+    entry.fields.description ??
     documentToPlainTextString(entry.fields.content).substring(0, 50) + "...";
+
   const imageUrl = `https:${entry.fields.featuredImage?.fields.file?.url}`;
 
   return {
