@@ -10,7 +10,6 @@ import jumperLogoSrc from "@/app/_assets/logos/jumper.svg";
 import lifiLogoSrc from "@/app/_assets/logos/li-fi.svg";
 import okxLogoSrc from "@/app/_assets/logos/okx.svg";
 import pooltogetherLogoSrc from "@/app/_assets/logos/pooltogether.svg";
-import rainbowLogoSrc from "@/app/_assets/logos/rainbow.svg";
 import rangoLogoSrc from "@/app/_assets/logos/rango.svg";
 import snxLogoSrc from "@/app/_assets/logos/snx.svg";
 import socketLogoSrc from "@/app/_assets/logos/socket.svg";
@@ -55,9 +54,6 @@ const partners = [
   },
   {
     logo: <Image src={pooltogetherLogoSrc} alt="pooltogether logo" />,
-  },
-  {
-    logo: <Image src={rainbowLogoSrc} alt="rainbow logo" />,
   },
   {
     logo: <Image src={rangoLogoSrc} alt="rango logo" />,
