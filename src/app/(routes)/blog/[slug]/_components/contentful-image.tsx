@@ -43,7 +43,9 @@ export default function ContentfulImage({
         aria-description={description}
         {...props}
       />
-      {description && displayDescription && <p className="font-extralight">{description}</p>}
+      {description && displayDescription && (
+        <p className="font-extralight">{description}</p>
+      )}
     </div>
   );
 }
