@@ -34,7 +34,7 @@ export default function ContentfulImage({
       };
 
   return (
-    <div className="relative flex h-full w-full flex-col items-center gap-4">
+    <div className="relative flex h-full w-full flex-col items-center gap-2 pb-2">
       <Image
         src={urlWithProtocol}
         alt={description ?? "description"}
@@ -43,7 +43,9 @@ export default function ContentfulImage({
         aria-description={description}
         {...props}
       />
-      {description && displayDescription && <p>{description}</p>}
+      {description && displayDescription && (
+        <p className="font-extralight">{description}</p>
+      )}
     </div>
   );
 }

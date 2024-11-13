@@ -137,7 +137,7 @@ const nodeRenderers: RenderNode = {
     const mimeGroup = file?.contentType.split("/")[0]; // image / video etc
     switch (mimeGroup) {
       case "image":
-        return <ContentfulImage image={data} />;
+        return <ContentfulImage image={data} displayDescription />;
       // TODO: test this, make custom component if necessary
       case "video":
         return (
