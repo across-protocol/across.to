@@ -14,6 +14,7 @@ import {
   RedstoneIcon,
   ZoraIcon,
   WorldChainIcon,
+  AlephZeroIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
@@ -77,6 +78,10 @@ const chains = [
   {
     label: "World Chain",
     Icon: WorldChainIcon,
+  },
+  {
+    label: "Aleph Zero",
+    Icon: AlephZeroIcon,
   },
 ];
 
