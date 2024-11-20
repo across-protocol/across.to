@@ -17,6 +17,7 @@ import xyLogoSrc from "@/app/_assets/logos/xy.svg";
 import tahoLogoSrc from "@/app/_assets/logos/taho.svg";
 import swingLogoSrc from "@/app/_assets/logos/swing.svg";
 import metamaskLogoSrc from "@/app/_assets/logos/metamask.svg";
+import uniswapLogoSrc from "@/app/_assets/logos/uniswap.svg";
 
 const partners = [
   {
@@ -63,6 +64,9 @@ const partners = [
   },
   {
     logo: <Image src={socketLogoSrc} alt="socket logo" />,
+  },
+  {
+    logo: <Image src={uniswapLogoSrc} alt="uniswap logo" />,
   },
 ];
 
