@@ -27,7 +27,7 @@ export function HeroSection() {
           </Text>
           <div className="flex w-full flex-row justify-center md:justify-start">
             <Text variant="body-nums" className="max-w-[430px] text-center md:text-left">
-              Experience extraordinarily fast and cost-effective cross-chain bridging,
+              Experience extraordinarily fast and cost-effective crosschain bridging,
               secured by an intents-based architecture.
             </Text>
           </div>

@@ -7,19 +7,19 @@ const sections = [
   {
     Icon: ChatIcon,
     title: "User-Centric",
-    body: "Cross-chain intents are a cross-chain limit order plus an action to execute. Intents replace explicit execution steps with user outcomes, allowing relayers to compete to provide the optimal execution path for the user.",
+    body: "Crosschain intents are a crosschain limit order plus an action to execute. Intents replace explicit execution steps with user outcomes, allowing relayers to compete to provide the optimal execution path for the user.",
   },
   {
     Icon: FeatherIcon,
     title: "Elegant Abstraction",
-    body: "Unlike complex trusted message passing solutions Across connects users to dapps via intents, not just blockchains to blockchains. Developers only need to embed a standard order in protocol actions to create seamless cross-chain experiences.",
+    body: "Unlike complex trusted message passing solutions Across connects users to dapps via intents, not just blockchains to blockchains. Developers only need to embed a standard order in protocol actions to create seamless crosschain experiences.",
   },
   {
     Icon: BlocksDiagonalIcon,
     title: "Modular Interoperability",
     body: (
       <>
-        Cross-chain intents are powered by a modular system of 3 layers:
+        Crosschain intents are powered by a modular system of 3 layers:
         <ol className="list-decimal pl-6">
           <li>Request for quote mechanism</li>
           <li>Network of competitive relayers</li>

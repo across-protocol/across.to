@@ -13,13 +13,13 @@ import settlement2Image from "@/app/_assets/settlement-2.png";
 const features = [
   {
     Icon: <BlocksConnectedIcon className="h-14 w-14" />,
-    title: "Cross-Chain Intents Settlement",
-    body: "Intents are cross-chain limit orders submitted to an RFQ system and fulfilled by relayers with their own capital. Settlement verifies fulfillment and repays relayers. Across’ maximally efficient and modular settlement system reduces cost to relayers, and ultimately, users.",
+    title: "Crosschain Intents Settlement",
+    body: "Intents are crosschain limit orders submitted to an RFQ system and fulfilled by relayers with their own capital. Settlement verifies fulfillment and repays relayers. Across’ maximally efficient and modular settlement system reduces cost to relayers, and ultimately, users.",
   },
   {
     Icon: <ChecklistIcon className="h-14 w-14" />,
     title: "Modular by design",
-    body: "Across Settlement can accept any intents-based order flow following a standard structure. It seamlessly enables any DEX or application with RFQ order flow to offer best-execution cross-chain swaps from the most competitive network of professional market markets.",
+    body: "Across Settlement can accept any intents-based order flow following a standard structure. It seamlessly enables any DEX or application with RFQ order flow to offer best-execution crosschain swaps from the most competitive network of professional market markets.",
   },
   {
     Icon: <CheckmarkIcon className="h-14 w-14" />,
@@ -28,8 +28,8 @@ const features = [
   },
   {
     Icon: <CrossChainIcon className="h-14 w-14" />,
-    title: "Seamless cross-chain management",
-    body: "Repayment is made on the relayer's chain of choice, reducing overhead and complexity of managing cross-chain positions. Lower costs for relayers resulting in lower costs for users.",
+    title: "Seamless crosschain management",
+    body: "Repayment is made on the relayer's chain of choice, reducing overhead and complexity of managing crosschain positions. Lower costs for relayers resulting in lower costs for users.",
   },
 ];
 
