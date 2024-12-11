@@ -29,7 +29,7 @@ export function HeroSection() {
             <span className="text-aqua-100">Intents</span>
           </Text>
           <Text variant="body-nums" className="max-w-[433px] text-center md:text-left">
-            A new paradigm in cross-chain experiences, seamlessly connecting users with
+            A new paradigm in crosschain experiences, seamlessly connecting users with
             applications.
           </Text>
           <BridgeNowLink className="self-center md:self-start" section="marketingHero">

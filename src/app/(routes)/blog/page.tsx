@@ -68,7 +68,7 @@ export default async function BlogHomePage({ searchParams }: PageProps) {
 export async function generateMetadata(): Promise<Metadata> {
   const title = "Across Blog";
   const description =
-    "Explore the latest in cross-chain solutions with the Across blog. Dive into tutorials, updates and announcements that help you leverage our protocol for fast and secure cross-chain transactions.";
+    "Explore the latest in crosschain solutions with the Across blog. Dive into tutorials, updates and announcements that help you leverage our protocol for fast and secure crosschain transactions.";
 
   return {
     metadataBase: new URL(SITE_BASE_URL),

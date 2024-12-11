@@ -29,16 +29,16 @@ const partners = [
     partner: "TeleOrdinal",
     description: (
       <>
-        TeleOrdinal has integrated Across+ to facilitate cross-chain bidding on Ordinals
+        TeleOrdinal has integrated Across+ to facilitate crosschain bidding on Ordinals
         (Bitcoin NFTs). The feature allows users to participate in Ordinal auctions via
         TeleOrdinal using stablecoins from their desired chains.
       </>
     ),
     quote: (
       <>
-        We chose Across+ to expand TeleOrdinal, our cross-chain Ordinals marketplace, to
+        We chose Across+ to expand TeleOrdinal, our crosschain Ordinals marketplace, to
         new EVMs for its fast and cost-effective bridging. The solution made integration
-        remarkably straightforward, enabling seamless token transfers and cross-chain
+        remarkably straightforward, enabling seamless token transfers and crosschain
         contract calls.
       </>
     ),
@@ -53,7 +53,7 @@ const partners = [
       <>
         The OnThis product, Shortcuts, sends ETH to human-readable contracts to bridge,
         swap, stake, mint, and more, directly from a user’s wallet. Across+ powers these
-        cross-chain bundled transactions.
+        crosschain bundled transactions.
       </>
     ),
     quote: (

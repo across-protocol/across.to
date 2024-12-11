@@ -22,7 +22,7 @@ export function HeroSection() {
             variant="heading-1"
             className="text-center sm:tracking-tight-1 md:text-left"
           >
-            <span className="text-purple-100">Cross-Chain</span>{" "}
+            <span className="text-purple-100">Crosschain</span>{" "}
             <span className="text-light-100">Intents</span> <br />
             <span className="text-light-100">Settlement</span>{" "}
             <span className="text-purple-100">Layer</span>
@@ -33,7 +33,7 @@ export function HeroSection() {
               className="max-w-[336px] text-center sm:max-w-[430px] md:text-left"
             >
               The future of interoperability is intents -- Across Settlement is the only
-              production-ready, modular settlement layer for cross-chain intents.
+              production-ready, modular settlement layer for crosschain intents.
             </Text>
           </div>
           <div className="flex self-center md:self-start">
