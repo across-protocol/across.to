@@ -49,7 +49,7 @@ export function FeaturesSection() {
           variant="heading-2"
           className="text-center capitalize tracking-tight-2 text-light-200"
         >
-          Seamless Cross-chain
+          Seamless Crosschain
           <br />
           Onboarding
         </Text>

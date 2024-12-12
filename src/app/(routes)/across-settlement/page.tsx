@@ -10,7 +10,7 @@ import { SubscribeSection } from "@/app/_components/subscribe-section";
 export const metadata: Metadata = {
   title: "Across Settlement",
   description:
-    "Cross-chain Intents Settlement Layer. The future of interoperability is intents -- Across Settlement is the only production-ready, modular settlement layer for cross-chain intents.",
+    "Crosschain Intents Settlement Layer. The future of interoperability is intents -- Across Settlement is the only production-ready, modular settlement layer for crosschain intents.",
 };
 
 export default function SettlementLanding() {

@@ -6,12 +6,12 @@ export const PRODUCT_LINKS = {
   },
   plus: {
     label: "Across+",
-    description: "Cross-Chain Bridge Hooks",
+    description: "Crosschain Bridge Hooks",
     href: "/across-plus",
   },
   settlement: {
     label: "Across Settlement",
-    description: "Cross-Chain Intents Settlement Layer",
+    description: "Crosschain Intents Settlement Layer",
     href: "/across-settlement",
   },
 };

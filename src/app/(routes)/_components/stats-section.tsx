@@ -16,9 +16,8 @@ export function StatsSection() {
           Empirically Proven
         </Text>
         <Text className="max-w-xl text-center">
-          Across is the only cross-chain intents protocol in production today, enabling
-          the fastest and lowest-cost interoperability solution without security
-          tradeoffs.
+          Across is the only crosschain intents protocol in production today, enabling the
+          fastest and lowest-cost interoperability solution without security tradeoffs.
         </Text>
       </div>
       <StatsRow />

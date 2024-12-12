@@ -40,8 +40,8 @@ export default function SettlementLanding() {
           necessarily be limited to, https://app.across.to, a website-hosted user
           interface (the &quot;Interface&quot; or &quot;App&quot;) and all products and
           features available via the Interface, including the API and all other software
-          that Risk Labs or a third party has developed for cross-chain bridging,
-          cross-chain onboarding, cross-chain intents, and cross-chain settlement on the
+          that Risk Labs or a third party has developed for crosschain bridging,
+          crosschain onboarding, crosschain intents, and crosschain settlement on the
           Interface. You must read this Agreement carefully as it governs your use of the
           Products. By accessing or using any of the Products, you signify that you have
           read, understand, and agree to be bound by this Agreement in its entirety. If

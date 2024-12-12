@@ -35,7 +35,7 @@ const useCases = [
       <>
         <li>
           <Text variant="body-nums-sm" className="text-light-200">
-            <span className="text-teal-100">Seamlessly onboard cross-chain LPs</span> with
+            <span className="text-teal-100">Seamlessly onboard crosschain LPs</span> with
             bridge + LP bundles
           </Text>
         </li>
@@ -94,7 +94,7 @@ const useCases = [
   {
     tabButtonLabel: "Buy NFT",
     title: "Unlock New Ecosystems",
-    body: "Onboard NFT collectors from their home chain with bridge + buy NFT bundled contract functions using Across+. Bridge abstraction eliminates cross-chain learning curve hurdles and Across’ reliably fast transfer speeds prevents missed opportunities on timed mints and auctions.",
+    body: "Onboard NFT collectors from their home chain with bridge + buy NFT bundled contract functions using Across+. Bridge abstraction eliminates crosschain learning curve hurdles and Across’ reliably fast transfer speeds prevents missed opportunities on timed mints and auctions.",
     learnMoreLink: INTEGRATION_LINKS.plus,
     listTitle: "value props",
     listItems: (

@@ -11,7 +11,7 @@ import { SubscribeSection } from "@/app/_components/subscribe-section";
 export const metadata: Metadata = {
   title: "Across+",
   description:
-    "Cross-Chain Bridge Hooks To Fulfill User Intents. Bridge abstraction promotes user onboarding and bootstraps cross-chain capital by bundling bridge + protocol actions within dapps.",
+    "Crosschain Bridge Hooks To Fulfill User Intents. Bridge abstraction promotes user onboarding and bootstraps crosschain capital by bundling bridge + protocol actions within dapps.",
 };
 
 export default function PlusLanding() {
