@@ -21,6 +21,16 @@ import CustomLink from "./link";
 import Link from "next/link";
 import { TERMS_OF_SERVICE } from "../_constants/links";
 
+type LinkType = {
+  label: string;
+  href: string;
+  description?: string;
+  Icon?: (props: React.SVGProps<SVGSVGElement>) => React.JSX.Element;
+  iconClassName?: string;
+  iconContainerClassName?: string;
+  highlightLink?: boolean;
+};
+
 const products = [
   {
     ...PRODUCT_LINKS.bridge,
@@ -69,6 +79,20 @@ const socials = [
   },
 ];
 
+const bridgeRoutes = [
+  "Arbitrum",
+  "Optimism",
+  "Linea",
+  "Polygon",
+  "Base",
+  "World Chain",
+  "zkSync",
+].map((chain) => ({
+  href: `https://app.across.to/${chain.toLowerCase().replaceAll(" ", "")}`,
+  label: `Bridge to ${chain}`,
+  highlightLink: true,
+}));
+
 const information = [
   {
     ...INFORMATION_LINKS.blog,
@@ -97,10 +121,11 @@ export function Footer() {
         <div className="sm:mr-16 md:mr-24">
           <AcrossFullIcon />
         </div>
-        <div className="mb-40 mt-12 grid grid-cols-2 gap-x-8 gap-y-12 sm:mt-0 sm:grid-cols-3 lg:gap-x-16">
+        <div className="mb-40 mt-12 grid grid-cols-2 gap-x-8 gap-y-12 sm:mt-0 lg:grid-cols-4 lg:gap-x-16">
           <FooterBox label="products" items={products} />
           <FooterBox label="socials" items={socials} useExternalLinks />
           <FooterBox label="resources" items={information} useExternalLinks />
+          <FooterBox label="routes" items={bridgeRoutes} useExternalLinks compressed />
         </div>
       </div>
       <div className="flex flex-col items-center gap-5">
@@ -119,15 +144,16 @@ export function Footer() {
 
 function FooterBox(props: {
   label: string;
-  items: typeof products | typeof socials | typeof information;
+  items: LinkType[];
   useExternalLinks?: boolean;
+  compressed?: boolean;
 }) {
   return (
     <div className="flex flex-col gap-5">
       <div className="text-xs uppercase lining-nums tabular-nums tracking-wide-4 text-grey-400">
         {props.label}
       </div>
-      <div className="flex flex-col gap-5">
+      <div className={twMerge("flex flex-col", props.compressed ? "gap-3" : "gap-5")}>
         {props.items.map((item) => (
           <div key={item.href} className="flex flex-row items-center gap-3">
             {props.useExternalLinks && !item.href.startsWith("/") ? (
@@ -146,18 +172,23 @@ function FooterBox(props: {
   );
 }
 
-function FooterBoxItem(props: {
-  item:
-    | (typeof products)[number]
-    | (typeof socials)[number]
-    | (typeof information)[number];
-}) {
+function FooterBoxItem(props: { item: LinkType }) {
+  const Icon = props.item.Icon;
   return (
     <div className="flex flex-row items-center gap-3 hover:opacity-90">
-      <IconBox className={twMerge("h-10 w-10", props.item.iconContainerClassName)}>
-        <props.item.Icon className={props.item.iconClassName} />
-      </IconBox>
-      <div className="text-sm lining-nums tabular-nums">{props.item.label}</div>
+      {Icon && (
+        <IconBox className={twMerge("h-10 w-10", props.item.iconContainerClassName)}>
+          <Icon className={props.item.iconClassName} />
+        </IconBox>
+      )}
+      <div
+        className={twMerge(
+          "text-sm lining-nums tabular-nums",
+          props.item.highlightLink ? "text-light-100" : "text-white",
+        )}
+      >
+        {props.item.label}
+      </div>
     </div>
   );
 }
