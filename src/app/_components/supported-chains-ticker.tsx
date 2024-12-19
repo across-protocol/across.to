@@ -17,7 +17,7 @@ import redstoneLogoSrc from "@/app/_assets/logos/redstone.svg";
 import zoraLogoSrc from "@/app/_assets/logos/zora.svg";
 import worldChainIconSrc from "@/app/_assets/logos/world-chain.svg";
 import alephZeroIconSrc from "@/app/_assets/logos/alephzero.svg";
-
+import inkLogoSrc from "@/app/_assets/logos/ink.svg";
 const chains = [
   {
     logo: <Image src={zkLogoSrc} alt="zk logo" />,
@@ -63,6 +63,9 @@ const chains = [
   },
   {
     logo: <Image className="px-4" src={alephZeroIconSrc} alt="aleph zero" />,
+  },
+  {
+    logo: <Image className="px-16" src={inkLogoSrc} alt="ink logo" />,
   },
 ];
 

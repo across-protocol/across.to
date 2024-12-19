@@ -15,6 +15,7 @@ import {
   ZoraIcon,
   WorldChainIcon,
   AlephZeroIcon,
+  InkIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
@@ -82,6 +83,10 @@ const chains = [
   {
     label: "Aleph Zero",
     Icon: AlephZeroIcon,
+  },
+  {
+    label: "Ink",
+    Icon: InkIcon,
   },
 ];
 
