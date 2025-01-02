@@ -61,9 +61,6 @@ export function ZoraIcon({ variant = "aqua", ...props }: LogoIconProps) {
           stroke={baseColors[variant]}
           strokeWidth="1"
           d="M50,0.5c27.3,0,49.5,22.2,49.5,49.5S77.3,99.5,50,99.5S0.5,77.3,0.5,50S22.7,0.5,50,0.5z"
-        />
-        <path
-          d="M100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100C77.6142 100 100 77.6142 100 50Z"
           fill={`url(#${linearGradientBasedId})`}
         />
       </g>
