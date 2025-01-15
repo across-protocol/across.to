@@ -16,6 +16,7 @@ import {
   WorldChainIcon,
   AlephZeroIcon,
   InkIcon,
+  SoneiumIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
@@ -87,6 +88,10 @@ const chains = [
   {
     label: "Ink",
     Icon: InkIcon,
+  },
+  {
+    label: "Soneium",
+    Icon: SoneiumIcon,
   },
 ];
 
