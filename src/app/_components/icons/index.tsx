@@ -59,3 +59,4 @@ export { WorldChainIcon } from "./gradient/logos/worldchain";
 export { AlephZeroIcon } from "./gradient/logos/alephzero";
 export { InkIcon } from "./gradient/logos/ink";
 export { SoneiumIcon } from "./gradient/logos/soneium";
+export { UnichainIcon } from "./gradient/logos/unichain";
