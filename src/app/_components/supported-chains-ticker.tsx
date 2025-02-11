@@ -19,7 +19,7 @@ import worldChainIconSrc from "@/app/_assets/logos/world-chain.svg";
 import alephZeroIconSrc from "@/app/_assets/logos/alephzero.svg";
 import inkLogoSrc from "@/app/_assets/logos/ink.svg";
 import soneiumLogoSrc from "@/app/_assets/logos/soneium.svg";
-import doctorWhoLofoSrc from "@/app/_assets/logos/doctor-who.svg";
+import unichainLofoSrc from "@/app/_assets/logos/unichain.svg";
 
 const chains = [
   {
@@ -74,7 +74,7 @@ const chains = [
     logo: <Image className="px-4" src={soneiumLogoSrc} alt="soneium logo" />,
   },
   {
-    logo: <Image className="px-4" src={doctorWhoLofoSrc} alt="doctorwho logo" />,
+    logo: <Image className="px-4" src={unichainLofoSrc} alt="unichain logo" />,
   },
 ];
 

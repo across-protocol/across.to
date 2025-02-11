@@ -1,13 +1,13 @@
 import { LogoIconProps } from "./types";
 
-export function DoctorWhoIcon({ variant = "aqua", ...props }: LogoIconProps) {
-  const linearGradientBasedId = `doctor-who-paint_linear_gradient_${variant}`;
+export function UnichainIcon({ variant = "aqua", ...props }: LogoIconProps) {
+  const linearGradientBasedId = `unichain-paint_linear_gradient_${variant}`;
 
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105 105" {...props}>
       <defs>
         <linearGradient
-          id="doctor-who-paint_linear_gradient_teal_1"
+          id="unichain-paint_linear_gradient_teal_1"
           x1="0%"
           y1="0%"
           x2="0%"
@@ -23,7 +23,7 @@ export function DoctorWhoIcon({ variant = "aqua", ...props }: LogoIconProps) {
           <stop offset="0.78803" stopColor="#ADE9FF" />
         </linearGradient>
         <linearGradient
-          id="doctor-who-paint_linear_gradient_purple_1"
+          id="unichain-paint_linear_gradient_purple_1"
           x1="0%"
           y1="0%"
           x2="0%"
@@ -39,7 +39,7 @@ export function DoctorWhoIcon({ variant = "aqua", ...props }: LogoIconProps) {
           <stop offset="0.78803" stopColor="#CCADFF" />
         </linearGradient>
         <linearGradient
-          id="doctor-who-paint_linear_gradient_teal_1"
+          id="unichain-paint_linear_gradient_teal_1"
           x1="0%"
           y1="0%"
           x2="0%"
@@ -55,7 +55,7 @@ export function DoctorWhoIcon({ variant = "aqua", ...props }: LogoIconProps) {
           <stop offset="0.78803" stopColor="#ADE9FF" />
         </linearGradient>
         <linearGradient
-          id="doctor-who-paint_linear_gradient_purple_1"
+          id="unichain-paint_linear_gradient_purple_1"
           x1="0%"
           y1="0%"
           x2="0%"

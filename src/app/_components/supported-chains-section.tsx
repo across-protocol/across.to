@@ -17,7 +17,7 @@ import {
   AlephZeroIcon,
   InkIcon,
   SoneiumIcon,
-  DoctorWhoIcon,
+  UnichainIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
@@ -95,8 +95,8 @@ const chains = [
     Icon: SoneiumIcon,
   },
   {
-    label: "DoctorWho",
-    Icon: DoctorWhoIcon,
+    label: "Unichain",
+    Icon: UnichainIcon,
   },
 ];
 
