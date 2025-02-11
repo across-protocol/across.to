@@ -80,6 +80,7 @@ const socials = [
 ];
 
 const bridgeRoutes = [
+  "Unichain",
   "Arbitrum",
   "Optimism",
   "Linea",
