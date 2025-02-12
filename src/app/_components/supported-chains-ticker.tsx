@@ -20,6 +20,7 @@ import alephZeroIconSrc from "@/app/_assets/logos/alephzero.svg";
 import inkLogoSrc from "@/app/_assets/logos/ink.svg";
 import soneiumLogoSrc from "@/app/_assets/logos/soneium.svg";
 import unichainLofoSrc from "@/app/_assets/logos/unichain.svg";
+import hyperliquidLogoSrc from "@/app/_assets/logos/hyperliquid.svg";
 
 const chains = [
   {
@@ -75,6 +76,9 @@ const chains = [
   },
   {
     logo: <Image className="px-4" src={unichainLofoSrc} alt="unichain logo" />,
+  },
+  {
+    logo: <Image className="px-4" src={hyperliquidLogoSrc} alt="hyperliquid logo" />,
   },
 ];
 
