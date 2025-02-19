@@ -18,6 +18,7 @@ import {
   InkIcon,
   SoneiumIcon,
   UnichainIcon,
+  HyperliquidIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
@@ -97,6 +98,10 @@ const chains = [
   {
     label: "Unichain",
     Icon: UnichainIcon,
+  },
+  {
+    label: "Hyperliquid",
+    Icon: HyperliquidIcon,
   },
 ];
 
