@@ -34,9 +34,16 @@ export function SubscribeSection(props: { variant: "aqua" | "teal" | "purple" })
           "Content-Type": "application/json",
         },
       });
-      setResponseMsg(await response.text());
+      const responseMsg = await response.text();
+      const userAlreadySubscribed = responseMsg.toLowerCase().includes("already a list member");
 
-      if (response.ok) {
+      if (userAlreadySubscribed) {
+        setResponseMsg("Already subscribed");
+      } else {
+        setResponseMsg(responseMsg);
+      }
+
+      if (response.ok || userAlreadySubscribed) {
         setStatus("success");
       } else {
         setStatus("error");
