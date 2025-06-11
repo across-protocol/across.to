@@ -35,7 +35,9 @@ export function SubscribeSection(props: { variant: "aqua" | "teal" | "purple" })
         },
       });
       const responseMsg = await response.text();
-      const userAlreadySubscribed = responseMsg.toLowerCase().includes("already a list member");
+      const userAlreadySubscribed = responseMsg
+        .toLowerCase()
+        .includes("already a list member");
 
       if (userAlreadySubscribed) {
         setResponseMsg("Already subscribed");
