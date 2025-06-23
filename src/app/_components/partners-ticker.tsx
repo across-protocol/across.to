@@ -18,6 +18,9 @@ import tahoLogoSrc from "@/app/_assets/logos/taho.svg";
 import swingLogoSrc from "@/app/_assets/logos/swing.svg";
 import metamaskLogoSrc from "@/app/_assets/logos/metamask.svg";
 import uniswapLogoSrc from "@/app/_assets/logos/uniswap.svg";
+import kyberswapLogoSrc from "@/app/_assets/logos/kyberswap.svg";
+import pancakeswapLogoSrc from "@/app/_assets/logos/pancakeswap.svg";
+import maldaLogoSrc from "@/app/_assets/logos/malda.svg";
 
 const partners = [
   {
@@ -67,6 +70,15 @@ const partners = [
   },
   {
     logo: <Image src={uniswapLogoSrc} alt="uniswap logo" />,
+  },
+  {
+    logo: <Image src={kyberswapLogoSrc} className="px-8" alt="kyberswap logo" />,
+  },
+  {
+    logo: <Image src={pancakeswapLogoSrc} className="px-4" alt="pancakeswap logo" />,
+  },
+  {
+    logo: <Image src={maldaLogoSrc} className="px-8" alt="malda logo" />,
   },
 ];
 
