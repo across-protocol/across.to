@@ -10,8 +10,8 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "images.ctfassets.net",
-        pathname: "**",
-      }
+        pathname: `/${process.env.CONTENTFUL_SPACE_ID}/**`,
+      },
     ],
   },
 };
