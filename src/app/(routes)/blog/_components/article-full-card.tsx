@@ -19,7 +19,7 @@ export default async function ArticleFullCard({ slug }: { slug: string }) {
   return (
     <Link
       href={`blog/${slug}`}
-      className="group relative order-1 grid  cursor-pointer grid-cols-1 gap-8 overflow-hidden rounded-2xl border border-white-translucent bg-[#ffffff08] p-5 md:order-1 md:grid-cols-2 md:p-10"
+      className="group relative order-1 grid grid-cols-1 gap-8 overflow-hidden rounded-2xl border border-white-translucent bg-[#ffffff08] p-5 md:order-1 md:grid-cols-2 md:p-10"
     >
       <div className="flex flex-col items-start justify-center gap-4">
         <MetaInfo
@@ -33,7 +33,7 @@ export default async function ArticleFullCard({ slug }: { slug: string }) {
           {description}
         </Text>
       </div>
-      <div className="md:h-[calc(100% + 80px)] -order-1 -m-5 -mb-0 min-h-40 md:order-1 md:-m-10 md:-mb-10 md:ml-0">
+      <div className="md:h-[calc(100% + 80px)] -order-1 -m-5 -mb-0 aspect-video md:order-1 md:-m-10 md:-mb-10 md:ml-0">
         <ContentfulImage image={article.fields.featuredImage} borderless fillDisplay />
       </div>
     </Link>
