@@ -19,6 +19,7 @@ import {
   SoneiumIcon,
   UnichainIcon,
   HyperliquidIcon,
+  BscIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 
@@ -102,6 +103,10 @@ const chains = [
   {
     label: "Hyperliquid",
     Icon: HyperliquidIcon,
+  },
+  {
+    label: "BSC Chain",
+    Icon: BscIcon,
   },
 ];
 

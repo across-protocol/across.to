@@ -21,6 +21,7 @@ import inkLogoSrc from "@/app/_assets/logos/ink.svg";
 import soneiumLogoSrc from "@/app/_assets/logos/soneium.svg";
 import unichainLofoSrc from "@/app/_assets/logos/unichain.svg";
 import hyperliquidLogoSrc from "@/app/_assets/logos/hyperliquid.svg";
+import bscLogo from "@/app/_assets/logos/bsc_text.svg";
 
 const chains = [
   {
@@ -79,6 +80,9 @@ const chains = [
   },
   {
     logo: <Image className="px-4" src={hyperliquidLogoSrc} alt="hyperliquid logo" />,
+  },
+  {
+    logo: <Image className="px-4" src={bscLogo} alt="bsc logo" />,
   },
 ];
 
