@@ -14,13 +14,14 @@ import {
   RedstoneIcon,
   ZoraIcon,
   WorldChainIcon,
-  AlephZeroIcon,
   InkIcon,
   SoneiumIcon,
   UnichainIcon,
   HyperliquidIcon,
+  BscIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
+import { SolanaIcon } from "./icons/gradient/logos/solana";
 
 const chains = [
   {
@@ -84,10 +85,6 @@ const chains = [
     Icon: WorldChainIcon,
   },
   {
-    label: "Aleph Zero",
-    Icon: AlephZeroIcon,
-  },
-  {
     label: "Ink",
     Icon: InkIcon,
   },
@@ -102,6 +99,14 @@ const chains = [
   {
     label: "Hyperliquid",
     Icon: HyperliquidIcon,
+  },
+  {
+    label: "BSC Chain",
+    Icon: BscIcon,
+  },
+  {
+    label: "Solana",
+    Icon: SolanaIcon,
   },
 ];
 

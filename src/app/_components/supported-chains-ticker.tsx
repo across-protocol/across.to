@@ -16,11 +16,12 @@ import liskLogoSrc from "@/app/_assets/logos/lisk.svg";
 import redstoneLogoSrc from "@/app/_assets/logos/redstone.svg";
 import zoraLogoSrc from "@/app/_assets/logos/zora.svg";
 import worldChainIconSrc from "@/app/_assets/logos/world-chain.svg";
-import alephZeroIconSrc from "@/app/_assets/logos/alephzero.svg";
 import inkLogoSrc from "@/app/_assets/logos/ink.svg";
 import soneiumLogoSrc from "@/app/_assets/logos/soneium.svg";
 import unichainLofoSrc from "@/app/_assets/logos/unichain.svg";
 import hyperliquidLogoSrc from "@/app/_assets/logos/hyperliquid.svg";
+import bscLogo from "@/app/_assets/logos/bsc_text.svg";
+import solanaLogo from "@/app/_assets/logos/solana_text.svg";
 
 const chains = [
   {
@@ -66,9 +67,6 @@ const chains = [
     logo: <Image className="px-4" src={worldChainIconSrc} alt="world chain logo" />,
   },
   {
-    logo: <Image className="px-4" src={alephZeroIconSrc} alt="aleph zero" />,
-  },
-  {
     logo: <Image className="px-16" src={inkLogoSrc} alt="ink logo" />,
   },
   {
@@ -79,6 +77,12 @@ const chains = [
   },
   {
     logo: <Image className="px-4" src={hyperliquidLogoSrc} alt="hyperliquid logo" />,
+  },
+  {
+    logo: <Image className="px-4" src={bscLogo} alt="bsc logo" />,
+  },
+  {
+    logo: <Image className="px-4" src={solanaLogo} alt="solana logo" />,
   },
 ];
 
