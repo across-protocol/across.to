@@ -14,7 +14,6 @@ import {
   RedstoneIcon,
   ZoraIcon,
   WorldChainIcon,
-  AlephZeroIcon,
   InkIcon,
   SoneiumIcon,
   UnichainIcon,
@@ -84,10 +83,6 @@ const chains = [
   {
     label: "World Chain",
     Icon: WorldChainIcon,
-  },
-  {
-    label: "Aleph Zero",
-    Icon: AlephZeroIcon,
   },
   {
     label: "Ink",
