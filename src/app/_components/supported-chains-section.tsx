@@ -22,6 +22,7 @@ import {
   BscIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
+import { SolanaIcon } from "./icons/gradient/logos/solana";
 
 const chains = [
   {
@@ -107,6 +108,10 @@ const chains = [
   {
     label: "BSC Chain",
     Icon: BscIcon,
+  },
+  {
+    label: "Solana",
+    Icon: SolanaIcon,
   },
 ];
 
