@@ -61,3 +61,5 @@ export { SoneiumIcon } from "./gradient/logos/soneium";
 export { UnichainIcon } from "./gradient/logos/unichain";
 export { HyperliquidIcon } from "./gradient/logos/hyperliquid";
 export { BscIcon } from "./gradient/logos/bsc";
+export { SolanaIcon } from "./gradient/logos/solana";
+export { PlasmaIcon } from "./gradient/logos/plasma";
