@@ -19,9 +19,10 @@ import {
   UnichainIcon,
   HyperliquidIcon,
   BscIcon,
+  SolanaIcon,
+  PlasmaIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
-import { SolanaIcon } from "./icons/gradient/logos/solana";
 
 const chains = [
   {
@@ -107,6 +108,10 @@ const chains = [
   {
     label: "Solana",
     Icon: SolanaIcon,
+  },
+  {
+    label: "Plasma",
+    Icon: PlasmaIcon,
   },
 ];
 
