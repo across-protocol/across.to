@@ -7,9 +7,9 @@ import { ProductsSection } from "./_components/products-section";
 import { SubscribeSection } from "@/app/_components/subscribe-section";
 
 export const metadata: Metadata = {
-  title: "Home | Across Protocol",
+  title: "Fast, Cheap, Secure Crosschain Bridge for ETH, WBTC, USDC & USDT",
   description:
-    "Interoperability powered by Intents. A new paradigm in crosschain experiences, seamlessly connecting users with applications.",
+    "Bridge assets across Ethereum, BSC, Solana, Base, Arbitrum, Hyperliquid and many more. Fast, cheap, secure crosschain transfers powered by intents.",
 };
 
 export default function Home() {
