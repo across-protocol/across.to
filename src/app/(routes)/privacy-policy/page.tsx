@@ -20,6 +20,18 @@ const SubHeadingText = ({ children }: { children: ReactNode }) => (
   <Text variant="heading-4">{children}</Text>
 );
 
+const UnorderedList = ({ children }: { children: ReactNode }) => (
+  <ul className="text-base list-disc space-y-4 leading-relaxed">{children}</ul>
+);
+
+const NestedUnorderedList = ({ children }: { children: ReactNode }) => (
+  <ul className="text-base mt-2 space-y-4 leading-relaxed">{children}</ul>
+);
+
+const OrderedList = ({ children }: { children: ReactNode }) => (
+  <ol className="text-base ml-6 space-y-4 leading-relaxed">{children}</ol>
+);
+
 export default function PrivacyPolicy() {
   return (
     <main className="relative z-[1] mx-auto flex w-full max-w-2xl flex-col gap-0 px-4 py-10 lg:px-0">
@@ -42,7 +54,7 @@ export default function PrivacyPolicy() {
         </BodyText>
 
         <MainHeadingText>High Level Summary</MainHeadingText>
-        <ul className="text-base list-inside list-disc space-y-4 leading-relaxed">
+        <UnorderedList>
           <li>Across is operated by Risk Labs, a Cayman Islands Foundation.</li>
           <li>
             The Across Protocol is not centrally controlled by Risk Labs. It is a
@@ -77,7 +89,7 @@ export default function PrivacyPolicy() {
             We work with third parties, who may have their own privacy policies; users are
             encouraged to review the respective privacy policies of these third parties.
           </li>
-        </ul>
+        </UnorderedList>
 
         <MainHeadingText>Data We Collect</MainHeadingText>
         <BodyText>
@@ -86,60 +98,61 @@ export default function PrivacyPolicy() {
           data, other than your email address, IP address, and device type. When you
           interact with the Services, we may collect:
         </BodyText>
-        <BodyText>
-          1. <strong>Publicly-available blockchain data.</strong> When you connect your
-          blockchain wallet to the Services, we may collect and log your
-          publicly-available blockchain address and screen it for any prior illicit
-          activity. Blockchain addresses are public data not created or assigned by us.
-        </BodyText>
-        <BodyText>
-          2. <strong>Information from other sources.</strong> We may receive information
-          about your wallet address or transactions from third-party providers to comply
-          with legal obligations and prevent fraudulent or other illicit activity.
-        </BodyText>
-        <BodyText>
-          3.{" "}
-          <strong>
-            Information collected automatically via cookies and tracking technologies.
-          </strong>{" "}
-          When you visit our websites, we may collect certain information by automated
-          means, such as through the use of cookies, web beacons and tracking
-          technologies. We use this information we collect by automated means to provide
-          and personalize the Services and features of the Services for you, learn about
-          your preferences, your use of the Services, and our interactions with you. Your
-          browser may tell you how to be notified when you receive certain types of
-          cookies or how to restrict or disable certain types of cookies. Please note,
-          however, that without cookies you may not be able to use all of the features of
-          our website.
-        </BodyText>
-        <BodyText>
-          4. <strong>Survey or usability information.</strong> If you participate in
-          surveys or usability studies, we collect the responses and any information you
-          voluntarily provide (such as wallet address, email address, and social handles
-          including discord, twitter, and telegram).
-        </BodyText>
-        <BodyText>
-          5. <strong>Correspondence.</strong> We receive any information you provide when
-          contacting us by email, customer support, or social media. This includes opting
-          into our newsletter and receiving emails from us.
-        </BodyText>
-        <BodyText>
-          6. <strong>Biographical information.</strong> If you apply for a job with us, we
-          collect information such as your name, email, phone, work and immigration
-          status, and any other information you provide in application materials.
-        </BodyText>
-        <BodyText>
-          7. <strong>Information you choose to provide.</strong> If you provide us with
-          data (e.g., your email), we use it for the purposes described at the time. We do
-          not attempt to link this to your wallet or other identifiers.
-        </BodyText>
+        <OrderedList>
+          <li>
+            <strong>Publicly-available blockchain data.</strong> When you connect your
+            blockchain wallet to the Services, we may collect and log your
+            publicly-available blockchain address and screen it for any prior illicit
+            activity. Blockchain addresses are public data not created or assigned by us.
+          </li>
+          <li>
+            <strong>Information from other sources.</strong> We may receive information
+            about your wallet address or transactions from third-party providers to comply
+            with legal obligations and prevent fraudulent or other illicit activity.
+          </li>
+          <li>
+            <strong>
+              Information collected automatically via cookies and tracking technologies.
+            </strong>{" "}
+            When you visit our websites, we may collect certain information by automated
+            means, such as through the use of cookies, web beacons and tracking
+            technologies. We use this information we collect by automated means to provide
+            and personalize the Services and features of the Services for you, learn about
+            your preferences, your use of the Services, and our interactions with you.
+            Your browser may tell you how to be notified when you receive certain types of
+            cookies or how to restrict or disable certain types of cookies. Please note,
+            however, that without cookies you may not be able to use all of the features
+            of our website.
+          </li>
+          <li>
+            <strong>Survey or usability information.</strong> If you participate in
+            surveys or usability studies, we collect the responses and any information you
+            voluntarily provide (such as wallet address, email address, and social handles
+            including discord, twitter, and telegram).
+          </li>
+          <li>
+            <strong>Correspondence.</strong> We receive any information you provide when
+            contacting us by email, customer support, or social media. This includes
+            opting into our newsletter and receiving emails from us.
+          </li>
+          <li>
+            <strong>Biographical information.</strong> If you apply for a job with us, we
+            collect information such as your name, email, phone, work and immigration
+            status, and any other information you provide in application materials.
+          </li>
+          <li>
+            <strong>Information you choose to provide.</strong> If you provide us with
+            data (e.g., your email), we use it for the purposes described at the time. We
+            do not attempt to link this to your wallet or other identifiers.
+          </li>
+        </OrderedList>
 
         <MainHeadingText>How We Use Data</MainHeadingText>
         <BodyText>
           We use the data we collect in accordance with your instructions, our Terms of
           Service, and as required by law. Our other uses of data include:
         </BodyText>
-        <ul className="text-base list-inside list-disc space-y-4 leading-relaxed">
+        <UnorderedList>
           <li>
             <strong>Providing the Services.</strong> To operate, maintain, and improve our
             Services.
@@ -166,7 +179,7 @@ export default function PrivacyPolicy() {
           <li>
             <strong>Hiring.</strong> To recruit and hire talent.
           </li>
-        </ul>
+        </UnorderedList>
         <BodyText>
           We retain each category of personal information that we collect for as long as
           necessary to fulfill the purposes described herein.
@@ -174,7 +187,7 @@ export default function PrivacyPolicy() {
 
         <MainHeadingText>How We Share Data</MainHeadingText>
         <BodyText>We may share data as follows:</BodyText>
-        <ul className="text-base list-inside list-disc space-y-4 leading-relaxed">
+        <UnorderedList>
           <li>
             <strong>With service providers.</strong> For infrastructure, analytics,
             compliance, and support (e.g., Infura, Cloudflare, blockchain analytics
@@ -199,7 +212,7 @@ export default function PrivacyPolicy() {
             <strong>With your consent.</strong> At any other time when you specifically
             direct us to share information.
           </li>
-        </ul>
+        </UnorderedList>
         <BodyText>
           We do not share your information with third parties for those third
           parties&apos; marketing purposes.
@@ -250,7 +263,7 @@ export default function PrivacyPolicy() {
           residents of such states with certain rights and require certain disclosures in
           respect of their personal information.
         </BodyText>
-        <ul className="text-base list-inside list-disc space-y-4 leading-relaxed">
+        <UnorderedList>
           <li>
             For a description of the categories of personal information that we collect,
             including in the past 12 months, and the sources therefor, please review the
@@ -277,58 +290,59 @@ export default function PrivacyPolicy() {
             Residents of U.S. states that have enacted privacy laws and regulations
             provide the residents of such states with certain rights in respect of their
             personal information. The exact scope of such rights may vary by state:
+            <NestedUnorderedList>
+              <li>
+                <strong>Right to Data Portability:</strong> The right to access personal
+                information collected about you in a portable format.
+              </li>
+              <li>
+                <strong>Right to Delete:</strong> The right to request that we delete
+                personal information that we have collected about you, subject to the fact
+                that we cannot alter or delete data recorded on blockchains.
+              </li>
+              <li>
+                <strong>Right to Correct:</strong> The right to request that we correct
+                inaccurate personal information that we maintain about you, subject to the
+                fact that we cannot alter or delete data recorded on blockchains.
+              </li>
+              <li>
+                <strong>
+                  Right to Opt Out of the Sale or Sharing of Personal Information:
+                </strong>{" "}
+                The right to opt out of the &quot;sale,&quot; &quot;sharing,&quot;
+                &quot;targeted advertising&quot; or certain other processing of personal
+                information that produces legal or similarly significant effects.
+              </li>
+              <li>
+                <strong>
+                  Right to Request Information Regarding Disclosure to Third Parties:
+                </strong>{" "}
+                The right to request a list of the categories of third parties to which we
+                have disclosed your personal information, and, in certain cases, the
+                specific third parties to which we have disclosed personal information or
+                a list of categories of personal information disclosed to third parties
+                for direct marketing purposes.
+              </li>
+              <li>
+                <strong>Right to Appeal:</strong> In certain cases, the right to appeal a
+                decision we have made in connection with a privacy rights request.
+              </li>
+              <li>
+                <strong>Right to Non-Discrimination:</strong> The right to not receive
+                retaliatory or discriminatory treatment in connection with a request to
+                exercise your privacy rights.
+              </li>
+              <li>
+                <strong>Right to Request Removal of Content:</strong> In certain cases,
+                individuals under the age of 18 may make requests to remove content.
+              </li>
+            </NestedUnorderedList>
           </li>
-        </ul>
-        <ul className="text-base ml-6 list-inside list-[circle] space-y-3 leading-relaxed">
-          <li>
-            <strong>Right to Data Portability:</strong> The right to access personal
-            information collected about you in a portable format.
-          </li>
-          <li>
-            <strong>Right to Delete:</strong> The right to request that we delete personal
-            information that we have collected about you, subject to the fact that we
-            cannot alter or delete data recorded on blockchains.
-          </li>
-          <li>
-            <strong>Right to Correct:</strong> The right to request that we correct
-            inaccurate personal information that we maintain about you, subject to the
-            fact that we cannot alter or delete data recorded on blockchains.
-          </li>
-          <li>
-            <strong>
-              Right to Opt Out of the Sale or Sharing of Personal Information:
-            </strong>{" "}
-            The right to opt out of the &quot;sale,&quot; &quot;sharing,&quot;
-            &quot;targeted advertising&quot; or certain other processing of personal
-            information that produces legal or similarly significant effects.
-          </li>
-          <li>
-            <strong>
-              Right to Request Information Regarding Disclosure to Third Parties:
-            </strong>{" "}
-            The right to request a list of the categories of third parties to which we
-            have disclosed your personal information, and, in certain cases, the specific
-            third parties to which we have disclosed personal information or a list of
-            categories of personal information disclosed to third parties for direct
-            marketing purposes.
-          </li>
-          <li>
-            <strong>Right to Appeal:</strong> In certain cases, the right to appeal a
-            decision we have made in connection with a privacy rights request.
-          </li>
-          <li>
-            <strong>Right to Non-Discrimination:</strong> The right to not receive
-            retaliatory or discriminatory treatment in connection with a request to
-            exercise your privacy rights.
-          </li>
-          <li>
-            <strong>Right to Request Removal of Content:</strong> In certain cases,
-            individuals under the age of 18 may make requests to remove content.
-          </li>
-        </ul>
+        </UnorderedList>
+
         <BodyText>
-          • You can submit in writing any requests or questions in respect of any rights
-          you may have under applicable U.S. state privacy laws to{" "}
+          You can submit in writing any requests or questions in respect of any rights you
+          may have under applicable U.S. state privacy laws to{" "}
           <a href="mailto:legal@across.to" className="text-aqua-500 hover:text-aqua-400">
             legal@across.to
           </a>
@@ -346,7 +360,7 @@ export default function PrivacyPolicy() {
           Rights for Cayman Islands, European Union and United Kingdom Residents (EU and
           UK General Data Protection Regulation &quot;GDPR&quot; Notice)
         </MainHeadingText>
-        <ul className="text-base list-inside list-disc space-y-4 leading-relaxed">
+        <UnorderedList>
           <li>
             We process personal data for the limited purposes described in the &quot;How
             We Use Data&quot; section above.
@@ -367,8 +381,8 @@ export default function PrivacyPolicy() {
             you, subject to the fact that we cannot alter or delete data recorded on
             blockchains, such as transaction data or wallet addresses:
           </li>
-        </ul>
-        <ul className="text-base list-inside list-disc space-y-3 leading-relaxed">
+        </UnorderedList>
+        <UnorderedList>
           <li>
             To request access to personal data, and be provided with it in permanent form;
           </li>
@@ -387,7 +401,7 @@ export default function PrivacyPolicy() {
           </li>
           <li>
             To request that we disclose to you:
-            <ul className="ml-6 mt-2 list-inside list-[circle] space-y-2">
+            <NestedUnorderedList>
               <li>the categories of personal data we have collected about you,</li>
               <li>
                 the categories of sources from which the personal data is collected,
@@ -400,7 +414,7 @@ export default function PrivacyPolicy() {
                 data, and
               </li>
               <li>the specific pieces of personal data we have collected about you;</li>
-            </ul>
+            </NestedUnorderedList>
           </li>
           <li>
             To not be subject to a decision based solely on automated processing based on
@@ -424,7 +438,7 @@ export default function PrivacyPolicy() {
             accordance with our legitimate interests, including to comply with our legal
             obligations, resolves disputes, prevent fraud, and enforce our agreements.
           </li>
-        </ul>
+        </UnorderedList>
 
         <MainHeadingText>Changes to this Policy</MainHeadingText>
         <BodyText>
