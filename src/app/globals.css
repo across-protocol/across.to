@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ul,
+ol {
+  @apply list-outside;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+ul {
+  @apply ml-6 list-disc;
+}
+
+li > ul {
+  @apply mt-2 list-[circle];
+}
+
+li > ol {
+  @apply mt-2 list-decimal;
+}
