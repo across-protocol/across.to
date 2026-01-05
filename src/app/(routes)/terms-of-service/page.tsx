@@ -29,24 +29,24 @@ export default function SettlementLanding() {
             Terms of Service
           </Text>
           <Text variant="cap-case" className="text-grey-400">
-            Dated: August 22, 2024
+            Dated: October 22, 2025
           </Text>
         </div>
         <BodyText>
-          These Terms of Service (the &quot;Agreement&quot; or the “Terms”) explain the
-          terms and conditions by which you may access and use the Products provided by
-          Risk Labs (referred to herein as &quot;Risk Labs&quot;, &quot;we&quot;,
-          &quot;our&quot;, or &quot;us&quot;). The Products shall include, but shall not
-          necessarily be limited to, https://app.across.to, a website-hosted user
-          interface (the &quot;Interface&quot; or &quot;App&quot;) and all products and
-          features available via the Interface, including the API and all other software
-          that Risk Labs or a third party has developed for crosschain bridging,
+          These Terms of Service (the &quot;Agreement&quot; or the &quot;Terms&quot;)
+          explain the terms and conditions by which you may access and use the Products
+          provided by Risk Labs (referred to herein as &quot;Risk Labs&quot;,
+          &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). The Products shall include,
+          but shall not necessarily be limited to, https://app.across.to, a website-hosted
+          user interface (the &quot;Interface&quot; or &quot;App&quot;) and all products
+          and features available via the Interface, including the API and all other
+          software that Risk Labs or a third party has developed for crosschain bridging,
           crosschain onboarding, crosschain intents, and crosschain settlement on the
-          Interface. You must read this Agreement carefully as it governs your use of the
-          Products. By accessing or using any of the Products, you signify that you have
-          read, understand, and agree to be bound by this Agreement in its entirety. If
-          you do not agree, you are not authorized to access or use any of our Products
-          and should not use our Products.
+          Interface (collectively, the &quot;Products&quot;). You must read this Agreement
+          carefully as it governs your use of the Products. By accessing or using any of
+          the Products, you signify that you have read, understand, and agree to be bound
+          by this Agreement in its entirety. If you do not agree, you are not authorized
+          to access or use any of our Products and should not use our Products.
         </BodyText>
         <BodyText>
           To access or use any of our Products, you must be able to form a legally binding
@@ -63,20 +63,21 @@ export default function SettlementLanding() {
           sanctions administered or enforced by any governmental authority or otherwise
           designated on any list of prohibited or restricted parties (including but not
           limited to the list maintained by the Office of Foreign Assets Control of the
-          U.S. Department of the Treasury) (collectively, a “Sanctioned Person”) or (b) a
-          resident, citizen or agent of, or organized in, and do not have a registered
-          office in, a jurisdiction or territory that is the subject of comprehensive
-          country-wide, territory-wide, or regional economic sanctions by the United
-          States (collectively, “Restricted Territories”). You further represent that you
-          do not intend to transact with any Sanctioned Person or any person present in a
-          Restricted Territory. Finally, you represent that your access and use of any of
-          our Products will fully comply with all applicable laws and regulations, and
-          that you will not access or use any of our Products to conduct, promote, or
-          otherwise facilitate any illegal activity. If use of our Products are not
-          permitted in your jurisdiction, you may not attempt to use any of our Products.
-          Use of a Virtual Private Network (“VPN”) or any other privacy or anonymization
-          tools or techniques to circumvent, or attempt to circumvent, to circumvent any
-          such jurisdictional restrictions is prohibited.
+          U.S. Department of the Treasury) (collectively, a &quot;Sanctioned Person&quot;)
+          or (b) a resident, citizen or agent of, or organized in, and do not have a
+          registered office in, a jurisdiction or territory that is the subject of
+          comprehensive country-wide, territory-wide, or regional economic sanctions by
+          the United States (collectively, &quot;Restricted Territories&quot;). You
+          further represent that you do not intend to transact with any Sanctioned Person
+          or any person present in a Restricted Territory. Finally, you represent that
+          your access and use of any of our Products will fully comply with all applicable
+          laws, rules and regulations, and that you will not access or use any of our
+          Products to conduct, promote, or otherwise facilitate any illegal activity. If
+          use of our Products are not permitted in your jurisdiction, you may not attempt
+          to use any of our Products. Use of a Virtual Private Network (&quot;VPN&quot;)
+          or any other privacy or anonymization tools or techniques to circumvent, or
+          attempt to circumvent, to circumvent any such jurisdictional restrictions is
+          prohibited.
         </BodyText>
         <BodyText>
           NOTICE: This Agreement contains important information, including a binding
@@ -128,10 +129,81 @@ export default function SettlementLanding() {
         <SubHeadingText>1.3 Third Party Services and Content</SubHeadingText>
         <BodyText>
           When you use any of our Products, you may also be using the products, services
-          or content of one or more third parties. Your use of such third party products,
+          or content of one or more third parties. This includes possible integrations of
+          our Products with those of third-parties. Your use of such third party products,
           services or content may be subject to separate policies, terms of use and fees
           of these third parties, and you agree to abide by and be responsible for such
           policies, terms of use and fees, as applicable.
+        </BodyText>
+        <BodyText>
+          Certain features of the Products are enabled or &quot;powered by&quot;
+          third-party application programming interfaces, services, or other features
+          (each, a &quot;Provider,&quot; and such features, &quot;Provider-Powered
+          Features&quot;), which may include functionality supplied by decentralized
+          exchange routing, quoting, or settlement providers. By accessing or using any
+          Provider-Powered Feature, you acknowledge and agree that: (a) you are also bound
+          by the then-current terms of service and privacy policy of the applicable
+          Provider (collectively, &quot;Provider Terms&quot;); (b) your first use of a
+          Provider-Powered Feature constitutes your agreement to the Provider Terms; and
+          (c) Risk Labs is not a party to, and has no responsibility or liability for, the
+          Provider Terms. You, and not Risk Labs, will be responsible for any and all
+          costs and charges associated with your use of any Provider-Powered Features or
+          other third-party services. Risk Labs may enable these features and services
+          merely as a convenience and the integration or inclusion of such services does
+          not imply an endorsement or recommendation. Risk Labs has no control over and is
+          not responsible for such Provider-Powered Features or third-party services,
+          including for the accuracy, availability, reliability, or completeness of
+          information shared by or available through these features or services. Any
+          dealings you have with third parties while using our Products are between you
+          and the third party. Risk Labs will not be responsible or liable, directly or
+          indirectly, for any damage or loss caused or alleged to be caused by or in
+          connection with use of or reliance on any Provider-Powered Features or
+          third-party services.
+        </BodyText>
+        <BodyText>
+          Some Providers may provide us with access to certain information that you have
+          provided to third parties, including through such Provider-Powered Features or
+          other third-party services, and we will use, store and disclose such information
+          in accordance with our Privacy Policy. For more information about our use,
+          storage and disclosure of information related to you and your use of such within
+          our Products, please see our Privacy Policy.
+        </BodyText>
+        <BodyText>
+          Risk Labs has no control over and is not responsible for the privacy practices
+          of these Providers. If you have any questions regarding how a Provider may
+          process your personal information, we encourage you to review the privacy
+          policies of the third parties providing these features prior to using such
+          services.
+        </BodyText>
+        <BodyText>
+          Risk Labs may update the list of Providers and links to Provider Terms from time
+          to time without notice. Current Providers include, without limitation, Uniswap
+          Labs (see: Uniswap Terms of Service and Uniswap Privacy Policy).
+        </BodyText>
+        <SubHeadingText>1.4 API Integrators</SubHeadingText>
+        <BodyText>
+          If you integrate or access any Risk Labs API, software development kits, or
+          developer tooling (&quot;Across API&quot;) to provide functionality to your end
+          users: (1) Binding Terms: Before enabling any end-user access to functionality
+          powered by the Across API, you must ensure such end users expressly agree to
+          legally binding terms and a privacy policy no less protective of Risk Labs than
+          these Terms and the Across Privacy Policy, including with respect to
+          intellectual property, data rights, disclaimers, limitations of liability,
+          class-action waiver, and arbitration; (2) Enforcement: You must incorporate
+          these Terms by reference into your end-user terms and enforce them for Risk
+          Labs&apos; benefit upon request (including suspending or revoking access for
+          violations); (3) Attribution &amp; Accuracy: Where data, routes, or quotes are
+          supplied by Risk Labs, you must clearly attribute such outputs (e.g.,
+          &quot;Powered by Across&quot; and must not modify quotes or call-data in a
+          manner that could mislead users; (4) Security &amp; Compliance: You must
+          maintain appropriate technical and organizational measures to protect API keys
+          and data; comply with applicable laws, rules and regulations (including
+          export/sanctions); and not use the Across API to create a competing service; and
+          (5) Suspension: Risk Labs may, in its sole discretion, suspend your or your
+          users&apos; API access where continued use poses security, legal, or compliance
+          risk, or violates these Terms. For additional detail on the required terms for
+          integrations with any of our Products, please contact us by sending an email to:
+          legal@across.to
         </BodyText>
         <MainHeadingText>
           2. Modifications of this Agreement or Our Products
@@ -156,13 +228,13 @@ export default function SettlementLanding() {
           disable or modify access to access to the Products at any time in the event of
           any breach of these Terms. You acknowledge. understand, and agree that, from
           time to time, our Products may be inaccessible or inoperable for any reason,
-          including: (a) equipment or technology or other infrastructure delay,
-          inaccessibility, or malfunctions; (b) periodic maintenance procedures or repairs
-          that Risk Labs or any of our suppliers or contractors may undertake from time to
-          time; (c) causes beyond Risk Labs’ control or that Risk Labs could not
-          reasonably foresee; (d) disruptions and temporary or permanent unavailability of
-          underlying blockchain infrastructure; or (e) unavailability of third-party
-          service providers or external partners for any reason.
+          including: (i) equipment or technology or other infrastructure delay,
+          inaccessibility, or malfunctions; (ii) periodic maintenance procedures or
+          repairs that Risk Labs or any of our suppliers or contractors may undertake from
+          time to time; (iii) causes beyond Risk Labs&apos; control or that Risk Labs
+          could not reasonably foresee; (iv) disruptions and temporary or permanent
+          unavailability of underlying blockchain infrastructure; or (v) unavailability of
+          third-party service providers or external partners for any reason.
         </BodyText>
         <BodyText>
           Without limitation of any other provision of these Terms, and as set forth
@@ -175,16 +247,39 @@ export default function SettlementLanding() {
           As between you and Risk Labs, we own all intellectual property and other rights
           in and to each of our Products and its respective contents, including, but not
           limited to, software (including in the Interface), text, images, trademarks,
-          service marks, copyrights, patents, designs, and its &quot;look and feel.&quot;
-          This intellectual property is available under the terms of this agreement.
-          Subject to the terms of this Agreement, we grant you a limited, revocable,
-          non-exclusive, non-sublicensable, non-transferable license to access and use our
-          Products solely in accordance with this Agreement. You agree that you will not
-          use, modify, distribute, tamper with, reverse engineer, disassemble or decompile
-          any of our Products for any purpose other than as expressly permitted pursuant
-          to this Agreement. Except as set forth in this Agreement, we grant you no right,
-          title or interest in or to any of our Products, including any intellectual
-          property rights.
+          service marks, copyrights, patents, designs, and any Product&apos;s &quot;look
+          and feel.&quot; This intellectual property is made available to you under the
+          terms of this Agreement. Subject to the terms of this Agreement, we grant you a
+          limited, revocable, non-exclusive, non-sublicensable, non-transferable license
+          to access and use our Products solely in accordance with this Agreement. You
+          agree that you will not use, modify, distribute, tamper with, reverse engineer,
+          disassemble or decompile any of our Products for any purpose other than as
+          expressly permitted pursuant to this Agreement. Except as expressly set forth in
+          this Agreement, we grant you no right, title or interest in or to any of our
+          Products, including any intellectual property rights.
+        </BodyText>
+        <BodyText>
+          By using any of our Products, you grant us a worldwide, non-exclusive,
+          sublicensable, royalty-free license to use, copy, modify, and display any
+          content, including but not limited to text, materials, images, files,
+          communications, comments, feedback, suggestions, ideas, concepts, questions,
+          data, or otherwise, that you post on or through any of our Products for our
+          current and future business purposes, including to provide, promote, and improve
+          the services. You grant to us a non-exclusive, transferable, worldwide,
+          perpetual, irrevocable, fully-paid, royalty-free license, with the right to
+          sublicense, under any and all intellectual property rights that you own or
+          control to use, copy, modify, create derivative works based upon any suggestions
+          or feedback for any purpose.
+        </BodyText>
+        <BodyText>
+          You represent and warrant that you have, or have obtained, all rights, licenses,
+          consents, permissions, power and/or authority necessary to grant the rights
+          granted herein for any material that you list, post, promote, or display on or
+          through any of our Products. You represent and warrant that such content does
+          not contain material subject to copyright, trademark, publicity rights, or other
+          intellectual property rights, unless you have necessary permission or are
+          otherwise legally entitled to post the material and to grant us the license
+          described above, and that the content does not violate any laws.
         </BodyText>
         <BodyText>
           You understand and acknowledge that the Protocol is not a Product and we do not
@@ -203,8 +298,9 @@ export default function SettlementLanding() {
           expressly relieve us of any and all liability arising from your use of any such
           resources or participation in any such promotions, and you shall not use our
           Products in combination with any third party products or services in any manner
-          that would infringe or otherwise violate the intellectual property rights of any
-          third party or violate any applicable law.
+          that would infringe, misappropriate or otherwise violate the intellectual
+          property rights of any third party or violate any applicable law, rule, or
+          regulation.
         </BodyText>
         <SubHeadingText>3.3 Additional Rights</SubHeadingText>
         <BodyText>
@@ -220,16 +316,16 @@ export default function SettlementLanding() {
           Interface:
         </BodyText>
         <BodyText>
-          Intellectual Property Infringement. Activity that infringes on or violates any
-          copyright, trademark, service mark, patent, right of publicity, right of
-          privacy, or other proprietary or intellectual property rights under applicable
-          law in any jurisdiction in the world.
+          Intellectual Property Infringement. Activity that infringes, misappropriates or
+          otherwise violates any copyright, trademark, service mark, patent, right of
+          publicity, right of privacy, or other proprietary or intellectual property right
+          under applicable law, rule, or regulation in any jurisdiction in the world.
         </BodyText>
         <BodyText>
-          Data Privacy. Activity that violates any applicable laws, and contractual and
-          fiduciary obligations relating to the collection, storage, use, transfer and any
-          other processing of any personal information or any other sensitive or
-          confidential information.
+          Data Privacy. Activity that violates any applicable laws, rules or regulations,
+          or contractual or fiduciary obligations relating to the collection, storage,
+          use, transfer or any other processing of any personal information or any other
+          sensitive or confidential information.
         </BodyText>
         <BodyText>
           Cyberattack. Activity that seeks to interfere with or compromise the integrity,
@@ -242,11 +338,10 @@ export default function SettlementLanding() {
           harmful material into the Interface or the Products.
         </BodyText>
         <BodyText>
-          Fraud and Misrepresentation. Activity that seeks to defraud us or any other
-          person or entity, including, but not limited to, providing any false,
-          inaccurate, or misleading information in order to unlawfully obtain the property
-          of another, or to defraud Risk Labs, other users of the Products or any other
-          person.
+          Fraud and Misrepresentation. Activity that seeks to defraud us, any other user
+          of the Products or any other person or entity, including, but not limited to,
+          providing any false, inaccurate, or misleading information in order to
+          unlawfully obtain the property of another.
         </BodyText>
         <BodyText>
           Market Manipulation. Activity that violates any applicable law, rule, or
@@ -275,7 +370,7 @@ export default function SettlementLanding() {
           Sale of Stolen Property. Buying, selling, or transferring of stolen items,
           fraudulently obtained items, items taken without authorization, and/or any other
           illegally obtained items. Using or accessing the Products to transmit or
-          exchange Digital Assets that are the direct or indirect proceeds of any criminal
+          exchange digital assets that are the direct or indirect proceeds of any criminal
           or fraudulent activity, including terrorism or tax evasion.
         </BodyText>
         <BodyText>
@@ -302,16 +397,22 @@ export default function SettlementLanding() {
           Labs employs on the Interface, including through the use of a VPN.
         </BodyText>
         <BodyText>
+          Circumvention of Provider Restrictions. Activity that circumvents, or attempts
+          to circumvent, any content-filtering techniques, security measures, geographic
+          or sanctions-based restrictions, or access controls imposed by Risk Labs or by
+          any Provider, including through the use of a VPN or anonymization tools.
+        </BodyText>
+        <BodyText>
           Any Other Unlawful Conduct. Activity that violates any applicable law, rule, or
-          regulation of the United States or another relevant jurisdiction, including, but
-          not limited to, the restrictions and regulatory requirements imposed by U.S.
+          regulation of the United States or any other relevant jurisdiction, including,
+          but not limited to, the restrictions and regulatory requirements imposed by U.S.
           law, including any relevant and applicable anti-money laundering and
           anti-terrorist financing laws and sanctions programs, such as the Bank Secrecy
-          Act and the U.S. Department of Treasury’s Office of Foreign Asset Controls.
+          Act and the U.S. Department of Treasury&apos;s Office of Foreign Asset Controls.
           Activity from a jurisdiction (including an IP address in a jurisdiction) that we
           have, in our sole discretion, determined is a jurisdiction where the use of the
-          Site, the Interface or the Products is prohibited, including any Restricted
-          Territory, or any activity with a Sanctioned Person.
+          Interface or the Products is prohibited, including in any Restricted Territory,
+          or any activity with a Sanctioned Person.
         </BodyText>
         <BodyText>
           As a further condition to accessing or using the Products, you affirm that you
@@ -329,19 +430,21 @@ export default function SettlementLanding() {
           you submit.
         </BodyText>
         <SubHeadingText>4.3 Non-Custodial and No Fiduciary Duties</SubHeadingText>
-        Each of the Products is a purely non-custodial application, meaning we do not ever
-        have custody, possession, or control of your digital assets at any time. It
-        further means you are solely responsible for the custody of the cryptographic
-        private keys to the digital asset wallets you hold and you should never share your
-        wallet credentials or seed phrase with anyone. We accept no responsibility for, or
-        liability to you, in connection with your use of a wallet and make no
-        representations or warranties regarding how any of our Products will operate with
-        any specific wallet. Risk Labs has no control over, or liability for, the
-        delivery, quality, safety, legality, or any other aspect of any digital assets
-        that you may transfer to or from a third party, and we are not responsible for
-        ensuring that an entity with whom you transact completes the transaction or is
-        authorized to do so, and if you experience a problem with any transactions in
-        digital assets using the Products, then you bear the entire risk.
+        <BodyText>
+          Each of the Products is a purely non-custodial application, meaning we do not
+          ever have custody, possession, or control of your digital assets at any time. It
+          further means you are solely responsible for the custody of the cryptographic
+          private keys to the digital asset wallets you hold and you should never share
+          your wallet credentials or seed phrase with anyone. We accept no responsibility
+          for, or liability to you, in connection with your use of a wallet and make no
+          representations or warranties regarding how any of our Products will operate
+          with any specific wallet. Risk Labs has no control over, or liability for, the
+          delivery, quality, safety, legality, or any other aspect of any digital assets
+          that you may transfer to or from a third party, and we are not responsible for
+          ensuring that an entity with whom you transact completes the transaction or is
+          authorized to do so, and if you experience a problem with any transactions in
+          digital assets using the Products, then you bear the entire risk.
+        </BodyText>
         <BodyText>
           Likewise, you are solely responsible for any associated wallet and we are not
           liable for any acts or omissions by you in connection with or as a result of
@@ -399,16 +502,23 @@ export default function SettlementLanding() {
           would have materially affected his or her settlement with the debtor or released
           party.&quot;
         </BodyText>
+        <SubHeadingText>4.7 Compliance with Provider Terms</SubHeadingText>
+        <BodyText>
+          You represent and warrant that prior to your first use of any Provider-Powered
+          Feature or other third-party services, you have read and agree to be bound by
+          the applicable Provider Terms, and that your use of the Provider-Powered Feature
+          will at all times comply with such Provider Terms.
+        </BodyText>
         <MainHeadingText>5. Disclaimers</MainHeadingText>
         <SubHeadingText>5.1 Assumption of Risk -- Generally</SubHeadingText>
         <BodyText>
-          Risk labs is a developer of software. Risk Labs does not operate a digital asset
+          Risk Labs is a developer of software. Risk Labs does not operate a digital asset
           or derivatives exchange platform or offer trade execution or clearing services
           and has no oversight, involvement, or control concerning your transactions using
-          the products. All transactions between users of the interface are executed
-          peer-to-peer directly between the users’ addresses through a smart contract. You
-          are responsible for complying with all applicable laws that govern your digital
-          assets.
+          the Products. All transactions between users of the interface are executed
+          peer-to-peer directly between the users&apos; addresses through a smart
+          contract. You are responsible for complying with all applicable laws, rules and
+          regulations that govern your digital assets.
         </BodyText>
         <BodyText>
           By accessing and using any of our products, you represent that you are
@@ -510,25 +620,25 @@ export default function SettlementLanding() {
           providing similar services.
         </BodyText>
         <BodyText>
-          We must comply with applicable laws, which may require us to, upon request by
-          government agencies, take certain actions or provide information. You
-          acknowledge and understand that Risk Labs may in its sole discretion take any
-          action it deems appropriate to cooperate with government agencies or comply with
-          applicable laws.
+          We must comply with applicable laws, rules and regulations which may require us
+          to, upon request by government agencies, take certain actions or provide
+          information. You acknowledge and understand that Risk Labs may in its sole
+          discretion take any action it deems appropriate to cooperate with government
+          agencies or comply with applicable laws, rules or regulations.
         </BodyText>
         <BodyText>
-          If you act as a liquidity provider to the protocol through the interface, you
+          If you act as a liquidity provider to the Protocol through the interface, you
           understand that your digital assets may lose some or all of their value while
-          they are supplied to the protocol through the interface due to the fluctuation
+          they are supplied to the Protocol through the interface due to the fluctuation
           of prices of tokens in a trading pair or liquidity pool.
         </BodyText>
         <BodyText>
           In summary, you acknowledge that we are not responsible for any of these
-          variables or risks, do not own or control the protocol, and cannot be held
+          variables or risks, do not own or control the Protocol, and cannot be held
           liable for any resulting losses that you experience while accessing or using any
-          of our products. Accordingly, you understand and agree to assume full
+          of our Products. Accordingly, you understand and agree to assume full
           responsibility for all of the risks of accessing and using the interface to
-          interact with the protocol. You hereby irrevocably waive, release and discharge
+          interact with the Protocol. You hereby irrevocably waive, release and discharge
           all claims, whether known or unknown to you, against Risk Labs and our
           shareholders, members, directors, officers, employees, agents, and
           representatives, suppliers, and contractors related to any of the risks set
@@ -536,40 +646,41 @@ export default function SettlementLanding() {
         </BodyText>
         <SubHeadingText>5.2 No Warranties</SubHeadingText>
         <BodyText>
-          Each of our products are provided on an &quot;as is&quot; and &quot;as
+          Each of our Products are provided on an &quot;as is&quot; and &quot;as
           available&quot; basis. To the fullest extent permitted by law, we disclaim any
           representations and warranties of any kind, whether express, implied, or
           statutory, including, but not limited to, the warranties of merchantability and
           fitness for a particular purpose. You acknowledge and understand that your use
-          of each of our products is at your own risk. We do not represent or warrant that
-          access to any of our products will be continuous, uninterrupted, timely, or
-          secure; that the information contained in any of our products will be accurate,
-          reliable, complete, or current; or that any of our products will be free from
-          errors, defects, viruses, or other harmful elements, or that use of the Products
-          does not and will not infringe or otherwise violate the intellectual property of
-          any third party. No advice, information, or statement that we make should be
-          treated as creating any warranty concerning any of our products. We do not
-          endorse, guarantee, or assume responsibility for any advertisements, offers, or
-          statements made by third parties concerning any of our products.
+          of each of our Products is at your own risk. We do not represent or warrant that
+          access to any of our Products will be continuous, uninterrupted, timely, or
+          secure; that the information contained in any of our Products will be accurate,
+          reliable, complete, or current; or that any of our Products will be free from
+          errors, defects, viruses, or other harmful elements, or that use of our Products
+          does not and will not infringe, misappropriate or otherwise violate the
+          intellectual property of any third party. No advice, information, or statement
+          that we make should be treated as creating any warranty concerning any of our
+          Products. We do not endorse, guarantee, or assume responsibility for any
+          advertisements, offers, or statements made by third parties concerning any of
+          our Products.
         </BodyText>
         <BodyText>
-          Similarly, the protocol is provided &quot;as is&quot;, at your own risk, and
+          Similarly, the Protocol is provided &quot;as is&quot;, at your own risk, and
           without warranties of any kind. Although we contributed to the initial code for
-          the protocol, we do not provide, own, or control the protocol, which is run
+          the Protocol, we do not provide, own, or control the Protocol, which is run
           autonomously without any headcount by smart contracts deployed on various
-          blockchains. Upgrades and modifications to the protocol are generally managed in
+          blockchains. Upgrades and modifications to the Protocol are generally managed in
           a community-driven way by holders of the acx governance token. No developer or
-          entity involved in creating the protocol will be liable for any claims or
+          entity involved in creating the Protocol will be liable for any claims or
           damages whatsoever associated with your use, inability to use, or your
-          interaction with other users of, the protocol, including any direct, indirect,
+          interaction with other users of, the Protocol, including any direct, indirect,
           incidental, special, exemplary, punitive or consequential damages, or loss of
           profits, cryptocurrencies, tokens, or anything else of value. We do not endorse,
           guarantee, or assume responsibility for any advertisements, offers, or
-          statements made by third parties concerning any of our products.
+          statements made by third parties concerning any of our Products.
         </BodyText>
         <BodyText>
           You acknowledge and understand that data you provide while accessing or using
-          the products may become irretrievably lost or corrupted or temporarily
+          the Products may become irretrievably lost or corrupted or temporarily
           unavailable due to a variety of causes, and agree that, to the maximum extent
           permitted under applicable law, we will not be liable for any loss or damage
           caused by denial-of-service attacks, software failures, viruses or other
@@ -586,11 +697,11 @@ export default function SettlementLanding() {
         </BodyText>
         <SubHeadingText>5.3 No Investment Advice </SubHeadingText>
         <BodyText>
-          All information provided by any of our products is for informational purposes
+          All information provided by any of our Products is for informational purposes
           only and should not be construed as investment advice or a recommendation that a
           particular token is a safe or sound investment. You should not take, or refrain
           from taking, any action based on any information contained in any of our
-          products. By providing token information for your convenience, we do not make
+          Products. By providing token information for your convenience, we do not make
           any investment recommendations to you or opine on the merits of any transaction
           or opportunity. You alone are responsible for determining whether any
           investment, investment strategy or related transaction is appropriate for you
@@ -625,11 +736,11 @@ export default function SettlementLanding() {
           including, but not limited to, damages for loss of profits, goodwill, use, data,
           fiat, revenue, opportunities, goodwill or other intangible property, arising out
           of or relating to any access or use of or inability to access or use any of the
-          products, nor will we be responsible for any damage, loss, or injury resulting
+          Products, nor will we be responsible for any damage, loss, or injury resulting
           from hacking, tampering, or other unauthorized access or use of any of the
-          products or the information contained within it, whether such damages are based
+          Products or the information contained within it, whether such damages are based
           in contract, tort, negligence, strict liability, or otherwise, arising out of or
-          in connection with authorized or unauthorized use of any of the products, even
+          in connection with authorized or unauthorized use of any of the Products, even
           if an authorized representative of Risk Labs has been advised of or knew or
           should have known of the possibility of such damages. We assume no liability or
           responsibility for any: (a) errors, mistakes, or inaccuracies of content; (b)
@@ -637,30 +748,30 @@ export default function SettlementLanding() {
           access or use of the interface; (c) unauthorized access or use of any secure
           server or database in our control, or the use of any information or data stored
           therein; (d) interruption or cessation of function related to any of the
-          products; (e) bugs, viruses, trojan horses, or the like that may be transmitted
+          Products; (e) bugs, viruses, trojan horses, or the like that may be transmitted
           to or through the interface; (f) errors or omissions in, or loss or damage
           incurred as a result of the use of, any content made available through any of
-          the products; (g) the defamatory, offensive, or illegal conduct of any third
-          party and (h) causes beyond Risk Labs’ control or that Risk Labs could not
+          the Products; (g) the defamatory, offensive, or illegal conduct of any third
+          party and (h) causes beyond Risk Labs&apos; control or that Risk Labs could not
           reasonably foresee.
         </BodyText>
         <BodyText>
           We have no liability to you or to any third party for any claims or damages that
           may arise as a result of any payments or transactions that you engage in via any
-          of our products, or any other payment or transactions that you conduct via any
-          of our products. Except as expressly provided for herein, we do not provide
-          refunds for any purchases that you might make on or through any of our products.
+          of our Products, or any other payment or transactions that you conduct via any
+          of our Products. Except as expressly provided for herein, we do not provide
+          refunds for any purchases that you might make on or through any of our Products.
         </BodyText>
         <BodyText>
-          We make no warranties or representations, express or implied, about linked third
-          party services, the third parties they are owned and operated by, the
-          information contained on them, assets available through them, or the
-          suitability, privacy, or security of their products or services. You acknowledge
-          sole responsibility for and assume all risk arising from your use of third-party
-          services, third-party websites, applications, or resources. We shall not be
-          liable under any circumstances for damages arising out of or in any way related
-          to software, products, services, and/or information offered or provided by
-          third-parties and accessed through any of our products.
+          We make no warranties or representations, express or implied, about
+          Provider-Powered Features or other third-party services, the third parties they
+          are owned and operated by, the information contained on them, assets available
+          through them, or the suitability, privacy, or security of their products or
+          services. You acknowledge sole responsibility for and assume all risk arising
+          from your use of third-party services, third-party websites, applications, or
+          resources. We shall not be liable under any circumstances for damages arising
+          out of or in any way related to software, products, services, and/or information
+          offered or provided by third-parties and accessed through any of our Products.
         </BodyText>
         <BodyText>
           Some jurisdictions do not allow the limitation of liability for personal injury,
@@ -730,13 +841,14 @@ export default function SettlementLanding() {
           arbitration under the JAMS Optional Expedited Arbitration Procedures. You
           understand that you are required to resolve all Disputes by binding arbitration.
           The arbitration shall be held on a confidential basis before a single
-          arbitrator, who shall be selected pursuant to JAMS rules. The arbitration will
-          be held in New York, New York, unless you and we both agree to hold it
-          elsewhere. Unless we agree otherwise, the arbitrator may not consolidate your
-          claims with those of any other party. You and Risk Labs agree that for any
-          arbitration you initiate, you will pay the filing fee and all other JAMS fees
-          and costs. For any arbitration initiated by Risk Labs, Risk Labs will pay all
-          JAMS fees and costs.
+          arbitrator, who shall be selected pursuant to JAMS rules, including where
+          applicable the JAMS&apos; Mass Arbitration Procedures and Guidelines. The
+          arbitration will be held in New York, New York, unless you and we both agree to
+          hold it elsewhere. Unless we agree otherwise, the arbitrator may not consolidate
+          or coordinate your claims with those of any other party. You and Risk Labs agree
+          that for any arbitration you initiate, you will pay the filing fee and all other
+          JAMS fees and costs. For any arbitration initiated by Risk Labs, Risk Labs will
+          pay all JAMS fees and costs.
         </BodyText>
         <BodyText>
           Any claim arising out of or related to these Terms or the Products must be filed
@@ -754,7 +866,7 @@ export default function SettlementLanding() {
         <SubHeadingText>8.3 Class Action and Jury Trial Waiver</SubHeadingText>
         <BodyText>
           You and Risk Labs agree that any Dispute arising out of or relating to these
-          Terms of Service is personal to you and Risk Labs You must bring any and all
+          Terms of Service is personal to you and Risk Labs. You must bring any and all
           Disputes against us in your individual capacity and not as a plaintiff in or
           member of any purported class action, collective action, private attorney
           general action, or other representative proceeding. This provision applies to
@@ -833,6 +945,22 @@ export default function SettlementLanding() {
           the objectives of the provision to the greatest extent possible under any
           applicable law and the validity or enforceability of any other provision of this
           Agreement shall not be affected.
+        </BodyText>
+        <SubHeadingText>9.8 Privacy Policy</SubHeadingText>
+        <BodyText>
+          Your access to and use of the Products is also subject to the Across Privacy
+          Policy, which is incorporated by reference into these Terms and is accessible on
+          the Across website. By using the Products, you acknowledge that you have read
+          and agree to the Across Privacy Policy. For Provider-Powered Features, you are
+          also subject to the applicable Provider Privacy Policy.
+        </BodyText>
+        <SubHeadingText>9.9 Incorporation by Reference</SubHeadingText>
+        <BodyText>
+          Provider Terms and the Across Privacy Policy are incorporated by reference into
+          these Terms. In the event of a conflict between Provider Terms and these Terms
+          for Provider-Powered Features or other third-party service, the Provider Terms
+          control solely with respect to your use of that Provider-Powered Feature or
+          other third-party service.
         </BodyText>
       </div>
       <BackToTopButton />
