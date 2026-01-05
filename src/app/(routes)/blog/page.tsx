@@ -17,6 +17,9 @@ type PageProps = {
   searchParams: SearchParams;
 };
 
+// ISR - rebuild on an interval
+export const revalidate = 1800; // 30 minutes
+
 export default async function BlogHomePage({ searchParams }: PageProps) {
   const key = createCacheKey({
     searchParams,
