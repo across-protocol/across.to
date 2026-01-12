@@ -7,6 +7,10 @@
     {
       "source": "/amplitude",
       "destination": "https://api2.amplitude.com/2/httpapi"
+    },
+    {
+      "source": "/experiment/:path*",
+      "destination": "https://api.lab.amplitude.com/:path*"
     }
   ],
   "redirects": [
