@@ -135,5 +135,4 @@ export default async function SpecificBlogPage({ params }: SpecificBlogPageProps
   );
 }
 
-// Add revalidate for ISR at the page level
-export const revalidate = 60; // revalidate every 60 seconds
+export const revalidate = 7200;
