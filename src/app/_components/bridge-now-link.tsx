@@ -12,12 +12,12 @@ const bridgeAppBaseUrl = "https://app.across.to";
 export function BridgeNowLink(props: Props) {
   return (
     <Suspense>
-      <_BridgeNowLink {...props} />
+      <BridgeNowLinkInternal {...props} />
     </Suspense>
   );
 }
 
-function _BridgeNowLink({ className, section, ...props }: Props) {
+function BridgeNowLinkInternal({ className, section, ...props }: Props) {
   const searchParams = useSearchParams();
 
   const refParams = searchParams.get("ref") || searchParams.get("referrer");

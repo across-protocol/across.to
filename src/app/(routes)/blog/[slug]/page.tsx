@@ -19,12 +19,13 @@ import { Metadata } from "next";
 import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
 import { SITE_BASE_URL } from "@/app/_constants/links";
 
-type SpecificBlogPageProps = { params: { slug: string } };
+type SpecificBlogPageProps = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({
   params,
 }: SpecificBlogPageProps): Promise<Metadata> {
-  const entry = await retrieveContentfulEntry(params.slug);
+  const { slug } = await params;
+  const entry = await retrieveContentfulEntry(slug);
   if (!entry) {
     redirect("/404");
   }
@@ -40,7 +41,7 @@ export async function generateMetadata({
     metadataBase: new URL(SITE_BASE_URL),
     publisher: "Across Protocol",
     alternates: {
-      canonical: `/blog/${params.slug}`,
+      canonical: `/blog/${slug}`,
     },
     title,
     description,
@@ -58,7 +59,7 @@ export async function generateMetadata({
       title,
       description,
       images: [imageUrl],
-      url: `/blog/${params.slug}`,
+      url: `/blog/${slug}`,
     },
   };
 }
@@ -87,7 +88,8 @@ const SubStack = ({
   );
 
 export default async function SpecificBlogPage({ params }: SpecificBlogPageProps) {
-  const entry = await retrieveContentfulEntry(params.slug);
+  const { slug } = await params;
+  const entry = await retrieveContentfulEntry(slug);
   if (!entry) {
     redirect("/404");
   }

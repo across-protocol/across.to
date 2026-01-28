@@ -14,20 +14,21 @@ import { retrieveContentfulPublishedSlugs } from "@/app/_lib/contentful";
 export type SearchParams = Record<string, string | undefined>;
 
 type PageProps = {
-  searchParams: SearchParams;
+  searchParams: Promise<SearchParams>;
 };
 
 // ISR - rebuild on an interval
 export const revalidate = 1800; // 30 minutes
 
 export default async function BlogHomePage({ searchParams }: PageProps) {
+  const resolvedSearchParams = await searchParams;
   const key = createCacheKey({
-    searchParams,
+    searchParams: resolvedSearchParams,
   });
 
-  const search = searchParams["search"];
+  const search = resolvedSearchParams["search"];
   const isSearch = Boolean(!!search);
-  const page = Number(searchParams["page"]);
+  const page = Number(resolvedSearchParams["page"]);
 
   const pageNumber = isNaN(page) || !Number.isInteger(page) || page < 1 ? 1 : page;
   const pageLength = 16;
