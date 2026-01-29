@@ -23,6 +23,7 @@ import {
   PlasmaIcon,
 } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
+import { MegaEthIcon } from "./icons/gradient/logos/megaeth";
 
 const chains = [
   {
@@ -112,6 +113,10 @@ const chains = [
   {
     label: "Plasma",
     Icon: PlasmaIcon,
+  },
+  {
+    label: "MegaEth",
+    Icon: MegaEthIcon,
   },
 ];
 

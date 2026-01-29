@@ -73,7 +73,7 @@ export function UnichainIcon({ variant = "aqua", ...props }: LogoIconProps) {
       </defs>
       <path
         id="path-to-animate"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         fill={`url(#${linearGradientBasedId}_1)`}
         d="M20 0H85a20 20 0 0 1 20 20V85a20 20 0 0 1-20 20H20a20 20 0 0 1-20-20V20A20 20 0 0 1 20 0Z M94 51.71c-22.495 0-40.71-18.234-40.71-40.71h-1.58v40.71H11v1.58c22.494 0 40.71 18.233 40.71 40.71h1.58V53.29H94v-1.58Z"
       />
