@@ -121,25 +121,35 @@ const information = [
 
 export function Footer() {
   const pathname = usePathname();
-  const isMegaETH = pathname==="/megaeth";
+  const isMegaETH = pathname === "/megaeth";
 
-
-
-  if (isMegaETH){
-    return(
-      <footer className="border-t flex text-xs sm:text-md justify-around text-light-400/40 tracking-wide-4 border-t-light-100/10 p-5 bg-[#151518]">
+  if (isMegaETH) {
+    return (
+      <footer className="flex justify-around border-t border-t-light-100/10 bg-[#151518] p-5 text-xs tracking-wide-4 text-light-400/40 sm:text-md">
         <div>
           <a href="http://across.to" target="_blank" rel="noopener noreferrer">
-        © 2026 - ACROSS PROTOCOL
+            © 2026 - ACROSS PROTOCOL
           </a>
         </div>
         <div className="flex gap-5">
-          <a href="http://across.to/privacy-policy" target="_blank" rel="noopener noreferrer">PRIVACY POLICY</a>
-          <a href="http://across.to/terms-of-service" target="_blank" rel="noopener noreferrer">TERMS OF SERVICE</a>
+          <a
+            href="http://across.to/privacy-policy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            PRIVACY POLICY
+          </a>
+          <a
+            href="http://across.to/terms-of-service"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TERMS OF SERVICE
+          </a>
         </div>
       </footer>
-    )
-  }else{
+    );
+  } else {
     return (
       <footer className="flex flex-col px-8 py-12">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-center">

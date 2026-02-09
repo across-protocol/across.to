@@ -10,7 +10,7 @@ import SectionHeading from "./section-heading";
 export function CreativeCta() {
   return (
     <section
-      className={`relative overflow-clip ${sectionSpacing} pb-10 pt-10 bg-cover sm:bg-none bg-center bg-no-repeat`}
+      className={`relative overflow-clip ${sectionSpacing} bg-cover bg-center bg-no-repeat pb-10 pt-10 sm:bg-none`}
       style={{ backgroundImage: `url(${heroBackground.src})` }}
     >
       {/* <Image src={heroBackground} alt="" className="absolute -z-30" /> */}
@@ -19,7 +19,11 @@ export function CreativeCta() {
         <SectionHeading title="Start bridging to MegaETH today" />
 
         <div className="flex flex-col items-center gap-3 sm:flex-row">
-          <BridgeNowLink section="marketingHero" className={primaryButtonClass} href={`${bridgeAppBaseUrl}/megaeth`}>
+          <BridgeNowLink
+            section="marketingHero"
+            className={primaryButtonClass}
+            href={`${bridgeAppBaseUrl}/megaeth`}
+          >
             Bridge to MegaETH
           </BridgeNowLink>
           <a
@@ -31,15 +35,14 @@ export function CreativeCta() {
             Read the docs
           </a>
         </div>
-        <div >
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#151518] via-[#151518d0] to-transparent z-40" />
+        <div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-40 h-48 bg-gradient-to-t from-[#151518] via-[#151518d0] to-transparent" />
 
-          <div className="flex flex-col gap-1 mt-32 z-10">
-
-          <AcrossMegaethIcon/>
-          <MegaethAcrossIcon/>
-          <AcrossMegaethIcon/>
-          <MegaethAcrossIcon/>
+          <div className="z-10 mt-32 flex flex-col gap-1">
+            <AcrossMegaethIcon />
+            <MegaethAcrossIcon />
+            <AcrossMegaethIcon />
+            <MegaethAcrossIcon />
           </div>
         </div>
       </div>
