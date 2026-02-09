@@ -23,6 +23,7 @@ import hyperliquidLogoSrc from "@/app/_assets/logos/hyperliquid.svg";
 import bscLogo from "@/app/_assets/logos/bsc_text.svg";
 import solanaLogo from "@/app/_assets/logos/solana_text.svg";
 import plasmaLogo from "@/app/_assets/logos/plasma_text.svg";
+import megaEthLogo from "@/app/_assets/logos/megaeth.svg";
 
 const chains = [
   {
@@ -87,6 +88,9 @@ const chains = [
   },
   {
     logo: <Image className="px-4" src={plasmaLogo} alt="plasma logo" />,
+  },
+  {
+    logo: <Image className="px-4" src={megaEthLogo} alt="MegaEth logo" />,
   },
 ];
 
