@@ -1,4 +1,4 @@
-import { BridgeNowLink } from "@/app/_components/bridge-now-link";
+import { BridgeNowLink, bridgeAppBaseUrl } from "@/app/_components/bridge-now-link";
 import { AcrossMegaethIcon, MegaethAcrossIcon } from "@/app/_components/icons";
 import { Text } from "@/app/_components/text";
 import { INFORMATION_LINKS } from "@/app/_constants/links";
@@ -19,7 +19,7 @@ export function CreativeCta() {
         <SectionHeading title="Start bridging to MegaETH today" />
 
         <div className="flex flex-col items-center gap-3 sm:flex-row">
-          <BridgeNowLink section="marketingHero" className={primaryButtonClass}>
+          <BridgeNowLink section="marketingHero" className={primaryButtonClass} href={`${bridgeAppBaseUrl}/megaeth`}>
             Bridge to MegaETH
           </BridgeNowLink>
           <a

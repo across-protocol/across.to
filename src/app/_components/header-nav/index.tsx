@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-
 import { twMerge } from "@/app/_lib/tw-merge";
 import { INFORMATION_LINKS, PRODUCT_LINKS, SOCIAL_LINKS } from "@/app/_constants";
 
@@ -22,7 +21,7 @@ import {
 } from "../icons";
 import { Button } from "../button";
 import { Text } from "../text";
-import { BridgeNowLink } from "../bridge-now-link";
+import { BridgeNowLink, bridgeAppBaseUrl } from "../bridge-now-link";
 
 import { FlyoutMenu } from "./flyout-menu";
 import { MobileMenu } from "./mobile-menu";
@@ -109,7 +108,7 @@ export function HeaderNav() {
           </Link>
         </div>
         <div className="flex justify-end">
-          <BridgeNowLink section="marketingHero" className="inline-flex items-center justify-center rounded-xl bg-aqua-100 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-[#0A0E13]  transition duration-200 hover:-translate-y-0.5">
+          <BridgeNowLink href={`${bridgeAppBaseUrl}/megaeth`} section="marketingHero" className="inline-flex items-center justify-center rounded-xl bg-aqua-100 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-[#0A0E13]  transition duration-200 hover:-translate-y-0.5">
             Bridge to MegaETH
           </BridgeNowLink>
         </div>

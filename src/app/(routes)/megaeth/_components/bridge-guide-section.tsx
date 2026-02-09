@@ -8,7 +8,7 @@ import bridge2 from "../_assets/bridge-guide-2.svg";
 import bridge3 from "../_assets/bridge-guide-3.svg";
 import bridge4 from "../_assets/bridge-guide-4.svg";
 import SectionHeading from "./section-heading";
-import { BridgeNowLink } from "@/app/_components/bridge-now-link";
+import { BridgeNowLink, bridgeAppBaseUrl } from "@/app/_components/bridge-now-link";
 import { primaryButtonClass, sectionSpacing } from "./styles";
 
 export default function BridgeGuideSection() {
@@ -18,9 +18,9 @@ export default function BridgeGuideSection() {
   useEffect(() => {
     const computeItems = () => {
       const width = window.innerWidth;
-      if (width >= 1024) return 3; // lg and up
-      if (width >= 768) return 2; // md
-      return 1; // mobile
+      if (width >= 1024) return 3.5; // lg and up
+      if (width >= 768) return 2.5; // md
+      return 1.2; // mobile
     };
 
     const update = () => setItemsPerView(computeItems());
@@ -56,7 +56,7 @@ export default function BridgeGuideSection() {
       number: "4.",
       title: "Fund your MegaETH wallet",
       description:
-        "Your wallet on MegaETH will now have the bridged funds. You can also add more tokens to this wallet from other chains using Across.",
+        "Your wallet on MegaETH will now have the bridged funds. You can also add more tokens to this wallet from other chains using Across securely and instantly.",
       image: bridge4,
     },
   ];
@@ -138,7 +138,7 @@ export default function BridgeGuideSection() {
 
         {/* CTA Button */}
         <div className="flex justify-center">
-          <BridgeNowLink section="marketingHero" className={primaryButtonClass}>
+          <BridgeNowLink section="marketingHero" className={primaryButtonClass} href={`${bridgeAppBaseUrl}/megaeth`}>
             Bridge to MegaETH
           </BridgeNowLink>
         </div>

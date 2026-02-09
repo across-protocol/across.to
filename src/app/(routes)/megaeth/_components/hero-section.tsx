@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { AcrossIcon, VerifiedCheckmarkCircleIcon } from '@/app/_components/icons'
 import megaEthSrc from '@/app/_assets/logos/megaeth-light.svg'
 
-import { BridgeNowLink } from '@/app/_components/bridge-now-link'
+import { BridgeNowLink, bridgeAppBaseUrl } from '@/app/_components/bridge-now-link'
 import { primaryButtonClass, sectionSpacing } from './styles'
 import heroBackground from '../_assets/hero.svg'
 
@@ -41,7 +41,7 @@ export function HeroSection() {
             </p>
           </div>
 
-          <BridgeNowLink section="marketingHero" className={primaryButtonClass}>
+          <BridgeNowLink section="marketingHero" className={primaryButtonClass} href={`${bridgeAppBaseUrl}/megaeth`}>
             Bridge to MegaETH
           </BridgeNowLink>
 

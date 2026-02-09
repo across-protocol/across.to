@@ -5,9 +5,12 @@ import { Suspense, useCallback } from "react";
 import { ampli } from "../_amplitude";
 import { pageLookup } from "../_lib/amplitude";
 
-type Props = React.ComponentProps<"a"> & { section: "navbar" | "marketingHero" };
+type Props = React.ComponentProps<"a"> & { 
+  section: "navbar" | "marketingHero";
+  href?: string;
+};
 
-const bridgeAppBaseUrl = "https://app.across.to";
+export const bridgeAppBaseUrl = "https://app.across.to";
 
 export function BridgeNowLink(props: Props) {
   return (
@@ -17,7 +20,7 @@ export function BridgeNowLink(props: Props) {
   );
 }
 
-function BridgeNowLinkInternal({ className, section, ...props }: Props) {
+function BridgeNowLinkInternal({ className, href, section, ...props }: Props) {
   const searchParams = useSearchParams();
 
   const refParams = searchParams.get("ref") || searchParams.get("referrer");
@@ -31,7 +34,7 @@ function BridgeNowLinkInternal({ className, section, ...props }: Props) {
     params.set("integrator", integratorParams);
   }
 
-  const bridgeNowLink = `${bridgeAppBaseUrl}/bridge?${params.toString()}`;
+  const bridgeNowLink = `${bridgeAppBaseUrl}/bridge-and-swap?${params.toString()}`;
 
   const pathname = usePathname();
   const actionCallback = () => {
@@ -44,7 +47,7 @@ function BridgeNowLinkInternal({ className, section, ...props }: Props) {
     <a
       onClick={actionCallback}
       className={className}
-      href={bridgeNowLink}
+      href={href ? href : bridgeNowLink}
       target="_blank"
       rel="noopener noreferrer"
       {...props}
