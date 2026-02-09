@@ -14,6 +14,7 @@ const config: Config = {
         100: "#fff",
         200: "#F0FFFB",
         300: "#C5D5E0",
+        400: "#E0F3FF",
       },
       grey: {
         light: "#313237",
@@ -24,6 +25,7 @@ const config: Config = {
       },
       black: {
         700: "#34353B",
+        800:"#151518"
       },
       aqua: {
         100: "#6CF9D8",
