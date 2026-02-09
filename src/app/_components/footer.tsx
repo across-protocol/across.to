@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import {
@@ -20,6 +21,8 @@ import { twMerge } from "@/app/_lib/tw-merge";
 import CustomLink from "./link";
 import Link from "next/link";
 import { TERMS_OF_SERVICE, PRIVACY_POLICY } from "../_constants/links";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 type LinkType = {
   label: string;
@@ -117,37 +120,58 @@ const information = [
 ];
 
 export function Footer() {
-  return (
-    <footer className="flex flex-col px-8 py-12">
-      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-center">
-        <div className="sm:mr-16 md:mr-24">
-          <AcrossFullIcon />
+  const pathname = usePathname();
+  const isMegaETH = pathname==="/megaeth";
+
+
+
+  if (isMegaETH){
+    return(
+      <footer className="border-t flex text-xs sm:text-md justify-around text-light-400/40 tracking-wide-4 border-t-light-100/10 p-5 bg-[#151518]">
+        <div>
+          <a href="http://across.to" target="_blank" rel="noopener noreferrer">
+        © 2026 - ACROSS PROTOCOL
+          </a>
         </div>
-        <div className="mb-40 mt-12 grid grid-cols-2 gap-x-8 gap-y-12 sm:mt-0 lg:grid-cols-4 lg:gap-x-16">
-          <FooterBox label="products" items={products} />
-          <FooterBox label="socials" items={socials} useExternalLinks />
-          <FooterBox label="resources" items={information} useExternalLinks />
-          <FooterBox label="routes" items={bridgeRoutes} useExternalLinks compressed />
+        <div className="flex gap-5">
+          <a href="http://across.to/privacy-policy" target="_blank" rel="noopener noreferrer">PRIVACY POLICY</a>
+          <a href="http://across.to/terms-of-service" target="_blank" rel="noopener noreferrer">TERMS OF SERVICE</a>
         </div>
-      </div>
-      <div className="flex flex-col items-center gap-5">
-        <div className="flex flex-row items-center justify-center gap-1 lining-nums tabular-nums  text-grey-400">
-          Secured by
-          <UmaIcon />
+      </footer>
+    )
+  }else{
+    return (
+      <footer className="flex flex-col px-8 py-12">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-center">
+          <div className="sm:mr-16 md:mr-24">
+            <AcrossFullIcon />
+          </div>
+          <div className="mb-40 mt-12 grid grid-cols-2 gap-x-8 gap-y-12 sm:mt-0 lg:grid-cols-4 lg:gap-x-16">
+            <FooterBox label="products" items={products} />
+            <FooterBox label="socials" items={socials} useExternalLinks />
+            <FooterBox label="resources" items={information} useExternalLinks />
+            <FooterBox label="routes" items={bridgeRoutes} useExternalLinks compressed />
+          </div>
         </div>
-        <div className="h-[1px] w-1/2 max-w-[12rem] bg-gradient-to-r from-transparent via-grey-500 to-transparent"></div>
-        <div className="-mt-2 flex flex-row items-center gap-4">
-          <Link className="text-grey-400" href={TERMS_OF_SERVICE}>
-            Terms of Service
-          </Link>
-          <span className="text-grey-500">•</span>
-          <Link className="text-grey-400" href={PRIVACY_POLICY}>
-            Privacy Policy
-          </Link>
+        <div className="flex flex-col items-center gap-5">
+          <div className="flex flex-row items-center justify-center gap-1 lining-nums tabular-nums  text-grey-400">
+            Secured by
+            <UmaIcon />
+          </div>
+          <div className="h-[1px] w-1/2 max-w-[12rem] bg-gradient-to-r from-transparent via-grey-500 to-transparent"></div>
+          <div className="-mt-2 flex flex-row items-center gap-4">
+            <Link className="text-grey-400" href={TERMS_OF_SERVICE}>
+              Terms of Service
+            </Link>
+            <span className="text-grey-500">•</span>
+            <Link className="text-grey-400" href={PRIVACY_POLICY}>
+              Privacy Policy
+            </Link>
+          </div>
         </div>
-      </div>
-    </footer>
-  );
+      </footer>
+    );
+  }
 }
 
 function FooterBox(props: {
