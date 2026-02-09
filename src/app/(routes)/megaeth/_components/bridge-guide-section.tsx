@@ -72,7 +72,7 @@ export default function BridgeGuideSection() {
   };
 
   return (
-    <div className="text-light-400 min-h-screen p-8">
+    <div className="min-h-screen p-8 text-light-400">
       <div className="mx-auto max-w-7xl">
         <SectionHeading title="How to bridge to MegaETH" />
 
@@ -99,7 +99,7 @@ export default function BridgeGuideSection() {
                       {step.number}
                     </span>
                     <h3 className="mb-3 text-heading-3 font-semibold">{step.title}</h3>
-                    <p className="text-light-400/70 text-lg leading-relaxed">
+                    <p className="text-lg leading-relaxed text-light-400/70">
                       {step.description}
                     </p>
                   </div>
@@ -110,7 +110,7 @@ export default function BridgeGuideSection() {
                   className={`${step.number === "4." ? "" : "absolute -right-6 top-1/2 z-10 -translate-y-1/2"} `}
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl border-2 border-[#151518] bg-[#1B1B1E] shadow-lg">
-                    <span className="text-light-400/50 text-xl">→</span>
+                    <span className="text-xl text-light-400/50">→</span>
                   </div>
                 </div>
               </div>
@@ -138,7 +138,11 @@ export default function BridgeGuideSection() {
 
         {/* CTA Button */}
         <div className="flex justify-center">
-          <BridgeNowLink section="marketingHero" className={primaryButtonClass} href={`${bridgeAppBaseUrl}/megaeth`}>
+          <BridgeNowLink
+            section="marketingHero"
+            className={primaryButtonClass}
+            href={`${bridgeAppBaseUrl}/megaeth`}
+          >
             Bridge to MegaETH
           </BridgeNowLink>
         </div>

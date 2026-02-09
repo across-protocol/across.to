@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import BridgeGuideSection from './_components/bridge-guide-section'
-import { EcosystemSection } from './_components/ecosystem-section'
-import { FeaturesSection } from './_components/features-section'
-import { HeroSection } from './_components/hero-section'
-import { CreativeCta } from './_components/creative-cta'
+import BridgeGuideSection from "./_components/bridge-guide-section";
+import { EcosystemSection } from "./_components/ecosystem-section";
+import { FeaturesSection } from "./_components/features-section";
+import { HeroSection } from "./_components/hero-section";
+import { CreativeCta } from "./_components/creative-cta";
 // import { TokensSection } from './_components/tokens-section'
 
 export default function MegaEthLanding() {
@@ -17,5 +17,5 @@ export default function MegaEthLanding() {
       <EcosystemSection />
       <CreativeCta />
     </div>
-  )
+  );
 }

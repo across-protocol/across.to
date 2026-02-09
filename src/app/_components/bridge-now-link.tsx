@@ -5,7 +5,7 @@ import { Suspense, useCallback } from "react";
 import { ampli } from "../_amplitude";
 import { pageLookup } from "../_lib/amplitude";
 
-type Props = React.ComponentProps<"a"> & { 
+type Props = React.ComponentProps<"a"> & {
   section: "navbar" | "marketingHero";
   href?: string;
 };
