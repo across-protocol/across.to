@@ -42,5 +42,5 @@ export function pageLookup(pathname: string) {
   const isSpecificBlogPage = /^\/blog\/[a-zA-Z0-9-]+$/.test(pathname);
   return isSpecificBlogPage
     ? "marketingBlogSpecificPage"
-    : AMPLITUDE_PAGE_LOOKUP[pathname] ?? "404Page";
+    : (AMPLITUDE_PAGE_LOOKUP[pathname] ?? "404Page");
 }
