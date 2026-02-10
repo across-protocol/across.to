@@ -10,7 +10,7 @@ import { SectionHeading } from "./section-heading";
 const featureCards = [
   {
     title: "Day-1 MegaETH support",
-    description: "Bridge USDT, WBTC, and ETH as soon as MegaETH mainnet goes live.",
+    description: "Bridge USDT0, WETH, and ETH as soon as MegaETH mainnet goes live.",
     Icon: SubscriptionStarIcon,
   },
   {
