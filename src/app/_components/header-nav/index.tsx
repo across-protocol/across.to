@@ -109,7 +109,7 @@ export function HeaderNav() {
         </div>
         <div className="flex justify-end">
           <BridgeNowLink
-            href={`${bridgeAppBaseUrl}/megaeth`}
+            href={`${bridgeAppBaseUrl}/megaeth?utmsource=landingpage&utmmedium=website&utmcampaign=megaethlandingpage20260210`}
             section="marketingHero"
             className="tracking-wide inline-flex items-center justify-center rounded-xl bg-aqua-100 px-6 py-3 text-sm font-semibold uppercase text-[#0A0E13]  transition duration-200 hover:-translate-y-0.5"
           >

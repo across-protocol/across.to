@@ -141,7 +141,7 @@ export default function BridgeGuideSection() {
           <BridgeNowLink
             section="marketingHero"
             className={primaryButtonClass}
-            href={`${bridgeAppBaseUrl}/megaeth`}
+            href={`${bridgeAppBaseUrl}/megaeth?utmsource=landingpage&utmmedium=website&utmcampaign=megaethlandingpage20260210`}
           >
             Bridge to MegaETH
           </BridgeNowLink>
