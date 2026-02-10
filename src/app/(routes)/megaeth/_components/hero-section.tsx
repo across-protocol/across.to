@@ -41,7 +41,7 @@ export function HeroSection() {
               Bridge to MegaETH with Across
             </h1>
             <p className="text-base mx-auto max-w-3xl leading-relaxed text-grey-400 sm:text-heading-4">
-              Fast, secure bridging for MegaETH mainnet — Day-1 support for USDT, WETH,
+              Fast, secure bridging for MegaETH mainnet — Day-1 support for USDT0, WETH,
               and ETH.
             </p>
           </div>
