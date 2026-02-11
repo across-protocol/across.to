@@ -41,7 +41,18 @@ function generateEmbedHref(url: URL) {
 
 const nodeRenderers: RenderNode = {
   [INLINES.HYPERLINK]: (node, children) => {
-    const url = new URL(node.data.uri as string);
+    let uri = node.data.uri as string;
+
+    // Handle URLs without protocol (e.g., "app.across.to" → "https://app.across.to")
+    if (
+      !uri.startsWith("http://") &&
+      !uri.startsWith("https://") &&
+      !uri.startsWith("/")
+    ) {
+      uri = `https://${uri}`;
+    }
+
+    const url = new URL(uri);
 
     if (children?.toString().toLowerCase().includes("iframe")) {
       if (
