@@ -44,7 +44,11 @@ const nodeRenderers: RenderNode = {
     let uri = node.data.uri as string;
 
     // Handle URLs without protocol (e.g., "app.across.to" → "https://app.across.to")
-    if (!uri.startsWith("http://") && !uri.startsWith("https://") && !uri.startsWith("/")) {
+    if (
+      !uri.startsWith("http://") &&
+      !uri.startsWith("https://") &&
+      !uri.startsWith("/")
+    ) {
       uri = `https://${uri}`;
     }
 
