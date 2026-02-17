@@ -7,6 +7,7 @@ import { HeaderNav } from "@/app/_components/header-nav";
 import { PageTracking } from "@/app/_components/page-tracking";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { AttributionCapture } from "./_components/attribution-capture";
 import { GOOGLE_ANALYTICS_TAG_ID } from "./_constants";
 import { AmpliProvider } from "./_hooks/useAmplitude";
 import "./globals.css";
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={twMerge(inter.className, "bg-grey-dark text-light-300")}>
+        <AttributionCapture />
         <AmpliProvider>
           <div className="flex min-h-screen flex-col justify-between">
             <HeaderNav />
