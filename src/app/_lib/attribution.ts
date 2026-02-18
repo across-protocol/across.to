@@ -46,7 +46,10 @@ export function setAttribution(): void {
     // invalid referrer URL
   }
 
-  const hasReferrer = document.referrer !== "";
+  const isFirstParty =
+    referringDomain === "across.to" ||
+    referringDomain.endsWith(".across.to");
+  const hasReferrer = document.referrer !== "" && !isFirstParty;
   const hasUtm = UTM_PARAMS.some((key) => utmValues[key] !== null);
   if (!hasReferrer && !hasUtm) return;
 
