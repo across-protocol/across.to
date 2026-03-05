@@ -15,8 +15,7 @@ export default function TokenSurveyPage() {
           <span className="text-aqua-100">ACX</span> Token Survey
         </Text>
         <Text variant="body" className=" text-grey-400 leading-relaxed text-center mx-6 lg:mx-48">
-          Across is becoming a private company. This is a quick temperature check - we
-          want to know if you're interested in converting your tokens into real equity.
+          Across is becoming a private company. This is a quick temperature check - we want to know if you are interested in converting your tokens into real equity.
         </Text>
       </div>
 
