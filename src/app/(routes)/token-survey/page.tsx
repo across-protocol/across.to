@@ -15,7 +15,7 @@ export default function TokenSurveyPage() {
         <Text variant="heading-2" className="leading-[52.80px] ">
           Welcome to the Across Token Survey
         </Text>
-        <Text variant="body" className=" text-grey-400 leading-relaxed  mr-6 lg:mr-48">
+        <Text variant="body" className=" text-grey-400 leading-relaxed">
         This survey gauges your non-binding interest in two potential options: a cash liquidity option or participation in a future private company&apos;s equity structure (subject to eligibility and regulatory requirements).Read the full temp check proposal <Link className="text-aqua-100 underline" href="https://across.to/">HERE</Link>.
         </Text>
       </div>
