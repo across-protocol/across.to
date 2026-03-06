@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 import { Text } from "@/app/_components/text";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "ACX Token Survey",
@@ -15,11 +16,7 @@ export default function TokenSurveyPage() {
           Welcome to the Across Token Survey
         </Text>
         <Text variant="body" className=" text-grey-400 leading-relaxed  mr-6 lg:mr-48">
-        Across has proposed transitioning from a token structure to a private company through an ACX token-to-equity conversion and buyout offer. As part of the public temperature check, This survey is intended solely to gauge non-binding interest in two potential pathways that may be explored as part of a broader restructuring discussion:
-        <ul className="list-disc list-inside text-left">
-          <li>A potential cash liquidity option</li>
-          <li>A potential opportunity to participate in an equity-based structure of a future private company, subject to eligibility, documentation, and regulatory considerations</li>
-        </ul>
+        This survey gauges your non-binding interest in two potential options: a cash liquidity option or participation in a future private company&apos;s equity structure (subject to eligibility and regulatory requirements).Read the full temp check proposal <Link className="text-aqua-100 underline" href="https://across.to/">HERE</Link>.
         </Text>
       </div>
 
