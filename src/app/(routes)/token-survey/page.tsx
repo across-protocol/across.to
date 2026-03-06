@@ -13,10 +13,10 @@ export default function TokenSurveyPage() {
     <main className="relative z-[1] mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-10 lg:px-0">
       <div className="flex flex-col gap-4">
         <Text variant="heading-2" className="leading-[52.80px] ">
-          Welcome to the Across Token Survey
+        Bridge Across - Exchange Indication Survey
         </Text>
         <Text variant="body" className=" text-grey-400 leading-relaxed">
-        This survey gauges your non-binding interest in two potential options: a cash liquidity option or participation in a future private company&apos;s equity structure (subject to eligibility and regulatory requirements).Read the full temp check proposal <Link className="text-aqua-100 underline" href="https://across.to/">HERE</Link>.
+        As it relates to the proposed transition of Across into a private company structure, this survey gauges your interest in two potential options: a token buy out or <strong>equity exchange</strong>. This survey signals your participation interest in exchange or sale; however, this non-biding survey is contingent on the proposals vote and legal permissibility. Read the full temp-check proposal <Link className="text-aqua-100 underline" href="https://across.to/">HERE</Link>.
         </Text>
       </div>
 
