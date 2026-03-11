@@ -21,7 +21,10 @@ export default function TokenSurveyPage() {
           buy out or equity exchange. This survey signals your participation interest in
           exchange or sale; however, this non-biding survey is contingent on the
           proposal&#39;s vote and legal permissibility. Read the full temp-check proposal{" "}
-          <Link className="text-aqua-100 underline" href="https://across.to/">
+          <Link
+            className="text-aqua-100 underline"
+            href="https://forum.across.to/t/the-bridge-across/2097"
+          >
             HERE
           </Link>
           .
