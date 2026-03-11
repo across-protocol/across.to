@@ -1,10 +1,6 @@
 const COOKIE_NAME = "across_attribution";
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 30; // 30 days
-const UTM_PARAMS = [
-  "utm_source",
-  "utm_medium",
-  "utm_campaign",
-] as const;
+const UTM_PARAMS = ["utm_source", "utm_medium", "utm_campaign"] as const;
 
 interface Attribution {
   referrer: string;
@@ -47,8 +43,7 @@ export function setAttribution(): void {
   }
 
   const isFirstParty =
-    referringDomain === "across.to" ||
-    referringDomain.endsWith(".across.to");
+    referringDomain === "across.to" || referringDomain.endsWith(".across.to");
   const hasReferrer = document.referrer !== "" && !isFirstParty;
   const hasUtm = UTM_PARAMS.some((key) => utmValues[key] !== null);
   if (!hasReferrer && !hasUtm) return;
