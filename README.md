@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Across Protocol Marketing Website
+
+The marketing website for [Across Protocol](https://across.to) — the fastest and lowest-cost cross-chain bridge.
+
+## Stack
+
+- [Next.js 15](https://nextjs.org/) (App Router)
+- [React 18](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Contentful](https://www.contentful.com/) (Headless CMS for blog)
+- [Vercel](https://vercel.com/) (Deployment)
+- [Amplitude](https://amplitude.com/) (Analytics)
 
 ## Getting Started
 
-First, run the development server:
+### Requirements
+
+- Node.js (see `.nvmrc` — lts/hydrogen)
+- Yarn
+
+### Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn
+cp .env.example .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Fill in the required environment variables in `.env`:
+- `CONTENTFUL_SPACE_ID` — Contentful space identifier
+- `CONTENTFUL_ACCESS_TOKEN` — Contentful API token
+- `CONTENTFUL_REVALIDATE_SECRET` — ISR revalidation webhook secret
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Development
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+yarn dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+### Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+yarn build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Lint & Format
 
-## Deploy on Vercel
+```bash
+yarn lint
+yarn format
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+src/app/
+├── (routes)/          # Next.js App Router pages
+│   ├── page.tsx       # Homepage
+│   ├── across-bridge/ # Bridge product page
+│   ├── across-plus/   # Plus product page
+│   ├── across-settlement/ # Settlement layer page
+│   ├── blog/          # Blog (Contentful CMS)
+│   └── ...
+├── api/               # API routes (ISR revalidation)
+├── _components/       # Shared React components
+├── _lib/              # Utilities (Contentful client, analytics)
+├── _hooks/            # Custom React hooks
+├── _constants/        # Configuration constants
+└── _assets/           # Static images and logos
+```
+
+## CMS
+
+Blog content is managed in [Contentful](https://www.contentful.com/). Changes published in Contentful trigger ISR revalidation via the `/api/revalidate` webhook endpoint.
+
+## Analytics
+
+Event tracking uses Amplitude. To refresh tracking data:
+
+```bash
+yarn ampli:pull
+```
+
+## License
+
+Proprietary
