@@ -26,6 +26,7 @@ cp .env.example .env
 ```
 
 Fill in the required environment variables in `.env`:
+
 - `CONTENTFUL_SPACE_ID` — Contentful space identifier
 - `CONTENTFUL_ACCESS_TOKEN` — Contentful API token
 - `CONTENTFUL_REVALIDATE_SECRET` — ISR revalidation webhook secret

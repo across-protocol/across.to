@@ -26,6 +26,7 @@ Update this `AGENTS.md` when new routes, integrations, or CMS content types are 
 ## Architecture
 
 Next.js 15 App Router with:
+
 - **Contentful CMS** for blog content (rich text, images, tags)
 - **Amplitude** for event tracking
 - **Tailwind CSS** for styling
@@ -33,18 +34,18 @@ Next.js 15 App Router with:
 
 ### Routes
 
-| Route | Purpose |
-|-------|---------|
-| `/` | Homepage |
-| `/across-bridge` | Bridge product page |
-| `/across-plus` | Plus product page |
-| `/across-settlement` | Settlement layer page |
-| `/blog` | Blog listing (Contentful) |
-| `/blog/[slug]` | Blog article (dynamic, Contentful) |
-| `/megaeth` | MegaETH campaign page |
-| `/privacy-policy` | Privacy policy |
-| `/terms-of-service` | Terms of service |
-| `/api/revalidate` | ISR revalidation endpoint (Contentful webhook) |
+| Route                | Purpose                                        |
+| -------------------- | ---------------------------------------------- |
+| `/`                  | Homepage                                       |
+| `/across-bridge`     | Bridge product page                            |
+| `/across-plus`       | Plus product page                              |
+| `/across-settlement` | Settlement layer page                          |
+| `/blog`              | Blog listing (Contentful)                      |
+| `/blog/[slug]`       | Blog article (dynamic, Contentful)             |
+| `/megaeth`           | MegaETH campaign page                          |
+| `/privacy-policy`    | Privacy policy                                 |
+| `/terms-of-service`  | Terms of service                               |
+| `/api/revalidate`    | ISR revalidation endpoint (Contentful webhook) |
 
 ### CMS integration
 
